@@ -1,0 +1,246 @@
+﻿@{
+    ViewBag.Title = "Perfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var User = (ThreeBits.Security.Portal.USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+    
+    var UserFull = (ThreeBits.Security.Portal.USERSECURITYWCF.UsuarioDC)ViewBag.ResUsuario;
+}
+
+<div id="e-commerce-product" class="page-layout simple tabbed">
+
+                        <!-- HEADER -->
+                        <div class="page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-6">
+
+                            <div cllass="row no-gutters align-items-center">
+
+                                @*<a href="apps-e-commerce-products.html" class="btn btn-icon mr-4">
+                                    <i cass="icon icon-arrow-left"></i>
+                                </a>*@
+
+                                <div class="product-image mr-4">
+                                    @*<img src="~/assets/images/avatars/@User.RUTAFOTOPERFIL">*@
+                                </div>
+
+                                <div>USUARIO @User.NOMBRE @User.APATERNO</div>
+                            </div>
+
+                            <button type="button" class="btn btn-light">
+                                GUARDAR
+                            </button>
+
+                        </div>
+                        <!-- / HEADER -->
+
+                        <!-- CONTENT -->
+                        <div class="page-content">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                                <li class="nav-item">
+                                    <a class="nav-link btn active" id="basic-info-tab" data-toggle="tab" href="#basic-info-tab-pane" role="tab" aria-controls="basic-info-tab-pane" aria-expanded="true">Usuario</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link btn" id="product-images-tab" data-toggle="tab" href="#product-images-tab-pane" role="tab" aria-controls="product-images-tab-pane">Domicilios</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link btn" id="pricing-tab" data-toggle="tab" href="#pricing-tab-pane" role="tab" aria-controls="pricing-tab-pane">Contactos</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content">
+
+                                <div class="tab-pane fade show active" id="basic-info-tab-pane" role="tabpanel" aria-labelledby="basic-info-tab">
+
+                                    <div class="card p-6">
+
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" aria-describedby="product name" />
+                                                <label>Product Name</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" aria-describedby="product description" rows="5"></textarea>
+                                                <label>Product Description</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" aria-describedby="product categories" />
+                                                <label>Categories</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" aria-describedby="product tags" />
+                                                <label>Tags</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="text-center">
+                                                    <div class="kv-avatar center-block" style="width: 180px">
+                                                        <%--<input id="avatar" name="avatar" type="file" class="file-loading">--%>
+                                                        <asp:FileUpload ID="avatar" runat="server" CssClass="file-loading" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">ID</span>
+                                                    @Html.TextBoxFor(User.IDUSUARIO, new { @class = " form-control", @placeholder = "Email" })
+                                                    <asp:TextBox ID="txtIdUsuario" runat="server" CssClass="form-control" placeholder="IdUsuario" Enabled="false"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                                    <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" placeholder="@Nombre de Usuario"></asp:TextBox>
+                                            
+                                                <asp:RequiredFieldValidator ID="reqUsuario" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Usuario Requerido" ControlToValidate="txtUsuario" ValidationGroup="AgregarUsuario"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator ID="rexUsuario" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Usuario Invalido" ControlToValidate="txtUsuario" ValidationGroup="AgregarUsuario" ValidationExpression="^[\w\s.,@]+"></asp:RegularExpressionValidator>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-font"></span></span>
+                                                    <asp:TextBox ID="txtAPaterno" runat="server" CssClass="form-control" placeholder="Apellido Paterno"></asp:TextBox>
+                                                </div>
+                                                <%--<asp:RequiredFieldValidator ID="reqAPaterno" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Apellido Paterno Requerido" ControlToValidate="txtAPaterno" ValidationGroup="AgregarUsuario"></asp:RequiredFieldValidator>--%>
+                                                <asp:RegularExpressionValidator ID="rexAPaterno" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Apellido Paterno (Solo Letras)" ValidationExpression="^[a-zA-Z\s]+$" ControlToValidate="txtAPaterno" ValidationGroup="AgregarUsuario"></asp:RegularExpressionValidator>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-font"></span></span>
+                                                    <asp:TextBox ID="txtAMaterno" runat="server" CssClass="form-control" placeholder="Apellido Materno"></asp:TextBox>
+                                                </div>
+                                                <%--<asp:RequiredFieldValidator ID="reqAMaterno" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Apellido Materno Requerido" ControlToValidate="txtAMaterno" ValidationGroup="AgregarUsuario"></asp:RequiredFieldValidator>--%>
+                                                <asp:RegularExpressionValidator ID="rexAMaterno" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Apellido Materno (Solo Letras)" ValidationExpression="^[a-zA-Z\s]+$" ControlToValidate="txtAMaterno" ValidationGroup="AgregarUsuario"></asp:RegularExpressionValidator>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-font"></span></span>
+                                                    <asp:TextBox ID="txtNombres" runat="server" CssClass="form-control" placeholder="Nombres"></asp:TextBox>
+                                                </div>
+                                                <asp:RequiredFieldValidator ID="reqNombre" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Nombre Requerido" ControlToValidate="txtNombres" ValidationGroup="AgregarUsuario"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator ID="rexNombre" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Nombre (Solo Letras ,.)" ValidationExpression="^[\w\s.]+$" ControlToValidate="txtNombres" ValidationGroup="AgregarUsuario"></asp:RegularExpressionValidator>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                                                    <asp:TextBox ID="txtFechaNacimiento" runat="server" CssClass="form-control" placeholder="Fecha Nacimiento"></asp:TextBox>
+                                                    <span class="input-group-addon">Sexo:</span>
+                                                    <asp:DropDownList ID="ddlSexo" CssClass="form-control" runat="server"></asp:DropDownList>
+                                                </div>
+                                                <asp:RequiredFieldValidator ID="reqFechaNacimiento" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Fecha requerida" ControlToValidate="txtFechaNacimiento" ValidationGroup="AgregarUsuario"></asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="reqSexo" runat="server" CssClass="text-danger small pull-left" ErrorMessage="Seleccione el sexo" InitialValue="0" ControlToValidate="ddlSexo" ValidationGroup="AgregarUsuario"></asp:RequiredFieldValidator>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">E.Civil:</span>
+                                                    <asp:DropDownList ID="ddlEstadoCivil" CssClass="form-control" runat="server"></asp:DropDownList>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Area:</span>
+                                                    <asp:DropDownList ID="ddlArea" CssClass="form-control" runat="server"></asp:DropDownList>
+                                                </div>
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="product-images-tab-pane" role="tabpanel" aria-labelledby="inventory-tab">
+
+                                    <div class="card p-6">
+
+                                        <form>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" aria-describedby="sku" />
+                                                <label>SKU</label>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" aria-describedby="barcode" />
+                                                <label>Barcode</label>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input id="example-number-input" class="form-control" type="number" value="42" aria-describedby="quantity" />
+                                                <label for="example-number-input">Quantity</label>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pricing-tab-pane" role="tabpanel" aria-labelledby="pricing-tab">
+
+                                    <div class="card p-6">
+
+                                        <form>
+
+                                            <div class="input-group mb-8">
+
+                                                <span class="input-group-addon pt-4">$</span>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+                                                    <label>Tax Excluded Price</label>
+                                                </div>
+
+                                                <span class="input-group-addon pt-4">.00</span>
+
+                                            </div>
+
+                                            <div class="input-group mb-8">
+
+                                                <span class="input-group-addon pt-4">$</span>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+                                                    <label>Tax Included Price</label>
+                                                </div>
+
+                                                <span class="input-group-addon pt-4">.00</span>
+
+                                            </div>
+
+                                            <div class="input-group mb-8">
+
+                                                <span class="input-group-addon pt-4">%</span>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-label="taxt rate" />
+                                                    <label>Tax Rate</label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="input-group mb-8">
+
+                                                <span class="input-group-addon pt-4">$</span>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+                                                    <label>Compared Price</label>
+                                                    <small class="form-text text-muted">Add a compare price to show next to the real price</small>
+                                                </div>
+
+                                                <span class="input-group-addon pt-4">.00</span>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                               
+
+                            </div>
+                        </div>
+                        <!-- / CONTENT -->
+                    </div>

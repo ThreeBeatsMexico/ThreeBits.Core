@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/SecurityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" />
+  <xs:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/SecurityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Common" />
+  <xs:complexType name="SecutityDC">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Aplicaciones" nillable="true" type="q1:ArrayOfAplicacionBE" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="ElementosObjetos" nillable="true" type="q2:ArrayOfPermisoXElementosObjBE" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Encriptacion" nillable="true" type="q3:EncryptionBE" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Metodos" nillable="true" type="q4:ArrayOfWCFMetodosBE" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="PermisoXObjetos" nillable="true" type="q5:ArrayOfPermisosXObjetosBE" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="PermisosXMenu" nillable="true" type="q6:ArrayOfPermisosXMenuBE" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="PermisosXSubmenu" nillable="true" type="q7:ArrayOfPermisoXSubmenuBE" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Common" minOccurs="0" name="ResGral" nillable="true" type="q8:RespuestaGralBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecutityDC" nillable="true" type="tns:SecutityDC" />
+</xs:schema>

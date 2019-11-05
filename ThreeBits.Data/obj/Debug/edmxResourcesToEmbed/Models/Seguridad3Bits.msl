@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Seguridad3BitsModelStoreContainer" CdmEntityContainer="Seguridad3BitsEntities1">
+    <EntitySetMapping Name="APLICACION">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.APLICACION">
+        <MappingFragment StoreEntitySet="APLICACION">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDIT_CONTACTO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.AUDIT_CONTACTO">
+        <MappingFragment StoreEntitySet="AUDIT_CONTACTO">
+          <ScalarProperty Name="IDCONTACTOAUDIT" ColumnName="IDCONTACTOAUDIT" />
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVOCONTACTO" ColumnName="ACTIVOCONTACTO" />
+          <ScalarProperty Name="IDUSERMODIFICA" ColumnName="IDUSERMODIFICA" />
+          <ScalarProperty Name="IDAPPMODIFICA" ColumnName="IDAPPMODIFICA" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDIT_DOMICILIO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.AUDIT_DOMICILIO">
+        <MappingFragment StoreEntitySet="AUDIT_DOMICILIO">
+          <ScalarProperty Name="IDDOMICILIOAUDIT" ColumnName="IDDOMICILIOAUDIT" />
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVODOM" ColumnName="ACTIVODOM" />
+          <ScalarProperty Name="IDUSERMODIFICA" ColumnName="IDUSERMODIFICA" />
+          <ScalarProperty Name="IDAPPMODIFICA" ColumnName="IDAPPMODIFICA" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDIT_USUARIOS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.AUDIT_USUARIOS">
+        <MappingFragment StoreEntitySet="AUDIT_USUARIOS">
+          <ScalarProperty Name="IDUSUARIOAUDIT" ColumnName="IDUSUARIOAUDIT" />
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVOUSR" ColumnName="ACTIVOUSR" />
+          <ScalarProperty Name="IDUSERMODIFICA" ColumnName="IDUSERMODIFICA" />
+          <ScalarProperty Name="IDAPPMODIFICA" ColumnName="IDAPPMODIFICA" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_AREA">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_AREA">
+        <MappingFragment StoreEntitySet="CAT_AREA">
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_ESTACIONES">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_ESTACIONES">
+        <MappingFragment StoreEntitySet="CAT_ESTACIONES">
+          <ScalarProperty Name="IDESTACION" ColumnName="IDESTACION" />
+          <ScalarProperty Name="DESRIPCION" ColumnName="DESRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_ESTADOCIVIL">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_ESTADOCIVIL">
+        <MappingFragment StoreEntitySet="CAT_ESTADOCIVIL">
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_GRALS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_GRALS">
+        <MappingFragment StoreEntitySet="CAT_GRALS">
+          <ScalarProperty Name="IDCATGRAL" ColumnName="IDCATGRAL" />
+          <ScalarProperty Name="NOMBRETABLA" ColumnName="NOMBRETABLA" />
+          <ScalarProperty Name="IDTABLA" ColumnName="IDTABLA" />
+          <ScalarProperty Name="DESCRIPCIONTABLA" ColumnName="DESCRIPCIONTABLA" />
+          <ScalarProperty Name="IDFILTRO" ColumnName="IDFILTRO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_OPERACIONAUDIT">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_OPERACIONAUDIT">
+        <MappingFragment StoreEntitySet="CAT_OPERACIONAUDIT">
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_SEXO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_SEXO">
+        <MappingFragment StoreEntitySet="CAT_SEXO">
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_TIPOCONTACTO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_TIPOCONTACTO">
+        <MappingFragment StoreEntitySet="CAT_TIPOCONTACTO">
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_TIPOPERSONA">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_TIPOPERSONA">
+        <MappingFragment StoreEntitySet="CAT_TIPOPERSONA">
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_TIPOUSUARIO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CAT_TIPOUSUARIO">
+        <MappingFragment StoreEntitySet="CAT_TIPOUSUARIO">
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATGENERALES">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CATGENERALES">
+        <MappingFragment StoreEntitySet="CATGENERALES">
+          <ScalarProperty Name="IDCATGENERALES" ColumnName="IDCATGENERALES" />
+          <ScalarProperty Name="NOMBRECATALOGO" ColumnName="NOMBRECATALOGO" />
+          <ScalarProperty Name="IDCATALOGO" ColumnName="IDCATALOGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="FILTRO" ColumnName="FILTRO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFIGAPP">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CONFIGAPP">
+        <MappingFragment StoreEntitySet="CONFIGAPP">
+          <ScalarProperty Name="IDCONFIGAPP" ColumnName="IDCONFIGAPP" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.CONTACTO">
+        <MappingFragment StoreEntitySet="CONTACTO">
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOMICILIO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.DOMICILIO">
+        <MappingFragment StoreEntitySet="DOMICILIO">
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTACIONESXAPP">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.ESTACIONESXAPP">
+        <MappingFragment StoreEntitySet="ESTACIONESXAPP">
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDESTACION" ColumnName="IDESTACION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGERROR">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.LOGERROR">
+        <MappingFragment StoreEntitySet="LOGERROR">
+          <ScalarProperty Name="IDLOGERROR" ColumnName="IDLOGERROR" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="VCHMENSAJE" ColumnName="VCHMENSAJE" />
+          <ScalarProperty Name="VCHHOSTNAME" ColumnName="VCHHOSTNAME" />
+          <ScalarProperty Name="VCHIP" ColumnName="VCHIP" />
+          <ScalarProperty Name="VCHSTACKTRACE" ColumnName="VCHSTACKTRACE" />
+          <ScalarProperty Name="DTFECHAERROR" ColumnName="DTFECHAERROR" />
+          <ScalarProperty Name="VCHUSUARIO" ColumnName="VCHUSUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOSXELEMENTOSOBJETO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.PERMISOSXELEMENTOSOBJETO">
+        <MappingFragment StoreEntitySet="PERMISOSXELEMENTOSOBJETO">
+          <ScalarProperty Name="IDELEMENTOSXOBJ" ColumnName="IDELEMENTOSXOBJ" />
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="ELEMENTO" ColumnName="ELEMENTO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOSXMENU">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.PERMISOSXMENU">
+        <MappingFragment StoreEntitySet="PERMISOSXMENU">
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOSXSUBMENU">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.PERMISOSXSUBMENU">
+        <MappingFragment StoreEntitySet="PERMISOSXSUBMENU">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOXOBJETOS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.PERMISOXOBJETOS">
+        <MappingFragment StoreEntitySet="PERMISOXOBJETOS">
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="PAGINA" ColumnName="PAGINA" />
+          <ScalarProperty Name="NOMBREOBJETO" ColumnName="NOMBREOBJETO" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLESXUSUARIO">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.ROLESXUSUARIO">
+        <MappingFragment StoreEntitySet="ROLESXUSUARIO">
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOXAPLICACION">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.USUARIOXAPLICACION">
+        <MappingFragment StoreEntitySet="USUARIOXAPLICACION">
+          <ScalarProperty Name="IDUSRSXAPP" ColumnName="IDUSRSXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WCFMETODOS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.WCFMETODOS">
+        <MappingFragment StoreEntitySet="WCFMETODOS">
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="NOMBREMETODO" ColumnName="NOMBREMETODO" />
+          <ScalarProperty Name="RECURRENTE" ColumnName="RECURRENTE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WCFRECURRENCIA">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.WCFRECURRENCIA">
+        <MappingFragment StoreEntitySet="WCFRECURRENCIA">
+          <ScalarProperty Name="IDRECURRENCIA" ColumnName="IDRECURRENCIA" />
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="FECHAACCESO" ColumnName="FECHAACCESO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WCFSERVICIOS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.WCFSERVICIOS">
+        <MappingFragment StoreEntitySet="WCFSERVICIOS">
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VWCATTABLASCATALOGOS">
+      <EntityTypeMapping TypeName="Seguridad3BitsModel.VWCATTABLASCATALOGOS">
+        <MappingFragment StoreEntitySet="VWCATTABLASCATALOGOS">
+          <ScalarProperty Name="IdTable" ColumnName="IdTable" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_actDeactUsuario" FunctionName="Seguridad3BitsModel.Store.sp_actDeactUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_addUsuarioXAplicacion" FunctionName="Seguridad3BitsModel.Store.sp_addUsuarioXAplicacion" />
+    <FunctionImportMapping FunctionImportName="sp_AuditContacto" FunctionName="Seguridad3BitsModel.Store.sp_AuditContacto" />
+    <FunctionImportMapping FunctionImportName="sp_AuditDomicilio" FunctionName="Seguridad3BitsModel.Store.sp_AuditDomicilio" />
+    <FunctionImportMapping FunctionImportName="sp_AuditUser" FunctionName="Seguridad3BitsModel.Store.sp_AuditUser" />
+    <FunctionImportMapping FunctionImportName="sp_checkMenuxAppRol" FunctionName="Seguridad3BitsModel.Store.sp_checkMenuxAppRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkMenuxAppRol_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkMetodo" FunctionName="Seguridad3BitsModel.Store.sp_checkMetodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkMetodo_Result">
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="NOMBREMETODO" ColumnName="NOMBREMETODO" />
+          <ScalarProperty Name="RECURRENTE" ColumnName="RECURRENTE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkRolxApp" FunctionName="Seguridad3BitsModel.Store.sp_checkRolxApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkRolxApp_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkServicio" FunctionName="Seguridad3BitsModel.Store.sp_checkServicio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkServicio_Result">
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkSubMenuxAppRol" FunctionName="Seguridad3BitsModel.Store.sp_checkSubMenuxAppRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkSubMenuxAppRol_Result">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkUsrXApp" FunctionName="Seguridad3BitsModel.Store.sp_checkUsrXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkUsrXApp_Result">
+          <ScalarProperty Name="IDUSRSXAPP" ColumnName="IDUSRSXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkXApp" FunctionName="Seguridad3BitsModel.Store.sp_checkXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_checkXApp_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_delMenusXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_delMenusXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_delSubMenusXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_delSubMenusXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_getAplicaciones" FunctionName="Seguridad3BitsModel.Store.sp_getAplicaciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getAplicaciones_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getAppsXUsuario" FunctionName="Seguridad3BitsModel.Store.sp_getAppsXUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getAppsXUsuario_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="IDUSRSXAPP" ColumnName="IDUSRSXAPP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getContactos" FunctionName="Seguridad3BitsModel.Store.sp_getContactos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getContactos_Result">
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="TIPOCONTACTO" ColumnName="TIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getDomicilios" FunctionName="Seguridad3BitsModel.Store.sp_getDomicilios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getDomicilios_Result">
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getElementsObjectsXIdObj" FunctionName="Seguridad3BitsModel.Store.sp_getElementsObjectsXIdObj">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getElementsObjectsXIdObj_Result">
+          <ScalarProperty Name="IDELEMENTOSXOBJ" ColumnName="IDELEMENTOSXOBJ" />
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="ELEMENTO" ColumnName="ELEMENTO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEstacionesXApps" FunctionName="Seguridad3BitsModel.Store.sp_getEstacionesXApps">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getEstacionesXApps_Result">
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDESTACION" ColumnName="IDESTACION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMenusXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_getMenusXAppRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getMenusXAppRol_Result">
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMenusXAppRolAdmin" FunctionName="Seguridad3BitsModel.Store.sp_getMenusXAppRolAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getMenusXAppRolAdmin_Result">
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMetodoXApp" FunctionName="Seguridad3BitsModel.Store.sp_getMetodoXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getMetodoXApp_Result">
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="NOMBREMETODO" ColumnName="NOMBREMETODO" />
+          <ScalarProperty Name="RECURRENTE" ColumnName="RECURRENTE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getObjetosXAppRolPage" FunctionName="Seguridad3BitsModel.Store.sp_getObjetosXAppRolPage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getObjetosXAppRolPage_Result">
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="PAGINA" ColumnName="PAGINA" />
+          <ScalarProperty Name="NOMBREOBJETO" ColumnName="NOMBREOBJETO" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getPermisoXApp" FunctionName="Seguridad3BitsModel.Store.sp_getPermisoXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getPermisoXApp_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getRolesXApp" FunctionName="Seguridad3BitsModel.Store.sp_getRolesXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getRolesXApp_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getRolesXUserApp" FunctionName="Seguridad3BitsModel.Store.sp_getRolesXUserApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getRolesXUserApp_Result">
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="DESCROL" ColumnName="DESCROL" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DescripcionAplicacion" ColumnName="DescripcionAplicacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getSubMenusXIdMenu" FunctionName="Seguridad3BitsModel.Store.sp_getSubMenusXIdMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getSubMenusXIdMenu_Result">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getSubMenusXIdMenuAdmin" FunctionName="Seguridad3BitsModel.Store.sp_getSubMenusXIdMenuAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getSubMenusXIdMenuAdmin_Result">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getUsuario" FunctionName="Seguridad3BitsModel.Store.sp_getUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.sp_getUsuario_Result">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="DESCAREA" ColumnName="DESCAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="DESCIDTIPOUSUARIO" ColumnName="DESCIDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_insAplicacion" FunctionName="Seguridad3BitsModel.Store.sp_insAplicacion" />
+    <FunctionImportMapping FunctionImportName="sp_insContacto" FunctionName="Seguridad3BitsModel.Store.sp_insContacto" />
+    <FunctionImportMapping FunctionImportName="sp_insDomicilio" FunctionName="Seguridad3BitsModel.Store.sp_insDomicilio" />
+    <FunctionImportMapping FunctionImportName="sp_insLogError" FunctionName="Seguridad3BitsModel.Store.sp_insLogError" />
+    <FunctionImportMapping FunctionImportName="sp_insMenuXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_insMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_insMetodosxApp" FunctionName="Seguridad3BitsModel.Store.sp_insMetodosxApp" />
+    <FunctionImportMapping FunctionImportName="sp_insPermisosxElementoObjeto" FunctionName="Seguridad3BitsModel.Store.sp_insPermisosxElementoObjeto" />
+    <FunctionImportMapping FunctionImportName="sp_insPermisosxObjeto" FunctionName="Seguridad3BitsModel.Store.sp_insPermisosxObjeto" />
+    <FunctionImportMapping FunctionImportName="sp_insRolesXUsuario" FunctionName="Seguridad3BitsModel.Store.sp_insRolesXUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_insRolXApp" FunctionName="Seguridad3BitsModel.Store.sp_insRolXApp" />
+    <FunctionImportMapping FunctionImportName="sp_insRolXUserApp" FunctionName="Seguridad3BitsModel.Store.sp_insRolXUserApp" />
+    <FunctionImportMapping FunctionImportName="sp_insServicioWCF" FunctionName="Seguridad3BitsModel.Store.sp_insServicioWCF" />
+    <FunctionImportMapping FunctionImportName="sp_insSubMenuXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_insSubMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_insUser" FunctionName="Seguridad3BitsModel.Store.sp_insUser" />
+    <FunctionImportMapping FunctionImportName="sp_updAplicacion" FunctionName="Seguridad3BitsModel.Store.sp_updAplicacion" />
+    <FunctionImportMapping FunctionImportName="sp_updContacto" FunctionName="Seguridad3BitsModel.Store.sp_updContacto" />
+    <FunctionImportMapping FunctionImportName="sp_updDomicilio" FunctionName="Seguridad3BitsModel.Store.sp_updDomicilio" />
+    <FunctionImportMapping FunctionImportName="sp_updMenuXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_updMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_updRol" FunctionName="Seguridad3BitsModel.Store.sp_updRol" />
+    <FunctionImportMapping FunctionImportName="sp_updSubMenuXAppRol" FunctionName="Seguridad3BitsModel.Store.sp_updSubMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_updUsuario" FunctionName="Seguridad3BitsModel.Store.sp_updUsuario" />
+    <FunctionImportMapping FunctionImportName="spAddCatEspecifico" FunctionName="Seguridad3BitsModel.Store.spAddCatEspecifico" />
+    <FunctionImportMapping FunctionImportName="spAddCatGenerales" FunctionName="Seguridad3BitsModel.Store.spAddCatGenerales" />
+    <FunctionImportMapping FunctionImportName="spAddConfigApp" FunctionName="Seguridad3BitsModel.Store.spAddConfigApp" />
+    <FunctionImportMapping FunctionImportName="spAddContacto" FunctionName="Seguridad3BitsModel.Store.spAddContacto" />
+    <FunctionImportMapping FunctionImportName="spAddDomicilio" FunctionName="Seguridad3BitsModel.Store.spAddDomicilio" />
+    <FunctionImportMapping FunctionImportName="spAddUsuario" FunctionName="Seguridad3BitsModel.Store.spAddUsuario" />
+    <FunctionImportMapping FunctionImportName="spAddUsuarioXAplicacion" FunctionName="Seguridad3BitsModel.Store.spAddUsuarioXAplicacion" />
+    <FunctionImportMapping FunctionImportName="spGetCatEspecifico" FunctionName="Seguridad3BitsModel.Store.spGetCatEspecifico" />
+    <FunctionImportMapping FunctionImportName="spGetCatGenerales" FunctionName="Seguridad3BitsModel.Store.spGetCatGenerales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetCatGenerales_Result">
+          <ScalarProperty Name="IDCATGENERALES" ColumnName="IDCATGENERALES" />
+          <ScalarProperty Name="NOMBRECATALOGO" ColumnName="NOMBRECATALOGO" />
+          <ScalarProperty Name="IDCATALOGO" ColumnName="IDCATALOGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="FILTRO" ColumnName="FILTRO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetConfigApp" FunctionName="Seguridad3BitsModel.Store.spGetConfigApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetConfigApp_Result">
+          <ScalarProperty Name="IDCONFIGAPP" ColumnName="IDCONFIGAPP" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetContactos" FunctionName="Seguridad3BitsModel.Store.spGetContactos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetContactos_Result">
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="TIPOCONTACTO" ColumnName="TIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDefinicionTabla" FunctionName="Seguridad3BitsModel.Store.spGetDefinicionTabla" />
+    <FunctionImportMapping FunctionImportName="spGetDomicilios" FunctionName="Seguridad3BitsModel.Store.spGetDomicilios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetDomicilios_Result">
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetRolesVSUsuario" FunctionName="Seguridad3BitsModel.Store.spGetRolesVSUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetRolesVSUsuario_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="APLICACION" ColumnName="APLICACION" />
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+          <ScalarProperty Name="ROLASIGNADO" ColumnName="ROLASIGNADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSysTablaCatalogo" FunctionName="Seguridad3BitsModel.Store.spGetSysTablaCatalogo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetSysTablaCatalogo_Result">
+          <ScalarProperty Name="IdTable" ColumnName="IdTable" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUsuario" FunctionName="Seguridad3BitsModel.Store.spGetUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetUsuario_Result">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUsuarios" FunctionName="Seguridad3BitsModel.Store.spGetUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetUsuarios_Result">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRolesVSUsuario" FunctionName="Seguridad3BitsModel.Store.spRolesVSUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spRolesVSUsuario_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="APLICACION" ColumnName="APLICACION" />
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSetCatEspecifico" FunctionName="Seguridad3BitsModel.Store.spSetCatEspecifico" />
+    <FunctionImportMapping FunctionImportName="spSetCatGenerales" FunctionName="Seguridad3BitsModel.Store.spSetCatGenerales" />
+    <FunctionImportMapping FunctionImportName="spSetConfigApp" FunctionName="Seguridad3BitsModel.Store.spSetConfigApp" />
+    <FunctionImportMapping FunctionImportName="spSetContacto" FunctionName="Seguridad3BitsModel.Store.spSetContacto" />
+    <FunctionImportMapping FunctionImportName="spSetDomicilio" FunctionName="Seguridad3BitsModel.Store.spSetDomicilio" />
+    <FunctionImportMapping FunctionImportName="spSetUsuario" FunctionName="Seguridad3BitsModel.Store.spSetUsuario" />
+    <FunctionImportMapping FunctionImportName="spSetUsuarioXAplicacion" FunctionName="Seguridad3BitsModel.Store.spSetUsuarioXAplicacion" />
+  </EntityContainerMapping>
+</Mapping>

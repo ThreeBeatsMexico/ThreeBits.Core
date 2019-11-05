@@ -1,0 +1,40 @@
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.WCFService.dll.config
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.WCFService.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.WCFService.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Business.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Data.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\PVLSECVB.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Business.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Data.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Data.dll.config
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.xml
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csprojAssemblyReference.cache
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.CopyComplete
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.SqlServer.xml
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.WCFService.dll.config
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.WCFService.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.WCFService.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.SqlServer.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Business.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Entities.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Data.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\PVLSECVB.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Business.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Entities.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.xml
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\EntityFramework.SqlServer.xml
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Data.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\bin\ThreeBits.Data.dll.config
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csprojAssemblyReference.cache
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.CoreCompileInputs.cache
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.CopyComplete
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.pdb

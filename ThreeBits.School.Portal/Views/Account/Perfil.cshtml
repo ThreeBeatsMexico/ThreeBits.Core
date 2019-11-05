@@ -1,0 +1,318 @@
+﻿@{
+    ViewBag.Title = "Perfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var User = (ThreeBits.School.Portal.USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+    var UserFull = (ThreeBits.School.Portal.USERSECURITYWCF.UsuarioDC)ViewBag.ResUsuario;
+}
+@if (Session["USER_SESSION"] == null)
+{
+    Response.Redirect("~/Account/Login");
+}
+else
+{
+
+    <div class="page-layout simple tabbed">
+        <form class="formAjax" method="post" action="~/Account/Perfil">
+            <!-- HEADER -->
+            <div class="page-header bg-black-500 light-fg d-flex flex-column justify-content-center justify-content-lg-end p-6">
+                <div class="flex-column row flex-lg-row align-items-center align-items-lg-end no-gutters justify-content-between">
+                    <div class="user-info flex-column row flex-lg-row no-gutters align-items-center">
+                        <img class="profile-image avatar huge mr-6" src="@Url.Action("UserPhotos", "Account" )">
+
+                        <div class="name h2 my-6">@User.IDUSUARIO - @User.NOMBRE @User.APATERNO @User.AMATERNO </div>
+                        <input type="hidden" value="@User.IDUSUARIO" id="idUsuario" name="idUsuario" />
+
+                    </div>
+                    <div class="actions row align-items-center no-gutters">
+
+                        <button class="submit-button btn btn-block btn-secondary my-4 mx-auto btnAjax" aria-label="GUARDAR" type="submit">
+                            GUARDAR
+                            <img src="~/assets/images/ellipsis.gif" class="loadingAjax" high="20%" width="15%" style="display:none" />
+                        </button>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- / HEADER -->
+            <!-- CONTENT -->
+            <div class="page-content">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link btn active" id="basic-info-tab" data-toggle="tab" href="#basic-info-tab-pane" role="tab" aria-controls="basic-info-tab-pane" aria-expanded="true">Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" id="product-images-tab" data-toggle="tab" href="#product-images-tab-pane" role="tab" aria-controls="product-images-tab-pane">Domicilio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" id="pricing-tab" data-toggle="tab" href="#pricing-tab-pane" role="tab" aria-controls="pricing-tab-pane">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" id="password-tab" data-toggle="tab" href="#password-tab-pane" role="tab" aria-controls="password-tab-pane">Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" id="avatar-tab" data-toggle="tab" href="#avatar-tab-pane" role="tab" aria-controls="avatar-tab-pane">Avatar</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="basic-info-tab-pane" role="tabpanel" aria-labelledby="basic-info-tab">
+                        <div class="card p-6">
+
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Nombre" id="sNombre" name="sNombre" value="@User.NOMBRE" placeholder="Nombres" required />
+                                        <label>Nombres</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Nombre.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Appellido Paterno" id="sPaterno" name="sPaterno" value="@User.APATERNO" placeholder="A Paterno" required />
+                                        <label>A. Paterno</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Apellido Paterno.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Apellido Materno" id="sMaterno" name="sMaterno" value="@User.AMATERNO" placeholder="A Materno" required />
+                                        <label>A. Materno</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Apellido Materno.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @{
+                                var fNac = UserFull.DatosUsuario.Usuario.FECHANACCONST;
+                                var m2 = string.Format("{0:yyyy-MM-dd}", fNac);
+                            }
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <label for="FNacimiento">Fecha de Nacimiento</label>
+                                        <input class="form-control" type="date" id="FNacimiento" name="FNacimiento" value="@m2" />
+                                        <div class="invalid-feedback">
+                                            Ingresa una Fecha de Nacimiento.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        @Html.Label("Sexo")
+                                        @Html.DropDownList("IdSexo")
+                                        @*<label>Sexo</label>
+                                            <select id="" class="form-control">
+                                                <option value="0">Default select</option>
+                                                <option value="1">MASCULINO</option>
+                                                <option value="2">FEMENINO</option>
+                                            </select>*@
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        @Html.Label("Estado Civil")
+                                        @Html.DropDownList("IdEstadoCivil")
+                                        @*<label>Estado Civil</label>
+                                            <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>SOLTERO</option>
+                                                <option>CASADO</option>
+                                            </select>*@
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product-images-tab-pane" role="tabpanel" aria-labelledby="inventory-tab">
+                        <div class="card p-6">
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Calle" id="sCalle" name="sCalle" value="@UserFull.DatosUsuario.Domicilios[0].CALLE" placeholder="Calle" required />
+                                        <label>Calle</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa una Calle.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Numero Exterior" id="sNumExt" name="sNumExt" value="@UserFull.DatosUsuario.Domicilios[0].NUMEXT" placeholder="Numero Exterior" required />
+                                        <label>Num. Interior</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Numero Exterior.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Numero Interior" id="sNumInt" name="sNumInt" value="@UserFull.DatosUsuario.Domicilios[0].NUMINT" placeholder="Numero Interior" required />
+                                        <label>Num. Exterior</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Numero Interior.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Codigo Postal" id="sCP" name="sCP" value="@UserFull.DatosUsuario.Domicilios[0].CP" placeholder="Codigo Postal" required />
+                                        <label>Codigo Postal</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Apellido Materno.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Colonia" id="sColonia" name="sColonia" value="@UserFull.DatosUsuario.Domicilios[0].COLONIA" placeholder="Colonia" required />
+                                        <label>Colonia</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Nombre.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Municipio" id="sMunicipio" name="sMunicipio" value="@UserFull.DatosUsuario.Domicilios[0].MUNICIPIO" placeholder="Municipio" required />
+                                        <label>Municipio</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Municipio.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Estado" id="sEstado" name="sEstado" value="@UserFull.DatosUsuario.Domicilios[0].ESTADO" placeholder="Estado" required />
+                                        <label>Estado</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Estado.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pricing-tab-pane" role="tabpanel" aria-labelledby="pricing-tab">
+                        <div class="card p-6">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Telefono" id="sTelefono" name="sTelefono" value="@UserFull.DatosUsuario.Contactos[0].VALOR" placeholder="Telefono" required />
+                                        <label>Telefono</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Telefono.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" aria-describedby="Correo Electronico" id="sCorreoElectronico" name="sCorreoElectronico" value="@UserFull.DatosUsuario.Contactos[1].VALOR" placeholder="Correo Electronico" required />
+                                        <label>Correo Electronico</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un Correo Electronico.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="password-tab-pane" role="tabpanel" aria-labelledby="pricing-tab">
+                        <div class="card p-6">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" aria-describedby="Password" id="sPassword" name="sPassword" />
+                                        <label>Password</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingresa un password.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" aria-describedby="Confirma Password" id="sCPassword" name="sCPassword" EqualTo="#sPassword" />
+                                        <label>Confirma Password</label>
+                                        <div class="invalid-feedback">
+                                            Por favor confirma tu password.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="avatar-tab-pane" role="tabpanel" aria-labelledby="avatar-tab">
+                        <div class="card p-6">
+                            <div class="flex-column row flex-lg-row align-items-center align-items-lg-end no-gutters justify-content-between">
+                                <div class="user-info flex-column row flex-lg-row no-gutters align-items-center">
+
+                                    <img class="profile-image avatar-container huge mr-6" src="@Url.Action("UserPhotos", "Account" )">
+
+                                </div>
+                                <div class="actions col align-items-center no-gutters">
+
+                                    <input type="file" class="btn btn-secondary ml-2 fuse-ripple-ready" id="pFiles" name="pFiles" aria-label="Cargar foto" value="CAMBIAR FOTO" />
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- / CONTENT -->
+        </form>
+    </div>
+
+}
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+          
+            $('#pFiles').val('');
+           
+        });
+    </script>
+
+                                    }
+

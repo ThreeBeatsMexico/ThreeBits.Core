@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="efc286f2-d1ed-4a94-899f-a29afcb6af1b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ThreeBits.WCFService/CommonService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommonService.xsd" MetadataType="Schema" ID="980106de-1c60-4628-94c7-57a989af5779" SourceId="1" SourceUrl="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CommonService1.xsd" MetadataType="Schema" ID="1e6b1049-3642-46a9-bb2b-253b5ea9ab28" SourceId="1" SourceUrl="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CommonService2.xsd" MetadataType="Schema" ID="853c79d6-823f-4c43-9e42-9612cd0c61ba" SourceId="1" SourceUrl="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CommonService3.xsd" MetadataType="Schema" ID="d8f6841d-73ca-457a-a5d0-e34de2f2d1e1" SourceId="1" SourceUrl="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CommonService.disco" MetadataType="Disco" ID="b10367ef-53f8-4e33-9c5d-1074e84afa45" SourceId="1" SourceUrl="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?disco" />
+    <MetadataFile FileName="CommonService.wsdl" MetadataType="Wsdl" ID="64c59926-b5bb-4abb-92b1-f9259db28a2f" SourceId="1" SourceUrl="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

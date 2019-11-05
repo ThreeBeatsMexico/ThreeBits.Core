@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0455060b553e47ed8bca4f91f1d6de2c" Name="Diagram1">
+        <EntityTypeShape EntityType="Seguridad3BitsModel.APLICACION" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.AUDIT_CONTACTO" Width="1.5" PointX="11.25" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.AUDIT_DOMICILIO" Width="1.5" PointX="11.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.AUDIT_USUARIOS" Width="1.5" PointX="11.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_AREA" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_ESTACIONES" Width="1.5" PointX="3.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_ESTADOCIVIL" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_GRALS" Width="1.5" PointX="10.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_OPERACIONAUDIT" Width="1.5" PointX="9" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_SEXO" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_TIPOCONTACTO" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_TIPOPERSONA" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CAT_TIPOUSUARIO" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CATGENERALES" Width="1.5" PointX="12.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CONFIGAPP" Width="1.5" PointX="12.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.CONTACTO" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.DOMICILIO" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.ESTACIONESXAPP" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.LOGERROR" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.PERMISOSXELEMENTOSOBJETO" Width="1.5" PointX="10.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.PERMISOSXMENU" Width="1.5" PointX="8.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.PERMISOSXSUBMENU" Width="1.5" PointX="10.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.PERMISOXOBJETOS" Width="1.5" PointX="8.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.ROLES" Width="1.5" PointX="6" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.ROLESXUSUARIO" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.USUARIOS" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.USUARIOXAPLICACION" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.WCFMETODOS" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.WCFRECURRENCIA" Width="1.5" PointX="10.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.WCFSERVICIOS" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Seguridad3BitsModel.VWCATTABLASCATALOGOS" Width="1.5" PointX="13.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_AUDITUSUARIOS_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_ESTACIONXAPP_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_LOGERROR_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_ROLES_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOXAPP_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_WCFMETODOS_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_AUDITCONTACTO_REF_CATOPERAUDIT" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_AUDITDOM_REF_CATOPERAUDIT" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_AUDITUSUARIOS_REF_CATOPERAUDIT" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOS_REF_CAT_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_ESTACIONESXAPP_REF_CAT_ESTACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOS_REF_CATEDOCIVIL" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOS_REF_CATSEXO" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_CONTACTO_REF_CATTIPOCONTACTO" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOS_REF_CATTIPOPERSONA" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOS_REF_CATTIPOUSUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_CONTACTO_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_DOMICILIO_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_ROLESXUS_REF_ESTACIONESAPP" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_PERMISOSXMENU_REF_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_PERMISOXOBJETO_REF_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_ROLESXPERFIL_REF_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_ROLESXUSUARIO_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_USUARIOXAPP_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_WCFMETODOS_REF_WCFSERVICIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="Seguridad3BitsModel.FK_WCFRECURRENCIA_REF_WCFMETODOS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

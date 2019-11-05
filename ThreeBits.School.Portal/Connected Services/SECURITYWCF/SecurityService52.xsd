@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/SecurityService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" />
+  <xs:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/SecurityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" />
+  <xs:element name="checkPermisoXMethServ">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MethodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ServiceName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkPermisoXMethServResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="checkPermisoXMethServResult" nillable="true" type="q1:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkMetodoXApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdApp" type="xs:long" />
+        <xs:element minOccurs="0" name="sServiceName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sMethodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkMetodoXAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="checkMetodoXAppResult" nillable="true" type="q2:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObjetosXAppRolPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" type="xs:long" />
+        <xs:element minOccurs="0" name="Pagina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObjetosXAppRolPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getObjetosXAppRolPageResult" nillable="true" type="q3:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getElementsObjectsXIdObj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPermisosXObj" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getElementsObjectsXIdObjResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getElementsObjectsXIdObjResult" nillable="true" type="q4:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuXAppRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuXAppRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getMenuXAppRolResult" nillable="true" type="q5:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuXAppRolAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuXAppRolAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getMenuXAppRolAdminResult" nillable="true" type="q6:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuxRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" type="xs:long" />
+        <xs:element minOccurs="0" name="AppRol" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuxRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getMenuxRolResult" nillable="true" type="q7:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuxRolAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" type="xs:long" />
+        <xs:element minOccurs="0" name="AppRol" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMenuxRolAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getMenuxRolAdminResult" nillable="true" type="q8:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSubMenuXIdMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPermisoMenu" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSubMenuXIdMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getSubMenuXIdMenuResult" nillable="true" type="q9:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSubMenuXIdMenuAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPermisoMenu" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSubMenuXIdMenuAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getSubMenuXIdMenuAdminResult" nillable="true" type="q10:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="encryptDesEncrypt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tipo" type="xs:int" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="encryptDesEncryptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="encryptDesEncryptResult" nillable="true" type="q11:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAplicaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtBusqueda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAplicacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="getAplicacionesResult" nillable="true" type="q12:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Aplicacion" nillable="true" type="q13:AplicacionBE" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addAplicacionResult" nillable="true" type="q14:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idMenu" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="delMenuResult" nillable="true" type="q15:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delSubMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSubMenu" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delSubMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="delSubMenuResult" nillable="true" type="q16:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Aplicacion" nillable="true" type="q17:AplicacionBE" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="updAplicacionResult" nillable="true" type="q18:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updMenuxAppRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Menu" nillable="true" type="q19:PermisosXMenuBE" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updMenuxAppRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="updMenuxAppRolResult" nillable="true" type="q20:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updSubMenuxAppRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="SubMenu" nillable="true" type="q21:PermisoXSubmenuBE" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updSubMenuxAppRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="updSubMenuxAppRolResult" nillable="true" type="q22:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addMetodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Security" minOccurs="0" name="Metodos" nillable="true" type="q23:ArrayOfWCFMetodosBE" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addMetodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addMetodoResult" nillable="true" type="q24:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addRolxApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AppRol" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addRolxAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addRolxAppResult" nillable="true" type="q25:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servicio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdApp" type="xs:long" />
+        <xs:element minOccurs="0" name="Recurrente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addServicioResult" nillable="true" type="q26:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addMenuxAppRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rol" type="xs:long" />
+        <xs:element minOccurs="0" name="IdApp" type="xs:long" />
+        <xs:element minOccurs="0" name="Menu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Img" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Obj" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Orden" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addMenuxAppRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addMenuxAppRolResult" nillable="true" type="q27:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addSubMenuxAppRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdSubMenu" type="xs:long" />
+        <xs:element minOccurs="0" name="SubMenu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Img" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Obj" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Orden" type="xs:long" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addSubMenuxAppRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addSubMenuxAppRolResult" nillable="true" type="q28:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPermisosxObjeto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdRol" type="xs:long" />
+        <xs:element minOccurs="0" name="Pagina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Obj" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoObj" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPermisosxObjetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addPermisosxObjetoResult" nillable="true" type="q29:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPermisosxElementoObjeto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPermiosObj" type="xs:long" />
+        <xs:element minOccurs="0" name="Elemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="App" type="xs:long" />
+        <xs:element minOccurs="0" name="PasswordApp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPermisosxElementoObjetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ThreeBits.WCFService" minOccurs="0" name="addPermisosxElementoObjetoResult" nillable="true" type="q30:SecutityDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

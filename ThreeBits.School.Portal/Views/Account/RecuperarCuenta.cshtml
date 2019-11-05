@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "RecuperarCuenta";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+
+
+<main>
+
+    <div id="wrapper">
+
+        <div class="content-wrapper">
+            <div class="content custom-scrollbar">
+
+                <div id="register-v2" class="row no-gutters">
+
+                    <div class="intro col-12 col-md light-fg">
+
+                        <div class="d-flex flex-column align-items-center align-items-md-start text-center text-md-left py-16 py-md-32 px-12">
+
+                            <div class="logo bg-secondary mb-8">
+                                <span>TB</span>
+                            </div>
+
+                            <div class="title">
+                                Bienvenido al Sistema de Inventarios de ThreeBits!
+                            </div>
+
+                            <div class="description pt-2">
+                                Recupera tu cuenta.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper col-12 col-md-auto d-flex justify-content-center p-4 p-md-0">
+
+                        <div class="form-content md-elevation-8 h-100 bg-white text-auto py-16 py-md-32 px-12">
+
+                            <div class="title h5">Recuperar cuenta</div>
+
+                            <div class="description mt-2">Ingresa los datos solicitados</div>
+
+                            <form name="registerForm" method="post" class="mt-8 formAjax" action="~/Account/RecuperarCuenta">
+
+
+
+                                <div class="form-group mb-4">
+                                    <input type="email" class="form-control" id="registerFormInputEmail" name="CorreoElectronico" required="required" aria-describedby="emailHelp" placeholder="tucorreo@correo.com" />
+                                    <label for="registerFormInputEmail">Email address</label>
+                                </div>
+
+
+
+
+                                <button type="submit" class="submit-button btn btn-block btn-secondary my-4 mx-auto btnAjax" aria-label="RECUPERAR">
+                                    RECUPERAR MI CUENTA
+                                </button>
+
+                            </form>
+
+                            <div class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                                <span class="text mr-sm-2">Ya tienes una cuenta?</span>
+                                <a class="link text-secondary" href="~/Account/Login">Entrar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <nav id="footer" class="bg-dark text-auto row no-gutters align-items-center px-6">
+
+    </nav>
+</main>

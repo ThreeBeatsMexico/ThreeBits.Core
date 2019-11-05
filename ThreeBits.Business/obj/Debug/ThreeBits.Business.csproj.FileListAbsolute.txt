@@ -1,0 +1,29 @@
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Business.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Business.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\PVLSECVB.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Data.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\EntityFramework.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Data.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Data.dll.config
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\bin\Debug\EntityFramework.xml
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csprojAssemblyReference.cache
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CopyComplete
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Business.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Business.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Data.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Entities.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\EntityFramework.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Data.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Data.dll.config
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\ThreeBits.Entities.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\bin\Debug\EntityFramework.xml
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csprojAssemblyReference.cache
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CoreCompileInputs.cache
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CopyComplete
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.pdb

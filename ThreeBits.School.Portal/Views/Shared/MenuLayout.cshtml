@@ -1,0 +1,16 @@
+﻿<aside id="aside" class="aside aside-left" data-fuse-bar="aside" data-fuse-bar-media-step="md" data-fuse-bar-position="left">
+    <div class="aside-content bg-primary-700 text-auto">
+        <div class="aside-toolbar">
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">SECURITY</span>
+            </div>
+            <button id="toggle-fold-aside-button" type="button" class="btn btn-icon d-none d-lg-block" data-fuse-aside-toggle-fold>
+                <i class="icon icon-backburger"></i>
+            </button>
+        </div>
+        <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
+            @Html.Action("getMenu", "Account")
+        </ul>
+    </div>
+</aside>

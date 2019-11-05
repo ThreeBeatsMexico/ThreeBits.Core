@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Common" />
+      <xsd:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Text" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonService_GetCatGenerales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatGenerales" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetCatGenerales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatGeneralesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_AddCatGenerales_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCatGenerales" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_AddCatGenerales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCatGeneralesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_SetCatGenerales_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCatGenerales" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_SetCatGenerales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCatGeneralesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetCatEspecifico_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatEspecifico" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetCatEspecifico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatEspecificoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_AddCatEspecifico_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCatEspecifico" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_AddCatEspecifico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCatEspecificoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetConfigAPP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigAPP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetConfigAPP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigAPPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_AddConfigAPP_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddConfigAPP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_AddConfigAPP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddConfigAPPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_SetConfigAPP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfigAPP" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_SetConfigAPP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfigAPPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetDefinicionTabla_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefinicionTabla" />
+  </wsdl:message>
+  <wsdl:message name="ICommonService_GetDefinicionTabla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefinicionTablaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonService">
+    <wsdl:operation name="GetCatGenerales">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetCatGenerales" message="tns:ICommonService_GetCatGenerales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetCatGeneralesResponse" message="tns:ICommonService_GetCatGenerales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCatGenerales">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/AddCatGenerales" message="tns:ICommonService_AddCatGenerales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/AddCatGeneralesResponse" message="tns:ICommonService_AddCatGenerales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCatGenerales">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/SetCatGenerales" message="tns:ICommonService_SetCatGenerales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/SetCatGeneralesResponse" message="tns:ICommonService_SetCatGenerales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatEspecifico">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetCatEspecifico" message="tns:ICommonService_GetCatEspecifico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetCatEspecificoResponse" message="tns:ICommonService_GetCatEspecifico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCatEspecifico">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/AddCatEspecifico" message="tns:ICommonService_AddCatEspecifico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/AddCatEspecificoResponse" message="tns:ICommonService_AddCatEspecifico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigAPP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetConfigAPP" message="tns:ICommonService_GetConfigAPP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetConfigAPPResponse" message="tns:ICommonService_GetConfigAPP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddConfigAPP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/AddConfigAPP" message="tns:ICommonService_AddConfigAPP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/AddConfigAPPResponse" message="tns:ICommonService_AddConfigAPP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConfigAPP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/SetConfigAPP" message="tns:ICommonService_SetConfigAPP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/SetConfigAPPResponse" message="tns:ICommonService_SetConfigAPP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefinicionTabla">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonService/GetDefinicionTabla" message="tns:ICommonService_GetDefinicionTabla_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonService/GetDefinicionTablaResponse" message="tns:ICommonService_GetDefinicionTabla_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonService" type="tns:ICommonService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCatGenerales">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetCatGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCatGenerales">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/AddCatGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCatGenerales">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/SetCatGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatEspecifico">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetCatEspecifico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCatEspecifico">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/AddCatEspecifico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigAPP">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetConfigAPP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddConfigAPP">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/AddConfigAPP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConfigAPP">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/SetConfigAPP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefinicionTabla">
+      <soap:operation soapAction="http://tempuri.org/ICommonService/GetDefinicionTabla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonService">
+    <wsdl:port name="BasicHttpBinding_ICommonService" binding="tns:BasicHttpBinding_ICommonService">
+      <soap:address location="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

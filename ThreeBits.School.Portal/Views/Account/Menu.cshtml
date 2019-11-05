@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ThreeBits.School.Portal.SECURITYWCF.PermisosXMenuBE>
+
+@{
+
+    foreach (ThreeBits.School.Portal.SECURITYWCF.PermisosXMenuBE item in ViewBag.oListaMenu)
+    {
+        <li class="nav-item" role="tab" id="heading-@item.NOMBREMENU">
+            <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-@item.NOMBREMENU" href="@item.URL" aria-expanded="false" aria-controls="collapse-@item.NOMBREMENU">
+                <i class="icon s-4 icon-tile-four"></i>
+                <span>@item.NOMBREMENU</span>
+            </a>
+            <ul id="collapse-@item.NOMBREMENU" class='collapse' role="tabpanel" aria-labelledby="heading-@item.NOMBREMENU" data-children=".nav-item">
+
+                @{
+                    ((ThreeBits.School.Portal.Controllers.AccountController)this.ViewContext.Controller).get_sumbenu(Convert.ToInt32(item.IDPERMISOSMENU.ToString()));
+                }
+
+                @foreach (ThreeBits.School.Portal.SECURITYWCF.PermisoXSubmenuBE iSubmenu in Session["SubMenu"] as List<ThreeBits.School.Portal.SECURITYWCF.PermisoXSubmenuBE>)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link ripple fuse-ripple-ready" href="@iSubmenu.URL" data-url="user-interface-page-layouts-blank.html">
+                            <span>@iSubmenu.NOMBRESUBMENU</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

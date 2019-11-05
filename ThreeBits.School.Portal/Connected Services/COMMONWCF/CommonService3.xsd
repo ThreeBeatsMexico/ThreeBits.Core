@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ThreeBits.Entities.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://desktop-vc0brd2/ThreeBits.WCFService/CommonService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Text" />
+  <xs:complexType name="CatGeneralesBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="psACTIVO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psDESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psFILTRO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIDCATALOGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIDCATGENERALES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIDSUBCATALOGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psNOMBRECATALOGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psVALORFILTRO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CatGeneralesBE" nillable="true" type="tns:CatGeneralesBE" />
+  <xs:complexType name="RespuestaComunBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="itemError" nillable="true" type="tns:ErrorBE" />
+      <xs:element minOccurs="0" name="lstCatGenerales" nillable="true" type="tns:ArrayOfCatGeneralesBE" />
+      <xs:element minOccurs="0" name="lstCatalogo" nillable="true" type="tns:ArrayOfCatalogosBE" />
+      <xs:element minOccurs="0" name="lstConfiguracion" nillable="true" type="tns:ArrayOfConfiguracionBE" />
+      <xs:element minOccurs="0" name="psDescripcionTabla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIDCONFIGAPP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIdentityTabla" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaComunBE" nillable="true" type="tns:RespuestaComunBE" />
+  <xs:complexType name="ErrorBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pbFlag" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Text" minOccurs="0" name="psMensaje" nillable="true" type="q1:StringBuilder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorBE" nillable="true" type="tns:ErrorBE" />
+  <xs:complexType name="ArrayOfCatGeneralesBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CatGeneralesBE" nillable="true" type="tns:CatGeneralesBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCatGeneralesBE" nillable="true" type="tns:ArrayOfCatGeneralesBE" />
+  <xs:complexType name="ArrayOfCatalogosBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CatalogosBE" nillable="true" type="tns:CatalogosBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCatalogosBE" nillable="true" type="tns:ArrayOfCatalogosBE" />
+  <xs:complexType name="CatalogosBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CatalogosBE" nillable="true" type="tns:CatalogosBE" />
+  <xs:complexType name="ArrayOfConfiguracionBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfiguracionBE" nillable="true" type="tns:ConfiguracionBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfiguracionBE" nillable="true" type="tns:ArrayOfConfiguracionBE" />
+  <xs:complexType name="ConfiguracionBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="psACTIVO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psDESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIDCONFIGAPP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psIDCONFIGAPPNEW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="psVALOR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfiguracionBE" nillable="true" type="tns:ConfiguracionBE" />
+</xs:schema>

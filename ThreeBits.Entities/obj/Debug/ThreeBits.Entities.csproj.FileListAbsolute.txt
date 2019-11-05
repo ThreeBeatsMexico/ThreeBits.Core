@@ -1,0 +1,11 @@
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Entities\bin\Debug\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Entities\bin\Debug\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\Visual Studio 2017\Projects\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\bin\Debug\ThreeBits.Entities.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\bin\Debug\ThreeBits.Entities.pdb
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.csprojAssemblyReference.cache
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.csproj.CoreCompileInputs.cache
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.dll
+F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.pdb
