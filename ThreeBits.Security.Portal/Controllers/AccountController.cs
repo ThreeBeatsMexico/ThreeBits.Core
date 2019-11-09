@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using ThreeBits.Security.Portal.COMMONWCF;
+using ThreeBits.Security.Portal.Helpers;
+using ThreeBits.Security.Portal.Models;
 using ThreeBits.Security.Portal.Properties;
 
 namespace ThreeBits.Security.Portal.Controllers
@@ -19,13 +25,23 @@ namespace ThreeBits.Security.Portal.Controllers
         [HttpPost]
         public ActionResult Login(string sUsuario, string password, bool? recordar)
         {
+            string strMensaje = string.Empty;
+            int id = 0;
+            bool success = false;
             recordar = recordar == null ? false : true;
             if (fnLogin(sUsuario, password, (bool)recordar))
             {
-                return RedirectToAction("Index", "Home");
-
+                id = -1;
+                strMensaje = Url.Content("~/Home");
+                success = true;
             }
-            return View();
+            else
+            {
+                id = 1;
+                success = false;
+                strMensaje = "Ocurrio un error, revisa tus credenciales";
+            }
+            return Json(new Response { IsSuccess = success, Message = strMensaje, Id = id }, JsonRequestBehavior.AllowGet);
         }
 
         private bool fnLogin(string sUsuario, string sPassword, bool sRecordarcuenta)
@@ -54,9 +70,9 @@ namespace ThreeBits.Security.Portal.Controllers
                 reglas.TIPOBUSQUEDA = 3;
                 reglas.USUARIO = sUsuario;
 
-                reglas.IDAPP = long.Parse(ResourceSec.IdApp);
-                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
-
+                reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                //resUsuario.DatosUsuario.Contactos
                 if (resUsuario.DatosUsuario.Usuario.IDUSUARIO.ToString() == "0")
                 {
                     ModelState.AddModelError("", "El Nombre de usuario no existe!");
@@ -73,11 +89,11 @@ namespace ThreeBits.Security.Portal.Controllers
                 {
                     SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
                     SECURITYWCF.SecutityDC ResDesencriptaPass = new SECURITYWCF.SecutityDC();
-                    ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(resUsuario.DatosUsuario.Usuario.PASSWORD, 2, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
+                    ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(resUsuario.DatosUsuario.Usuario.PASSWORD, 2, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
 
                     if (ValidaPassword(sPassword, ResDesencriptaPass.Encriptacion.VALOROUT.ToString()))
                     {
-                        ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(resUsuario.DatosUsuario.Usuario.IDUSUARIO.ToString(), 1, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
+                        ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(resUsuario.DatosUsuario.Usuario.IDUSUARIO.ToString(), 1, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
                         itemSecurity.NOMBRE = resUsuario.DatosUsuario.Usuario.NOMBRE;
                         itemSecurity.APATERNO = resUsuario.DatosUsuario.Usuario.APATERNO;
                         itemSecurity.AMATERNO = resUsuario.DatosUsuario.Usuario.AMATERNO;
@@ -85,6 +101,7 @@ namespace ThreeBits.Security.Portal.Controllers
                         itemSecurity.IDUSUARIO = resUsuario.DatosUsuario.Usuario.IDUSUARIO;
                         itemSecurity.RUTAFOTOPERFIL = resUsuario.DatosUsuario.Usuario.RUTAFOTOPERFIL;
                         itemSecurity.USUARIO = resUsuario.DatosUsuario.Usuario.USUARIO;
+
                         Session.Add("USER_SESSION", itemSecurity);
                         FormsAuthentication.SetAuthCookie(sUsuario, sRecordarcuenta);
                         _return = true;
@@ -133,9 +150,9 @@ namespace ThreeBits.Security.Portal.Controllers
                 List<SECURITYWCF.PermisosXMenuBE> oListaMenu = new List<SECURITYWCF.PermisosXMenuBE>();
                 reglas.TIPOBUSQUEDA = 1;
                 reglas.USUARIO = itemSecurity.IDUSUARIO.ToString();
-                reglas.IDAPP = long.Parse(ResourceSec.IdApp);
-                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
-                resUsuarioRol = seguridad.getRolesXApp(reglas, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
+                reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                resUsuarioRol = seguridad.getRolesXApp(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
 
                 string sIdRol = string.Empty;
                 string sDescripcionRol = string.Empty;
@@ -154,8 +171,8 @@ namespace ThreeBits.Security.Portal.Controllers
 
                 int dRol = Convert.ToInt32(Rol[0].IDROL);
 
-                oSecurity = SeguridadLatino.getMenuXAppRol(dRol, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
-                oListaMenu = oSecurity.PermisosXMenu.OrderByDescending(x => x.IDPERMISOSMENU).ToList();
+                oSecurity = SeguridadLatino.getMenuXAppRol(dRol, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                oListaMenu = oSecurity.PermisosXMenu.OrderBy(x => x.ORDENMENU).ToList();
 
 
                 var pageName = Request.Url.AbsolutePath.Split('/').LastOrDefault();
@@ -186,8 +203,8 @@ namespace ThreeBits.Security.Portal.Controllers
             SECURITYWCF.SecutityDC oSecurity = new SECURITYWCF.SecutityDC();
 
             List<SECURITYWCF.PermisoXSubmenuBE> oListaSubMenu = new List<SECURITYWCF.PermisoXSubmenuBE>();
-            oSecurity = SeguridadLatino.getSubMenuXIdMenu(idPermisoMenu, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
-            oListaSubMenu = oSecurity.PermisosXSubmenu.ToList();
+            oSecurity = SeguridadLatino.getSubMenuXIdMenu(idPermisoMenu, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            oListaSubMenu = oSecurity.PermisosXSubmenu.OrderBy(x => x.ORDENSUBMENU).ToList();
             Session.Add("SubMenu", oListaSubMenu);
         }
 
@@ -208,37 +225,130 @@ namespace ThreeBits.Security.Portal.Controllers
 
         public ActionResult Perfil()
         {
-            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
-            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
-            USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
-            USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
-            USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
-            USERSECURITYWCF.UsuarioDC resUsuarioRol = new USERSECURITYWCF.UsuarioDC();
-            SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
-            SECURITYWCF.SecutityDC oSecurity = new SECURITYWCF.SecutityDC();
-            List<SECURITYWCF.PermisosXMenuBE> oListaMenu = new List<SECURITYWCF.PermisosXMenuBE>();
-            reglas.TIPOBUSQUEDA = 1;
-            reglas.USUARIO = itemSecurity.IDUSUARIO.ToString();
-            reglas.IDAPP = long.Parse(ResourceSec.IdApp);
-            resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceSec.IdApp), ResourceSec.Password);
+            if (Session["USER_SESSION"] != null)
+            {
+                USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+                itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+                USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
+                USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
+                USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
+                USERSECURITYWCF.UsuarioDC resUsuarioRol = new USERSECURITYWCF.UsuarioDC();
+                SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
+                SECURITYWCF.SecutityDC oSecurity = new SECURITYWCF.SecutityDC();
+                List<SECURITYWCF.PermisosXMenuBE> oListaMenu = new List<SECURITYWCF.PermisosXMenuBE>();
+                reglas.TIPOBUSQUEDA = 1;
+                reglas.USUARIO = itemSecurity.IDUSUARIO.ToString();
+                reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
 
-            ViewBag.ResUsuario = resUsuario;
+                ViewBag.ResUsuario = resUsuario;
+                HelperTools hHelp = new HelperTools();
+                List<CatalogosBE> lstSexo = new List<CatalogosBE>();
+                lstSexo = hHelp.SetDdlCatalogos("8");
+                List<CatalogosBE> lstEdoCivil = new List<CatalogosBE>();
+                lstEdoCivil = hHelp.SetDdlCatalogos("5");
+
+                ViewBag.IdSexo = new SelectList(lstSexo, "ID", "DESCRIPCION", resUsuario.DatosUsuario.Usuario.IDSEXO);
+                ViewBag.IdEstadoCivil = new SelectList(lstEdoCivil, "ID", "DESCRIPCION", resUsuario.DatosUsuario.Usuario.IDESTADOCIVIL);
 
 
-
-
-
-
-
-
-
+            }
             return View();
         }
         [HttpPost]
-        public ActionResult Perfil(int IdRol = 0)
+        public ActionResult Perfil(string idUsuario, string sNombre, string sPaterno, string sMaterno, DateTime FNacimiento, int IdSexo, int IdEstadoCivil,
+            string sCalle, string sNumExt, string sNumInt, string sCP, string sColonia, string sMunicipio, string sEstado,
+            string sTelefono, string sCorreoElectronico, string sPassword, string sCPassword,
+           IEnumerable<HttpPostedFileBase> pFiles)
         {
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
 
-            return View();
+            SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC ResDesencriptaPass = new SECURITYWCF.SecutityDC();
+            USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
+            USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
+            USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
+            USERSECURITYWCF.UsuariosBE Usuario = new USERSECURITYWCF.UsuariosBE();
+
+            reglas.TIPOBUSQUEDA = 1;
+            reglas.USUARIO = idUsuario;
+
+            reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+            resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            Usuario = resUsuario.DatosUsuario.Usuario;
+
+            if (Usuario.IDUSUARIO.ToString() != "0")
+            {
+                if (!string.IsNullOrEmpty(sPassword))
+                {
+                    if (ValidaExpresion(sPassword, sCPassword))
+                    {
+                        ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(sPassword, 1, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                        Usuario.PASSWORD = ResDesencriptaPass.Encriptacion.VALOROUT;
+                    }
+                    else { return Json(new Response { IsSuccess = false, Message = "Los Passwords no coinciden, por favor verifica", Id = 0 }, JsonRequestBehavior.AllowGet); }
+                }
+                if (pFiles.Count() > 0)
+                {
+                    if (pFiles.First() != null)
+                    {
+
+
+                        foreach (var item in pFiles)
+                        {
+                            //string path = Server.MapPath("~/Uploads/");
+                            string path = ConfigurationManager.AppSettings["Store"].ToString() + @"/Avatar/";
+                            if (!Directory.Exists(path))
+                            {
+                                Directory.CreateDirectory(path);
+                            }
+                            string fName = idUsuario;
+                            string fExtension = Path.GetExtension(item.FileName);
+                            fName += fExtension;
+                            item.SaveAs(path + fName);
+                            Usuario.RUTAFOTOPERFIL = fName;
+                        }
+                    }
+                }
+                Usuario.NOMBRE = sNombre;
+                Usuario.APATERNO = sPaterno;
+                Usuario.AMATERNO = sMaterno;
+                Usuario.IDSEXO = IdSexo;
+                Usuario.IDESTADOCIVIL = IdEstadoCivil;
+                Usuario.FECHANACCONST = FNacimiento;
+
+                resUsuario.DatosUsuario.Domicilios[0].CALLE = sCalle;
+                resUsuario.DatosUsuario.Domicilios[0].NUMEXT = sNumExt;
+                resUsuario.DatosUsuario.Domicilios[0].NUMINT = sNumInt;
+                resUsuario.DatosUsuario.Domicilios[0].CP = sCP;
+                resUsuario.DatosUsuario.Domicilios[0].COLONIA = sColonia;
+                resUsuario.DatosUsuario.Domicilios[0].MUNICIPIO = sMunicipio;
+                resUsuario.DatosUsuario.Domicilios[0].ESTADO = sEstado;
+
+                resUsuario.DatosUsuario.Contactos[0].VALOR = sTelefono;
+                resUsuario.DatosUsuario.Contactos[1].VALOR = sCorreoElectronico;
+
+
+                seguridad.updateUsuario(reglas, Usuario, resUsuario.DatosUsuario.Domicilios, resUsuario.DatosUsuario.Contactos, resUsuario.DatosUsuario.RolesXUsuario, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                success = true;
+                id = 1;
+                strMensaje.Append("Se actualizo la informacion de manera Correcta.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ocurrio un error!, intenta mas tarde.");
+            }
+
+
+
+
+
+
+
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id }, JsonRequestBehavior.AllowGet);
         }
         /// <summary>
         /// Crea la parte de menu padres del sistema asociados al rol
@@ -246,12 +356,34 @@ namespace ThreeBits.Security.Portal.Controllers
         /// <param name="IdRol">Es el rol con el que accede el usuario al sistem</param>
         /// <returns></returns>
 
+        //public ActionResult RecoverPassword()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult RecoverPassword(string sEmail)
+        //{
+        //    if (fnLogin(sUsuario, sPassword, sRecordarcuenta))
+        //    {
+        //        return RedirectToAction("Index", "Home");
+
+        //    }
+        //    return View();
+        //}
+
+
+
+        //public ActionResult Register()
+        //{
+
+        //}
+
         public ActionResult Registrarme()
         {
             return View();
         }
 
-        //[HttpPost]
+
         //public ActionResult Registrarme(string NombreEmpresa, string CorreoElectronico, string Password)
         //{
         //    IRepository repository = new Model.InventariosDB.Repository();
@@ -312,71 +444,192 @@ namespace ThreeBits.Security.Portal.Controllers
         //    return Json(new Response { IsSuccess = true, Message = strMensaje, Id = id }, JsonRequestBehavior.AllowGet);
         //}
 
-        //public ActionResult RecuperarCuenta()
-        //{
-        //    return View();
-        //}
+        public ActionResult RecuperarCuenta()
+        {
+            return View();
+        }
 
-        //[HttpPost]
-        //public ActionResult RecuperarCuenta(string CorreoElectronico)
-        //{
-        //    IRepository repository = new Model.InventariosDB.Repository();
-        //    var objUsu = repository.FindEntity<USUARIOS>(c => c.EMAIL == CorreoElectronico);
-        //    int id = 0;
-        //    string strMensaje = "El correo no se encuentra registrado.";
-        //    if (objUsu != null)
-        //    {
-        //        objUsu.ACTIVO = true;
-        //        string strToken = objUsu.ID.ToString() + objUsu.EMAIL;
-        //        string strTknAjax = CryptoHelper.ComputeHash(strToken, CryptoHelper.Supported_HA.SHA512, null);
-        //        objUsu.TOKEN = Server.UrlEncode(strTknAjax);
-        //        repository.Update(objUsu);
-        //        var baseAddress = ToolsHelper.UrlOriginal(Request) + "/Account/ResetPass/?tkn=" + objUsu.TOKEN;
-        //        string Mensaje = "Para restaurar tu cuenta de INVENTARIOS, entra a la siguiente liga y crea una nueva contraseña. <br/><br/> <a href='" + baseAddress + "'>INVENTARIOS recuperar cuenta</a>";
-        //        ToolsHelper.SendMail(CorreoElectronico, "Recuperar cuenta de INVENTARIOS", Mensaje);
-        //        strMensaje = "Se envío un correo con la información requerida para recuperar su cuenta.";
-        //    }
-        //    return Json(new Response { IsSuccess = true, Message = strMensaje, Id = id }, JsonRequestBehavior.AllowGet);
-        //}
+        [HttpPost]
+        public ActionResult RecuperarCuenta(string CorreoElectronico)
+        {
+            string strMensaje = string.Empty;
+            int id = -1;
+            bool suc = false;
+            USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
+            USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
+            USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
+            USERSECURITYWCF.UsuariosBE Usuario = new USERSECURITYWCF.UsuariosBE();
+
+            reglas.TIPOBUSQUEDA = 3;
+            reglas.USUARIO = CorreoElectronico;
+
+            reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+            resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            Usuario = resUsuario.DatosUsuario.Usuario;
 
 
-        //public ActionResult ResetPass(string tkn)
-        //{
-        //    if (!string.IsNullOrEmpty(tkn))
-        //    {
-        //        IRepository repository = new Model.InventariosDB.Repository();
-        //        tkn = Server.UrlEncode(tkn);
-        //        ViewBag.tkn = tkn;
-        //        var objUsu = repository.FindEntity<USUARIOS>(c => c.TOKEN == tkn);
-        //        if (objUsu != null)
-        //        {
-        //            return View();
-        //        }
-        //    }
-        //    return RedirectToAction("Index", "Home");
-        //}
+            if (Usuario.IDUSUARIO.ToString() == "0")
+            {
+                suc = false;
+                strMensaje = "El correo no se encuentra registrado.";
+            }
+            else
+            {
+                HelperTools helper = new HelperTools();
 
-        //[HttpPost]
-        //public ActionResult ResetPass(string Password, string tkn)
-        //{
-        //    IRepository repository = new Model.InventariosDB.Repository();
-        //    var objUsu = repository.FindEntity<USUARIOS>(c => c.TOKEN == tkn);
-        //    string strMensaje = "";
-        //    int id = 0;
-        //    if (objUsu != null)
-        //    {
-        //        string strPass = CryptoHelper.ComputeHash(Password, CryptoHelper.Supported_HA.SHA512, null);
-        //        objUsu.PASSWORD = strPass;
-        //        objUsu.TOKEN = "";
-        //        repository.Update(objUsu);
-        //        strMensaje = "Se actualizó la contraseña correctamente, ya puede entrar al sistema INVENTARIOS.";
-        //    }
-        //    else
-        //    {
-        //        strMensaje = "El token se encuentra vencido, necesita recuperar nuevamente su cuenta.";
-        //    }
-        //    return Json(new Response { IsSuccess = true, Message = strMensaje, Id = id }, JsonRequestBehavior.AllowGet);
-        //}
-    
+                helper.BuilEmailTemplate(Usuario, "RecuperaPassword", Request);
+                suc = true;
+                id = 1;
+                strMensaje = "Se envío un correo con la información requerida para recuperar su cuenta.";
+
+            }
+
+
+
+
+
+            return Json(new Response { IsSuccess = suc, Message = strMensaje, Id = id }, JsonRequestBehavior.AllowGet);
+        }
+
+
+        public ActionResult ResetPass(string tkn)
+        {
+            if (!string.IsNullOrEmpty(tkn))
+            {
+                string strMensaje = string.Empty;
+                int id = -1;
+                bool suc = false;
+                SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
+                SECURITYWCF.SecutityDC ResDesencriptaPass = new SECURITYWCF.SecutityDC();
+                ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(tkn, 2, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+
+                USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
+                USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
+                USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
+                USERSECURITYWCF.UsuariosBE Usuario = new USERSECURITYWCF.UsuariosBE();
+
+                reglas.TIPOBUSQUEDA = 2;
+                reglas.USUARIO = ResDesencriptaPass.Encriptacion.VALOROUT;
+
+                reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                Usuario = resUsuario.DatosUsuario.Usuario;
+
+
+
+
+                if (Usuario.IDUSUARIO.ToString() != "0")
+                {
+                    ViewBag.tkn = Usuario.IDUSUARIOAPP;
+                    return View();
+                }
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public ActionResult ResetPass(string Password, string tkn)
+        {
+            string strMensaje = string.Empty;
+            int id = -1;
+            bool suc = false;
+            SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC ResDesencriptaPass = new SECURITYWCF.SecutityDC();
+            ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(tkn, 2, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+
+            USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
+            USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
+            USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
+            USERSECURITYWCF.UsuariosBE Usuario = new USERSECURITYWCF.UsuariosBE();
+
+            reglas.TIPOBUSQUEDA = 2;
+            reglas.USUARIO = tkn;
+
+            reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+            resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            Usuario = resUsuario.DatosUsuario.Usuario;
+
+            if (Usuario.IDUSUARIO.ToString() != "0")
+            {
+                ResDesencriptaPass = SeguridadLatino.encryptDesEncrypt(Password, 1, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+                Usuario.PASSWORD = ResDesencriptaPass.Encriptacion.VALOROUT;
+                seguridad.updateUsuario(reglas, Usuario, resUsuario.DatosUsuario.Domicilios, resUsuario.DatosUsuario.Contactos, resUsuario.DatosUsuario.RolesXUsuario, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+
+
+
+
+
+                suc = true;
+                id = 1;
+                strMensaje = "Se actualizó la contraseña correctamente, ya puede entrar al sistema INVENTARIOS.";
+            }
+            else
+            {
+                suc = false;
+                strMensaje = "El token se encuentra vencido, necesita recuperar nuevamente su cuenta.";
+            }
+
+
+
+
+
+
+
+            return Json(new Response { IsSuccess = suc, Message = strMensaje, Id = id }, JsonRequestBehavior.AllowGet);
+        }
+
+
+        public FileContentResult UserPhotos()
+        {
+            HelperTools oHelp = new HelperTools();
+            byte[] imageData = null;
+            // string fileName = HttpContext.Server.MapPath(@"/noImg.png");
+            string fileName = ConfigurationManager.AppSettings["Store"].ToString() + @"/Avatar/noImg.jpg";
+
+            if (Session["USER_SESSION"] != null)
+            {
+                USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+                itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+                USERSECURITYWCF.UserSecurityServiceClient seguridad = new USERSECURITYWCF.UserSecurityServiceClient();
+                USERSECURITYWCF.ReglasBE reglas = new USERSECURITYWCF.ReglasBE();
+                USERSECURITYWCF.UsuarioDC resUsuario = new USERSECURITYWCF.UsuarioDC();
+                USERSECURITYWCF.UsuarioDC resUsuarioRol = new USERSECURITYWCF.UsuarioDC();
+                SECURITYWCF.SecurityServiceClient SeguridadLatino = new SECURITYWCF.SecurityServiceClient();
+                SECURITYWCF.SecutityDC oSecurity = new SECURITYWCF.SecutityDC();
+                reglas.TIPOBUSQUEDA = 1;
+                reglas.USUARIO = itemSecurity.IDUSUARIO.ToString();
+                reglas.IDAPP = long.Parse(ResourceApp.IdApp);
+                resUsuario = seguridad.getUsuarioFull(reglas, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+                if (resUsuario == null)
+                {
+                    imageData = oHelp.UrltoByte(fileName);
+                    return File(imageData, "image/png");
+                }
+
+
+                imageData = oHelp.UrltoByte(ConfigurationManager.AppSettings["Store"].ToString() + @"/Avatar/" + resUsuario.DatosUsuario.Usuario.RUTAFOTOPERFIL);
+                return new FileContentResult(imageData, "image /jpeg");
+            }
+            else
+            {
+                imageData = oHelp.UrltoByte(fileName);
+                return File(imageData, "image/png");
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+
     }
 }

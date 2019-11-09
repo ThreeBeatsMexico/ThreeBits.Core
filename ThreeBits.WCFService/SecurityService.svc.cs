@@ -10,7 +10,7 @@ using ThreeBits.Entities.Security;
 
 namespace ThreeBits.WCFService
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "SecurityService" en el código, en svc y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando 'Rename' del menú 'Refactorizar' para cambiar el nombre de clase 'SecurityService' en el código, en svc y en el archivo de configuración a la vez.
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione SecurityService.svc o SecurityService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class SecurityService : ISecurityService
     {
@@ -19,10 +19,10 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Verifica que quien ejecute algun metodo de cierto servicio tenga permiso para poder acceder al WCF
         /// </summary>
-        /// <param name="MethodName">Recibe el metodo que se requiere ejecutar</param>
-        /// <param name="ServiceName">Recibe el servicio</param>
-        /// <param name="App">Recibe el nombre de la aplicacion</param>
-        /// <param name="PasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='MethodName'>Recibe el metodo que se requiere ejecutar</param>
+        /// <param name='ServiceName'>Recibe el servicio</param>
+        /// <param name='App'>Recibe el nombre de la aplicacion</param>
+        /// <param name='PasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns></returns>
         public SecutityDC checkPermisoXMethServ(string MethodName, string ServiceName, Int64 App, string PasswordApp)
         {
@@ -68,10 +68,10 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtenemos de BD de los objetos por App, Rol y pagina.
         /// </summary>
-        /// <param name="Rol">Recibe el rol del usuario</param>
-        /// <param name="Pagina">Recibe la pagina</param>
-        /// <param name="App">Recibe el id de la aplicacion</param>
-        /// <param name="PasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='Rol'>Recibe el rol del usuario</param>
+        /// <param name='Pagina'>Recibe la pagina</param>
+        /// <param name='App'>Recibe el id de la aplicacion</param>
+        /// <param name='PasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad PermisoXObjetos</returns>
         public SecutityDC getObjetosXAppRolPage(long Rol, string Pagina, Int64 App, string PasswordApp)
         {
@@ -96,9 +96,9 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtenemos de BD los elementos de un objeto.
         /// </summary>
-        /// <param name="IdPermisosXObj">Recibe el Id del Objeto</param>
-        /// <param name="App">Recibe el id de la aplicacion</param>
-        /// <param name="PasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='IdPermisosXObj'>Recibe el Id del Objeto</param>
+        /// <param name='App'>Recibe el id de la aplicacion</param>
+        /// <param name='PasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad ElementosObjetos</returns>
         public SecutityDC getElementsObjectsXIdObj(long IdPermisosXObj, Int64 App, string PasswordApp)
         {
@@ -123,9 +123,9 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtenemos la lista de menus por perfil que le corresponden
         /// </summary>
-        /// <param name="Perfil">Recibe el perfil del usuario</param>
-        /// <param name="sApp">Recibe el nombre de la aplicacion</param>
-        /// <param name="sPasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='Perfil'>Recibe el perfil del usuario</param>
+        /// <param name='sApp'>Recibe el nombre de la aplicacion</param>
+        /// <param name='sPasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad PermisosXMenu</returns>
         public SecutityDC getMenuXAppRol(long Rol, Int64 App, string PasswordApp)
         {
@@ -150,10 +150,10 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtiene la lista de submenus por menu y perfil que le corresponden
         /// </summary>
-        /// <param name="IdPermisoMenu">Recibe el id del menu</param>
-        /// <param name="Idperfil">Recibe el perfil del usuario</param>
-        /// <param name="sApp">Recibe el nombre de la aplicacion</param>
-        /// <param name="sPasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='IdPermisoMenu'>Recibe el id del menu</param>
+        /// <param name='Idperfil'>Recibe el perfil del usuario</param>
+        /// <param name='sApp'>Recibe el nombre de la aplicacion</param>
+        /// <param name='sPasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad PermisosXSubmenu</returns>   
         public SecutityDC getSubMenuXIdMenu(long IdPermisoMenu, Int64 App, string PasswordApp)
         {
@@ -198,10 +198,10 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtiene la lista de submenus por menu y perfil que le corresponden
         /// </summary>
-        /// <param name="IdPermisoMenu">Recibe el id del menu</param>
-        /// <param name="Idperfil">Recibe el perfil del usuario</param>
-        /// <param name="sApp">Recibe el nombre de la aplicacion</param>
-        /// <param name="sPasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='IdPermisoMenu'>Recibe el id del menu</param>
+        /// <param name='Idperfil'>Recibe el perfil del usuario</param>
+        /// <param name='sApp'>Recibe el nombre de la aplicacion</param>
+        /// <param name='sPasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad PermisosXSubmenu</returns>   
         public SecutityDC getSubMenuXIdMenuAdmin(long IdPermisoMenu, Int64 App, string PasswordApp)
         {
@@ -227,9 +227,9 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Encripta o desencripta las cadenas enviadas.
         /// </summary>
-        /// <param name="sValor">Recibe el valor a encriptar o desencriptar</param>
-        /// <param name="Tipo">1.- Encripta; 2.- Desencripta</param>
-        /// <param name="PasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='sValor'>Recibe el valor a encriptar o desencriptar</param>
+        /// <param name='Tipo'>1.- Encripta; 2.- Desencripta</param>
+        /// <param name='PasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa el valor encriptado o desencriptado segun sea el caso en el elemento Encriptacion</returns>
         public SecutityDC encryptDesEncrypt(string Valor, int Tipo, Int64 App, string PasswordApp)
         {
@@ -254,8 +254,8 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtiene la lista de Aplicaciones de toda la seguridad Latino
         /// </summary>
-        /// <param name="sApp">Recibe el nombre de la aplicacion</param>
-        /// <param name="sPasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='sApp'>Recibe el nombre de la aplicacion</param>
+        /// <param name='sPasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad AplicacionBE</returns>   
         public SecutityDC getAplicaciones(string idAplicacion, string txtBusqueda, Int64 App, string PasswordApp)
         {
@@ -398,9 +398,9 @@ namespace ThreeBits.WCFService
         /// <summary>
         /// Obtenemos la lista de menus por perfil que le corresponden
         /// </summary>
-        /// <param name="Perfil">Recibe el perfil del usuario</param>
-        /// <param name="sApp">Recibe el nombre de la aplicacion</param>
-        /// <param name="sPasswordApp">Recibe el password de la aplicacion</param>
+        /// <param name='Perfil'>Recibe el perfil del usuario</param>
+        /// <param name='sApp'>Recibe el nombre de la aplicacion</param>
+        /// <param name='sPasswordApp'>Recibe el password de la aplicacion</param>
         /// <returns>Regresa la informacion en la entidad PermisosXMenu</returns>
         public SecutityDC getMenuxRol(long Rol, Int64 AppxRol, Int64 App, string PasswordApp)
         {

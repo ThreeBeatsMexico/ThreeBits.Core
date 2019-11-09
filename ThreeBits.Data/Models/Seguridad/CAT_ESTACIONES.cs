@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class CAT_ESTACIONES
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public CAT_ESTACIONES()
         {
             this.ESTACIONESXAPP = new HashSet<ESTACIONESXAPP>();
@@ -24,7 +24,7 @@ namespace ThreeBits.Data.Models.Seguridad
         public string DESRIPCION { get; set; }
         public Nullable<bool> ACTIVO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<ESTACIONESXAPP> ESTACIONESXAPP { get; set; }
     }
 }

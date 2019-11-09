@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class CAT_TIPOCONTACTO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public CAT_TIPOCONTACTO()
         {
             this.CONTACTO = new HashSet<CONTACTO>();
@@ -24,7 +24,7 @@ namespace ThreeBits.Data.Models.Seguridad
         public string DESCRIPCION { get; set; }
         public Nullable<bool> ACTIVO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<CONTACTO> CONTACTO { get; set; }
     }
 }

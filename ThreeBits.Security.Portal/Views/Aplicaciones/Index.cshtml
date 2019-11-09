@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div id="e-commerce-products" class="page-layout carded full-width">
+
+    <div class="top-bg bg-primary"></div>
+
+    <!-- CONTENT -->
+    <div class="page-content-wrapper">
+
+        <!-- HEADER -->
+        <div class="page-header light-fg row no-gutters align-items-center justify-content-between">
+
+            <!-- APP TITLE -->
+            <div class="col-12 col-sm">
+
+                <div class="logo row no-gutters justify-content-center align-items-start justify-content-sm-start">
+                    <div class="logo-icon mr-3 mt-1">
+                        <i class="icon-cube-outline s-6"></i>
+                    </div>
+                    <div class="logo-text">
+                        <div class="h4">Aplicaciones</div>
+                        <div class="">Total Aplicaciones: @ViewBag.NumAplicaciones</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- / APP TITLE -->
+            <!-- SEARCH -->
+            <div class="col search-wrapper px-2">
+
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-icon fuse-ripple-ready">
+                            <i class="icon icon-magnify"></i>
+                        </button>
+                    </span>
+                    <input id="products-search-input" type="text" class="form-control" placeholder="Buscar" aria-label="Buscar">
+                </div>
+
+            </div>
+            <!-- / SEARCH -->
+
+            <div class="col-auto">
+                <a href="#mdlAplicacion" data-toggle="modal" id="btnNewApp" class="btn btn-light fuse-ripple-ready">AGREGAR APLICACION</a>
+            </div>
+
+        </div>
+        <!-- / HEADER -->
+
+        <div class="page-content-card">
+
+            <div id="e-commerce-products-table_wrapper" class="dataTables_wrapper no-footer">
+                <div class="dataTables_scroll">
+
+                    <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+                        <table id="e-commerce-products-table" class="table dataTable no-footer dtr-inline" role="grid" aria-describedby="e-commerce-products-table_info" style="width: 100%;">
+
+                            <thead>
+                                <tr>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">ID APP</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">APLICACION</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">PASSWORD</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">ACTIVO</span>
+                                        </div>
+                                    </th>
+                                    <th class="secondary-text">
+                                        <div class="table-header">
+                                            <span class="column-title">ACCIONES</span>
+                                        </div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in (List<ThreeBits.Security.Portal.SECURITYWCF.AplicacionBE>)ViewBag.lstAplicaciones)
+                                {
+                                    <tr role="row" class="odd">
+                                        <td tabindex="0" class="sorting_1">@item.IDAPLICACION</td>
+
+                                        <td>@item.DESCRIPCION</td>
+                                        <td>@item.PASSWORD</td>
+                                        <td>@item.ACTIVO</td>
+
+                                        <td>
+                                            <a href="#mdlAplicacion" class="btnEditApp btn btn-icon fuse-ripple-ready" data-toggle="modal" data-id="@item.IDAPLICACION"><i class="icon icon-pencil s-4"></i></a>
+
+                                            @*<button type="button" class="btn btn-icon fuse-ripple-ready" aria-label="Product details" data-toggle="modal" data-target="#mdlAplicacion">
+
+                                                </button>*@
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- / CONTENT -->
+</div>
+
+<div class="modal fade" id="mdlAplicacion" tabindex="-1" role="dialog" aria-labelledby="mdlAplicacionLabel" aria-hidden="true" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="mdlTitle" class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-content">
+                    Cargando...
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts
+    {
+    <script src="~/Scripts/Aplicaciones/Aplicaciones.js"></script>
+    }
+
+
+
+
+
+
+

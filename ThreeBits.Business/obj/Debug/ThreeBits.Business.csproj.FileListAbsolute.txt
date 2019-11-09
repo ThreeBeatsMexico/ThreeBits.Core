@@ -27,3 +27,18 @@ F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CopyComplete
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.dll
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Business\obj\Debug\ThreeBits.Business.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Debug\ThreeBits.Business.csprojAssemblyReference.cache
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CoreCompileInputs.cache
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Business.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Business.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\PVLSECVB.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Data.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Entities.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\EntityFramework.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Data.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Data.dll.config
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\ThreeBits.Entities.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Debug\EntityFramework.xml
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Debug\ThreeBits.Business.csproj.CopyComplete
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Debug\ThreeBits.Business.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Debug\ThreeBits.Business.pdb

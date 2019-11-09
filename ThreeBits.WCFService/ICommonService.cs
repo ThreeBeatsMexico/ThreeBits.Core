@@ -8,7 +8,7 @@ using ThreeBits.Entities.Common;
 
 namespace ThreeBits.WCFService
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "ICommonService" en el código y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando 'Rename' del menú 'Refactorizar' para cambiar el nombre de interfaz 'ICommonService' en el código y en el archivo de configuración a la vez.
     [ServiceContract]
     public interface ICommonService
     {
@@ -20,7 +20,7 @@ namespace ThreeBits.WCFService
         RespuestaComunBE SetCatGenerales(CatGeneralesBE item);
 
         [OperationContract]
-        RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = "");
+        RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = '');
         [OperationContract]
         RespuestaComunBE AddCatEspecifico(string sIdCatalogo, string sDescripcion);
 

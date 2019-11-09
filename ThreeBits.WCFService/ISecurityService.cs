@@ -9,7 +9,7 @@ using ThreeBits.Entities.Security;
 
 namespace ThreeBits.WCFService
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "ISecurityService" en el código y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando 'Rename' del menú 'Refactorizar' para cambiar el nombre de interfaz 'ISecurityService' en el código y en el archivo de configuración a la vez.
     [ServiceContract]
     public interface ISecurityService
     {

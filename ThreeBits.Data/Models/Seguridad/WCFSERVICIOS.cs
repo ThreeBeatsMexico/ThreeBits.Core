@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class WCFSERVICIOS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public WCFSERVICIOS()
         {
             this.WCFMETODOS = new HashSet<WCFMETODOS>();
@@ -24,7 +24,7 @@ namespace ThreeBits.Data.Models.Seguridad
         public string DESCRIPCION { get; set; }
         public Nullable<bool> ACTIVO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<WCFMETODOS> WCFMETODOS { get; set; }
     }
 }

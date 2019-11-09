@@ -1,88 +1,153 @@
-﻿<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <title>Security Three Bits - Portal</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="~/assets/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic" rel="stylesheet">
-    <!-- STYLESHEETS -->
-    <style type="text/css">
+﻿
+@if (Session["USER_SESSION"] == null)
+{
+    Response.Redirect("~/Account/Login");
+}
+else
+{
+    <!DOCTYPE html>
+    <html lang="en-us">
 
-        [fuse-cloak],
-        .fuse-cloak {
-            display: none !important;
-        }
-    </style>
-    <!-- Icons.css -->
-    <link type="text/css" rel="stylesheet" href="~/assets/icons/fuse-icon-font/style.css">
-    <!-- Animate.css -->
-    <link type="text/css" rel="stylesheet" href="~/assets/node_modules/animate.css/animate.min.css">
-    <!-- PNotify -->
-    <link type="text/css" rel="stylesheet" href="~/assets/node_modules/pnotify/dist/PNotifyBrightTheme.css">
-    <!-- Nvd3 - D3 Charts -->
-    <link type="text/css" rel="stylesheet" href="~/assets/node_modules/nvd3/build/nv.d3.min.css" />
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" rel="stylesheet" href="~/assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" />
-    <!-- Fuse Html -->
-    <link type="text/css" rel="stylesheet" href="~/assets/fuse-html/fuse-html.min.css" />
-    <!-- Main CSS -->
-    <link type="text/css" rel="stylesheet" href="~/assets/css/main.css">
-    <!-- / STYLESHEETS -->
-    <!-- JAVASCRIPT -->
-    <!-- jQuery -->
-    <script type="text/javascript" src="~/assets/node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- Mobile Detect -->
-    <script type="text/javascript" src="~/assets/node_modules/mobile-detect/mobile-detect.min.js"></script>
-    <!-- Perfect Scrollbar -->
-    <script type="text/javascript" src="~/assets/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    <!-- Popper.js -->
-    <script type="text/javascript" src="~/assets/node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <!-- Bootstrap -->
-    <script type="text/javascript" src="~/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Nvd3 - D3 Charts -->
-    <script type="text/javascript" src="~/assets/node_modules/d3/d3.min.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/nvd3/build/nv.d3.min.js"></script>
-    <!-- Data tables -->
-    <script type="text/javascript" src="~/assets/node_modules/datatables.net/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/datatables-responsive/js/dataTables.responsive.js"></script>
-    <!-- PNotify -->
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotify.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyStyleMaterial.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyButtons.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyCallbacks.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyMobile.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyHistory.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyDesktop.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyConfirm.js"></script>
-    <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyReference.js"></script>
-    <!-- Fuse Html -->
-    <script type="text/javascript" src="~/assets/fuse-html/fuse-html.min.js"></script>
-    <!-- Main JS -->
-    <script type="text/javascript" src="~/assets/js/main.js"></script>
-    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
-    <script src="jquery.simpleWeather.js" charset="utf-8"></script>*@
-</head>
-<body class="layout layout-vertical layout-left-navigation layout-below-toolbar layout-below-footer">
-    <main>
-        <div id="wrapper">
-            @Html.Partial("MenuLayout")
-            <div class="content-wrapper">
-                @Html.Partial("TopLayout")
-                <div class="content custom-scrollbar">
-                    @RenderBody()
-                </div>
-                <script type="text/javascript" src="~/assets/js/apps/dashboard/project.js"></script>
-                <nav id="footer" class="bg-dark text-auto row no-gutters align-items-center px-6">
-                    @*<a class="btn btn-secondary text-capitalize" href="http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn" target="_blank">
+    <head>
+        <title>Security Three Bits - Portal</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="~/assets/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic" rel="stylesheet">
+        <!-- STYLESHEETS -->
+        <style type="text/css">
+
+            [fuse-cloak],
+            .fuse-cloak {
+                display: none !important;
+            }
+        </style>
+        <!-- Icons.css -->
+        <link type="text/css" rel="stylesheet" href="~/assets/icons/fuse-icon-font/style.css">
+        <!-- Animate.css -->
+        <link type="text/css" rel="stylesheet" href="~/assets/node_modules/animate.css/animate.min.css">
+        <!-- PNotify -->
+        <link type="text/css" rel="stylesheet" href="~/assets/node_modules/pnotify/dist/PNotifyBrightTheme.css">
+        <!-- Nvd3 - D3 Charts -->
+        <link type="text/css" rel="stylesheet" href="~/assets/node_modules/nvd3/build/nv.d3.min.css" />
+        <!-- Perfect Scrollbar -->
+        <link type="text/css" rel="stylesheet" href="~/assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" />
+        <!-- Fuse Html -->
+        <link type="text/css" rel="stylesheet" href="~/assets/fuse-html/fuse-html.min.css" />
+        <!-- Main CSS -->
+        <link type="text/css" rel="stylesheet" href="~/assets/css/main.css">
+        <!-- / STYLESHEETS -->
+        <!-- JAVASCRIPT -->
+        <!-- jQuery -->
+        <script type="text/javascript" src="~/assets/node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- Mobile Detect -->
+        <script type="text/javascript" src="~/assets/node_modules/mobile-detect/mobile-detect.min.js"></script>
+        <!-- Perfect Scrollbar -->
+        <script type="text/javascript" src="~/assets/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+        <!-- Popper.js -->
+        <script type="text/javascript" src="~/assets/node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="~/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Nvd3 - D3 Charts -->
+        <script type="text/javascript" src="~/assets/node_modules/d3/d3.min.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/nvd3/build/nv.d3.min.js"></script>
+        <!-- Data tables -->
+        <script type="text/javascript" src="~/assets/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/datatables-responsive/js/dataTables.responsive.js"></script>
+        <!-- PNotify -->
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotify.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyStyleMaterial.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyButtons.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyCallbacks.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyMobile.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyHistory.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyDesktop.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyConfirm.js"></script>
+        <script type="text/javascript" src="~/assets/node_modules/pnotify/dist/iife/PNotifyReference.js"></script>
+        <!-- Fuse Html -->
+        <script type="text/javascript" src="~/assets/fuse-html/fuse-html.min.js"></script>
+        <!-- Main JS -->
+      
+        @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
+        <script src="jquery.simpleWeather.js" charset="utf-8"></script>*@
+    </head>
+    <body class="layout layout-vertical layout-left-navigation layout-below-toolbar layout-below-footer media-step-xl fuse-aside-folded">
+
+        <main>
+            <div id="wrapper">
+                @Html.Partial("MenuLayout")
+                <div class="content-wrapper">
+                    @Html.Partial("TopLayout")
+
+
+                    <div class="content custom-scrollbar ps ps--active-y">
+                        @RenderBody()
+                    </div>
+
+                    <nav id="footer" class="bg-dark text-auto row no-gutters align-items-center px-6">
+                        @*<a class="btn btn-secondary text-capitalize" href="http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn" target="_blank">
                             <i class="icon icon-cart mr-2 s-4"></i>Purchase FUSE Bootstrap
                         </a>*@
-                </nav>
+                    </nav>
+                </div>
+                @Html.Partial("RigthLayout")
             </div>
-            @Html.Partial("RigthLayout")
-        </div>
-    </main>
-    @RenderSection("Scripts", required: false)
-</body>
+        </main>
+        <script type="text/javascript" src="~/assets/js/main.js"></script>
+        <script src="~/assets/js/jquery.plugins.js"></script>
+        <script src="~/assets/js/custom.js"></script>
+        <script type="text/javascript" src="~/assets/js/apps/dashboard/project.js"></script>
+        @RenderSection("Scripts", required: false)
+        <script>
+
+            $(document).ready(function ($){
+                var path = window.location.pathname.split("/").pop();
+                if (path == '') {
+                    path = 'index';
+                }
+
+                var target = $('.sidenav a[href="' + path + '"]');
+                target.addClass('active');
+
+
+            });
+
+            var a = window.location.pathname;
+            $('.sidenav > li > a[href="http://localhost' + a + '"').parent().addClass("active");
+
+            $('#sidenav').find('a').each(function () {
+                
+                    var link = new RegExp($(this).attr('href')); //Check if some menu compares inside your the browsers link
+                //alert(link);
+                if (link.test(document.location.href)) {
+                    if (!$(this).parents().hasClass('collapse show active')) {
+                            $(this).parents('li').addClass('collapse show');
+                            $(this).parents().addClass("active show");
+                            $(this).addClass("active"); //Add this too
+                        }
+                    }
+                });
+
+            //$('#sidenav').click(function (e) {
+            //    var id = e.target.id;
+            //    alert(id);
+            //});
+
+            var urlGeneral = '@Url.Content("~/")';
+
+        </script>
+
+
+
+
+
+
+    </body>
+
+
+   
+
+   
 </html>
+}

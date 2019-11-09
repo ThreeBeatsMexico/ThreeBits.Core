@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class PERMISOSXMENU
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public PERMISOSXMENU()
         {
             this.PERMISOSXSUBMENU = new HashSet<PERMISOSXSUBMENU>();
@@ -30,7 +30,7 @@ namespace ThreeBits.Data.Models.Seguridad
         public string TOOLTIP { get; set; }
         public Nullable<bool> ACTIVO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<PERMISOSXSUBMENU> PERMISOSXSUBMENU { get; set; }
         public virtual ROLES ROLES { get; set; }
     }

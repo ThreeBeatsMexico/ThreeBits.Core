@@ -1,0 +1,15 @@
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Release\ThreeBits.Business.csprojAssemblyReference.cache
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Release\ThreeBits.Business.csproj.CoreCompileInputs.cache
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Business.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Business.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\PVLSECVB.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Data.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Entities.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\EntityFramework.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Data.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Data.dll.config
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\ThreeBits.Entities.pdb
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\bin\Release\EntityFramework.xml
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Release\ThreeBits.Business.csproj.CopyComplete
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Release\ThreeBits.Business.dll
+C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Business\obj\Release\ThreeBits.Business.pdb

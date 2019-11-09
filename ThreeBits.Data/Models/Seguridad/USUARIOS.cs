@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class USUARIOS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public USUARIOS()
         {
             this.CONTACTO = new HashSet<CONTACTO>();
@@ -45,13 +45,13 @@ namespace ThreeBits.Data.Models.Seguridad
         public virtual CAT_SEXO CAT_SEXO { get; set; }
         public virtual CAT_TIPOPERSONA CAT_TIPOPERSONA { get; set; }
         public virtual CAT_TIPOUSUARIO CAT_TIPOUSUARIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<CONTACTO> CONTACTO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<DOMICILIO> DOMICILIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<ROLESXUSUARIO> ROLESXUSUARIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<USUARIOXAPLICACION> USUARIOXAPLICACION { get; set; }
     }
 }

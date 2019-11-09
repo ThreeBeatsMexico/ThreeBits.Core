@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class PERMISOXOBJETOS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public PERMISOXOBJETOS()
         {
             this.PERMISOSXELEMENTOSOBJETO = new HashSet<PERMISOSXELEMENTOSOBJETO>();
@@ -28,7 +28,7 @@ namespace ThreeBits.Data.Models.Seguridad
         public string TOOLTIP { get; set; }
         public Nullable<bool> ACTIVO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<PERMISOSXELEMENTOSOBJETO> PERMISOSXELEMENTOSOBJETO { get; set; }
         public virtual ROLES ROLES { get; set; }
     }

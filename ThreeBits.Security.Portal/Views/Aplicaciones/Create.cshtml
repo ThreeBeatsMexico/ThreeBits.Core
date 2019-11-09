@@ -1,0 +1,41 @@
+﻿@{ Layout = null;}
+<form class="formAjax" method="post" action="~/Aplicaciones/Create">
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="Aplicacion" id="sAplicacion" name="sAplicacion" placeholder="Aplicacion" required />
+                <label>APLICACION</label>
+                <div class="invalid-feedback">
+                    Por favor ingresa una Aplicacion.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="form-group">
+                <input type="password" class="form-control md-has-value" aria-describedby="Appellido Paterno" id="sPassword" name="sPassword" placeholder="Password" required />
+                <label>PASSWORD</label>
+                <div class="invalid-feedback">
+                    Por favor ingresa un Apellido Paterno.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="Apellido Materno" id="sUrlInicio" name="sUrlInicio" placeholder="UrlInicio" required />
+                <label>URLINICIO</label>
+                <div class="invalid-feedback">
+                    Por favor ingresa un Apellido Materno.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary btnAjax">Guardar</button>
+    </div>
+</form>
+

@@ -11,13 +11,14 @@ namespace ThreeBits.Business.Common
 {
     public class ConfiguracionBR
     {
+        string sConnGral = ConfigurationManager.AppSettings['ConnGral'].ToString();
         public RespuestaComunBE GetConfigAPP(ConfiguracionBE item)
         {
             ConfigurationDA oConfiguracionDA = new ConfigurationDA();
             RespuestaComunBE Respuesta = new RespuestaComunBE();
             ConfiguracionBE itemConfig = new ConfiguracionBE();
 
-            Respuesta = oConfiguracionDA.GetConfigAPP(item);
+            Respuesta = oConfiguracionDA.GetConfigAPP(item,sConnGral);
 
             return Respuesta;
         }
@@ -29,9 +30,9 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
 
-            Respuesta = oConfiguracionDA.GetConfigAPP(itemConfig);
+            Respuesta = oConfiguracionDA.GetConfigAPP(itemConfig, sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
 
             Respuesta = oConfiguracionDA.AddConfigAPP(item, sConexionString);
@@ -46,9 +47,9 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
 
-            Respuesta = oConfiguracionDA.GetConfigAPP(itemConfig);
+            Respuesta = oConfiguracionDA.GetConfigAPP(itemConfig, sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
 
             Respuesta = oConfiguracionDA.SetConfigAPP(item, sConexionString);

@@ -9,7 +9,7 @@ using ThreeBits.Entities.Common;
 
 namespace ThreeBits.WCFService
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "CommonService" en el código, en svc y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando 'Rename' del menú 'Refactorizar' para cambiar el nombre de clase 'CommonService' en el código, en svc y en el archivo de configuración a la vez.
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione CommonService.svc o CommonService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class CommonService : ICommonService
     {
@@ -43,7 +43,7 @@ namespace ThreeBits.WCFService
         }
 
 
-        public RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = "")
+        public RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = '')
         {
             RespuestaComunBE Respuesta = new RespuestaComunBE();
             CatalogosBR oCatalogosBR = new CatalogosBR();

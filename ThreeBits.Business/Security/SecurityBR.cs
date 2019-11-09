@@ -21,14 +21,14 @@ namespace ThreeBits.Business.Security
 
                 bool Permiso = false;
                 PermisosApp = SeguridadDA.checkPermisoXAplicacion(App, sPasswordApp);
-                if (CrypDecrypt.DecryptString(PermisosApp.PASSWORD, "") == CrypDecrypt.DecryptString(sPasswordApp, "")) Permiso = true;
+                if (CrypDecrypt.DecryptString(PermisosApp.PASSWORD, '') == CrypDecrypt.DecryptString(sPasswordApp, '')) Permiso = true;
                 ////Si sale negativo mandamos una excepcion controlada
-                if (!Permiso) throw new SeguridadException("La aplicación no tiene acceso al servicio: " + sServiceName);
+                if (!Permiso) throw new SeguridadException('La aplicación no tiene acceso al servicio: ' + sServiceName);
 
                 Permiso = false;
                 List<WCFMetodosBE> MetodosXApp = new List<WCFMetodosBE>();
                 MetodosXApp = SeguridadDA.checkMetodoXApp(App, sServiceName, sMethodName);
-                if (MetodosXApp.Count == 0) throw new SeguridadException("La aplicación no tiene acceso al método: " + sMethodName);
+                if (MetodosXApp.Count == 0) throw new SeguridadException('La aplicación no tiene acceso al método: ' + sMethodName);
             }
             catch (SeguridadException exCu)
             {
@@ -158,12 +158,12 @@ namespace ThreeBits.Business.Security
                 if (Tipo == 1) ////Encrypta
                 {
                     Encriptacion.VALORIN = Valor;
-                    Encriptacion.VALOROUT = CrypDecrypt.EncryptString(Valor, "");
+                    Encriptacion.VALOROUT = CrypDecrypt.EncryptString(Valor, '');
                 }
                 else ///Desencrypta
                 {
                     Encriptacion.VALORIN = Valor;
-                    Encriptacion.VALOROUT = CrypDecrypt.DecryptString(Valor, "");
+                    Encriptacion.VALOROUT = CrypDecrypt.DecryptString(Valor, '');
                 }
                 return Encriptacion;
             }
@@ -196,7 +196,7 @@ namespace ThreeBits.Business.Security
                 SecurityDA Seguridad = new SecurityDA();
 
                 bool bExistUsr = checkApp(Aplicacion.DESCRIPCION.ToString().ToUpper());
-                if (bExistUsr) throw new Exception("La Aplicacion ya existe.");
+                if (bExistUsr) throw new Exception('La Aplicacion ya existe.');
                 return Seguridad.addAplicacion(Aplicacion, App);
             }
             catch (Exception ex)
@@ -211,7 +211,7 @@ namespace ThreeBits.Business.Security
             {
                 SecurityDA Seguridad = new SecurityDA();
                 //bool bExistUsr = checkApp(Aplicacion.DESCRIPCION.ToString().ToUpper());
-                //if (!bExistUsr) throw new Exception("La Aplicacion ya existe.");
+                //if (!bExistUsr) throw new Exception('La Aplicacion ya existe.');
                 return Seguridad.updAplicacion(Aplicacion, App);
             }
             catch (Exception ex)
@@ -254,7 +254,7 @@ namespace ThreeBits.Business.Security
                 SecurityDA Seguridad = new SecurityDA();
 
                 bool bExistUsr = checkRol(Rol.ToString().ToUpper(), App);
-                if (bExistUsr) throw new Exception("El Rol ya existe.");
+                if (bExistUsr) throw new Exception('El Rol ya existe.');
                 return Seguridad.addRolxApp(Rol.ToString().ToUpper(), App);
             }
             catch (Exception ex)
@@ -270,7 +270,7 @@ namespace ThreeBits.Business.Security
 
                 //[HVG][20012016][estas validaciones se estan realizando desde el front]
                 //bool bExistUsr = checkMetodo(Metodo.ToString().ToUpper(), IdApp,Servicio);
-                //if (bExistUsr) throw new Exception("El MEtodo ya existe.");
+                //if (bExistUsr) throw new Exception('El MEtodo ya existe.');
                 return Seguridad.addMetodo(lstMetodos, IdApp);
             }
             catch (Exception ex)
@@ -286,7 +286,7 @@ namespace ThreeBits.Business.Security
                 SecurityDA Seguridad = new SecurityDA();
 
                 bool bExistUsr = checkServicio(Servicio.ToString().ToUpper(), IdApp);
-                if (bExistUsr) throw new Exception("El Servicio ya existe.");
+                if (bExistUsr) throw new Exception('El Servicio ya existe.');
                 return Seguridad.addServicio(Servicio);
             }
             catch (Exception ex)
@@ -302,7 +302,7 @@ namespace ThreeBits.Business.Security
                 SecurityDA Seguridad = new SecurityDA();
 
                 bool bExistUsr = checkMenu(Menu, Rol, IdApp);
-                if (bExistUsr) throw new Exception("El Servicio ya existe.");
+                if (bExistUsr) throw new Exception('El Servicio ya existe.');
                 return Seguridad.addMenuxAppRol(Rol, IdApp, Menu, Img, Obj, Url, Tool, Orden);
             }
             catch (Exception ex)
@@ -318,7 +318,7 @@ namespace ThreeBits.Business.Security
                 SecurityDA Seguridad = new SecurityDA();
 
                 bool bExistUsr = checkSubMenu(SubMenu, IdSubMenu);
-                if (bExistUsr) throw new Exception("El Servicio ya existe.");
+                if (bExistUsr) throw new Exception('El Servicio ya existe.');
                 return Seguridad.addSubMenuxAppRol(IdSubMenu, SubMenu, Img, Obj, Url, Tool, Orden);
             }
             catch (Exception ex)
@@ -348,7 +348,7 @@ namespace ThreeBits.Business.Security
                 SecurityDA Seguridad = new SecurityDA();
 
                 // bool bExistUsr = checkSubMenu(SubMenu, IdSubMenu);
-                //if (bExistUsr) throw new Exception("El Servicio ya existe.");
+                //if (bExistUsr) throw new Exception('El Servicio ya existe.');
                 return Seguridad.addPermisosxElementoObjeto(IdPermiosObj, Elemento, Tool);
             }
             catch (Exception ex)

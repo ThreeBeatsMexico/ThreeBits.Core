@@ -11,6 +11,7 @@ namespace ThreeBits.Business.Common
 {
     public class CommonBR
     {
+        string sConnGral = ConfigurationManager.AppSettings['ConnGral'].ToString();
         public RespuestaComunBE GetDefinicionTabla(string sNombreTabla)
         {
             CommonDA oCommonDA = new CommonDA();
@@ -22,9 +23,9 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
 
-            Respuesta = oConfiguracionDA.GetConfigAPP(itemConfig);
+            Respuesta = oConfiguracionDA.GetConfigAPP(itemConfig,sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
 
             Respuesta = oCommonDA.GetDefinicionTabla(sNombreTabla, sConexionString);

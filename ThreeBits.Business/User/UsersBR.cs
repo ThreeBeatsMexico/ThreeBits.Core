@@ -25,7 +25,7 @@ namespace ThreeBits.Business.User
                 ReglasInt.TIPOBUSQUEDA = 2;
                 ReglasInt.IDAPP = Usuario.IDAPLICACION;
                 bool bExistUsr = checkUsrXApp(ReglasInt, App);
-                if (bExistUsr) throw new Exception("El usuario ya se encuentra agregado.");
+                if (bExistUsr) throw new Exception('El usuario ya se encuentra agregado.');
 
                 ////Validamos la existencia de los roles 
                 List<RolesBE> RolesXApp = getRolesXApp(Reglas, App);
@@ -42,7 +42,7 @@ namespace ThreeBits.Business.User
                             break;
                         }
                     }
-                    if (!bFlagExist) throw new Exception("El rol " + s.IDROL.ToString() + " no pertenece a la aplicación o no existe.");
+                    if (!bFlagExist) throw new Exception('El rol ' + s.IDROL.ToString() + ' no pertenece a la aplicación o no existe.');
                 }
 
                 UsuarioRes = usuarioDA.addUsuario(Reglas, Usuario, Domicilios, Contactos, RolesXUsuario, App);
@@ -92,7 +92,7 @@ namespace ThreeBits.Business.User
                 UsersDA usuarioDA = new UsersDA();
 
                 bool bExistUsr = checkUsrXApp(Reglas, App);
-                if (!bExistUsr) throw new Exception("El usuario no pertenece a la aplicación o no existe.");
+                if (!bExistUsr) throw new Exception('El usuario no pertenece a la aplicación o no existe.');
 
                 ////Validamos la existencia de los roles 
                 List<RolesBE> RolesXApp = usuarioDA.getRolesXApp(Reglas, App);
@@ -109,7 +109,7 @@ namespace ThreeBits.Business.User
                             break;
                         }
                     }
-                    if (!bFlagExist) throw new Exception("El rol " + s.IDROL.ToString() + " no pertenece a la aplicación o no existe.");
+                    if (!bFlagExist) throw new Exception('El rol ' + s.IDROL.ToString() + ' no pertenece a la aplicación o no existe.');
                 }
 
                 return usuarioDA.addRolesXUsuario(Reglas, RolesXUsuario, App);
@@ -283,7 +283,7 @@ namespace ThreeBits.Business.User
                         break;
                     }
                 }
-                if (!bFlagExist) throw new Exception("El rol " + RolXUsuario.IDROL.ToString() + " no pertenece a la aplicación o no existe.");
+                if (!bFlagExist) throw new Exception('El rol ' + RolXUsuario.IDROL.ToString() + ' no pertenece a la aplicación o no existe.');
 
                 UsersDA usuarioDA = new UsersDA();
                 return usuarioDA.updateRol(Reglas, RolXUsuario, App);

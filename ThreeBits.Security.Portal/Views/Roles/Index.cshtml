@@ -1,0 +1,192 @@
+﻿<div class="doc data-table-doc page-layout simple full-width">
+
+    <!-- HEADER -->
+    <div class="page-header bg-primary text-auto p-6 row no-gutters align-items-center justify-content-between">
+        <div class="row col-12">
+
+        
+                <div class="col-12 col-md-2">
+                    <div class="logo row no-gutters justify-content-center align-items-start justify-content-sm-start">
+                        <div class="logo-icon mr-3 mt-1">
+                            <i class="icon-cube-outline s-6"></i>
+                        </div>
+                        <div class="logo-text">
+                            <div class="h4">Roles</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="form-group">
+                        @Html.Label("Aplicacion")
+                        @Html.DropDownList("IdAplicacion")
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="form-group">
+                        <label>Roles</label>
+                        <select id="IdRol" class="form-control"></select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <a data-toggle="modal" id="btnNewRol" class="btn btn-light fuse-ripple-ready">
+                        <i class="icon-plus"></i>
+                        <span>AGREGAR ROL</span>
+                    </a>
+                </div>
+           
+        </div>
+    </div>
+
+    <!-- / HEADER -->
+    <!-- CONTENT -->
+    <div class="page-content p-6">
+        <div class="content container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="example ">
+
+                        <div class="description">
+                            <div class="description-text">
+
+                                <h3>MENUS</h3>
+
+                            </div>
+                            <div class="toggle-source-preview">
+                                <img src="~/assets/images/ellipsis.gif" high="20%" width="25%" class="loadingAjax" style="display:none" />
+                            </div>
+
+                        </div>
+
+                        <div class="source-preview-wrapper">
+                            <div class="preview">
+                                <div class="preview-elements">
+
+                                    <div id="sample-data-table_wrapper" class="dataTables_wrapper no-footer">
+                                        <div id="tblContent"></div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT -->
+
+</div>
+<div class="modal fade" id="mdlRol" tabindex="-1" role="dialog" aria-labelledby="mdlAplicacionLabel" aria-hidden="true" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="mdlTitle" class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-content">
+                    Cargando...
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script>
+    $(function () {
+    $('#IdAplicacion').addClass('form-control');
+    });
+
+    $("#IdAplicacion").on("change", function () {
+
+    consultaRoles();
+    });
+
+    function consultaRoles(){
+    $.ajax(
+    {
+    url: "@Url.Action("ConsultaRoles", "Roles")",
+    data: { IdAplicacion: $("#IdAplicacion").val() },
+    type: "POST",
+    success:
+    function (data) {
+
+    $('#IdRol').find('option').remove().end();
+    $(data).each(function (i, v) { // indice, valor
+    $('#IdRol').append('<option value="' + v.ID + '">' + v.DESCRIPCION + '</option>');
+    });
+    }
+    }
+    );
+    }
+
+
+    //FUNCION LLENA MENUS
+    $("#IdRol").on("change", function () {
+    consultaMenu();
+    });
+    function consultaMenu(){
+    var tabla = "<table id='tblMenus' class='table dataTable no-footer dtr-inline' role='grid' aria-describedby='sample-data-table_info' style='width: 982px;'>";
+
+        $(".loadingAjax").show();
+        $.ajax(
+        {
+        url: "@Url.Action("ConsultaMenu", "Roles")",
+        data: { IdAplicacion: $("#IdAplicacion").val(), IdRol: $("#IdRol").val()},
+        type: "POST",
+        success:
+        function (data) {
+        tabla += "<thead><tr><th>IDMENU</th><th>MENU</th><th>URL</th><th>ICONO</th><th>ORDEN</th><th>TOOLTIP</th><th>ACTIVO</th></tr></thead><tbody>";
+            for (var i = 0; i < data.length; i++) {
+                tabla += "<tr>" + "<td>" + ((data[i].IDPERMISOSMENU == null) ? "" : data[i].IDPERMISOSMENU)
+                    + "</td>" + "<td>" + ((data[i].NOMBREMENU == null) ? "" : data[i].NOMBREMENU)
+                    + "</td>" + "<td>" + ((data[i].URL == null) ? "" : data[i].URL)
+                    + "</td>" + "<td>" + ((data[i].IMAGEN == null) ? "" : data[i].IMAGEN)
+                    + "</td>" + "<td>" + ((data[i].ORDENMENU == null) ? "" : data[i].ORDENMENU)
+                    + "</td>" + "<td>" + ((data[i].TOOLTIP == null) ? "" : data[i].TOOLTIP)
+                    + "</td>" + "<td>" + ((data[i].ACTIVO == null) ? "" : data[i].ACTIVO)
+                    + "</tr>";
+            }
+            tabla += "</tbody></table>";
+
+    $('#tblContent').html(tabla);
+    $(".loadingAjax").hide();
+    $('#tblMenus').DataTable({
+    responsive: true,
+    dom: 'rt<"dataTables_footer"ip>',
+    search: true
+    });
+
+    }
+    });
+    }
+
+    $("#btnNewRol").click(function (eve) {
+
+        if ($('#IdAplicacion').val() == null) {
+            alert("Seleccione una aplicacion");
+        }
+        else if ($('#IdRol').val() == null) {
+            alert("Seleccione un Rol")
+        } else {
+            alert("entra");
+           
+            
+            $('#mdlTitle').text("Nuevo Rol");
+            $('#modal-content').load("Aplicaciones/Create");
+            $('#mdlRol').modal('show');
+        }
+    });
+
+</script>
+    }

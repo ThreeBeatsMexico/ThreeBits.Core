@@ -14,7 +14,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
     public partial class WCFMETODOS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2214:DoNotCallOverridableMethodsInConstructors')]
         public WCFMETODOS()
         {
             this.WCFRECURRENCIA = new HashSet<WCFRECURRENCIA>();
@@ -29,7 +29,7 @@ namespace ThreeBits.Data.Models.Seguridad
     
         public virtual APLICACION APLICACION { get; set; }
         public virtual WCFSERVICIOS WCFSERVICIOS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage('Microsoft.Usage', 'CA2227:CollectionPropertiesShouldBeReadOnly')]
         public virtual ICollection<WCFRECURRENCIA> WCFRECURRENCIA { get; set; }
     }
 }
