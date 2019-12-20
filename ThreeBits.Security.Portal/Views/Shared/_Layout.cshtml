@@ -18,6 +18,16 @@ else
         <!-- STYLESHEETS -->
         <style type="text/css">
 
+            td.details-control {
+                background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_open.png') no-repeat center center;
+                cursor: pointer;
+            }
+
+            tr.shown td.details-control {
+                background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_close.png') no-repeat center center;
+            }
+
+
             [fuse-cloak],
             .fuse-cloak {
                 display: none !important;
@@ -41,6 +51,7 @@ else
         <!-- JAVASCRIPT -->
         <!-- jQuery -->
         <script type="text/javascript" src="~/assets/node_modules/jquery/dist/jquery.min.js"></script>
+        @*<script src="@Url.Content("~/DTables/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>*@
         <!-- Mobile Detect -->
         <script type="text/javascript" src="~/assets/node_modules/mobile-detect/mobile-detect.min.js"></script>
         <!-- Perfect Scrollbar -->
@@ -68,9 +79,14 @@ else
         <!-- Fuse Html -->
         <script type="text/javascript" src="~/assets/fuse-html/fuse-html.min.js"></script>
         <!-- Main JS -->
-      
-        @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" charset="utf-8"></script>
-        <script src="jquery.simpleWeather.js" charset="utf-8"></script>*@
+       
+
+
+        <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            @RenderSection("onReady", required: false)
+            });
+        </script>
     </head>
     <body class="layout layout-vertical layout-left-navigation layout-below-toolbar layout-below-footer media-step-xl fuse-aside-folded">
 
@@ -87,8 +103,8 @@ else
 
                     <nav id="footer" class="bg-dark text-auto row no-gutters align-items-center px-6">
                         @*<a class="btn btn-secondary text-capitalize" href="http://themeforest.net/item/fuse-angularjs-material-design-admin-template/12931855?ref=srcn" target="_blank">
-                            <i class="icon icon-cart mr-2 s-4"></i>Purchase FUSE Bootstrap
-                        </a>*@
+                                <i class="icon icon-cart mr-2 s-4"></i>Purchase FUSE Bootstrap
+                            </a>*@
                     </nav>
                 </div>
                 @Html.Partial("RigthLayout")
@@ -101,7 +117,10 @@ else
         @RenderSection("Scripts", required: false)
         <script>
 
-            $(document).ready(function ($){
+            $(document).ready(function ($) {
+
+               
+
                 var path = window.location.pathname.split("/").pop();
                 if (path == '') {
                     path = 'index';
@@ -117,9 +136,9 @@ else
             $('.sidenav > li > a[href="http://localhost' + a + '"').parent().addClass("active");
 
             $('#sidenav').find('a').each(function () {
-                
+
                     var link = new RegExp($(this).attr('href')); //Check if some menu compares inside your the browsers link
-                //alert(link);
+               
                 if (link.test(document.location.href)) {
                     if (!$(this).parents().hasClass('collapse show active')) {
                             $(this).parents('li').addClass('collapse show');
@@ -129,10 +148,7 @@ else
                     }
                 });
 
-            //$('#sidenav').click(function (e) {
-            //    var id = e.target.id;
-            //    alert(id);
-            //});
+           
 
             var urlGeneral = '@Url.Content("~/")';
 
@@ -146,8 +162,8 @@ else
     </body>
 
 
-   
 
-   
+
+
 </html>
 }

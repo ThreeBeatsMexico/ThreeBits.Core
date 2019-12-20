@@ -1,0 +1,97 @@
+﻿@model IEnumerable<ThreeBits.Security.Portal.SECURITYWCF.PermisosXMenuBE>
+@{
+
+    Layout = null;
+
+}
+
+
+<script>
+    var appSetting = '@(System.Configuration.ConfigurationManager.AppSettings["AppName"].ToString())';
+    $(document).ready(function () {
+        var oTable;
+        
+
+
+
+        $('#tblMenus tbody td img').click(function () {
+            var nTr = this.parentNode.parentNode;
+           
+            if (this.src.match('details_close')) {
+                /* This row is already open - close it */
+                this.src = window.location.origin + "/" + appSetting + "/assets/images/details_open.png";
+                oTable.fnClose(nTr);
+            }
+            else {
+                /* Open this row */
+                this.src = window.location.origin + "/" + appSetting + "/assets/images/details_close.png";
+                var idMenu = $(this).attr("rel");
+                //alert(companyid);
+                $.get(window.location.origin + "/" + appSetting + "/Roles/MenuSubmenus?IDMENU=" + idMenu, function (submenus) {
+                    oTable.fnOpen(nTr, submenus, 'details');
+              
+                });
+                 
+            }
+        });
+
+        /* Initialize table and make first column non-sortable*/
+        oTable = $('#tblMenus').dataTable({
+            responsive: true,
+            dom: 'rt<"dataTables_footer"ip>',
+            search: true
+        });
+
+
+        $(".btnEditMenu").click(function (eve) {
+            var url = '@Url.Action("EditMenu", "Roles")';
+            url += '/?IdAplicacion=' + $("#IdAplicacion").val() + '&IdRol=' + $("#IdRol").val() + '&IdMenu=' + $(this).data("id");
+
+                $('#mdlTitle').text("Editar Menu");
+                $('#modal-content').load(url);
+                $('#mdlRol').modal('show');
+        });
+
+
+
+    });
+</script>
+
+
+<table id='tblMenus' name='tblMenus' class='table dataTable no-footer dtr-inline' role='grid' aria-describedby='sample-data-table_info' style='width: 982px;'>
+    <thead>
+        <tr>
+            <th></th>
+            <th>IDMENU</th>
+            <th>MENU</th>
+            <th>URL</th>
+            <th>ICONO</th>
+            <th>ORDEN</th>
+            <th>TOOLTIP</th>
+            <th>ACTIVO</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td><img src="~/assets/images/details_open.png" rel="@item.IDPERMISOSMENU" alt="expand/collapse" style="cursor:pointer"></td>
+            <td>@item.IDPERMISOSMENU</td>
+            <td>@item.NOMBREMENU</td>
+            <td>@item.URL</td>
+            <td>@item.TOOLTIP</td>
+            <td>@item.IMAGEN</td>
+            <td>@item.TOOLTIP</td>
+            <td>@item.ACTIVO</td>
+            <td>
+                <a href="#mdlEditMenu" class="btnEditMenu btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Editar" data-id="@item.IDPERMISOSMENU"><i class="icon icon-pencil s-4"></i></a>
+            </td>
+        </tr>
+        }
+
+
+
+    </tbody>
+</table>
+

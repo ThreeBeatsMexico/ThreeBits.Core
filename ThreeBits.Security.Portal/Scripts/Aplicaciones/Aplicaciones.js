@@ -45,7 +45,9 @@
                                         primary: true,
                                         click: function (notice) {
                                             notice.close();
-                                            window.location = urlGeneral + "Home";
+                                            if (response.Result != null) {
+                                                window.location = urlGeneral + "Aplicaciones";
+                                            }
                                         }
                                     }]
                                 },

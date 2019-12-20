@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using ThreeBits.Security.Portal.COMMONWCF;
 using ThreeBits.Security.Portal.Helpers;
+using ThreeBits.Security.Portal.Models;
 using ThreeBits.Security.Portal.Properties;
 
 namespace ThreeBits.Security.Portal.Controllers
@@ -47,8 +49,161 @@ namespace ThreeBits.Security.Portal.Controllers
         }
 
 
+        public ActionResult MenuSubmenus(string IDMENU)
+        {
+            SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSecurity = new SECURITYWCF.SecutityDC();
+
+            resSecurity = security.getSubMenuXIdMenu(long.Parse(IDMENU), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            List<SECURITYWCF.PermisoXSubmenuBE> oSubMenuLista = new List<SECURITYWCF.PermisoXSubmenuBE>();
+            oSubMenuLista = resSecurity.PermisosXSubmenu.ToList();
+            return View(oSubMenuLista);
+        }
+
+        public ActionResult MenuView(string IdAplicacion, string IdRol)
+        {
+            SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSecurity = new SECURITYWCF.SecutityDC();
+
+            resSecurity = security.getMenuxRolAdmin(long.Parse(IdRol), long.Parse(IdAplicacion), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            List<SECURITYWCF.PermisosXMenuBE> oMenuLista = new List<SECURITYWCF.PermisosXMenuBE>();
+            oMenuLista = resSecurity.PermisosXMenu.ToList();
+            
+
+            return PartialView("MenuView",oMenuLista);
+        }
 
 
+        [HttpPost]
+        public ActionResult AddMenu(string IdRol,string IdApp, string Menu, string Img, string Obj,string Url, string Tool, string Orden)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+          
+            resSeguridad = seguridad.addMenuxAppRol(long.Parse(IdRol), long.Parse(IdApp),Menu,Img,Obj,Url,Tool, long.Parse(Orden), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se agrego el Menu.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+
+            }
+
+
+
+
+
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo="Roles" }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult AddRol(string IdApp, string Rol)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+
+            resSeguridad = seguridad.addRolxApp(Rol,long.Parse(IdApp), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se agrego el Rol.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+
+            }
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Create(string IdAplicacion)
+        {
+            ViewBag.IdAplicacion = IdAplicacion;
+            return View();
+        }
+
+
+        public ActionResult CreateMenu(string IdAplicacion, string IdRol)
+        {
+            ViewBag.IdAplicacion = IdAplicacion;
+            ViewBag.IdRol = IdRol;
+            return View();
+        }
+
+        public ActionResult EditMenu(string IdAplicacion, string IdRol, string IdMenu)
+        {
+            SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSecurity = new SECURITYWCF.SecutityDC();
+
+            resSecurity = security.getMenuxRol(long.Parse(IdRol), long.Parse(IdAplicacion), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            SECURITYWCF.PermisosXMenuBE oMenu = new SECURITYWCF.PermisosXMenuBE();
+            oMenu = resSecurity.PermisosXMenu.Where(x => x.IDPERMISOSMENU == long.Parse(IdMenu)).FirstOrDefault();
+            return View(oMenu);
+        }
+
+        [HttpPost]
+        public ActionResult EditMenu(SECURITYWCF.PermisosXMenuBE eMenu)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+
+            resSeguridad = seguridad.updMenuxAppRol(eMenu, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se agrego el Menu.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+
+            }
+
+
+
+
+
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
+        }
 
     }
 }

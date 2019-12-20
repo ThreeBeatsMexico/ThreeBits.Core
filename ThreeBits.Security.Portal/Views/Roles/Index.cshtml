@@ -4,37 +4,37 @@
     <div class="page-header bg-primary text-auto p-6 row no-gutters align-items-center justify-content-between">
         <div class="row col-12">
 
-        
-                <div class="col-12 col-md-2">
-                    <div class="logo row no-gutters justify-content-center align-items-start justify-content-sm-start">
-                        <div class="logo-icon mr-3 mt-1">
-                            <i class="icon-cube-outline s-6"></i>
-                        </div>
-                        <div class="logo-text">
-                            <div class="h4">Roles</div>
 
-                        </div>
+            <div class="col-12 col-md-2">
+                <div class="logo row no-gutters justify-content-center align-items-start justify-content-sm-start">
+                    <div class="logo-icon mr-3 mt-1">
+                        <i class="icon-cube-outline s-6"></i>
+                    </div>
+                    <div class="logo-text">
+                        <div class="h4">Roles</div>
+
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="form-group">
-                        @Html.Label("Aplicacion")
-                        @Html.DropDownList("IdAplicacion")
-                    </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    @Html.Label("Aplicacion")
+                    @Html.DropDownList("IdAplicacion")
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="form-group">
-                        <label>Roles</label>
-                        <select id="IdRol" class="form-control"></select>
-                    </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label>Roles</label>
+                    <select id="IdRol" class="form-control" required></select>
                 </div>
-                <div class="col-12 col-md-2">
-                    <a data-toggle="modal" id="btnNewRol" class="btn btn-light fuse-ripple-ready">
-                        <i class="icon-plus"></i>
-                        <span>AGREGAR ROL</span>
-                    </a>
-                </div>
-           
+            </div>
+            <div class="col-12 col-md-2">
+                <a data-toggle="modal" id="btnNewRol" class="btn btn-light fuse-ripple-ready">
+                    <i class="icon-plus"></i>
+                    <span>AGREGAR ROL</span>
+                </a>
+            </div>
+
         </div>
     </div>
 
@@ -48,13 +48,16 @@
                     <div class="example ">
 
                         <div class="description">
-                            <div class="description-text">
+                            @*<div class="description-text">
 
                                 <h3>MENUS</h3>
 
-                            </div>
-                            <div class="toggle-source-preview">
-                                <img src="~/assets/images/ellipsis.gif" high="20%" width="25%" class="loadingAjax" style="display:none" />
+                            </div>*@
+                            <div>
+                                <a data-toggle="modal" id="btnNewMenu" class="btn btn-dark fuse-ripple-ready">
+                                    <i class="icon-plus"></i>
+                                    <span>MENU</span>
+                                </a>
                             </div>
 
                         </div>
@@ -64,6 +67,7 @@
                                 <div class="preview-elements">
 
                                     <div id="sample-data-table_wrapper" class="dataTables_wrapper no-footer">
+                                        <img src="~/assets/images/ellipsis.gif" high="20%" width="25%" class="loadingAjax" style="display:none" />
                                         <div id="tblContent"></div>
                                     </div>
 
@@ -91,9 +95,11 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+
+
             <div class="modal-body">
                 <div id="modal-content">
-                    Cargando...
+
                 </div>
             </div>
 
@@ -102,7 +108,11 @@
 </div>
 
 @section Scripts{
-<script>
+    <script>
+
+      
+
+    var appSetting = '@(System.Configuration.ConfigurationManager.AppSettings["AppName"].ToString())';
     $(function () {
     $('#IdAplicacion').addClass('form-control');
     });
@@ -132,11 +142,16 @@
 
 
     //FUNCION LLENA MENUS
-    $("#IdRol").on("change", function () {
-    consultaMenu();
+        $("#IdRol").on("change", function () {
+        var url = '@Url.Action("MenuView", "Roles")';
+            url += '/?IdAplicacion=' + $("#IdAplicacion").val() + '&IdRol=' + $("#IdRol").val();
+           // alert(url);
+            $("#tblContent").load(url); 
+   // consultaMenu();
     });
-    function consultaMenu(){
-    var tabla = "<table id='tblMenus' class='table dataTable no-footer dtr-inline' role='grid' aria-describedby='sample-data-table_info' style='width: 982px;'>";
+    function consultaMenu() {
+
+    var tabla = "<table id='tblMenus' name='tblMenus' class='table dataTable no-footer dtr-inline' role='grid' aria-describedby='sample-data-table_info' style='width: 982px;'>";
 
         $(".loadingAjax").show();
         $.ajax(
@@ -146,22 +161,23 @@
         type: "POST",
         success:
         function (data) {
-        tabla += "<thead><tr><th>IDMENU</th><th>MENU</th><th>URL</th><th>ICONO</th><th>ORDEN</th><th>TOOLTIP</th><th>ACTIVO</th></tr></thead><tbody>";
+        tabla += "<thead><tr><th></th><th>IDMENU</th><th>MENU</th><th>URL</th><th>ICONO</th><th>ORDEN</th><th>TOOLTIP</th><th>ACTIVO</th></tr></thead><tbody>";
             for (var i = 0; i < data.length; i++) {
-                tabla += "<tr>" + "<td>" + ((data[i].IDPERMISOSMENU == null) ? "" : data[i].IDPERMISOSMENU)
+                tabla += "<tr>" + "<td><img src='" + window.location.origin + "/" + appSetting + "/assets/images/details_open.png' rel='" + data[i].IDPERMISOSMENU + "' alt ='expand/collapse' class='details-control' style='cursor:pointer'></td>"
+                    + "<td>" + ((data[i].IDPERMISOSMENU == null) ? "" : data[i].IDPERMISOSMENU)
                     + "</td>" + "<td>" + ((data[i].NOMBREMENU == null) ? "" : data[i].NOMBREMENU)
                     + "</td>" + "<td>" + ((data[i].URL == null) ? "" : data[i].URL)
                     + "</td>" + "<td>" + ((data[i].IMAGEN == null) ? "" : data[i].IMAGEN)
                     + "</td>" + "<td>" + ((data[i].ORDENMENU == null) ? "" : data[i].ORDENMENU)
                     + "</td>" + "<td>" + ((data[i].TOOLTIP == null) ? "" : data[i].TOOLTIP)
                     + "</td>" + "<td>" + ((data[i].ACTIVO == null) ? "" : data[i].ACTIVO)
-                    + "</tr>";
+                    + "</td></tr>";
             }
             tabla += "</tbody></table>";
 
     $('#tblContent').html(tabla);
-    $(".loadingAjax").hide();
-    $('#tblMenus').DataTable({
+            $(".loadingAjax").hide();
+            $('#tblMenus').DataTable({
     responsive: true,
     dom: 'rt<"dataTables_footer"ip>',
     search: true
@@ -171,7 +187,9 @@
     });
     }
 
-    $("#btnNewRol").click(function (eve) {
+        $("#btnNewRol").click(function (eve) {
+
+
 
         if ($('#IdAplicacion').val() == null) {
             alert("Seleccione una aplicacion");
@@ -179,14 +197,41 @@
         else if ($('#IdRol').val() == null) {
             alert("Seleccione un Rol")
         } else {
-            alert("entra");
-           
             
+             var url = '@Url.Action("Create", "Roles")';
+            url += '/?IdAplicacion=' + $("#IdAplicacion").val();
+
             $('#mdlTitle').text("Nuevo Rol");
-            $('#modal-content').load("Aplicaciones/Create");
+            $('#modal-content').load(url);
             $('#mdlRol').modal('show');
         }
+        });
+
+        $("#btnNewMenu").click(function (eve) {
+
+          
+            if ($('#IdRol').val() == null || $('#IdRol').val() == "") {
+                alert("Seleccione un Rol")
+            } else {
+                var url = '@Url.Action("CreateMenu", "Roles")';
+                url += '/?IdAplicacion=' + $("#IdAplicacion").val() + '&IdRol=' + $("#IdRol").val();
+
+                $('#mdlTitle').text("Nuevo Menu");
+                $('#modal-content').load(url);
+                $('#mdlRol').modal('show');
+            }
+       
     });
 
-</script>
-    }
+
+
+
+
+       
+      
+
+
+    </script>
+}
+
+    

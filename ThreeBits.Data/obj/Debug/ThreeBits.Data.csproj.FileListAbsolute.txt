@@ -26,17 +26,3 @@ F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.CopyComplete
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Data\obj\Debug\ThreeBits.Data.dll
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Data\obj\Debug\ThreeBits.Data.pdb
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Data.dll.config
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Data.dll
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Data.pdb
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.dll
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Entities.dll
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Entities.pdb
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.xml
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csprojAssemblyReference.cache
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.CoreCompileInputs.cache
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.CopyComplete
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.dll
-C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.pdb

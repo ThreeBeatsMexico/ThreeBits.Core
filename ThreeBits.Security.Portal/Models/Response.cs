@@ -11,5 +11,6 @@ namespace ThreeBits.Security.Portal.Models
         public string Message { get; set; }
         public object Result { get; set; }
         public int Id { get; set; }
+        public string RedirectTo { get; set; }
     }
 }

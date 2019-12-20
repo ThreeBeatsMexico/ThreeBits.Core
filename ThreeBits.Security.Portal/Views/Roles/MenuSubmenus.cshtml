@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ThreeBits.Security.Portal.SECURITYWCF.PermisoXSubmenuBE>
+@{
+
+    Layout = null;
+
+}
+
+<table id='tblSubMenus' name='tblSubMenus' class='table table-striped table-info' role='grid' style='width: 982px;'>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>SUBMENU</th>
+            <th>URL</th>
+            <th>TOOLTIP</th>
+            <th>ICONO</th>
+            <th>ORDEN</th>
+            <th>ACTIVO</th>
+            <th>ACCIONES</th>
+        </tr>
+  
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.IDPERMISOSXSUBMENU</td>
+            <td>@item.NOMBRESUBMENU</td>
+            <td>@item.URL</td>
+            <td>@item.TOOLTIP</td>
+            <td>@item.IMAGEN</td>
+            <td>@item.TOOLTIP</td>
+            <td>@item.ACTIVO</td>
+            <td>
+            <a href="#mdlAplicacion" class="btnEditApp btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Editar" data-id="@item.IDPERMISOSXSUBMENU"><i class="icon icon-pencil s-4"></i></a>
+            
+        </tr>
+
+        }
+
+
+
+    </tbody>
+</table>

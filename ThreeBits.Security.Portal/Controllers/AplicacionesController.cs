@@ -88,7 +88,7 @@ namespace ThreeBits.Security.Portal.Controllers
 
 
 
-            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id }, JsonRequestBehavior.AllowGet);
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo="Aplicaciones" }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Edit(string id)

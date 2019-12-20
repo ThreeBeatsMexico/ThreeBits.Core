@@ -45,7 +45,9 @@
                                         primary: true,
                                         click: function (notice) {
                                             notice.close();
-                                            window.location = urlGeneral + "Home";
+                                            if (response.RedirectTo != null) {
+                                                window.location = urlGeneral + response.RedirectTo;
+                                            }
                                         }
                                     }]
                                 },

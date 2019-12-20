@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<ThreeBits.Security.Portal.SECURITYWCF.PermisosXMenuBE>
     @{
+      
 
-        foreach (ThreeBits.Security.Portal.SECURITYWCF.PermisosXMenuBE item in ViewBag.oListaMenu)
-        {
+            foreach (ThreeBits.Security.Portal.SECURITYWCF.PermisosXMenuBE item in ViewBag.oListaMenu)
+            {
             <li class="nav-item" role="tab" id="heading-@item.NOMBREMENU">
                 <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-@item.NOMBREMENU" href="@item.URL" aria-expanded="false" aria-controls="collapse-@item.NOMBREMENU" >
                     <i class="icon s-4 @item.IMAGEN"></i>
@@ -25,8 +26,9 @@
                     }
                 </ul>
             </li>
-        }
-    }
+                                }
+                            }
+                       
 
 
 

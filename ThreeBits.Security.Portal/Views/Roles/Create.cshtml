@@ -1,0 +1,20 @@
+﻿@{  Layout = "~/Views/Shared/LayoutModales.cshtml";}
+<form class="formAjax" method="post" action="~/Roles/AddRol">
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="ROL" id="Rol" name="Rol" placeholder="Rol" required />
+                <input type="hidden" id="IdApp" name="IdApp" value="@ViewBag.IdAplicacion" />
+                <label>NOMBRE DEL ROL</label>
+                <div class="invalid-feedback">
+                    Por favor ingresa un Rol.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary btnAjax">Guardar</button>
+    </div>
+</form>
+
