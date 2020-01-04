@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "EditSubMenu";
+    Layout = "~/Views/Shared/LayoutModales.cshtml";
+}
+@model ThreeBits.Security.Portal.SECURITYWCF.PermisoXSubmenuBE
+
+<form class="formAjax" method="post" action="~/Roles/EditSubMenu">
+
+    <input type="hidden" id="IDPERMISOSXSUBMENU" name="IDPERMISOSXSUBMENU" value="@Model.IDPERMISOSXSUBMENU" />
+    <input type="hidden" id="IDPERMISOSMENU" name="IDPERMISOSMENU" value="@Model.IDPERMISOSMENU" />
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="NOMBRESUBMENU" id="NOMBRESUBMENU" name="NOMBRESUBMENU" value="@Model.NOMBRESUBMENU" placeholder="Menu" required />
+                <label>NOMBRE SUB MENU</label>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="URL" id="URL" name="URL" value="@Model.URL" placeholder="Url" required />
+                <label>URL</label>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="IMAGEN" id="IMAGEN" name="IMAGEN" value="@Model.IMAGEN" placeholder="Img" required />
+                <label>IMAGEN</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="TOOLTIP" id="TOOLTIP" name="TOOLTIP" value="@Model.TOOLTIP" placeholder="Tool" required />
+                <label>TOOLTIP</label>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="ORDENSUBMENU" id="ORDENSUBMENU" name="ORDENSUBMENU" value="@Model.ORDENSUBMENU" placeholder="Orden" required />
+                <label>ORDEN</label>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" checked="@Model.ACTIVO" name="ACTIVO" id="ACTIVO" class="form-check-input">
+                        <span class="checkbox-icon fuse-ripple-ready"></span>
+                        <span>ACTIVO</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary btnAjax">Guardar</button>
+    </div>
+</form>
+

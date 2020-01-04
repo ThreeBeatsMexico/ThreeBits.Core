@@ -52,6 +52,17 @@
                 $('#mdlRol').modal('show');
         });
 
+          $(".btnAddSubMenu").click(function (eve) {
+            var url = '@Url.Action("CreateSubMenu", "Roles")';
+            url += '/?IdAplicacion=' + $("#IdAplicacion").val()  + '&IdMenu=' + $(this).data("id");
+
+                $('#mdlTitle').text("Crear Sub Menu");
+                $('#modal-content').load(url);
+                $('#mdlRol').modal('show');
+        });
+
+         
+
 
 
     });
@@ -86,6 +97,7 @@
             <td>@item.ACTIVO</td>
             <td>
                 <a href="#mdlEditMenu" class="btnEditMenu btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Editar" data-id="@item.IDPERMISOSMENU"><i class="icon icon-pencil s-4"></i></a>
+                <a href="#mdlAddSubMenu" class="btnAddSubMenu btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Agregar Submenu" data-id="@item.IDPERMISOSMENU"><i class="icon icon-plus s-4"></i></a>
             </td>
         </tr>
         }

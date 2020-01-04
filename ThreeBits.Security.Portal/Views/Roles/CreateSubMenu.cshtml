@@ -1,0 +1,55 @@
+﻿@{ Layout = "~/Views/Shared/LayoutModales.cshtml";}
+<form class="formAjax" method="post" action="~/Roles/AddSubMenu">
+    <input type="hidden" id="IdApp" name="IdApp" value="@ViewBag.IdAplicacion" />
+    <input type="hidden" id="IdMenu" name="IdMenu" value="@ViewBag.IdMenu" />
+    <input type="hidden" id="Obj" name="Obj" value=" " />
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="SubMenu" id="SubMenu" name="SubMenu" placeholder="SubMenu" required />
+                <label>NOMBRE SUBMENU</label>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="Url" id="Url" name="Url" placeholder="Url" required />
+                <label>URL</label>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="Img" id="Img" name="Img" placeholder="Img" required />
+                <label>IMAGEN</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="Tool" id="Tool" name="Tool" placeholder="Tool" required />
+                <label>TOOLTIP</label>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" aria-describedby="Orden" id="Orden" name="Orden" placeholder="Orden" required />
+                <label>ORDEN</label>
+            </div>
+        </div>
+        @*<div class="col-12 col-md-4">
+                <div class="form-group">
+                    <input type="checkbox" class="form-control md-has-value" aria-describedby="Activo" id="Activo" name="Activo" placeholder="Activo" required />
+                    <label>ACTIVO</label>
+                </div>
+            </div>*@
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary btnAjax">Guardar</button>
+    </div>
+</form>
+
+
+

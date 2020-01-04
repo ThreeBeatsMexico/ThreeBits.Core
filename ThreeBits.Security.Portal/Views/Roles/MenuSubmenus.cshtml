@@ -5,6 +5,23 @@
 
 }
 
+<script>
+  
+    $(document).ready(function () {
+  
+    
+        $(".btnEditSubMenu").click(function (eve) {
+            var url = '@Url.Action("EditSubMenu", "Roles")';
+            url += '/?IdAplicacion=' + $("#IdAplicacion").val() + '&IdSubMenu=' + $(this).data("id") + '&IdMenu=' + $(this).data("id2");
+
+                $('#mdlTitle').text("Editar SubMenu");
+                $('#modal-content').load(url);
+                $('#mdlRol').modal('show');
+        });
+    
+    });
+    </script>
+
 <table id='tblSubMenus' name='tblSubMenus' class='table table-striped table-info' role='grid' style='width: 982px;'>
     <thead>
         <tr>
@@ -17,7 +34,7 @@
             <th>ACTIVO</th>
             <th>ACCIONES</th>
         </tr>
-  
+
 
     </thead>
     <tbody>
@@ -32,9 +49,11 @@
             <td>@item.TOOLTIP</td>
             <td>@item.ACTIVO</td>
             <td>
-            <a href="#mdlAplicacion" class="btnEditApp btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Editar" data-id="@item.IDPERMISOSXSUBMENU"><i class="icon icon-pencil s-4"></i></a>
-            
-        </tr>
+                <a href="#mdlEditSubMenu" class="btnEditSubMenu btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Editar" data-id="@item.IDPERMISOSXSUBMENU" data-id2="@item.IDPERMISOSMENU"><i class="icon icon-pencil s-4"></i></a>
+                <a href="#mdlDelSubMenu" class="btnDelSubMenu btn btn-icon fuse-ripple-ready" data-toggle="modal" title="Borrar" data-id="@item.IDPERMISOSXSUBMENU"><i class="icon icon-trash s-4"></i></a>
+
+
+</tr>
 
         }
 

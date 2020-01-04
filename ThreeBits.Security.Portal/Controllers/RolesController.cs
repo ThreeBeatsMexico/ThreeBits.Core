@@ -157,6 +157,13 @@ namespace ThreeBits.Security.Portal.Controllers
             return View();
         }
 
+        public ActionResult CreateSubMenu(string IdAplicacion, string IdMenu)
+        {
+            ViewBag.IdAplicacion = IdAplicacion;
+            ViewBag.IdMenu = IdMenu;
+            return View();
+        }
+
         public ActionResult EditMenu(string IdAplicacion, string IdRol, string IdMenu)
         {
             SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
@@ -166,6 +173,17 @@ namespace ThreeBits.Security.Portal.Controllers
             SECURITYWCF.PermisosXMenuBE oMenu = new SECURITYWCF.PermisosXMenuBE();
             oMenu = resSecurity.PermisosXMenu.Where(x => x.IDPERMISOSMENU == long.Parse(IdMenu)).FirstOrDefault();
             return View(oMenu);
+        }
+
+        public ActionResult EditSubMenu(string IdAplicacion, string IdSubMenu, string IdMenu)
+        {
+            SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSecurity = new SECURITYWCF.SecutityDC();
+
+            resSecurity = security.getSubMenuXIdMenu(long.Parse(IdMenu), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            SECURITYWCF.PermisoXSubmenuBE oSubMenu = new SECURITYWCF.PermisoXSubmenuBE();
+            oSubMenu = resSecurity.PermisosXSubmenu.Where(x => x.IDPERMISOSXSUBMENU == long.Parse(IdSubMenu)).FirstOrDefault();
+            return View(oSubMenu);
         }
 
         [HttpPost]
@@ -205,5 +223,72 @@ namespace ThreeBits.Security.Portal.Controllers
             return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpPost]
+        public ActionResult EditSubMenu(SECURITYWCF.PermisoXSubmenuBE eSubMenu)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+
+            resSeguridad = seguridad.updSubMenuxAppRol(eSubMenu, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se actualizo el Sub Menu.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+
+            }
+
+
+
+
+
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult AddSubMenu(string IdMenu, string SubMenu, string Img, string Obj, string Url, string Tool, string Orden)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+
+            resSeguridad = seguridad.addSubMenuxAppRol(long.Parse(IdMenu), SubMenu, Img, Obj, Url, Tool, long.Parse(Orden), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se agrego el Sub Menu.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+            }
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
