@@ -2,13 +2,13 @@
 {
     var service,
         body,
-        mediaStepsArr = ['xs', 'sm', 'md', 'lg', 'xl'],
+        mediaStepsArr = ["xs", "sm", "md", "lg", "xl"],
         mediaSteps = {
-            xl: '(min-width: 1200px)',
-            lg: '(min-width: 992px)',
-            md: '(min-width: 768px)',
-            sm: '(min-width: 576px)',
-            xs: '(min-width: 0px)'
+            xl: "(min-width: 1200px)",
+            lg: "(min-width: 992px)",
+            md: "(min-width: 768px)",
+            sm: "(min-width: 576px)",
+            xs: "(min-width: 0px)"
         },
         currentStep,
         oldStep;
@@ -16,7 +16,7 @@
     /**
      * Wait document ready to initialize
      */
-    $('document').ready(function ()
+    $("document").ready(function ()
     {
         init();
     });
@@ -26,7 +26,7 @@
      */
     function init()
     {
-        body = $('body');
+        body = $("body");
 
         currentStep = getCurrentStep();
 
@@ -36,7 +36,7 @@
         {
             currentStep = getCurrentStep();
 
-            $(window).trigger('fuse::windowResized', [currentStep, isOrBelow, isOrAbove]);
+            $(window).trigger("fuse::windowResized", [currentStep, isOrBelow, isOrAbove]);
 
             if ( oldStep !== currentStep )
             {
@@ -44,7 +44,7 @@
             }
         }
 
-        $(window).on('resize', debounce(listener, 400));
+        $(window).on("resize", debounce(listener, 400));
 
         service = {
             watchMatchMedia         : init,
@@ -82,12 +82,12 @@
      */
     function matchMediaChanged()
     {
-        body.addClass('media-step-' + currentStep);
-        body.removeClass('media-step-' + oldStep);
+        body.addClass("media-step-" + currentStep);
+        body.removeClass("media-step-" + oldStep);
 
         oldStep = currentStep;
 
-        $(window).trigger('fuse::matchMediaChanged', [currentStep, isOrBelow, isOrAbove]);
+        $(window).trigger("fuse::matchMediaChanged", [currentStep, isOrBelow, isOrAbove]);
     }
 
     /**

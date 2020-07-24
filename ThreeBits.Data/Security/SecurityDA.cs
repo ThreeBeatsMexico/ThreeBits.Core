@@ -37,7 +37,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -64,7 +64,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -93,7 +93,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -121,7 +121,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -153,7 +153,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -185,7 +185,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -217,7 +217,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -250,7 +250,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -277,7 +277,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -294,7 +294,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -311,7 +311,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -328,7 +328,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App);
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App);
                 throw new Exception(ex.Message);
             }
         }
@@ -345,7 +345,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -362,14 +362,14 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
         public bool addMetodo(List<WCFMetodosBE> lstMetodos, Int64 IdApp)
         {
             
-            DbTransaction scopeGrl;
+           // DbTransaction scopeGrl;
             //dboSecurity.Connection.Open();
             //scopeGrl = dboSecurity.Connection.BeginTransaction();
             //dboSecurity.Transaction = scopeGrl;
@@ -389,7 +389,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', IdApp.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", IdApp.ToString());
                 throw new Exception(ex.Message);
             }
             finally
@@ -413,7 +413,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', '');
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", "");
                 throw new Exception(ex.Message);
             }
         }
@@ -430,7 +430,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', '');
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", "");
                 throw new Exception(ex.Message);
             }
         }
@@ -447,7 +447,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', '');
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", "");
                 throw new Exception(ex.Message);
             }
         }
@@ -464,7 +464,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', '');
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", "");
                 throw new Exception(ex.Message);
             }
         }
@@ -481,7 +481,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', '');
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", "");
                 throw new Exception(ex.Message);
             }
         }
@@ -498,7 +498,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -515,7 +515,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -540,7 +540,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
 
             }
@@ -568,7 +568,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
 
             }
@@ -596,7 +596,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', IdApp.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", IdApp.ToString());
                 throw new Exception(ex.Message);
 
             }
@@ -624,7 +624,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', IdApp.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", IdApp.ToString());
                 throw new Exception(ex.Message);
 
             }
@@ -652,7 +652,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', IdApp.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", IdApp.ToString());
                 throw new Exception(ex.Message);
 
             }
@@ -680,7 +680,7 @@ namespace ThreeBits.Data.Security
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', '');
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", "");
                 throw new Exception(ex.Message);
 
             }

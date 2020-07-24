@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "EditMenu";
+    Layout = "~/Views/Shared/LayoutModales.cshtml";
+}
+@model ThreeBits.Security.Portal.SECURITYWCF.PermisosXMenuBE
+
+<form class="formAjax" method="post" action="~/Roles/DelMenu">
+    <input type="hidden" id="IDROL" name="IDROL" value="@Model.IDROL" />
+    <input type="hidden" id="IDPERMISOSMENU" name="IDPERMISOSMENU" value="@Model.IDPERMISOSMENU" />
+    <input type="hidden" id="TIPOOBJETO" name="TIPOOBJETO" value=" " />
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" readonly aria-describedby="NOMBREMENU" id="NOMBREMENU" name="NOMBREMENU" value="@Model.NOMBREMENU" placeholder="Menu" required />
+                <label>Este Menu sera eliminado...</label>
+            </div>
+        </div>
+
+
+       
+    </div>
+    
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary btnAjax">Eliminar</button>
+    </div>
+</form>
+
+
+

@@ -20,7 +20,7 @@ namespace ThreeBits.WCFService
         RespuestaComunBE SetCatGenerales(CatGeneralesBE item);
 
         [OperationContract]
-        RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = '');
+        RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = "");
         [OperationContract]
         RespuestaComunBE AddCatEspecifico(string sIdCatalogo, string sDescripcion);
 

@@ -1925,8 +1925,8 @@
         var chart = nv.models.lineChart()
             .options(
                 {
-                    type        : 'lineChart',
-                    color                  : ['#4caf50', '#3f51b5', '#ff5722'],
+                    type        : "lineChart",
+                    color                  : ["#4caf50", "#3f51b5", "#ff5722"],
                     height                 : 320,
                     margin                 : {
                         top   : 32,
@@ -1936,7 +1936,7 @@
                     },
                     useInteractiveGuideline: true,
                     clipVoronoi            : false,
-                    interpolate            : 'cardinal',
+                    interpolate            : "cardinal",
                     x                      : function (d)
                     {
                         return d.x;
@@ -1961,16 +1961,16 @@
         chart.xAxis     //Chart x-axis settings
             .tickFormat(function (d)
             {
-                return d + ' min.';
+                return d + " min.";
             });
 
         chart.yAxis     //Chart y-axis settings
             .tickFormat(function (d)
             {
-                return d + ' MB';
+                return d + " MB";
             });
 
-        var chartd3 = d3.select('#widget1-main-chart svg')
+        var chartd3 = d3.select("#widget1-main-chart svg")
         var chartData;
 
         initChart();
@@ -1995,8 +1995,8 @@
         var chart = nv.models.lineChart()
             .options(
                 {
-                    type        : 'lineChart',
-                    color       : ['rgba(0, 0, 0, 0.27)'],
+                    type        : "lineChart",
+                    color       : ["rgba(0, 0, 0, 0.27)"],
                     height      : 50,
                     margin      : {
                         top   : 8,
@@ -2006,7 +2006,7 @@
                     },
                     duration    : 1,
                     clipEdge    : true,
-                    interpolate : 'cardinal',
+                    interpolate : "cardinal",
                     interactive : false,
                     isArea      : true,
                     showLegend  : false,
@@ -2025,7 +2025,7 @@
                 }
             );
 
-        var chartd3 = d3.select('#widget4-main-chart svg')
+        var chartd3 = d3.select("#widget4-main-chart svg")
         var chartData;
 
         initChart();
@@ -2062,7 +2062,7 @@
                 chartData[0].values.push(newValue);
 
                 // Randomize the value
-                $('.widget.widget4 .latency-value').text(20 + randomNumber + 'ms');
+                $(".widget.widget4 .latency-value").text(20 + randomNumber + "ms");
 
                 // Update Chart
                 chartd3.datum(chartData).call(chart);
@@ -2087,8 +2087,8 @@
         var chart = nv.models.lineChart()
             .options(
                 {
-                    type                   : 'lineChart',
-                    color                  : ['#03A9F4'],
+                    type                   : "lineChart",
+                    color                  : ["#03A9F4"],
                     height                 : 140,
                     margin                 : {
                         top   : 8,
@@ -2099,7 +2099,7 @@
                     duration               : 1,
                     clipEdge               : true,
                     clipVoronoi            : false,
-                    interpolate            : 'cardinal',
+                    interpolate            : "cardinal",
                     isArea                 : true,
                     useInteractiveGuideline: true,
                     showLegend             : false,
@@ -2116,19 +2116,19 @@
                 }
             );
 
-        var chartd3 = d3.select('#widget6-main-chart svg')
+        var chartd3 = d3.select("#widget6-main-chart svg")
         var chartData;
 
         chart.xAxis     //Chart x-axis settings
             .tickFormat(function (d)
             {
-                return d + ' sec.';
+                return d + " sec.";
             });
 
         chart.yAxis     //Chart y-axis settings
             .tickFormat(function (d)
             {
-                return d + '%';
+                return d + "%";
             });
 
         initChart();
@@ -2176,16 +2176,16 @@
         return chart;
     });
 
-    $('#widget7-table').DataTable(
+    $("#widget7-table").DataTable(
         {
-            pagingType: 'simple',
+            pagingType: "simple",
             pageLength: 10,
             lengthMenu: [10, 20, 50, 100],
             autoWidth : false,
             responsive: true,
             columnDefs: [
                 {
-                    width  : '20%',
+                    width  : "20%",
                     targets: [0, 1, 2, 3, 4]
                 }
             ],
@@ -2195,9 +2195,9 @@
                 {
                     render: function (data, type)
                     {
-                        if ( type === 'display' )
+                        if ( type === "display" )
                         {
-                            return data + ' KB/s';
+                            return data + " KB/s";
                         }
                         else
                         {
@@ -2208,9 +2208,9 @@
                 {
                     render: function (data, type)
                     {
-                        if ( type === 'display' )
+                        if ( type === "display" )
                         {
-                            return data + '%';
+                            return data + "%";
                         }
                         else
                         {
@@ -2221,10 +2221,10 @@
                 {
                     render: function (data, type)
                     {
-                        if ( type === 'display' )
+                        if ( type === "display" )
                         {
                             var el = $(data);
-                            el.html(el.text() + ' MB');
+                            el.html(el.text() + " MB");
 
                             return el[0].outerHTML;
                         }

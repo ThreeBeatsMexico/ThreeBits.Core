@@ -18,7 +18,7 @@ namespace ThreeBits.Data.Models.Seguridad
     public partial class Seguridad3BitsEntities1 : DbContext
     {
         public Seguridad3BitsEntities1()
-            : base('name=Seguridad3BitsEntities1')
+            : base("name=Seguridad3BitsEntities1")
         {
         }
     
@@ -62,1957 +62,1957 @@ namespace ThreeBits.Data.Models.Seguridad
         public virtual int sp_actDeactUsuario(Nullable<int> tIPOUSUARIOIN, Nullable<bool> aCTDEACTIVATE, string uSUARIOIN, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var tIPOUSUARIOINParameter = tIPOUSUARIOIN.HasValue ?
-                new ObjectParameter('TIPOUSUARIOIN', tIPOUSUARIOIN) :
-                new ObjectParameter('TIPOUSUARIOIN', typeof(int));
+                new ObjectParameter("TIPOUSUARIOIN", tIPOUSUARIOIN) :
+                new ObjectParameter("TIPOUSUARIOIN", typeof(int));
     
             var aCTDEACTIVATEParameter = aCTDEACTIVATE.HasValue ?
-                new ObjectParameter('ACTDEACTIVATE', aCTDEACTIVATE) :
-                new ObjectParameter('ACTDEACTIVATE', typeof(bool));
+                new ObjectParameter("ACTDEACTIVATE", aCTDEACTIVATE) :
+                new ObjectParameter("ACTDEACTIVATE", typeof(bool));
     
             var uSUARIOINParameter = uSUARIOIN != null ?
-                new ObjectParameter('USUARIOIN', uSUARIOIN) :
-                new ObjectParameter('USUARIOIN', typeof(string));
+                new ObjectParameter("USUARIOIN", uSUARIOIN) :
+                new ObjectParameter("USUARIOIN", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_actDeactUsuario', tIPOUSUARIOINParameter, aCTDEACTIVATEParameter, uSUARIOINParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_actDeactUsuario", tIPOUSUARIOINParameter, aCTDEACTIVATEParameter, uSUARIOINParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_addUsuarioXAplicacion(string iDUSRSXAPP, string iDAPLICACION, string iDUSUARIO, string aCTIVO)
         {
             var iDUSRSXAPPParameter = iDUSRSXAPP != null ?
-                new ObjectParameter('IDUSRSXAPP', iDUSRSXAPP) :
-                new ObjectParameter('IDUSRSXAPP', typeof(string));
+                new ObjectParameter("IDUSRSXAPP", iDUSRSXAPP) :
+                new ObjectParameter("IDUSRSXAPP", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION != null ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(string));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(string));
     
             var iDUSUARIOParameter = iDUSUARIO != null ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(string));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(string));
     
             var aCTIVOParameter = aCTIVO != null ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(string));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_addUsuarioXAplicacion', iDUSRSXAPPParameter, iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_addUsuarioXAplicacion", iDUSRSXAPPParameter, iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
         }
     
         public virtual int sp_AuditContacto(Nullable<int> iDOPERACIONAUDIT, Nullable<long> iDCONTACTO, Nullable<long> iDUSUARIO, string iDTIPOCONTACTO, string vALOR, Nullable<System.DateTime> fECHAALTA, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDOPERACIONAUDITParameter = iDOPERACIONAUDIT.HasValue ?
-                new ObjectParameter('IDOPERACIONAUDIT', iDOPERACIONAUDIT) :
-                new ObjectParameter('IDOPERACIONAUDIT', typeof(int));
+                new ObjectParameter("IDOPERACIONAUDIT", iDOPERACIONAUDIT) :
+                new ObjectParameter("IDOPERACIONAUDIT", typeof(int));
     
             var iDCONTACTOParameter = iDCONTACTO.HasValue ?
-                new ObjectParameter('IDCONTACTO', iDCONTACTO) :
-                new ObjectParameter('IDCONTACTO', typeof(long));
+                new ObjectParameter("IDCONTACTO", iDCONTACTO) :
+                new ObjectParameter("IDCONTACTO", typeof(long));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDTIPOCONTACTOParameter = iDTIPOCONTACTO != null ?
-                new ObjectParameter('IDTIPOCONTACTO', iDTIPOCONTACTO) :
-                new ObjectParameter('IDTIPOCONTACTO', typeof(string));
+                new ObjectParameter("IDTIPOCONTACTO", iDTIPOCONTACTO) :
+                new ObjectParameter("IDTIPOCONTACTO", typeof(string));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_AuditContacto', iDOPERACIONAUDITParameter, iDCONTACTOParameter, iDUSUARIOParameter, iDTIPOCONTACTOParameter, vALORParameter, fECHAALTAParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AuditContacto", iDOPERACIONAUDITParameter, iDCONTACTOParameter, iDUSUARIOParameter, iDTIPOCONTACTOParameter, vALORParameter, fECHAALTAParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_AuditDomicilio(Nullable<int> iDOPERACIONAUDIT, Nullable<long> iDDOMICILIO, Nullable<long> iDUSUARIO, string cALLE, string nUMEXT, string nUMINT, string iDESTADO, string eSTADO, string iDMUN, string mUNICIPIO, string iDCOLONIA, string cOLONIA, string cP, Nullable<System.DateTime> fECHAALTA, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDOPERACIONAUDITParameter = iDOPERACIONAUDIT.HasValue ?
-                new ObjectParameter('IDOPERACIONAUDIT', iDOPERACIONAUDIT) :
-                new ObjectParameter('IDOPERACIONAUDIT', typeof(int));
+                new ObjectParameter("IDOPERACIONAUDIT", iDOPERACIONAUDIT) :
+                new ObjectParameter("IDOPERACIONAUDIT", typeof(int));
     
             var iDDOMICILIOParameter = iDDOMICILIO.HasValue ?
-                new ObjectParameter('IDDOMICILIO', iDDOMICILIO) :
-                new ObjectParameter('IDDOMICILIO', typeof(long));
+                new ObjectParameter("IDDOMICILIO", iDDOMICILIO) :
+                new ObjectParameter("IDDOMICILIO", typeof(long));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var cALLEParameter = cALLE != null ?
-                new ObjectParameter('CALLE', cALLE) :
-                new ObjectParameter('CALLE', typeof(string));
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
     
             var nUMEXTParameter = nUMEXT != null ?
-                new ObjectParameter('NUMEXT', nUMEXT) :
-                new ObjectParameter('NUMEXT', typeof(string));
+                new ObjectParameter("NUMEXT", nUMEXT) :
+                new ObjectParameter("NUMEXT", typeof(string));
     
             var nUMINTParameter = nUMINT != null ?
-                new ObjectParameter('NUMINT', nUMINT) :
-                new ObjectParameter('NUMINT', typeof(string));
+                new ObjectParameter("NUMINT", nUMINT) :
+                new ObjectParameter("NUMINT", typeof(string));
     
             var iDESTADOParameter = iDESTADO != null ?
-                new ObjectParameter('IDESTADO', iDESTADO) :
-                new ObjectParameter('IDESTADO', typeof(string));
+                new ObjectParameter("IDESTADO", iDESTADO) :
+                new ObjectParameter("IDESTADO", typeof(string));
     
             var eSTADOParameter = eSTADO != null ?
-                new ObjectParameter('ESTADO', eSTADO) :
-                new ObjectParameter('ESTADO', typeof(string));
+                new ObjectParameter("ESTADO", eSTADO) :
+                new ObjectParameter("ESTADO", typeof(string));
     
             var iDMUNParameter = iDMUN != null ?
-                new ObjectParameter('IDMUN', iDMUN) :
-                new ObjectParameter('IDMUN', typeof(string));
+                new ObjectParameter("IDMUN", iDMUN) :
+                new ObjectParameter("IDMUN", typeof(string));
     
             var mUNICIPIOParameter = mUNICIPIO != null ?
-                new ObjectParameter('MUNICIPIO', mUNICIPIO) :
-                new ObjectParameter('MUNICIPIO', typeof(string));
+                new ObjectParameter("MUNICIPIO", mUNICIPIO) :
+                new ObjectParameter("MUNICIPIO", typeof(string));
     
             var iDCOLONIAParameter = iDCOLONIA != null ?
-                new ObjectParameter('IDCOLONIA', iDCOLONIA) :
-                new ObjectParameter('IDCOLONIA', typeof(string));
+                new ObjectParameter("IDCOLONIA", iDCOLONIA) :
+                new ObjectParameter("IDCOLONIA", typeof(string));
     
             var cOLONIAParameter = cOLONIA != null ?
-                new ObjectParameter('COLONIA', cOLONIA) :
-                new ObjectParameter('COLONIA', typeof(string));
+                new ObjectParameter("COLONIA", cOLONIA) :
+                new ObjectParameter("COLONIA", typeof(string));
     
             var cPParameter = cP != null ?
-                new ObjectParameter('CP', cP) :
-                new ObjectParameter('CP', typeof(string));
+                new ObjectParameter("CP", cP) :
+                new ObjectParameter("CP", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_AuditDomicilio', iDOPERACIONAUDITParameter, iDDOMICILIOParameter, iDUSUARIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, fECHAALTAParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AuditDomicilio", iDOPERACIONAUDITParameter, iDDOMICILIOParameter, iDUSUARIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, fECHAALTAParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_AuditUser(Nullable<long> iDAPLICACION, Nullable<int> iDOPERACIONAUDIT, Nullable<long> iDUSUARIO, string iDSEXO, string iDTIPOPERSONA, string iDESTADOCIVIL, string aREA, string tIPOUSUARIO, string iDUSUARIOAPP, string aPATERNO, string aMATERNO, string nOMBRE, Nullable<System.DateTime> fECHANACCONST, string uSUARIO, string pASSWORD, string rUTAFOTOPERFIL, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDOPERACIONAUDITParameter = iDOPERACIONAUDIT.HasValue ?
-                new ObjectParameter('IDOPERACIONAUDIT', iDOPERACIONAUDIT) :
-                new ObjectParameter('IDOPERACIONAUDIT', typeof(int));
+                new ObjectParameter("IDOPERACIONAUDIT", iDOPERACIONAUDIT) :
+                new ObjectParameter("IDOPERACIONAUDIT", typeof(int));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDSEXOParameter = iDSEXO != null ?
-                new ObjectParameter('IDSEXO', iDSEXO) :
-                new ObjectParameter('IDSEXO', typeof(string));
+                new ObjectParameter("IDSEXO", iDSEXO) :
+                new ObjectParameter("IDSEXO", typeof(string));
     
             var iDTIPOPERSONAParameter = iDTIPOPERSONA != null ?
-                new ObjectParameter('IDTIPOPERSONA', iDTIPOPERSONA) :
-                new ObjectParameter('IDTIPOPERSONA', typeof(string));
+                new ObjectParameter("IDTIPOPERSONA", iDTIPOPERSONA) :
+                new ObjectParameter("IDTIPOPERSONA", typeof(string));
     
             var iDESTADOCIVILParameter = iDESTADOCIVIL != null ?
-                new ObjectParameter('IDESTADOCIVIL', iDESTADOCIVIL) :
-                new ObjectParameter('IDESTADOCIVIL', typeof(string));
+                new ObjectParameter("IDESTADOCIVIL", iDESTADOCIVIL) :
+                new ObjectParameter("IDESTADOCIVIL", typeof(string));
     
             var aREAParameter = aREA != null ?
-                new ObjectParameter('AREA', aREA) :
-                new ObjectParameter('AREA', typeof(string));
+                new ObjectParameter("AREA", aREA) :
+                new ObjectParameter("AREA", typeof(string));
     
             var tIPOUSUARIOParameter = tIPOUSUARIO != null ?
-                new ObjectParameter('TIPOUSUARIO', tIPOUSUARIO) :
-                new ObjectParameter('TIPOUSUARIO', typeof(string));
+                new ObjectParameter("TIPOUSUARIO", tIPOUSUARIO) :
+                new ObjectParameter("TIPOUSUARIO", typeof(string));
     
             var iDUSUARIOAPPParameter = iDUSUARIOAPP != null ?
-                new ObjectParameter('IDUSUARIOAPP', iDUSUARIOAPP) :
-                new ObjectParameter('IDUSUARIOAPP', typeof(string));
+                new ObjectParameter("IDUSUARIOAPP", iDUSUARIOAPP) :
+                new ObjectParameter("IDUSUARIOAPP", typeof(string));
     
             var aPATERNOParameter = aPATERNO != null ?
-                new ObjectParameter('APATERNO', aPATERNO) :
-                new ObjectParameter('APATERNO', typeof(string));
+                new ObjectParameter("APATERNO", aPATERNO) :
+                new ObjectParameter("APATERNO", typeof(string));
     
             var aMATERNOParameter = aMATERNO != null ?
-                new ObjectParameter('AMATERNO', aMATERNO) :
-                new ObjectParameter('AMATERNO', typeof(string));
+                new ObjectParameter("AMATERNO", aMATERNO) :
+                new ObjectParameter("AMATERNO", typeof(string));
     
             var nOMBREParameter = nOMBRE != null ?
-                new ObjectParameter('NOMBRE', nOMBRE) :
-                new ObjectParameter('NOMBRE', typeof(string));
+                new ObjectParameter("NOMBRE", nOMBRE) :
+                new ObjectParameter("NOMBRE", typeof(string));
     
             var fECHANACCONSTParameter = fECHANACCONST.HasValue ?
-                new ObjectParameter('FECHANACCONST', fECHANACCONST) :
-                new ObjectParameter('FECHANACCONST', typeof(System.DateTime));
+                new ObjectParameter("FECHANACCONST", fECHANACCONST) :
+                new ObjectParameter("FECHANACCONST", typeof(System.DateTime));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var rUTAFOTOPERFILParameter = rUTAFOTOPERFIL != null ?
-                new ObjectParameter('RUTAFOTOPERFIL', rUTAFOTOPERFIL) :
-                new ObjectParameter('RUTAFOTOPERFIL', typeof(string));
+                new ObjectParameter("RUTAFOTOPERFIL", rUTAFOTOPERFIL) :
+                new ObjectParameter("RUTAFOTOPERFIL", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_AuditUser', iDAPLICACIONParameter, iDOPERACIONAUDITParameter, iDUSUARIOParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, aREAParameter, tIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, fECHAALTAParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AuditUser", iDAPLICACIONParameter, iDOPERACIONAUDITParameter, iDUSUARIOParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, aREAParameter, tIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, fECHAALTAParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual ObjectResult<sp_checkMenuxAppRol_Result> sp_checkMenuxAppRol(string mENU, Nullable<long> iDROL)
         {
             var mENUParameter = mENU != null ?
-                new ObjectParameter('MENU', mENU) :
-                new ObjectParameter('MENU', typeof(string));
+                new ObjectParameter("MENU", mENU) :
+                new ObjectParameter("MENU", typeof(string));
     
             var iDROLParameter = iDROL.HasValue ?
-                new ObjectParameter('IDROL', iDROL) :
-                new ObjectParameter('IDROL', typeof(long));
+                new ObjectParameter("IDROL", iDROL) :
+                new ObjectParameter("IDROL", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkMenuxAppRol_Result>('sp_checkMenuxAppRol', mENUParameter, iDROLParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkMenuxAppRol_Result>("sp_checkMenuxAppRol", mENUParameter, iDROLParameter);
         }
     
         public virtual ObjectResult<sp_checkMetodo_Result> sp_checkMetodo(string mETODO, Nullable<long> iDAPLICACION, Nullable<long> iDSERVICIOS)
         {
             var mETODOParameter = mETODO != null ?
-                new ObjectParameter('METODO', mETODO) :
-                new ObjectParameter('METODO', typeof(string));
+                new ObjectParameter("METODO", mETODO) :
+                new ObjectParameter("METODO", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDSERVICIOSParameter = iDSERVICIOS.HasValue ?
-                new ObjectParameter('IDSERVICIOS', iDSERVICIOS) :
-                new ObjectParameter('IDSERVICIOS', typeof(long));
+                new ObjectParameter("IDSERVICIOS", iDSERVICIOS) :
+                new ObjectParameter("IDSERVICIOS", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkMetodo_Result>('sp_checkMetodo', mETODOParameter, iDAPLICACIONParameter, iDSERVICIOSParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkMetodo_Result>("sp_checkMetodo", mETODOParameter, iDAPLICACIONParameter, iDSERVICIOSParameter);
         }
     
         public virtual ObjectResult<sp_checkRolxApp_Result> sp_checkRolxApp(string rOL, Nullable<long> iDAPLICACION)
         {
             var rOLParameter = rOL != null ?
-                new ObjectParameter('ROL', rOL) :
-                new ObjectParameter('ROL', typeof(string));
+                new ObjectParameter("ROL", rOL) :
+                new ObjectParameter("ROL", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkRolxApp_Result>('sp_checkRolxApp', rOLParameter, iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkRolxApp_Result>("sp_checkRolxApp", rOLParameter, iDAPLICACIONParameter);
         }
     
         public virtual ObjectResult<sp_checkServicio_Result> sp_checkServicio(string sERVICIO)
         {
             var sERVICIOParameter = sERVICIO != null ?
-                new ObjectParameter('SERVICIO', sERVICIO) :
-                new ObjectParameter('SERVICIO', typeof(string));
+                new ObjectParameter("SERVICIO", sERVICIO) :
+                new ObjectParameter("SERVICIO", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkServicio_Result>('sp_checkServicio', sERVICIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkServicio_Result>("sp_checkServicio", sERVICIOParameter);
         }
     
         public virtual ObjectResult<sp_checkSubMenuxAppRol_Result> sp_checkSubMenuxAppRol(string sUBMENU, Nullable<long> iDPERMISOSMENU)
         {
             var sUBMENUParameter = sUBMENU != null ?
-                new ObjectParameter('SUBMENU', sUBMENU) :
-                new ObjectParameter('SUBMENU', typeof(string));
+                new ObjectParameter("SUBMENU", sUBMENU) :
+                new ObjectParameter("SUBMENU", typeof(string));
     
             var iDPERMISOSMENUParameter = iDPERMISOSMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSMENU', iDPERMISOSMENU) :
-                new ObjectParameter('IDPERMISOSMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSMENU", iDPERMISOSMENU) :
+                new ObjectParameter("IDPERMISOSMENU", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkSubMenuxAppRol_Result>('sp_checkSubMenuxAppRol', sUBMENUParameter, iDPERMISOSMENUParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkSubMenuxAppRol_Result>("sp_checkSubMenuxAppRol", sUBMENUParameter, iDPERMISOSMENUParameter);
         }
     
         public virtual ObjectResult<sp_checkUsrXApp_Result> sp_checkUsrXApp(Nullable<int> tIPOBUSQUEDA, Nullable<long> iDAPLICACION, string uSUARIO)
         {
             var tIPOBUSQUEDAParameter = tIPOBUSQUEDA.HasValue ?
-                new ObjectParameter('TIPOBUSQUEDA', tIPOBUSQUEDA) :
-                new ObjectParameter('TIPOBUSQUEDA', typeof(int));
+                new ObjectParameter("TIPOBUSQUEDA", tIPOBUSQUEDA) :
+                new ObjectParameter("TIPOBUSQUEDA", typeof(int));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkUsrXApp_Result>('sp_checkUsrXApp', tIPOBUSQUEDAParameter, iDAPLICACIONParameter, uSUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkUsrXApp_Result>("sp_checkUsrXApp", tIPOBUSQUEDAParameter, iDAPLICACIONParameter, uSUARIOParameter);
         }
     
         public virtual ObjectResult<sp_checkXApp_Result> sp_checkXApp(string aPLICACION)
         {
             var aPLICACIONParameter = aPLICACION != null ?
-                new ObjectParameter('APLICACION', aPLICACION) :
-                new ObjectParameter('APLICACION', typeof(string));
+                new ObjectParameter("APLICACION", aPLICACION) :
+                new ObjectParameter("APLICACION", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkXApp_Result>('sp_checkXApp', aPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_checkXApp_Result>("sp_checkXApp", aPLICACIONParameter);
         }
     
         public virtual int sp_delMenusXAppRol(Nullable<long> idMenu)
         {
             var idMenuParameter = idMenu.HasValue ?
-                new ObjectParameter('IdMenu', idMenu) :
-                new ObjectParameter('IdMenu', typeof(long));
+                new ObjectParameter("IdMenu", idMenu) :
+                new ObjectParameter("IdMenu", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_delMenusXAppRol', idMenuParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delMenusXAppRol", idMenuParameter);
         }
     
         public virtual int sp_delSubMenusXAppRol(Nullable<long> idSubMenu)
         {
             var idSubMenuParameter = idSubMenu.HasValue ?
-                new ObjectParameter('IdSubMenu', idSubMenu) :
-                new ObjectParameter('IdSubMenu', typeof(long));
+                new ObjectParameter("IdSubMenu", idSubMenu) :
+                new ObjectParameter("IdSubMenu", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_delSubMenusXAppRol', idSubMenuParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_delSubMenusXAppRol", idSubMenuParameter);
         }
     
         public virtual ObjectResult<sp_getAplicaciones_Result> sp_getAplicaciones(string iDAPLICACION, string tXTBUSQUEDA)
         {
             var iDAPLICACIONParameter = iDAPLICACION != null ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(string));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(string));
     
             var tXTBUSQUEDAParameter = tXTBUSQUEDA != null ?
-                new ObjectParameter('TXTBUSQUEDA', tXTBUSQUEDA) :
-                new ObjectParameter('TXTBUSQUEDA', typeof(string));
+                new ObjectParameter("TXTBUSQUEDA", tXTBUSQUEDA) :
+                new ObjectParameter("TXTBUSQUEDA", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getAplicaciones_Result>('sp_getAplicaciones', iDAPLICACIONParameter, tXTBUSQUEDAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getAplicaciones_Result>("sp_getAplicaciones", iDAPLICACIONParameter, tXTBUSQUEDAParameter);
         }
     
         public virtual ObjectResult<sp_getAppsXUsuario_Result> sp_getAppsXUsuario(Nullable<int> tIPOBUSQUEDA, string uSUARIO)
         {
             var tIPOBUSQUEDAParameter = tIPOBUSQUEDA.HasValue ?
-                new ObjectParameter('TIPOBUSQUEDA', tIPOBUSQUEDA) :
-                new ObjectParameter('TIPOBUSQUEDA', typeof(int));
+                new ObjectParameter("TIPOBUSQUEDA", tIPOBUSQUEDA) :
+                new ObjectParameter("TIPOBUSQUEDA", typeof(int));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getAppsXUsuario_Result>('sp_getAppsXUsuario', tIPOBUSQUEDAParameter, uSUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getAppsXUsuario_Result>("sp_getAppsXUsuario", tIPOBUSQUEDAParameter, uSUARIOParameter);
         }
     
         public virtual ObjectResult<sp_getContactos_Result> sp_getContactos(Nullable<long> iDUSUARIO)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getContactos_Result>('sp_getContactos', iDUSUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getContactos_Result>("sp_getContactos", iDUSUARIOParameter);
         }
     
         public virtual ObjectResult<sp_getDomicilios_Result> sp_getDomicilios(Nullable<long> iDUSUARIO)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getDomicilios_Result>('sp_getDomicilios', iDUSUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getDomicilios_Result>("sp_getDomicilios", iDUSUARIOParameter);
         }
     
         public virtual ObjectResult<sp_getElementsObjectsXIdObj_Result> sp_getElementsObjectsXIdObj(Nullable<long> iDELEMENTOSXOBJ)
         {
             var iDELEMENTOSXOBJParameter = iDELEMENTOSXOBJ.HasValue ?
-                new ObjectParameter('IDELEMENTOSXOBJ', iDELEMENTOSXOBJ) :
-                new ObjectParameter('IDELEMENTOSXOBJ', typeof(long));
+                new ObjectParameter("IDELEMENTOSXOBJ", iDELEMENTOSXOBJ) :
+                new ObjectParameter("IDELEMENTOSXOBJ", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getElementsObjectsXIdObj_Result>('sp_getElementsObjectsXIdObj', iDELEMENTOSXOBJParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getElementsObjectsXIdObj_Result>("sp_getElementsObjectsXIdObj", iDELEMENTOSXOBJParameter);
         }
     
         public virtual ObjectResult<sp_getEstacionesXApps_Result> sp_getEstacionesXApps(Nullable<long> iDAPLICACION)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getEstacionesXApps_Result>('sp_getEstacionesXApps', iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getEstacionesXApps_Result>("sp_getEstacionesXApps", iDAPLICACIONParameter);
         }
     
         public virtual ObjectResult<sp_getMenusXAppRol_Result> sp_getMenusXAppRol(Nullable<long> idApp, Nullable<long> idRol)
         {
             var idAppParameter = idApp.HasValue ?
-                new ObjectParameter('IdApp', idApp) :
-                new ObjectParameter('IdApp', typeof(long));
+                new ObjectParameter("IdApp", idApp) :
+                new ObjectParameter("IdApp", typeof(long));
     
             var idRolParameter = idRol.HasValue ?
-                new ObjectParameter('IdRol', idRol) :
-                new ObjectParameter('IdRol', typeof(long));
+                new ObjectParameter("IdRol", idRol) :
+                new ObjectParameter("IdRol", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getMenusXAppRol_Result>('sp_getMenusXAppRol', idAppParameter, idRolParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getMenusXAppRol_Result>("sp_getMenusXAppRol", idAppParameter, idRolParameter);
         }
     
         public virtual ObjectResult<sp_getMenusXAppRolAdmin_Result> sp_getMenusXAppRolAdmin(Nullable<long> idApp, Nullable<long> idRol)
         {
             var idAppParameter = idApp.HasValue ?
-                new ObjectParameter('IdApp', idApp) :
-                new ObjectParameter('IdApp', typeof(long));
+                new ObjectParameter("IdApp", idApp) :
+                new ObjectParameter("IdApp", typeof(long));
     
             var idRolParameter = idRol.HasValue ?
-                new ObjectParameter('IdRol', idRol) :
-                new ObjectParameter('IdRol', typeof(long));
+                new ObjectParameter("IdRol", idRol) :
+                new ObjectParameter("IdRol", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getMenusXAppRolAdmin_Result>('sp_getMenusXAppRolAdmin', idAppParameter, idRolParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getMenusXAppRolAdmin_Result>("sp_getMenusXAppRolAdmin", idAppParameter, idRolParameter);
         }
     
         public virtual ObjectResult<sp_getMetodoXApp_Result> sp_getMetodoXApp(Nullable<long> idApp, string sERVICENAME, string mETHODNAME)
         {
             var idAppParameter = idApp.HasValue ?
-                new ObjectParameter('IdApp', idApp) :
-                new ObjectParameter('IdApp', typeof(long));
+                new ObjectParameter("IdApp", idApp) :
+                new ObjectParameter("IdApp", typeof(long));
     
             var sERVICENAMEParameter = sERVICENAME != null ?
-                new ObjectParameter('SERVICENAME', sERVICENAME) :
-                new ObjectParameter('SERVICENAME', typeof(string));
+                new ObjectParameter("SERVICENAME", sERVICENAME) :
+                new ObjectParameter("SERVICENAME", typeof(string));
     
             var mETHODNAMEParameter = mETHODNAME != null ?
-                new ObjectParameter('METHODNAME', mETHODNAME) :
-                new ObjectParameter('METHODNAME', typeof(string));
+                new ObjectParameter("METHODNAME", mETHODNAME) :
+                new ObjectParameter("METHODNAME", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getMetodoXApp_Result>('sp_getMetodoXApp', idAppParameter, sERVICENAMEParameter, mETHODNAMEParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getMetodoXApp_Result>("sp_getMetodoXApp", idAppParameter, sERVICENAMEParameter, mETHODNAMEParameter);
         }
     
         public virtual ObjectResult<sp_getObjetosXAppRolPage_Result> sp_getObjetosXAppRolPage(Nullable<long> idApp, Nullable<long> idRol, string pagina)
         {
             var idAppParameter = idApp.HasValue ?
-                new ObjectParameter('IdApp', idApp) :
-                new ObjectParameter('IdApp', typeof(long));
+                new ObjectParameter("IdApp", idApp) :
+                new ObjectParameter("IdApp", typeof(long));
     
             var idRolParameter = idRol.HasValue ?
-                new ObjectParameter('IdRol', idRol) :
-                new ObjectParameter('IdRol', typeof(long));
+                new ObjectParameter("IdRol", idRol) :
+                new ObjectParameter("IdRol", typeof(long));
     
             var paginaParameter = pagina != null ?
-                new ObjectParameter('Pagina', pagina) :
-                new ObjectParameter('Pagina', typeof(string));
+                new ObjectParameter("Pagina", pagina) :
+                new ObjectParameter("Pagina", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getObjetosXAppRolPage_Result>('sp_getObjetosXAppRolPage', idAppParameter, idRolParameter, paginaParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getObjetosXAppRolPage_Result>("sp_getObjetosXAppRolPage", idAppParameter, idRolParameter, paginaParameter);
         }
     
         public virtual ObjectResult<sp_getPermisoXApp_Result> sp_getPermisoXApp(Nullable<long> idApp)
         {
             var idAppParameter = idApp.HasValue ?
-                new ObjectParameter('IdApp', idApp) :
-                new ObjectParameter('IdApp', typeof(long));
+                new ObjectParameter("IdApp", idApp) :
+                new ObjectParameter("IdApp", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getPermisoXApp_Result>('sp_getPermisoXApp', idAppParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getPermisoXApp_Result>("sp_getPermisoXApp", idAppParameter);
         }
     
         public virtual ObjectResult<sp_getRolesXApp_Result> sp_getRolesXApp(Nullable<long> iDAPLICACION)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getRolesXApp_Result>('sp_getRolesXApp', iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getRolesXApp_Result>("sp_getRolesXApp", iDAPLICACIONParameter);
         }
     
         public virtual ObjectResult<sp_getRolesXUserApp_Result> sp_getRolesXUserApp(Nullable<int> tIPOBUSQUEDA, string uSUARIO, Nullable<long> iDAPLICACION)
         {
             var tIPOBUSQUEDAParameter = tIPOBUSQUEDA.HasValue ?
-                new ObjectParameter('TIPOBUSQUEDA', tIPOBUSQUEDA) :
-                new ObjectParameter('TIPOBUSQUEDA', typeof(int));
+                new ObjectParameter("TIPOBUSQUEDA", tIPOBUSQUEDA) :
+                new ObjectParameter("TIPOBUSQUEDA", typeof(int));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getRolesXUserApp_Result>('sp_getRolesXUserApp', tIPOBUSQUEDAParameter, uSUARIOParameter, iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getRolesXUserApp_Result>("sp_getRolesXUserApp", tIPOBUSQUEDAParameter, uSUARIOParameter, iDAPLICACIONParameter);
         }
     
         public virtual ObjectResult<sp_getSubMenusXIdMenu_Result> sp_getSubMenusXIdMenu(Nullable<long> iDPERMISOSMENU)
         {
             var iDPERMISOSMENUParameter = iDPERMISOSMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSMENU', iDPERMISOSMENU) :
-                new ObjectParameter('IDPERMISOSMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSMENU", iDPERMISOSMENU) :
+                new ObjectParameter("IDPERMISOSMENU", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getSubMenusXIdMenu_Result>('sp_getSubMenusXIdMenu', iDPERMISOSMENUParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getSubMenusXIdMenu_Result>("sp_getSubMenusXIdMenu", iDPERMISOSMENUParameter);
         }
     
         public virtual ObjectResult<sp_getSubMenusXIdMenuAdmin_Result> sp_getSubMenusXIdMenuAdmin(Nullable<long> iDPERMISOSMENU)
         {
             var iDPERMISOSMENUParameter = iDPERMISOSMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSMENU', iDPERMISOSMENU) :
-                new ObjectParameter('IDPERMISOSMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSMENU", iDPERMISOSMENU) :
+                new ObjectParameter("IDPERMISOSMENU", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getSubMenusXIdMenuAdmin_Result>('sp_getSubMenusXIdMenuAdmin', iDPERMISOSMENUParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getSubMenusXIdMenuAdmin_Result>("sp_getSubMenusXIdMenuAdmin", iDPERMISOSMENUParameter);
         }
     
         public virtual ObjectResult<sp_getUsuario_Result> sp_getUsuario(Nullable<int> tIPOBUSQUEDA, string uSUARIO, Nullable<long> iDAPLICACION)
         {
             var tIPOBUSQUEDAParameter = tIPOBUSQUEDA.HasValue ?
-                new ObjectParameter('TIPOBUSQUEDA', tIPOBUSQUEDA) :
-                new ObjectParameter('TIPOBUSQUEDA', typeof(int));
+                new ObjectParameter("TIPOBUSQUEDA", tIPOBUSQUEDA) :
+                new ObjectParameter("TIPOBUSQUEDA", typeof(int));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getUsuario_Result>('sp_getUsuario', tIPOBUSQUEDAParameter, uSUARIOParameter, iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_getUsuario_Result>("sp_getUsuario", tIPOBUSQUEDAParameter, uSUARIOParameter, iDAPLICACIONParameter);
         }
     
         public virtual int sp_insAplicacion(string dESCRIPCION, string pASSWORD, Nullable<bool> aCTIVO)
         {
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insAplicacion', dESCRIPCIONParameter, pASSWORDParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insAplicacion", dESCRIPCIONParameter, pASSWORDParameter, aCTIVOParameter);
         }
     
         public virtual int sp_insContacto(Nullable<long> iDUSUARIO, Nullable<int> iDTIPOCONTACTO, string vALOR, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDTIPOCONTACTOParameter = iDTIPOCONTACTO.HasValue ?
-                new ObjectParameter('IDTIPOCONTACTO', iDTIPOCONTACTO) :
-                new ObjectParameter('IDTIPOCONTACTO', typeof(int));
+                new ObjectParameter("IDTIPOCONTACTO", iDTIPOCONTACTO) :
+                new ObjectParameter("IDTIPOCONTACTO", typeof(int));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insContacto', iDUSUARIOParameter, iDTIPOCONTACTOParameter, vALORParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insContacto", iDUSUARIOParameter, iDTIPOCONTACTOParameter, vALORParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual ObjectResult<Nullable<decimal>> sp_insDomicilio(Nullable<long> iDUSUARIO, string cALLE, string nUMEXT, string nUMINT, Nullable<int> iDESTADO, string eSTADO, Nullable<int> iDMUN, string mUNICIPIO, Nullable<int> iDCOLONIA, string cOLONIA, string cP, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var cALLEParameter = cALLE != null ?
-                new ObjectParameter('CALLE', cALLE) :
-                new ObjectParameter('CALLE', typeof(string));
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
     
             var nUMEXTParameter = nUMEXT != null ?
-                new ObjectParameter('NUMEXT', nUMEXT) :
-                new ObjectParameter('NUMEXT', typeof(string));
+                new ObjectParameter("NUMEXT", nUMEXT) :
+                new ObjectParameter("NUMEXT", typeof(string));
     
             var nUMINTParameter = nUMINT != null ?
-                new ObjectParameter('NUMINT', nUMINT) :
-                new ObjectParameter('NUMINT', typeof(string));
+                new ObjectParameter("NUMINT", nUMINT) :
+                new ObjectParameter("NUMINT", typeof(string));
     
             var iDESTADOParameter = iDESTADO.HasValue ?
-                new ObjectParameter('IDESTADO', iDESTADO) :
-                new ObjectParameter('IDESTADO', typeof(int));
+                new ObjectParameter("IDESTADO", iDESTADO) :
+                new ObjectParameter("IDESTADO", typeof(int));
     
             var eSTADOParameter = eSTADO != null ?
-                new ObjectParameter('ESTADO', eSTADO) :
-                new ObjectParameter('ESTADO', typeof(string));
+                new ObjectParameter("ESTADO", eSTADO) :
+                new ObjectParameter("ESTADO", typeof(string));
     
             var iDMUNParameter = iDMUN.HasValue ?
-                new ObjectParameter('IDMUN', iDMUN) :
-                new ObjectParameter('IDMUN', typeof(int));
+                new ObjectParameter("IDMUN", iDMUN) :
+                new ObjectParameter("IDMUN", typeof(int));
     
             var mUNICIPIOParameter = mUNICIPIO != null ?
-                new ObjectParameter('MUNICIPIO', mUNICIPIO) :
-                new ObjectParameter('MUNICIPIO', typeof(string));
+                new ObjectParameter("MUNICIPIO", mUNICIPIO) :
+                new ObjectParameter("MUNICIPIO", typeof(string));
     
             var iDCOLONIAParameter = iDCOLONIA.HasValue ?
-                new ObjectParameter('IDCOLONIA', iDCOLONIA) :
-                new ObjectParameter('IDCOLONIA', typeof(int));
+                new ObjectParameter("IDCOLONIA", iDCOLONIA) :
+                new ObjectParameter("IDCOLONIA", typeof(int));
     
             var cOLONIAParameter = cOLONIA != null ?
-                new ObjectParameter('COLONIA', cOLONIA) :
-                new ObjectParameter('COLONIA', typeof(string));
+                new ObjectParameter("COLONIA", cOLONIA) :
+                new ObjectParameter("COLONIA", typeof(string));
     
             var cPParameter = cP != null ?
-                new ObjectParameter('CP', cP) :
-                new ObjectParameter('CP', typeof(string));
+                new ObjectParameter("CP", cP) :
+                new ObjectParameter("CP", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>('sp_insDomicilio', iDUSUARIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("sp_insDomicilio", iDUSUARIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_insLogError(Nullable<long> idApp, string mENSAJE, string hOSTNAME, string iP, string sTACKTRACE, Nullable<System.DateTime> dTFECHAERROR, string vCHUSUARIO)
         {
             var idAppParameter = idApp.HasValue ?
-                new ObjectParameter('IdApp', idApp) :
-                new ObjectParameter('IdApp', typeof(long));
+                new ObjectParameter("IdApp", idApp) :
+                new ObjectParameter("IdApp", typeof(long));
     
             var mENSAJEParameter = mENSAJE != null ?
-                new ObjectParameter('MENSAJE', mENSAJE) :
-                new ObjectParameter('MENSAJE', typeof(string));
+                new ObjectParameter("MENSAJE", mENSAJE) :
+                new ObjectParameter("MENSAJE", typeof(string));
     
             var hOSTNAMEParameter = hOSTNAME != null ?
-                new ObjectParameter('HOSTNAME', hOSTNAME) :
-                new ObjectParameter('HOSTNAME', typeof(string));
+                new ObjectParameter("HOSTNAME", hOSTNAME) :
+                new ObjectParameter("HOSTNAME", typeof(string));
     
             var iPParameter = iP != null ?
-                new ObjectParameter('IP', iP) :
-                new ObjectParameter('IP', typeof(string));
+                new ObjectParameter("IP", iP) :
+                new ObjectParameter("IP", typeof(string));
     
             var sTACKTRACEParameter = sTACKTRACE != null ?
-                new ObjectParameter('STACKTRACE', sTACKTRACE) :
-                new ObjectParameter('STACKTRACE', typeof(string));
+                new ObjectParameter("STACKTRACE", sTACKTRACE) :
+                new ObjectParameter("STACKTRACE", typeof(string));
     
             var dTFECHAERRORParameter = dTFECHAERROR.HasValue ?
-                new ObjectParameter('DTFECHAERROR', dTFECHAERROR) :
-                new ObjectParameter('DTFECHAERROR', typeof(System.DateTime));
+                new ObjectParameter("DTFECHAERROR", dTFECHAERROR) :
+                new ObjectParameter("DTFECHAERROR", typeof(System.DateTime));
     
             var vCHUSUARIOParameter = vCHUSUARIO != null ?
-                new ObjectParameter('VCHUSUARIO', vCHUSUARIO) :
-                new ObjectParameter('VCHUSUARIO', typeof(string));
+                new ObjectParameter("VCHUSUARIO", vCHUSUARIO) :
+                new ObjectParameter("VCHUSUARIO", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insLogError', idAppParameter, mENSAJEParameter, hOSTNAMEParameter, iPParameter, sTACKTRACEParameter, dTFECHAERRORParameter, vCHUSUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insLogError", idAppParameter, mENSAJEParameter, hOSTNAMEParameter, iPParameter, sTACKTRACEParameter, dTFECHAERRORParameter, vCHUSUARIOParameter);
         }
     
         public virtual int sp_insMenuXAppRol(Nullable<long> iDROL, string nOMBREMENU, string iMAGEN, string tIPOOBJETO, string uRL, string tOOLTIP, Nullable<long> oRDEN)
         {
             var iDROLParameter = iDROL.HasValue ?
-                new ObjectParameter('IDROL', iDROL) :
-                new ObjectParameter('IDROL', typeof(long));
+                new ObjectParameter("IDROL", iDROL) :
+                new ObjectParameter("IDROL", typeof(long));
     
             var nOMBREMENUParameter = nOMBREMENU != null ?
-                new ObjectParameter('NOMBREMENU', nOMBREMENU) :
-                new ObjectParameter('NOMBREMENU', typeof(string));
+                new ObjectParameter("NOMBREMENU", nOMBREMENU) :
+                new ObjectParameter("NOMBREMENU", typeof(string));
     
             var iMAGENParameter = iMAGEN != null ?
-                new ObjectParameter('IMAGEN', iMAGEN) :
-                new ObjectParameter('IMAGEN', typeof(string));
+                new ObjectParameter("IMAGEN", iMAGEN) :
+                new ObjectParameter("IMAGEN", typeof(string));
     
             var tIPOOBJETOParameter = tIPOOBJETO != null ?
-                new ObjectParameter('TIPOOBJETO', tIPOOBJETO) :
-                new ObjectParameter('TIPOOBJETO', typeof(string));
+                new ObjectParameter("TIPOOBJETO", tIPOOBJETO) :
+                new ObjectParameter("TIPOOBJETO", typeof(string));
     
             var uRLParameter = uRL != null ?
-                new ObjectParameter('URL', uRL) :
-                new ObjectParameter('URL', typeof(string));
+                new ObjectParameter("URL", uRL) :
+                new ObjectParameter("URL", typeof(string));
     
             var tOOLTIPParameter = tOOLTIP != null ?
-                new ObjectParameter('TOOLTIP', tOOLTIP) :
-                new ObjectParameter('TOOLTIP', typeof(string));
+                new ObjectParameter("TOOLTIP", tOOLTIP) :
+                new ObjectParameter("TOOLTIP", typeof(string));
     
             var oRDENParameter = oRDEN.HasValue ?
-                new ObjectParameter('ORDEN', oRDEN) :
-                new ObjectParameter('ORDEN', typeof(long));
+                new ObjectParameter("ORDEN", oRDEN) :
+                new ObjectParameter("ORDEN", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insMenuXAppRol', iDROLParameter, nOMBREMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insMenuXAppRol", iDROLParameter, nOMBREMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter);
         }
     
         public virtual int sp_insMetodosxApp(Nullable<long> iDMETODOS, Nullable<long> iDAPLICACION, Nullable<long> iDSERVICIOS, string nOMBREMETODO, Nullable<bool> rECURRENTE, Nullable<bool> aCTIVO)
         {
             var iDMETODOSParameter = iDMETODOS.HasValue ?
-                new ObjectParameter('IDMETODOS', iDMETODOS) :
-                new ObjectParameter('IDMETODOS', typeof(long));
+                new ObjectParameter("IDMETODOS", iDMETODOS) :
+                new ObjectParameter("IDMETODOS", typeof(long));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDSERVICIOSParameter = iDSERVICIOS.HasValue ?
-                new ObjectParameter('IDSERVICIOS', iDSERVICIOS) :
-                new ObjectParameter('IDSERVICIOS', typeof(long));
+                new ObjectParameter("IDSERVICIOS", iDSERVICIOS) :
+                new ObjectParameter("IDSERVICIOS", typeof(long));
     
             var nOMBREMETODOParameter = nOMBREMETODO != null ?
-                new ObjectParameter('NOMBREMETODO', nOMBREMETODO) :
-                new ObjectParameter('NOMBREMETODO', typeof(string));
+                new ObjectParameter("NOMBREMETODO", nOMBREMETODO) :
+                new ObjectParameter("NOMBREMETODO", typeof(string));
     
             var rECURRENTEParameter = rECURRENTE.HasValue ?
-                new ObjectParameter('RECURRENTE', rECURRENTE) :
-                new ObjectParameter('RECURRENTE', typeof(bool));
+                new ObjectParameter("RECURRENTE", rECURRENTE) :
+                new ObjectParameter("RECURRENTE", typeof(bool));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insMetodosxApp', iDMETODOSParameter, iDAPLICACIONParameter, iDSERVICIOSParameter, nOMBREMETODOParameter, rECURRENTEParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insMetodosxApp", iDMETODOSParameter, iDAPLICACIONParameter, iDSERVICIOSParameter, nOMBREMETODOParameter, rECURRENTEParameter, aCTIVOParameter);
         }
     
         public virtual int sp_insPermisosxElementoObjeto(Nullable<long> iDPERMISOSOBJ, string eLEMENTO, string tOOLTIP)
         {
             var iDPERMISOSOBJParameter = iDPERMISOSOBJ.HasValue ?
-                new ObjectParameter('IDPERMISOSOBJ', iDPERMISOSOBJ) :
-                new ObjectParameter('IDPERMISOSOBJ', typeof(long));
+                new ObjectParameter("IDPERMISOSOBJ", iDPERMISOSOBJ) :
+                new ObjectParameter("IDPERMISOSOBJ", typeof(long));
     
             var eLEMENTOParameter = eLEMENTO != null ?
-                new ObjectParameter('ELEMENTO', eLEMENTO) :
-                new ObjectParameter('ELEMENTO', typeof(string));
+                new ObjectParameter("ELEMENTO", eLEMENTO) :
+                new ObjectParameter("ELEMENTO", typeof(string));
     
             var tOOLTIPParameter = tOOLTIP != null ?
-                new ObjectParameter('TOOLTIP', tOOLTIP) :
-                new ObjectParameter('TOOLTIP', typeof(string));
+                new ObjectParameter("TOOLTIP", tOOLTIP) :
+                new ObjectParameter("TOOLTIP", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insPermisosxElementoObjeto', iDPERMISOSOBJParameter, eLEMENTOParameter, tOOLTIPParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insPermisosxElementoObjeto", iDPERMISOSOBJParameter, eLEMENTOParameter, tOOLTIPParameter);
         }
     
         public virtual int sp_insPermisosxObjeto(Nullable<long> iDROL, string pAGINA, string nOMBREOBJETO, string tIPOOBJETO, string tOOLTIP)
         {
             var iDROLParameter = iDROL.HasValue ?
-                new ObjectParameter('IDROL', iDROL) :
-                new ObjectParameter('IDROL', typeof(long));
+                new ObjectParameter("IDROL", iDROL) :
+                new ObjectParameter("IDROL", typeof(long));
     
             var pAGINAParameter = pAGINA != null ?
-                new ObjectParameter('PAGINA', pAGINA) :
-                new ObjectParameter('PAGINA', typeof(string));
+                new ObjectParameter("PAGINA", pAGINA) :
+                new ObjectParameter("PAGINA", typeof(string));
     
             var nOMBREOBJETOParameter = nOMBREOBJETO != null ?
-                new ObjectParameter('NOMBREOBJETO', nOMBREOBJETO) :
-                new ObjectParameter('NOMBREOBJETO', typeof(string));
+                new ObjectParameter("NOMBREOBJETO", nOMBREOBJETO) :
+                new ObjectParameter("NOMBREOBJETO", typeof(string));
     
             var tIPOOBJETOParameter = tIPOOBJETO != null ?
-                new ObjectParameter('TIPOOBJETO', tIPOOBJETO) :
-                new ObjectParameter('TIPOOBJETO', typeof(string));
+                new ObjectParameter("TIPOOBJETO", tIPOOBJETO) :
+                new ObjectParameter("TIPOOBJETO", typeof(string));
     
             var tOOLTIPParameter = tOOLTIP != null ?
-                new ObjectParameter('TOOLTIP', tOOLTIP) :
-                new ObjectParameter('TOOLTIP', typeof(string));
+                new ObjectParameter("TOOLTIP", tOOLTIP) :
+                new ObjectParameter("TOOLTIP", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insPermisosxObjeto', iDROLParameter, pAGINAParameter, nOMBREOBJETOParameter, tIPOOBJETOParameter, tOOLTIPParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insPermisosxObjeto", iDROLParameter, pAGINAParameter, nOMBREOBJETOParameter, tIPOOBJETOParameter, tOOLTIPParameter);
         }
     
         public virtual int sp_insRolesXUsuario(Nullable<long> iDROL, Nullable<long> iDUSUARIO, Nullable<long> iDESTACIONXAPP)
         {
             var iDROLParameter = iDROL.HasValue ?
-                new ObjectParameter('IDROL', iDROL) :
-                new ObjectParameter('IDROL', typeof(long));
+                new ObjectParameter("IDROL", iDROL) :
+                new ObjectParameter("IDROL", typeof(long));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDESTACIONXAPPParameter = iDESTACIONXAPP.HasValue ?
-                new ObjectParameter('IDESTACIONXAPP', iDESTACIONXAPP) :
-                new ObjectParameter('IDESTACIONXAPP', typeof(long));
+                new ObjectParameter("IDESTACIONXAPP", iDESTACIONXAPP) :
+                new ObjectParameter("IDESTACIONXAPP", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insRolesXUsuario', iDROLParameter, iDUSUARIOParameter, iDESTACIONXAPPParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insRolesXUsuario", iDROLParameter, iDUSUARIOParameter, iDESTACIONXAPPParameter);
         }
     
         public virtual int sp_insRolXApp(string rOL, Nullable<long> iDAPLICACION)
         {
             var rOLParameter = rOL != null ?
-                new ObjectParameter('ROL', rOL) :
-                new ObjectParameter('ROL', typeof(string));
+                new ObjectParameter("ROL", rOL) :
+                new ObjectParameter("ROL", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insRolXApp', rOLParameter, iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insRolXApp", rOLParameter, iDAPLICACIONParameter);
         }
     
         public virtual int sp_insRolXUserApp(Nullable<long> iDROL, Nullable<long> iDUSUARIO, Nullable<long> iDESTACIONXAPP, Nullable<long> iDROLXUSUARIO, Nullable<bool> aCTIVO)
         {
             var iDROLParameter = iDROL.HasValue ?
-                new ObjectParameter('IDROL', iDROL) :
-                new ObjectParameter('IDROL', typeof(long));
+                new ObjectParameter("IDROL", iDROL) :
+                new ObjectParameter("IDROL", typeof(long));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDESTACIONXAPPParameter = iDESTACIONXAPP.HasValue ?
-                new ObjectParameter('IDESTACIONXAPP', iDESTACIONXAPP) :
-                new ObjectParameter('IDESTACIONXAPP', typeof(long));
+                new ObjectParameter("IDESTACIONXAPP", iDESTACIONXAPP) :
+                new ObjectParameter("IDESTACIONXAPP", typeof(long));
     
             var iDROLXUSUARIOParameter = iDROLXUSUARIO.HasValue ?
-                new ObjectParameter('IDROLXUSUARIO', iDROLXUSUARIO) :
-                new ObjectParameter('IDROLXUSUARIO', typeof(long));
+                new ObjectParameter("IDROLXUSUARIO", iDROLXUSUARIO) :
+                new ObjectParameter("IDROLXUSUARIO", typeof(long));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insRolXUserApp', iDROLParameter, iDUSUARIOParameter, iDESTACIONXAPPParameter, iDROLXUSUARIOParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insRolXUserApp", iDROLParameter, iDUSUARIOParameter, iDESTACIONXAPPParameter, iDROLXUSUARIOParameter, aCTIVOParameter);
         }
     
         public virtual int sp_insServicioWCF(string dESCRIPCION)
         {
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insServicioWCF', dESCRIPCIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insServicioWCF", dESCRIPCIONParameter);
         }
     
         public virtual int sp_insSubMenuXAppRol(Nullable<long> iDPERMISOSMENU, string nOMBRESUBMENU, string iMAGEN, string tIPOOBJETO, string uRL, string tOOLTIP, Nullable<long> oRDEN)
         {
             var iDPERMISOSMENUParameter = iDPERMISOSMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSMENU', iDPERMISOSMENU) :
-                new ObjectParameter('IDPERMISOSMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSMENU", iDPERMISOSMENU) :
+                new ObjectParameter("IDPERMISOSMENU", typeof(long));
     
             var nOMBRESUBMENUParameter = nOMBRESUBMENU != null ?
-                new ObjectParameter('NOMBRESUBMENU', nOMBRESUBMENU) :
-                new ObjectParameter('NOMBRESUBMENU', typeof(string));
+                new ObjectParameter("NOMBRESUBMENU", nOMBRESUBMENU) :
+                new ObjectParameter("NOMBRESUBMENU", typeof(string));
     
             var iMAGENParameter = iMAGEN != null ?
-                new ObjectParameter('IMAGEN', iMAGEN) :
-                new ObjectParameter('IMAGEN', typeof(string));
+                new ObjectParameter("IMAGEN", iMAGEN) :
+                new ObjectParameter("IMAGEN", typeof(string));
     
             var tIPOOBJETOParameter = tIPOOBJETO != null ?
-                new ObjectParameter('TIPOOBJETO', tIPOOBJETO) :
-                new ObjectParameter('TIPOOBJETO', typeof(string));
+                new ObjectParameter("TIPOOBJETO", tIPOOBJETO) :
+                new ObjectParameter("TIPOOBJETO", typeof(string));
     
             var uRLParameter = uRL != null ?
-                new ObjectParameter('URL', uRL) :
-                new ObjectParameter('URL', typeof(string));
+                new ObjectParameter("URL", uRL) :
+                new ObjectParameter("URL", typeof(string));
     
             var tOOLTIPParameter = tOOLTIP != null ?
-                new ObjectParameter('TOOLTIP', tOOLTIP) :
-                new ObjectParameter('TOOLTIP', typeof(string));
+                new ObjectParameter("TOOLTIP", tOOLTIP) :
+                new ObjectParameter("TOOLTIP", typeof(string));
     
             var oRDENParameter = oRDEN.HasValue ?
-                new ObjectParameter('ORDEN', oRDEN) :
-                new ObjectParameter('ORDEN', typeof(long));
+                new ObjectParameter("ORDEN", oRDEN) :
+                new ObjectParameter("ORDEN", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_insSubMenuXAppRol', iDPERMISOSMENUParameter, nOMBRESUBMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_insSubMenuXAppRol", iDPERMISOSMENUParameter, nOMBRESUBMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter);
         }
     
         public virtual ObjectResult<Nullable<decimal>> sp_insUser(Nullable<long> iDAPLICACION, Nullable<int> iDSEXO, Nullable<int> iDTIPOPERSONA, Nullable<int> iDESTADOCIVIL, Nullable<int> iDAREA, Nullable<int> iDTIPOUSUARIO, string iDUSUARIOAPP, string aPATERNO, string aMATERNO, string nOMBRE, Nullable<System.DateTime> fECHANACCONST, string uSUARIO, string pASSWORD, string rUTAFOTOPERFIL, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDSEXOParameter = iDSEXO.HasValue ?
-                new ObjectParameter('IDSEXO', iDSEXO) :
-                new ObjectParameter('IDSEXO', typeof(int));
+                new ObjectParameter("IDSEXO", iDSEXO) :
+                new ObjectParameter("IDSEXO", typeof(int));
     
             var iDTIPOPERSONAParameter = iDTIPOPERSONA.HasValue ?
-                new ObjectParameter('IDTIPOPERSONA', iDTIPOPERSONA) :
-                new ObjectParameter('IDTIPOPERSONA', typeof(int));
+                new ObjectParameter("IDTIPOPERSONA", iDTIPOPERSONA) :
+                new ObjectParameter("IDTIPOPERSONA", typeof(int));
     
             var iDESTADOCIVILParameter = iDESTADOCIVIL.HasValue ?
-                new ObjectParameter('IDESTADOCIVIL', iDESTADOCIVIL) :
-                new ObjectParameter('IDESTADOCIVIL', typeof(int));
+                new ObjectParameter("IDESTADOCIVIL", iDESTADOCIVIL) :
+                new ObjectParameter("IDESTADOCIVIL", typeof(int));
     
             var iDAREAParameter = iDAREA.HasValue ?
-                new ObjectParameter('IDAREA', iDAREA) :
-                new ObjectParameter('IDAREA', typeof(int));
+                new ObjectParameter("IDAREA", iDAREA) :
+                new ObjectParameter("IDAREA", typeof(int));
     
             var iDTIPOUSUARIOParameter = iDTIPOUSUARIO.HasValue ?
-                new ObjectParameter('IDTIPOUSUARIO', iDTIPOUSUARIO) :
-                new ObjectParameter('IDTIPOUSUARIO', typeof(int));
+                new ObjectParameter("IDTIPOUSUARIO", iDTIPOUSUARIO) :
+                new ObjectParameter("IDTIPOUSUARIO", typeof(int));
     
             var iDUSUARIOAPPParameter = iDUSUARIOAPP != null ?
-                new ObjectParameter('IDUSUARIOAPP', iDUSUARIOAPP) :
-                new ObjectParameter('IDUSUARIOAPP', typeof(string));
+                new ObjectParameter("IDUSUARIOAPP", iDUSUARIOAPP) :
+                new ObjectParameter("IDUSUARIOAPP", typeof(string));
     
             var aPATERNOParameter = aPATERNO != null ?
-                new ObjectParameter('APATERNO', aPATERNO) :
-                new ObjectParameter('APATERNO', typeof(string));
+                new ObjectParameter("APATERNO", aPATERNO) :
+                new ObjectParameter("APATERNO", typeof(string));
     
             var aMATERNOParameter = aMATERNO != null ?
-                new ObjectParameter('AMATERNO', aMATERNO) :
-                new ObjectParameter('AMATERNO', typeof(string));
+                new ObjectParameter("AMATERNO", aMATERNO) :
+                new ObjectParameter("AMATERNO", typeof(string));
     
             var nOMBREParameter = nOMBRE != null ?
-                new ObjectParameter('NOMBRE', nOMBRE) :
-                new ObjectParameter('NOMBRE', typeof(string));
+                new ObjectParameter("NOMBRE", nOMBRE) :
+                new ObjectParameter("NOMBRE", typeof(string));
     
             var fECHANACCONSTParameter = fECHANACCONST.HasValue ?
-                new ObjectParameter('FECHANACCONST', fECHANACCONST) :
-                new ObjectParameter('FECHANACCONST', typeof(System.DateTime));
+                new ObjectParameter("FECHANACCONST", fECHANACCONST) :
+                new ObjectParameter("FECHANACCONST", typeof(System.DateTime));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var rUTAFOTOPERFILParameter = rUTAFOTOPERFIL != null ?
-                new ObjectParameter('RUTAFOTOPERFIL', rUTAFOTOPERFIL) :
-                new ObjectParameter('RUTAFOTOPERFIL', typeof(string));
+                new ObjectParameter("RUTAFOTOPERFIL", rUTAFOTOPERFIL) :
+                new ObjectParameter("RUTAFOTOPERFIL", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>('sp_insUser', iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, fECHAALTAParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("sp_insUser", iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, fECHAALTAParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_updAplicacion(Nullable<long> iDAPLICACION, string dESCRIPCION, string pASSWORD, Nullable<bool> aCTIVO)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updAplicacion', iDAPLICACIONParameter, dESCRIPCIONParameter, pASSWORDParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updAplicacion", iDAPLICACIONParameter, dESCRIPCIONParameter, pASSWORDParameter, aCTIVOParameter);
         }
     
         public virtual int sp_updContacto(Nullable<long> iDUSUARIO, Nullable<long> iDCONTACTO, Nullable<int> iDTIPOCONTACTO, string vALOR, Nullable<bool> aCTIVO, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDCONTACTOParameter = iDCONTACTO.HasValue ?
-                new ObjectParameter('IDCONTACTO', iDCONTACTO) :
-                new ObjectParameter('IDCONTACTO', typeof(long));
+                new ObjectParameter("IDCONTACTO", iDCONTACTO) :
+                new ObjectParameter("IDCONTACTO", typeof(long));
     
             var iDTIPOCONTACTOParameter = iDTIPOCONTACTO.HasValue ?
-                new ObjectParameter('IDTIPOCONTACTO', iDTIPOCONTACTO) :
-                new ObjectParameter('IDTIPOCONTACTO', typeof(int));
+                new ObjectParameter("IDTIPOCONTACTO", iDTIPOCONTACTO) :
+                new ObjectParameter("IDTIPOCONTACTO", typeof(int));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updContacto', iDUSUARIOParameter, iDCONTACTOParameter, iDTIPOCONTACTOParameter, vALORParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updContacto", iDUSUARIOParameter, iDCONTACTOParameter, iDTIPOCONTACTOParameter, vALORParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_updDomicilio(Nullable<long> iDUSUARIO, Nullable<long> iDDOMICILIO, string cALLE, string nUMEXT, string nUMINT, Nullable<int> iDESTADO, string eSTADO, Nullable<int> iDMUN, string mUNICIPIO, Nullable<int> iDCOLONIA, string cOLONIA, string cP, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDDOMICILIOParameter = iDDOMICILIO.HasValue ?
-                new ObjectParameter('IDDOMICILIO', iDDOMICILIO) :
-                new ObjectParameter('IDDOMICILIO', typeof(long));
+                new ObjectParameter("IDDOMICILIO", iDDOMICILIO) :
+                new ObjectParameter("IDDOMICILIO", typeof(long));
     
             var cALLEParameter = cALLE != null ?
-                new ObjectParameter('CALLE', cALLE) :
-                new ObjectParameter('CALLE', typeof(string));
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
     
             var nUMEXTParameter = nUMEXT != null ?
-                new ObjectParameter('NUMEXT', nUMEXT) :
-                new ObjectParameter('NUMEXT', typeof(string));
+                new ObjectParameter("NUMEXT", nUMEXT) :
+                new ObjectParameter("NUMEXT", typeof(string));
     
             var nUMINTParameter = nUMINT != null ?
-                new ObjectParameter('NUMINT', nUMINT) :
-                new ObjectParameter('NUMINT', typeof(string));
+                new ObjectParameter("NUMINT", nUMINT) :
+                new ObjectParameter("NUMINT", typeof(string));
     
             var iDESTADOParameter = iDESTADO.HasValue ?
-                new ObjectParameter('IDESTADO', iDESTADO) :
-                new ObjectParameter('IDESTADO', typeof(int));
+                new ObjectParameter("IDESTADO", iDESTADO) :
+                new ObjectParameter("IDESTADO", typeof(int));
     
             var eSTADOParameter = eSTADO != null ?
-                new ObjectParameter('ESTADO', eSTADO) :
-                new ObjectParameter('ESTADO', typeof(string));
+                new ObjectParameter("ESTADO", eSTADO) :
+                new ObjectParameter("ESTADO", typeof(string));
     
             var iDMUNParameter = iDMUN.HasValue ?
-                new ObjectParameter('IDMUN', iDMUN) :
-                new ObjectParameter('IDMUN', typeof(int));
+                new ObjectParameter("IDMUN", iDMUN) :
+                new ObjectParameter("IDMUN", typeof(int));
     
             var mUNICIPIOParameter = mUNICIPIO != null ?
-                new ObjectParameter('MUNICIPIO', mUNICIPIO) :
-                new ObjectParameter('MUNICIPIO', typeof(string));
+                new ObjectParameter("MUNICIPIO", mUNICIPIO) :
+                new ObjectParameter("MUNICIPIO", typeof(string));
     
             var iDCOLONIAParameter = iDCOLONIA.HasValue ?
-                new ObjectParameter('IDCOLONIA', iDCOLONIA) :
-                new ObjectParameter('IDCOLONIA', typeof(int));
+                new ObjectParameter("IDCOLONIA", iDCOLONIA) :
+                new ObjectParameter("IDCOLONIA", typeof(int));
     
             var cOLONIAParameter = cOLONIA != null ?
-                new ObjectParameter('COLONIA', cOLONIA) :
-                new ObjectParameter('COLONIA', typeof(string));
+                new ObjectParameter("COLONIA", cOLONIA) :
+                new ObjectParameter("COLONIA", typeof(string));
     
             var cPParameter = cP != null ?
-                new ObjectParameter('CP', cP) :
-                new ObjectParameter('CP', typeof(string));
+                new ObjectParameter("CP", cP) :
+                new ObjectParameter("CP", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updDomicilio', iDUSUARIOParameter, iDDOMICILIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updDomicilio", iDUSUARIOParameter, iDDOMICILIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int sp_updMenuXAppRol(Nullable<long> iDPERMISOSMENU, string nOMBREMENU, string iMAGEN, string tIPOOBJETO, string uRL, string tOOLTIP, Nullable<long> oRDEN, Nullable<bool> aCTIVO)
         {
             var iDPERMISOSMENUParameter = iDPERMISOSMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSMENU', iDPERMISOSMENU) :
-                new ObjectParameter('IDPERMISOSMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSMENU", iDPERMISOSMENU) :
+                new ObjectParameter("IDPERMISOSMENU", typeof(long));
     
             var nOMBREMENUParameter = nOMBREMENU != null ?
-                new ObjectParameter('NOMBREMENU', nOMBREMENU) :
-                new ObjectParameter('NOMBREMENU', typeof(string));
+                new ObjectParameter("NOMBREMENU", nOMBREMENU) :
+                new ObjectParameter("NOMBREMENU", typeof(string));
     
             var iMAGENParameter = iMAGEN != null ?
-                new ObjectParameter('IMAGEN', iMAGEN) :
-                new ObjectParameter('IMAGEN', typeof(string));
+                new ObjectParameter("IMAGEN", iMAGEN) :
+                new ObjectParameter("IMAGEN", typeof(string));
     
             var tIPOOBJETOParameter = tIPOOBJETO != null ?
-                new ObjectParameter('TIPOOBJETO', tIPOOBJETO) :
-                new ObjectParameter('TIPOOBJETO', typeof(string));
+                new ObjectParameter("TIPOOBJETO", tIPOOBJETO) :
+                new ObjectParameter("TIPOOBJETO", typeof(string));
     
             var uRLParameter = uRL != null ?
-                new ObjectParameter('URL', uRL) :
-                new ObjectParameter('URL', typeof(string));
+                new ObjectParameter("URL", uRL) :
+                new ObjectParameter("URL", typeof(string));
     
             var tOOLTIPParameter = tOOLTIP != null ?
-                new ObjectParameter('TOOLTIP', tOOLTIP) :
-                new ObjectParameter('TOOLTIP', typeof(string));
+                new ObjectParameter("TOOLTIP", tOOLTIP) :
+                new ObjectParameter("TOOLTIP", typeof(string));
     
             var oRDENParameter = oRDEN.HasValue ?
-                new ObjectParameter('ORDEN', oRDEN) :
-                new ObjectParameter('ORDEN', typeof(long));
+                new ObjectParameter("ORDEN", oRDEN) :
+                new ObjectParameter("ORDEN", typeof(long));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updMenuXAppRol', iDPERMISOSMENUParameter, nOMBREMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updMenuXAppRol", iDPERMISOSMENUParameter, nOMBREMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter, aCTIVOParameter);
         }
     
         public virtual int sp_updRol(Nullable<long> iDROLXUSUARIO, Nullable<long> iDROL, Nullable<long> iDESTACIONXAPP)
         {
             var iDROLXUSUARIOParameter = iDROLXUSUARIO.HasValue ?
-                new ObjectParameter('IDROLXUSUARIO', iDROLXUSUARIO) :
-                new ObjectParameter('IDROLXUSUARIO', typeof(long));
+                new ObjectParameter("IDROLXUSUARIO", iDROLXUSUARIO) :
+                new ObjectParameter("IDROLXUSUARIO", typeof(long));
     
             var iDROLParameter = iDROL.HasValue ?
-                new ObjectParameter('IDROL', iDROL) :
-                new ObjectParameter('IDROL', typeof(long));
+                new ObjectParameter("IDROL", iDROL) :
+                new ObjectParameter("IDROL", typeof(long));
     
             var iDESTACIONXAPPParameter = iDESTACIONXAPP.HasValue ?
-                new ObjectParameter('IDESTACIONXAPP', iDESTACIONXAPP) :
-                new ObjectParameter('IDESTACIONXAPP', typeof(long));
+                new ObjectParameter("IDESTACIONXAPP", iDESTACIONXAPP) :
+                new ObjectParameter("IDESTACIONXAPP", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updRol', iDROLXUSUARIOParameter, iDROLParameter, iDESTACIONXAPPParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updRol", iDROLXUSUARIOParameter, iDROLParameter, iDESTACIONXAPPParameter);
         }
     
         public virtual int sp_updSubMenuXAppRol(Nullable<long> iDPERMISOSMENU, Nullable<long> iDPERMISOSSUBMENU, string nOMBRESUBMENU, string iMAGEN, string tIPOOBJETO, string uRL, string tOOLTIP, Nullable<long> oRDEN, Nullable<bool> aCTIVO)
         {
             var iDPERMISOSMENUParameter = iDPERMISOSMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSMENU', iDPERMISOSMENU) :
-                new ObjectParameter('IDPERMISOSMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSMENU", iDPERMISOSMENU) :
+                new ObjectParameter("IDPERMISOSMENU", typeof(long));
     
             var iDPERMISOSSUBMENUParameter = iDPERMISOSSUBMENU.HasValue ?
-                new ObjectParameter('IDPERMISOSSUBMENU', iDPERMISOSSUBMENU) :
-                new ObjectParameter('IDPERMISOSSUBMENU', typeof(long));
+                new ObjectParameter("IDPERMISOSSUBMENU", iDPERMISOSSUBMENU) :
+                new ObjectParameter("IDPERMISOSSUBMENU", typeof(long));
     
             var nOMBRESUBMENUParameter = nOMBRESUBMENU != null ?
-                new ObjectParameter('NOMBRESUBMENU', nOMBRESUBMENU) :
-                new ObjectParameter('NOMBRESUBMENU', typeof(string));
+                new ObjectParameter("NOMBRESUBMENU", nOMBRESUBMENU) :
+                new ObjectParameter("NOMBRESUBMENU", typeof(string));
     
             var iMAGENParameter = iMAGEN != null ?
-                new ObjectParameter('IMAGEN', iMAGEN) :
-                new ObjectParameter('IMAGEN', typeof(string));
+                new ObjectParameter("IMAGEN", iMAGEN) :
+                new ObjectParameter("IMAGEN", typeof(string));
     
             var tIPOOBJETOParameter = tIPOOBJETO != null ?
-                new ObjectParameter('TIPOOBJETO', tIPOOBJETO) :
-                new ObjectParameter('TIPOOBJETO', typeof(string));
+                new ObjectParameter("TIPOOBJETO", tIPOOBJETO) :
+                new ObjectParameter("TIPOOBJETO", typeof(string));
     
             var uRLParameter = uRL != null ?
-                new ObjectParameter('URL', uRL) :
-                new ObjectParameter('URL', typeof(string));
+                new ObjectParameter("URL", uRL) :
+                new ObjectParameter("URL", typeof(string));
     
             var tOOLTIPParameter = tOOLTIP != null ?
-                new ObjectParameter('TOOLTIP', tOOLTIP) :
-                new ObjectParameter('TOOLTIP', typeof(string));
+                new ObjectParameter("TOOLTIP", tOOLTIP) :
+                new ObjectParameter("TOOLTIP", typeof(string));
     
             var oRDENParameter = oRDEN.HasValue ?
-                new ObjectParameter('ORDEN', oRDEN) :
-                new ObjectParameter('ORDEN', typeof(long));
+                new ObjectParameter("ORDEN", oRDEN) :
+                new ObjectParameter("ORDEN", typeof(long));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updSubMenuXAppRol', iDPERMISOSMENUParameter, iDPERMISOSSUBMENUParameter, nOMBRESUBMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updSubMenuXAppRol", iDPERMISOSMENUParameter, iDPERMISOSSUBMENUParameter, nOMBRESUBMENUParameter, iMAGENParameter, tIPOOBJETOParameter, uRLParameter, tOOLTIPParameter, oRDENParameter, aCTIVOParameter);
         }
     
         public virtual int sp_updUsuario(Nullable<long> iDUSUARIO, Nullable<long> iDAPLICACION, Nullable<int> iDSEXO, Nullable<int> iDTIPOPERSONA, Nullable<int> iDESTADOCIVIL, Nullable<int> iDAREA, Nullable<int> iDTIPOUSUARIO, string iDUSUARIOAPP, string aPATERNO, string aMATERNO, string nOMBRE, Nullable<System.DateTime> fECHANACCONST, string uSUARIO, string pASSWORD, string rUTAFOTOPERFIL, Nullable<bool> aCTIVO, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDSEXOParameter = iDSEXO.HasValue ?
-                new ObjectParameter('IDSEXO', iDSEXO) :
-                new ObjectParameter('IDSEXO', typeof(int));
+                new ObjectParameter("IDSEXO", iDSEXO) :
+                new ObjectParameter("IDSEXO", typeof(int));
     
             var iDTIPOPERSONAParameter = iDTIPOPERSONA.HasValue ?
-                new ObjectParameter('IDTIPOPERSONA', iDTIPOPERSONA) :
-                new ObjectParameter('IDTIPOPERSONA', typeof(int));
+                new ObjectParameter("IDTIPOPERSONA", iDTIPOPERSONA) :
+                new ObjectParameter("IDTIPOPERSONA", typeof(int));
     
             var iDESTADOCIVILParameter = iDESTADOCIVIL.HasValue ?
-                new ObjectParameter('IDESTADOCIVIL', iDESTADOCIVIL) :
-                new ObjectParameter('IDESTADOCIVIL', typeof(int));
+                new ObjectParameter("IDESTADOCIVIL", iDESTADOCIVIL) :
+                new ObjectParameter("IDESTADOCIVIL", typeof(int));
     
             var iDAREAParameter = iDAREA.HasValue ?
-                new ObjectParameter('IDAREA', iDAREA) :
-                new ObjectParameter('IDAREA', typeof(int));
+                new ObjectParameter("IDAREA", iDAREA) :
+                new ObjectParameter("IDAREA", typeof(int));
     
             var iDTIPOUSUARIOParameter = iDTIPOUSUARIO.HasValue ?
-                new ObjectParameter('IDTIPOUSUARIO', iDTIPOUSUARIO) :
-                new ObjectParameter('IDTIPOUSUARIO', typeof(int));
+                new ObjectParameter("IDTIPOUSUARIO", iDTIPOUSUARIO) :
+                new ObjectParameter("IDTIPOUSUARIO", typeof(int));
     
             var iDUSUARIOAPPParameter = iDUSUARIOAPP != null ?
-                new ObjectParameter('IDUSUARIOAPP', iDUSUARIOAPP) :
-                new ObjectParameter('IDUSUARIOAPP', typeof(string));
+                new ObjectParameter("IDUSUARIOAPP", iDUSUARIOAPP) :
+                new ObjectParameter("IDUSUARIOAPP", typeof(string));
     
             var aPATERNOParameter = aPATERNO != null ?
-                new ObjectParameter('APATERNO', aPATERNO) :
-                new ObjectParameter('APATERNO', typeof(string));
+                new ObjectParameter("APATERNO", aPATERNO) :
+                new ObjectParameter("APATERNO", typeof(string));
     
             var aMATERNOParameter = aMATERNO != null ?
-                new ObjectParameter('AMATERNO', aMATERNO) :
-                new ObjectParameter('AMATERNO', typeof(string));
+                new ObjectParameter("AMATERNO", aMATERNO) :
+                new ObjectParameter("AMATERNO", typeof(string));
     
             var nOMBREParameter = nOMBRE != null ?
-                new ObjectParameter('NOMBRE', nOMBRE) :
-                new ObjectParameter('NOMBRE', typeof(string));
+                new ObjectParameter("NOMBRE", nOMBRE) :
+                new ObjectParameter("NOMBRE", typeof(string));
     
             var fECHANACCONSTParameter = fECHANACCONST.HasValue ?
-                new ObjectParameter('FECHANACCONST', fECHANACCONST) :
-                new ObjectParameter('FECHANACCONST', typeof(System.DateTime));
+                new ObjectParameter("FECHANACCONST", fECHANACCONST) :
+                new ObjectParameter("FECHANACCONST", typeof(System.DateTime));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var rUTAFOTOPERFILParameter = rUTAFOTOPERFIL != null ?
-                new ObjectParameter('RUTAFOTOPERFIL', rUTAFOTOPERFIL) :
-                new ObjectParameter('RUTAFOTOPERFIL', typeof(string));
+                new ObjectParameter("RUTAFOTOPERFIL", rUTAFOTOPERFIL) :
+                new ObjectParameter("RUTAFOTOPERFIL", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('sp_updUsuario', iDUSUARIOParameter, iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_updUsuario", iDUSUARIOParameter, iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int spAddCatEspecifico(string nOMBRECATALOGO, string iDCATALOGO, string dESCRIPCION, string vALORDESCRIPCION, ObjectParameter rESPUESTA)
         {
             var nOMBRECATALOGOParameter = nOMBRECATALOGO != null ?
-                new ObjectParameter('NOMBRECATALOGO', nOMBRECATALOGO) :
-                new ObjectParameter('NOMBRECATALOGO', typeof(string));
+                new ObjectParameter("NOMBRECATALOGO", nOMBRECATALOGO) :
+                new ObjectParameter("NOMBRECATALOGO", typeof(string));
     
             var iDCATALOGOParameter = iDCATALOGO != null ?
-                new ObjectParameter('IDCATALOGO', iDCATALOGO) :
-                new ObjectParameter('IDCATALOGO', typeof(string));
+                new ObjectParameter("IDCATALOGO", iDCATALOGO) :
+                new ObjectParameter("IDCATALOGO", typeof(string));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var vALORDESCRIPCIONParameter = vALORDESCRIPCION != null ?
-                new ObjectParameter('VALORDESCRIPCION', vALORDESCRIPCION) :
-                new ObjectParameter('VALORDESCRIPCION', typeof(string));
+                new ObjectParameter("VALORDESCRIPCION", vALORDESCRIPCION) :
+                new ObjectParameter("VALORDESCRIPCION", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spAddCatEspecifico', nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, vALORDESCRIPCIONParameter, rESPUESTA);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spAddCatEspecifico", nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, vALORDESCRIPCIONParameter, rESPUESTA);
         }
     
         public virtual int spAddCatGenerales(string nOMBRECATALOGO, string iDCATALOGO, string dESCRIPCION, string fILTRO, Nullable<bool> aCTIVO, ObjectParameter iDCATGENERALESNEW)
         {
             var nOMBRECATALOGOParameter = nOMBRECATALOGO != null ?
-                new ObjectParameter('NOMBRECATALOGO', nOMBRECATALOGO) :
-                new ObjectParameter('NOMBRECATALOGO', typeof(string));
+                new ObjectParameter("NOMBRECATALOGO", nOMBRECATALOGO) :
+                new ObjectParameter("NOMBRECATALOGO", typeof(string));
     
             var iDCATALOGOParameter = iDCATALOGO != null ?
-                new ObjectParameter('IDCATALOGO', iDCATALOGO) :
-                new ObjectParameter('IDCATALOGO', typeof(string));
+                new ObjectParameter("IDCATALOGO", iDCATALOGO) :
+                new ObjectParameter("IDCATALOGO", typeof(string));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var fILTROParameter = fILTRO != null ?
-                new ObjectParameter('FILTRO', fILTRO) :
-                new ObjectParameter('FILTRO', typeof(string));
+                new ObjectParameter("FILTRO", fILTRO) :
+                new ObjectParameter("FILTRO", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spAddCatGenerales', nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, fILTROParameter, aCTIVOParameter, iDCATGENERALESNEW);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spAddCatGenerales", nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, fILTROParameter, aCTIVOParameter, iDCATGENERALESNEW);
         }
     
         public virtual int spAddConfigApp(string dESCRIPCION, string vALOR, Nullable<bool> aCTIVO, ObjectParameter iDCONFIGAPPNEW)
         {
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spAddConfigApp', dESCRIPCIONParameter, vALORParameter, aCTIVOParameter, iDCONFIGAPPNEW);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spAddConfigApp", dESCRIPCIONParameter, vALORParameter, aCTIVOParameter, iDCONFIGAPPNEW);
         }
     
         public virtual ObjectResult<Nullable<decimal>> spAddContacto(Nullable<long> iDUSUARIO, Nullable<int> iDTIPOCONTACTO, string vALOR, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDTIPOCONTACTOParameter = iDTIPOCONTACTO.HasValue ?
-                new ObjectParameter('IDTIPOCONTACTO', iDTIPOCONTACTO) :
-                new ObjectParameter('IDTIPOCONTACTO', typeof(int));
+                new ObjectParameter("IDTIPOCONTACTO", iDTIPOCONTACTO) :
+                new ObjectParameter("IDTIPOCONTACTO", typeof(int));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>('spAddContacto', iDUSUARIOParameter, iDTIPOCONTACTOParameter, vALORParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("spAddContacto", iDUSUARIOParameter, iDTIPOCONTACTOParameter, vALORParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual ObjectResult<Nullable<decimal>> spAddDomicilio(Nullable<long> iDUSUARIO, string cALLE, string nUMEXT, string nUMINT, Nullable<int> iDESTADO, string eSTADO, Nullable<int> iDMUN, string mUNICIPIO, Nullable<int> iDCOLONIA, string cOLONIA, string cP, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var cALLEParameter = cALLE != null ?
-                new ObjectParameter('CALLE', cALLE) :
-                new ObjectParameter('CALLE', typeof(string));
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
     
             var nUMEXTParameter = nUMEXT != null ?
-                new ObjectParameter('NUMEXT', nUMEXT) :
-                new ObjectParameter('NUMEXT', typeof(string));
+                new ObjectParameter("NUMEXT", nUMEXT) :
+                new ObjectParameter("NUMEXT", typeof(string));
     
             var nUMINTParameter = nUMINT != null ?
-                new ObjectParameter('NUMINT', nUMINT) :
-                new ObjectParameter('NUMINT', typeof(string));
+                new ObjectParameter("NUMINT", nUMINT) :
+                new ObjectParameter("NUMINT", typeof(string));
     
             var iDESTADOParameter = iDESTADO.HasValue ?
-                new ObjectParameter('IDESTADO', iDESTADO) :
-                new ObjectParameter('IDESTADO', typeof(int));
+                new ObjectParameter("IDESTADO", iDESTADO) :
+                new ObjectParameter("IDESTADO", typeof(int));
     
             var eSTADOParameter = eSTADO != null ?
-                new ObjectParameter('ESTADO', eSTADO) :
-                new ObjectParameter('ESTADO', typeof(string));
+                new ObjectParameter("ESTADO", eSTADO) :
+                new ObjectParameter("ESTADO", typeof(string));
     
             var iDMUNParameter = iDMUN.HasValue ?
-                new ObjectParameter('IDMUN', iDMUN) :
-                new ObjectParameter('IDMUN', typeof(int));
+                new ObjectParameter("IDMUN", iDMUN) :
+                new ObjectParameter("IDMUN", typeof(int));
     
             var mUNICIPIOParameter = mUNICIPIO != null ?
-                new ObjectParameter('MUNICIPIO', mUNICIPIO) :
-                new ObjectParameter('MUNICIPIO', typeof(string));
+                new ObjectParameter("MUNICIPIO", mUNICIPIO) :
+                new ObjectParameter("MUNICIPIO", typeof(string));
     
             var iDCOLONIAParameter = iDCOLONIA.HasValue ?
-                new ObjectParameter('IDCOLONIA', iDCOLONIA) :
-                new ObjectParameter('IDCOLONIA', typeof(int));
+                new ObjectParameter("IDCOLONIA", iDCOLONIA) :
+                new ObjectParameter("IDCOLONIA", typeof(int));
     
             var cOLONIAParameter = cOLONIA != null ?
-                new ObjectParameter('COLONIA', cOLONIA) :
-                new ObjectParameter('COLONIA', typeof(string));
+                new ObjectParameter("COLONIA", cOLONIA) :
+                new ObjectParameter("COLONIA", typeof(string));
     
             var cPParameter = cP != null ?
-                new ObjectParameter('CP', cP) :
-                new ObjectParameter('CP', typeof(string));
+                new ObjectParameter("CP", cP) :
+                new ObjectParameter("CP", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>('spAddDomicilio', iDUSUARIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("spAddDomicilio", iDUSUARIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, fECHAALTAParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual ObjectResult<Nullable<decimal>> spAddUsuario(Nullable<long> iDAPLICACION, Nullable<int> iDSEXO, Nullable<int> iDTIPOPERSONA, Nullable<int> iDESTADOCIVIL, Nullable<int> iDAREA, Nullable<int> iDTIPOUSUARIO, string iDUSUARIOAPP, string aPATERNO, string aMATERNO, string nOMBRE, Nullable<System.DateTime> fECHANACCONST, string uSUARIO, string pASSWORD, string rUTAFOTOPERFIL, Nullable<System.DateTime> fECHAALTA, Nullable<bool> aCTIVO, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDSEXOParameter = iDSEXO.HasValue ?
-                new ObjectParameter('IDSEXO', iDSEXO) :
-                new ObjectParameter('IDSEXO', typeof(int));
+                new ObjectParameter("IDSEXO", iDSEXO) :
+                new ObjectParameter("IDSEXO", typeof(int));
     
             var iDTIPOPERSONAParameter = iDTIPOPERSONA.HasValue ?
-                new ObjectParameter('IDTIPOPERSONA', iDTIPOPERSONA) :
-                new ObjectParameter('IDTIPOPERSONA', typeof(int));
+                new ObjectParameter("IDTIPOPERSONA", iDTIPOPERSONA) :
+                new ObjectParameter("IDTIPOPERSONA", typeof(int));
     
             var iDESTADOCIVILParameter = iDESTADOCIVIL.HasValue ?
-                new ObjectParameter('IDESTADOCIVIL', iDESTADOCIVIL) :
-                new ObjectParameter('IDESTADOCIVIL', typeof(int));
+                new ObjectParameter("IDESTADOCIVIL", iDESTADOCIVIL) :
+                new ObjectParameter("IDESTADOCIVIL", typeof(int));
     
             var iDAREAParameter = iDAREA.HasValue ?
-                new ObjectParameter('IDAREA', iDAREA) :
-                new ObjectParameter('IDAREA', typeof(int));
+                new ObjectParameter("IDAREA", iDAREA) :
+                new ObjectParameter("IDAREA", typeof(int));
     
             var iDTIPOUSUARIOParameter = iDTIPOUSUARIO.HasValue ?
-                new ObjectParameter('IDTIPOUSUARIO', iDTIPOUSUARIO) :
-                new ObjectParameter('IDTIPOUSUARIO', typeof(int));
+                new ObjectParameter("IDTIPOUSUARIO", iDTIPOUSUARIO) :
+                new ObjectParameter("IDTIPOUSUARIO", typeof(int));
     
             var iDUSUARIOAPPParameter = iDUSUARIOAPP != null ?
-                new ObjectParameter('IDUSUARIOAPP', iDUSUARIOAPP) :
-                new ObjectParameter('IDUSUARIOAPP', typeof(string));
+                new ObjectParameter("IDUSUARIOAPP", iDUSUARIOAPP) :
+                new ObjectParameter("IDUSUARIOAPP", typeof(string));
     
             var aPATERNOParameter = aPATERNO != null ?
-                new ObjectParameter('APATERNO', aPATERNO) :
-                new ObjectParameter('APATERNO', typeof(string));
+                new ObjectParameter("APATERNO", aPATERNO) :
+                new ObjectParameter("APATERNO", typeof(string));
     
             var aMATERNOParameter = aMATERNO != null ?
-                new ObjectParameter('AMATERNO', aMATERNO) :
-                new ObjectParameter('AMATERNO', typeof(string));
+                new ObjectParameter("AMATERNO", aMATERNO) :
+                new ObjectParameter("AMATERNO", typeof(string));
     
             var nOMBREParameter = nOMBRE != null ?
-                new ObjectParameter('NOMBRE', nOMBRE) :
-                new ObjectParameter('NOMBRE', typeof(string));
+                new ObjectParameter("NOMBRE", nOMBRE) :
+                new ObjectParameter("NOMBRE", typeof(string));
     
             var fECHANACCONSTParameter = fECHANACCONST.HasValue ?
-                new ObjectParameter('FECHANACCONST', fECHANACCONST) :
-                new ObjectParameter('FECHANACCONST', typeof(System.DateTime));
+                new ObjectParameter("FECHANACCONST", fECHANACCONST) :
+                new ObjectParameter("FECHANACCONST", typeof(System.DateTime));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var rUTAFOTOPERFILParameter = rUTAFOTOPERFIL != null ?
-                new ObjectParameter('RUTAFOTOPERFIL', rUTAFOTOPERFIL) :
-                new ObjectParameter('RUTAFOTOPERFIL', typeof(string));
+                new ObjectParameter("RUTAFOTOPERFIL", rUTAFOTOPERFIL) :
+                new ObjectParameter("RUTAFOTOPERFIL", typeof(string));
     
             var fECHAALTAParameter = fECHAALTA.HasValue ?
-                new ObjectParameter('FECHAALTA', fECHAALTA) :
-                new ObjectParameter('FECHAALTA', typeof(System.DateTime));
+                new ObjectParameter("FECHAALTA", fECHAALTA) :
+                new ObjectParameter("FECHAALTA", typeof(System.DateTime));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>('spAddUsuario', iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, fECHAALTAParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("spAddUsuario", iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, fECHAALTAParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int spAddUsuarioXAplicacion(Nullable<long> iDAPLICACION, Nullable<long> iDUSUARIO, Nullable<bool> aCTIVO)
         {
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spAddUsuarioXAplicacion', iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spAddUsuarioXAplicacion", iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
         }
     
         public virtual int spGetCatEspecifico(Nullable<int> iDCATGENERALES, string nOMBRECATALOGO, string iDCATALOGO, string dESCRIPCION, string fILTRO, Nullable<bool> aCTIVO, string vALORFILTRO)
         {
             var iDCATGENERALESParameter = iDCATGENERALES.HasValue ?
-                new ObjectParameter('IDCATGENERALES', iDCATGENERALES) :
-                new ObjectParameter('IDCATGENERALES', typeof(int));
+                new ObjectParameter("IDCATGENERALES", iDCATGENERALES) :
+                new ObjectParameter("IDCATGENERALES", typeof(int));
     
             var nOMBRECATALOGOParameter = nOMBRECATALOGO != null ?
-                new ObjectParameter('NOMBRECATALOGO', nOMBRECATALOGO) :
-                new ObjectParameter('NOMBRECATALOGO', typeof(string));
+                new ObjectParameter("NOMBRECATALOGO", nOMBRECATALOGO) :
+                new ObjectParameter("NOMBRECATALOGO", typeof(string));
     
             var iDCATALOGOParameter = iDCATALOGO != null ?
-                new ObjectParameter('IDCATALOGO', iDCATALOGO) :
-                new ObjectParameter('IDCATALOGO', typeof(string));
+                new ObjectParameter("IDCATALOGO", iDCATALOGO) :
+                new ObjectParameter("IDCATALOGO", typeof(string));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var fILTROParameter = fILTRO != null ?
-                new ObjectParameter('FILTRO', fILTRO) :
-                new ObjectParameter('FILTRO', typeof(string));
+                new ObjectParameter("FILTRO", fILTRO) :
+                new ObjectParameter("FILTRO", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var vALORFILTROParameter = vALORFILTRO != null ?
-                new ObjectParameter('VALORFILTRO', vALORFILTRO) :
-                new ObjectParameter('VALORFILTRO', typeof(string));
+                new ObjectParameter("VALORFILTRO", vALORFILTRO) :
+                new ObjectParameter("VALORFILTRO", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spGetCatEspecifico', iDCATGENERALESParameter, nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, fILTROParameter, aCTIVOParameter, vALORFILTROParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spGetCatEspecifico", iDCATGENERALESParameter, nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, fILTROParameter, aCTIVOParameter, vALORFILTROParameter);
         }
     
         public virtual ObjectResult<spGetCatGenerales_Result> spGetCatGenerales(Nullable<int> iDCATGENERALES)
         {
             var iDCATGENERALESParameter = iDCATGENERALES.HasValue ?
-                new ObjectParameter('IDCATGENERALES', iDCATGENERALES) :
-                new ObjectParameter('IDCATGENERALES', typeof(int));
+                new ObjectParameter("IDCATGENERALES", iDCATGENERALES) :
+                new ObjectParameter("IDCATGENERALES", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetCatGenerales_Result>('spGetCatGenerales', iDCATGENERALESParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetCatGenerales_Result>("spGetCatGenerales", iDCATGENERALESParameter);
         }
     
         public virtual ObjectResult<spGetConfigApp_Result> spGetConfigApp(Nullable<int> iDCONFIGAPP)
         {
             var iDCONFIGAPPParameter = iDCONFIGAPP.HasValue ?
-                new ObjectParameter('IDCONFIGAPP', iDCONFIGAPP) :
-                new ObjectParameter('IDCONFIGAPP', typeof(int));
+                new ObjectParameter("IDCONFIGAPP", iDCONFIGAPP) :
+                new ObjectParameter("IDCONFIGAPP", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetConfigApp_Result>('spGetConfigApp', iDCONFIGAPPParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetConfigApp_Result>("spGetConfigApp", iDCONFIGAPPParameter);
         }
     
         public virtual ObjectResult<spGetContactos_Result> spGetContactos(Nullable<long> idUsuario)
         {
             var idUsuarioParameter = idUsuario.HasValue ?
-                new ObjectParameter('IdUsuario', idUsuario) :
-                new ObjectParameter('IdUsuario', typeof(long));
+                new ObjectParameter("IdUsuario", idUsuario) :
+                new ObjectParameter("IdUsuario", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetContactos_Result>('spGetContactos', idUsuarioParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetContactos_Result>("spGetContactos", idUsuarioParameter);
         }
     
         public virtual int spGetDefinicionTabla(string nombreTabla)
         {
             var nombreTablaParameter = nombreTabla != null ?
-                new ObjectParameter('NombreTabla', nombreTabla) :
-                new ObjectParameter('NombreTabla', typeof(string));
+                new ObjectParameter("NombreTabla", nombreTabla) :
+                new ObjectParameter("NombreTabla", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spGetDefinicionTabla', nombreTablaParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spGetDefinicionTabla", nombreTablaParameter);
         }
     
         public virtual ObjectResult<spGetDomicilios_Result> spGetDomicilios(Nullable<long> iDUSUARIO)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetDomicilios_Result>('spGetDomicilios', iDUSUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetDomicilios_Result>("spGetDomicilios", iDUSUARIOParameter);
         }
     
         public virtual ObjectResult<spGetRolesVSUsuario_Result> spGetRolesVSUsuario(string iDUSUARIO, string iDAPLICACION)
         {
             var iDUSUARIOParameter = iDUSUARIO != null ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(string));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION != null ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(string));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetRolesVSUsuario_Result>('spGetRolesVSUsuario', iDUSUARIOParameter, iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetRolesVSUsuario_Result>("spGetRolesVSUsuario", iDUSUARIOParameter, iDAPLICACIONParameter);
         }
     
         public virtual ObjectResult<spGetSysTablaCatalogo_Result> spGetSysTablaCatalogo()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetSysTablaCatalogo_Result>('spGetSysTablaCatalogo');
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetSysTablaCatalogo_Result>("spGetSysTablaCatalogo");
         }
     
         public virtual ObjectResult<spGetUsuario_Result> spGetUsuario(string idUsuario)
         {
             var idUsuarioParameter = idUsuario != null ?
-                new ObjectParameter('IdUsuario', idUsuario) :
-                new ObjectParameter('IdUsuario', typeof(string));
+                new ObjectParameter("IdUsuario", idUsuario) :
+                new ObjectParameter("IdUsuario", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetUsuario_Result>('spGetUsuario', idUsuarioParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetUsuario_Result>("spGetUsuario", idUsuarioParameter);
         }
     
         public virtual ObjectResult<spGetUsuarios_Result> spGetUsuarios(Nullable<int> idAplicacion, string nombre, string aMaterno, string aPaterno, string usuario)
         {
             var idAplicacionParameter = idAplicacion.HasValue ?
-                new ObjectParameter('IdAplicacion', idAplicacion) :
-                new ObjectParameter('IdAplicacion', typeof(int));
+                new ObjectParameter("IdAplicacion", idAplicacion) :
+                new ObjectParameter("IdAplicacion", typeof(int));
     
             var nombreParameter = nombre != null ?
-                new ObjectParameter('Nombre', nombre) :
-                new ObjectParameter('Nombre', typeof(string));
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
     
             var aMaternoParameter = aMaterno != null ?
-                new ObjectParameter('AMaterno', aMaterno) :
-                new ObjectParameter('AMaterno', typeof(string));
+                new ObjectParameter("AMaterno", aMaterno) :
+                new ObjectParameter("AMaterno", typeof(string));
     
             var aPaternoParameter = aPaterno != null ?
-                new ObjectParameter('APaterno', aPaterno) :
-                new ObjectParameter('APaterno', typeof(string));
+                new ObjectParameter("APaterno", aPaterno) :
+                new ObjectParameter("APaterno", typeof(string));
     
             var usuarioParameter = usuario != null ?
-                new ObjectParameter('Usuario', usuario) :
-                new ObjectParameter('Usuario', typeof(string));
+                new ObjectParameter("Usuario", usuario) :
+                new ObjectParameter("Usuario", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetUsuarios_Result>('spGetUsuarios', idAplicacionParameter, nombreParameter, aMaternoParameter, aPaternoParameter, usuarioParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetUsuarios_Result>("spGetUsuarios", idAplicacionParameter, nombreParameter, aMaternoParameter, aPaternoParameter, usuarioParameter);
         }
     
         public virtual ObjectResult<spRolesVSUsuario_Result> spRolesVSUsuario(string iDUSUARIO, string iDAPLICACION)
         {
             var iDUSUARIOParameter = iDUSUARIO != null ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(string));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION != null ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(string));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spRolesVSUsuario_Result>('spRolesVSUsuario', iDUSUARIOParameter, iDAPLICACIONParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spRolesVSUsuario_Result>("spRolesVSUsuario", iDUSUARIOParameter, iDAPLICACIONParameter);
         }
     
         public virtual int spSetCatEspecifico(string nOMBRECATALOGO, string iDCATALOGO, string dESCRIPCION, string dESCRIPCIONVALOR, Nullable<int> iDCAT, Nullable<int> aCTIVO)
         {
             var nOMBRECATALOGOParameter = nOMBRECATALOGO != null ?
-                new ObjectParameter('NOMBRECATALOGO', nOMBRECATALOGO) :
-                new ObjectParameter('NOMBRECATALOGO', typeof(string));
+                new ObjectParameter("NOMBRECATALOGO", nOMBRECATALOGO) :
+                new ObjectParameter("NOMBRECATALOGO", typeof(string));
     
             var iDCATALOGOParameter = iDCATALOGO != null ?
-                new ObjectParameter('IDCATALOGO', iDCATALOGO) :
-                new ObjectParameter('IDCATALOGO', typeof(string));
+                new ObjectParameter("IDCATALOGO", iDCATALOGO) :
+                new ObjectParameter("IDCATALOGO", typeof(string));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var dESCRIPCIONVALORParameter = dESCRIPCIONVALOR != null ?
-                new ObjectParameter('DESCRIPCIONVALOR', dESCRIPCIONVALOR) :
-                new ObjectParameter('DESCRIPCIONVALOR', typeof(string));
+                new ObjectParameter("DESCRIPCIONVALOR", dESCRIPCIONVALOR) :
+                new ObjectParameter("DESCRIPCIONVALOR", typeof(string));
     
             var iDCATParameter = iDCAT.HasValue ?
-                new ObjectParameter('IDCAT', iDCAT) :
-                new ObjectParameter('IDCAT', typeof(int));
+                new ObjectParameter("IDCAT", iDCAT) :
+                new ObjectParameter("IDCAT", typeof(int));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(int));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetCatEspecifico', nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, dESCRIPCIONVALORParameter, iDCATParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetCatEspecifico", nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, dESCRIPCIONVALORParameter, iDCATParameter, aCTIVOParameter);
         }
     
         public virtual int spSetCatGenerales(Nullable<int> iDCATGENERALES, string nOMBRECATALOGO, string iDCATALOGO, string dESCRIPCION, string fILTRO, Nullable<bool> aCTIVO)
         {
             var iDCATGENERALESParameter = iDCATGENERALES.HasValue ?
-                new ObjectParameter('IDCATGENERALES', iDCATGENERALES) :
-                new ObjectParameter('IDCATGENERALES', typeof(int));
+                new ObjectParameter("IDCATGENERALES", iDCATGENERALES) :
+                new ObjectParameter("IDCATGENERALES", typeof(int));
     
             var nOMBRECATALOGOParameter = nOMBRECATALOGO != null ?
-                new ObjectParameter('NOMBRECATALOGO', nOMBRECATALOGO) :
-                new ObjectParameter('NOMBRECATALOGO', typeof(string));
+                new ObjectParameter("NOMBRECATALOGO", nOMBRECATALOGO) :
+                new ObjectParameter("NOMBRECATALOGO", typeof(string));
     
             var iDCATALOGOParameter = iDCATALOGO != null ?
-                new ObjectParameter('IDCATALOGO', iDCATALOGO) :
-                new ObjectParameter('IDCATALOGO', typeof(string));
+                new ObjectParameter("IDCATALOGO", iDCATALOGO) :
+                new ObjectParameter("IDCATALOGO", typeof(string));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var fILTROParameter = fILTRO != null ?
-                new ObjectParameter('FILTRO', fILTRO) :
-                new ObjectParameter('FILTRO', typeof(string));
+                new ObjectParameter("FILTRO", fILTRO) :
+                new ObjectParameter("FILTRO", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetCatGenerales', iDCATGENERALESParameter, nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, fILTROParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetCatGenerales", iDCATGENERALESParameter, nOMBRECATALOGOParameter, iDCATALOGOParameter, dESCRIPCIONParameter, fILTROParameter, aCTIVOParameter);
         }
     
         public virtual int spSetConfigApp(Nullable<int> iDCONFIGAPP, string dESCRIPCION, string vALOR, Nullable<bool> aCTIVO)
         {
             var iDCONFIGAPPParameter = iDCONFIGAPP.HasValue ?
-                new ObjectParameter('IDCONFIGAPP', iDCONFIGAPP) :
-                new ObjectParameter('IDCONFIGAPP', typeof(int));
+                new ObjectParameter("IDCONFIGAPP", iDCONFIGAPP) :
+                new ObjectParameter("IDCONFIGAPP", typeof(int));
     
             var dESCRIPCIONParameter = dESCRIPCION != null ?
-                new ObjectParameter('DESCRIPCION', dESCRIPCION) :
-                new ObjectParameter('DESCRIPCION', typeof(string));
+                new ObjectParameter("DESCRIPCION", dESCRIPCION) :
+                new ObjectParameter("DESCRIPCION", typeof(string));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetConfigApp', iDCONFIGAPPParameter, dESCRIPCIONParameter, vALORParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetConfigApp", iDCONFIGAPPParameter, dESCRIPCIONParameter, vALORParameter, aCTIVOParameter);
         }
     
         public virtual int spSetContacto(Nullable<long> iDUSUARIO, Nullable<long> iDCONTACTO, Nullable<int> iDTIPOCONTACTO, string vALOR, Nullable<bool> aCTIVO, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDCONTACTOParameter = iDCONTACTO.HasValue ?
-                new ObjectParameter('IDCONTACTO', iDCONTACTO) :
-                new ObjectParameter('IDCONTACTO', typeof(long));
+                new ObjectParameter("IDCONTACTO", iDCONTACTO) :
+                new ObjectParameter("IDCONTACTO", typeof(long));
     
             var iDTIPOCONTACTOParameter = iDTIPOCONTACTO.HasValue ?
-                new ObjectParameter('IDTIPOCONTACTO', iDTIPOCONTACTO) :
-                new ObjectParameter('IDTIPOCONTACTO', typeof(int));
+                new ObjectParameter("IDTIPOCONTACTO", iDTIPOCONTACTO) :
+                new ObjectParameter("IDTIPOCONTACTO", typeof(int));
     
             var vALORParameter = vALOR != null ?
-                new ObjectParameter('VALOR', vALOR) :
-                new ObjectParameter('VALOR', typeof(string));
+                new ObjectParameter("VALOR", vALOR) :
+                new ObjectParameter("VALOR", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetContacto', iDUSUARIOParameter, iDCONTACTOParameter, iDTIPOCONTACTOParameter, vALORParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetContacto", iDUSUARIOParameter, iDCONTACTOParameter, iDTIPOCONTACTOParameter, vALORParameter, aCTIVOParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int spSetDomicilio(Nullable<long> iDUSUARIO, Nullable<long> iDDOMICILIO, string cALLE, string nUMEXT, string nUMINT, Nullable<int> iDESTADO, string eSTADO, Nullable<int> iDMUN, string mUNICIPIO, Nullable<int> iDCOLONIA, string cOLONIA, string cP, Nullable<long> iDAPLICACION, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDDOMICILIOParameter = iDDOMICILIO.HasValue ?
-                new ObjectParameter('IDDOMICILIO', iDDOMICILIO) :
-                new ObjectParameter('IDDOMICILIO', typeof(long));
+                new ObjectParameter("IDDOMICILIO", iDDOMICILIO) :
+                new ObjectParameter("IDDOMICILIO", typeof(long));
     
             var cALLEParameter = cALLE != null ?
-                new ObjectParameter('CALLE', cALLE) :
-                new ObjectParameter('CALLE', typeof(string));
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
     
             var nUMEXTParameter = nUMEXT != null ?
-                new ObjectParameter('NUMEXT', nUMEXT) :
-                new ObjectParameter('NUMEXT', typeof(string));
+                new ObjectParameter("NUMEXT", nUMEXT) :
+                new ObjectParameter("NUMEXT", typeof(string));
     
             var nUMINTParameter = nUMINT != null ?
-                new ObjectParameter('NUMINT', nUMINT) :
-                new ObjectParameter('NUMINT', typeof(string));
+                new ObjectParameter("NUMINT", nUMINT) :
+                new ObjectParameter("NUMINT", typeof(string));
     
             var iDESTADOParameter = iDESTADO.HasValue ?
-                new ObjectParameter('IDESTADO', iDESTADO) :
-                new ObjectParameter('IDESTADO', typeof(int));
+                new ObjectParameter("IDESTADO", iDESTADO) :
+                new ObjectParameter("IDESTADO", typeof(int));
     
             var eSTADOParameter = eSTADO != null ?
-                new ObjectParameter('ESTADO', eSTADO) :
-                new ObjectParameter('ESTADO', typeof(string));
+                new ObjectParameter("ESTADO", eSTADO) :
+                new ObjectParameter("ESTADO", typeof(string));
     
             var iDMUNParameter = iDMUN.HasValue ?
-                new ObjectParameter('IDMUN', iDMUN) :
-                new ObjectParameter('IDMUN', typeof(int));
+                new ObjectParameter("IDMUN", iDMUN) :
+                new ObjectParameter("IDMUN", typeof(int));
     
             var mUNICIPIOParameter = mUNICIPIO != null ?
-                new ObjectParameter('MUNICIPIO', mUNICIPIO) :
-                new ObjectParameter('MUNICIPIO', typeof(string));
+                new ObjectParameter("MUNICIPIO", mUNICIPIO) :
+                new ObjectParameter("MUNICIPIO", typeof(string));
     
             var iDCOLONIAParameter = iDCOLONIA.HasValue ?
-                new ObjectParameter('IDCOLONIA', iDCOLONIA) :
-                new ObjectParameter('IDCOLONIA', typeof(int));
+                new ObjectParameter("IDCOLONIA", iDCOLONIA) :
+                new ObjectParameter("IDCOLONIA", typeof(int));
     
             var cOLONIAParameter = cOLONIA != null ?
-                new ObjectParameter('COLONIA', cOLONIA) :
-                new ObjectParameter('COLONIA', typeof(string));
+                new ObjectParameter("COLONIA", cOLONIA) :
+                new ObjectParameter("COLONIA", typeof(string));
     
             var cPParameter = cP != null ?
-                new ObjectParameter('CP', cP) :
-                new ObjectParameter('CP', typeof(string));
+                new ObjectParameter("CP", cP) :
+                new ObjectParameter("CP", typeof(string));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetDomicilio', iDUSUARIOParameter, iDDOMICILIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetDomicilio", iDUSUARIOParameter, iDDOMICILIOParameter, cALLEParameter, nUMEXTParameter, nUMINTParameter, iDESTADOParameter, eSTADOParameter, iDMUNParameter, mUNICIPIOParameter, iDCOLONIAParameter, cOLONIAParameter, cPParameter, iDAPLICACIONParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int spSetUsuario(Nullable<long> iDUSUARIO, Nullable<long> iDAPLICACION, Nullable<int> iDSEXO, Nullable<int> iDTIPOPERSONA, Nullable<int> iDESTADOCIVIL, Nullable<int> iDAREA, Nullable<int> iDTIPOUSUARIO, string iDUSUARIOAPP, string aPATERNO, string aMATERNO, string nOMBRE, Nullable<System.DateTime> fECHANACCONST, string uSUARIO, string pASSWORD, string rUTAFOTOPERFIL, Nullable<bool> aCTIVO, Nullable<long> iDUSERMODIFICA, Nullable<long> iDAPPMODIFICA)
         {
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDSEXOParameter = iDSEXO.HasValue ?
-                new ObjectParameter('IDSEXO', iDSEXO) :
-                new ObjectParameter('IDSEXO', typeof(int));
+                new ObjectParameter("IDSEXO", iDSEXO) :
+                new ObjectParameter("IDSEXO", typeof(int));
     
             var iDTIPOPERSONAParameter = iDTIPOPERSONA.HasValue ?
-                new ObjectParameter('IDTIPOPERSONA', iDTIPOPERSONA) :
-                new ObjectParameter('IDTIPOPERSONA', typeof(int));
+                new ObjectParameter("IDTIPOPERSONA", iDTIPOPERSONA) :
+                new ObjectParameter("IDTIPOPERSONA", typeof(int));
     
             var iDESTADOCIVILParameter = iDESTADOCIVIL.HasValue ?
-                new ObjectParameter('IDESTADOCIVIL', iDESTADOCIVIL) :
-                new ObjectParameter('IDESTADOCIVIL', typeof(int));
+                new ObjectParameter("IDESTADOCIVIL", iDESTADOCIVIL) :
+                new ObjectParameter("IDESTADOCIVIL", typeof(int));
     
             var iDAREAParameter = iDAREA.HasValue ?
-                new ObjectParameter('IDAREA', iDAREA) :
-                new ObjectParameter('IDAREA', typeof(int));
+                new ObjectParameter("IDAREA", iDAREA) :
+                new ObjectParameter("IDAREA", typeof(int));
     
             var iDTIPOUSUARIOParameter = iDTIPOUSUARIO.HasValue ?
-                new ObjectParameter('IDTIPOUSUARIO', iDTIPOUSUARIO) :
-                new ObjectParameter('IDTIPOUSUARIO', typeof(int));
+                new ObjectParameter("IDTIPOUSUARIO", iDTIPOUSUARIO) :
+                new ObjectParameter("IDTIPOUSUARIO", typeof(int));
     
             var iDUSUARIOAPPParameter = iDUSUARIOAPP != null ?
-                new ObjectParameter('IDUSUARIOAPP', iDUSUARIOAPP) :
-                new ObjectParameter('IDUSUARIOAPP', typeof(string));
+                new ObjectParameter("IDUSUARIOAPP", iDUSUARIOAPP) :
+                new ObjectParameter("IDUSUARIOAPP", typeof(string));
     
             var aPATERNOParameter = aPATERNO != null ?
-                new ObjectParameter('APATERNO', aPATERNO) :
-                new ObjectParameter('APATERNO', typeof(string));
+                new ObjectParameter("APATERNO", aPATERNO) :
+                new ObjectParameter("APATERNO", typeof(string));
     
             var aMATERNOParameter = aMATERNO != null ?
-                new ObjectParameter('AMATERNO', aMATERNO) :
-                new ObjectParameter('AMATERNO', typeof(string));
+                new ObjectParameter("AMATERNO", aMATERNO) :
+                new ObjectParameter("AMATERNO", typeof(string));
     
             var nOMBREParameter = nOMBRE != null ?
-                new ObjectParameter('NOMBRE', nOMBRE) :
-                new ObjectParameter('NOMBRE', typeof(string));
+                new ObjectParameter("NOMBRE", nOMBRE) :
+                new ObjectParameter("NOMBRE", typeof(string));
     
             var fECHANACCONSTParameter = fECHANACCONST.HasValue ?
-                new ObjectParameter('FECHANACCONST', fECHANACCONST) :
-                new ObjectParameter('FECHANACCONST', typeof(System.DateTime));
+                new ObjectParameter("FECHANACCONST", fECHANACCONST) :
+                new ObjectParameter("FECHANACCONST", typeof(System.DateTime));
     
             var uSUARIOParameter = uSUARIO != null ?
-                new ObjectParameter('USUARIO', uSUARIO) :
-                new ObjectParameter('USUARIO', typeof(string));
+                new ObjectParameter("USUARIO", uSUARIO) :
+                new ObjectParameter("USUARIO", typeof(string));
     
             var pASSWORDParameter = pASSWORD != null ?
-                new ObjectParameter('PASSWORD', pASSWORD) :
-                new ObjectParameter('PASSWORD', typeof(string));
+                new ObjectParameter("PASSWORD", pASSWORD) :
+                new ObjectParameter("PASSWORD", typeof(string));
     
             var rUTAFOTOPERFILParameter = rUTAFOTOPERFIL != null ?
-                new ObjectParameter('RUTAFOTOPERFIL', rUTAFOTOPERFIL) :
-                new ObjectParameter('RUTAFOTOPERFIL', typeof(string));
+                new ObjectParameter("RUTAFOTOPERFIL", rUTAFOTOPERFIL) :
+                new ObjectParameter("RUTAFOTOPERFIL", typeof(string));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
             var iDUSERMODIFICAParameter = iDUSERMODIFICA.HasValue ?
-                new ObjectParameter('IDUSERMODIFICA', iDUSERMODIFICA) :
-                new ObjectParameter('IDUSERMODIFICA', typeof(long));
+                new ObjectParameter("IDUSERMODIFICA", iDUSERMODIFICA) :
+                new ObjectParameter("IDUSERMODIFICA", typeof(long));
     
             var iDAPPMODIFICAParameter = iDAPPMODIFICA.HasValue ?
-                new ObjectParameter('IDAPPMODIFICA', iDAPPMODIFICA) :
-                new ObjectParameter('IDAPPMODIFICA', typeof(long));
+                new ObjectParameter("IDAPPMODIFICA", iDAPPMODIFICA) :
+                new ObjectParameter("IDAPPMODIFICA", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetUsuario', iDUSUARIOParameter, iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetUsuario", iDUSUARIOParameter, iDAPLICACIONParameter, iDSEXOParameter, iDTIPOPERSONAParameter, iDESTADOCIVILParameter, iDAREAParameter, iDTIPOUSUARIOParameter, iDUSUARIOAPPParameter, aPATERNOParameter, aMATERNOParameter, nOMBREParameter, fECHANACCONSTParameter, uSUARIOParameter, pASSWORDParameter, rUTAFOTOPERFILParameter, aCTIVOParameter, iDUSERMODIFICAParameter, iDAPPMODIFICAParameter);
         }
     
         public virtual int spSetUsuarioXAplicacion(Nullable<long> iDUSRSXAPP, Nullable<long> iDAPLICACION, Nullable<long> iDUSUARIO, Nullable<bool> aCTIVO)
         {
             var iDUSRSXAPPParameter = iDUSRSXAPP.HasValue ?
-                new ObjectParameter('IDUSRSXAPP', iDUSRSXAPP) :
-                new ObjectParameter('IDUSRSXAPP', typeof(long));
+                new ObjectParameter("IDUSRSXAPP", iDUSRSXAPP) :
+                new ObjectParameter("IDUSRSXAPP", typeof(long));
     
             var iDAPLICACIONParameter = iDAPLICACION.HasValue ?
-                new ObjectParameter('IDAPLICACION', iDAPLICACION) :
-                new ObjectParameter('IDAPLICACION', typeof(long));
+                new ObjectParameter("IDAPLICACION", iDAPLICACION) :
+                new ObjectParameter("IDAPLICACION", typeof(long));
     
             var iDUSUARIOParameter = iDUSUARIO.HasValue ?
-                new ObjectParameter('IDUSUARIO', iDUSUARIO) :
-                new ObjectParameter('IDUSUARIO', typeof(long));
+                new ObjectParameter("IDUSUARIO", iDUSUARIO) :
+                new ObjectParameter("IDUSUARIO", typeof(long));
     
             var aCTIVOParameter = aCTIVO.HasValue ?
-                new ObjectParameter('ACTIVO', aCTIVO) :
-                new ObjectParameter('ACTIVO', typeof(bool));
+                new ObjectParameter("ACTIVO", aCTIVO) :
+                new ObjectParameter("ACTIVO", typeof(bool));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction('spSetUsuarioXAplicacion', iDUSRSXAPPParameter, iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSetUsuarioXAplicacion", iDUSRSXAPPParameter, iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ThreeBits.Business.Common
 {
    public class CatalogosBR
     {
-        string sConnGral = ConfigurationManager.AppSettings['ConnGral'].ToString();
+        string sConnGral = ConfigurationManager.AppSettings["ConnGral"].ToString();
         public RespuestaComunBE GetCatGenerales(CatGeneralesBE item)
         {
             
@@ -22,7 +22,7 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
 
             Respuesta = oConfigurationDA.GetConfigAPP(itemConfig, sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
@@ -40,7 +40,7 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
 
             Respuesta = oConfigurationDA.GetConfigAPP(itemConfig, sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
@@ -58,7 +58,7 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
 
             Respuesta = oConfigurationDA.GetConfigAPP(itemConfig, sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
@@ -69,7 +69,7 @@ namespace ThreeBits.Business.Common
         }
 
 
-        public RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = '')
+        public RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = "")
         {
             CatalogosDA oCatalogosDA = new CatalogosDA();
             CatGeneralesBE item = new CatGeneralesBE();
@@ -80,7 +80,7 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
 
             Respuesta = oConfigurationDA.GetConfigAPP(itemConfig, sConnGral);
             sConexionString = Respuesta.lstConfiguracion[0].psVALOR;
@@ -107,7 +107,7 @@ namespace ThreeBits.Business.Common
 
             string sConexionString = string.Empty;
 
-            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings['IdCatConexionString'].ToString();
+            itemConfig.psIDCONFIGAPP = ConfigurationManager.AppSettings["IdCatConexionString"].ToString();
 
            
             Respuesta = oConfigurationDA.GetConfigAPP(itemConfig,sConnGral);

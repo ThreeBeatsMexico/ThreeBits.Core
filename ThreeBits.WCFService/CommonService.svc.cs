@@ -43,7 +43,7 @@ namespace ThreeBits.WCFService
         }
 
 
-        public RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = '')
+        public RespuestaComunBE GetCatEspecifico(string sIdCatalogo, string sValorFiltro = "")
         {
             RespuestaComunBE Respuesta = new RespuestaComunBE();
             CatalogosBR oCatalogosBR = new CatalogosBR();

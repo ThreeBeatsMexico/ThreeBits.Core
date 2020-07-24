@@ -1682,6 +1682,8 @@
     <Content Include="Views\Roles\EditMenu.cshtml" />
     <Content Include="Views\Roles\CreateSubMenu.cshtml" />
     <Content Include="Views\Roles\EditSubMenu.cshtml" />
+    <Content Include="Views\Roles\DelSubMenu.cshtml" />
+    <Content Include="Views\Roles\DelMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

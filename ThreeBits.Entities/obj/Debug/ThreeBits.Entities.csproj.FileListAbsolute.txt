@@ -9,3 +9,9 @@ F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.csproj.CoreCompileInputs.cache
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.dll
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.pdb
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\bin\Debug\ThreeBits.Entities.dll
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\bin\Debug\ThreeBits.Entities.pdb
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.dll
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.pdb
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Debug\ThreeBits.Entities.csprojAssemblyReference.cache

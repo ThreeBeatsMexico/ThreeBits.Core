@@ -19,7 +19,7 @@ namespace ThreeBits.Data.User
         public UsuariosBE addUsuario(ReglasBE Reglas, UsuariosBE Usuario, List<DomicilioBE> Domicilios, List<ContactoBE> Contactos, List<RolesXUsuarioBE> RolesXUsuario, Int64 App)
         {
             
-            DbTransaction scopeGrl;
+           // DbTransaction scopeGrl;
             //dboSecurity.Connection.Open();
             //scopeGrl = dboSecurity.Connection.BeginTransaction();
             //dboSecurity.Transaction = scopeGrl;
@@ -76,7 +76,7 @@ namespace ThreeBits.Data.User
                 //scopeGrl.Rollback();
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
             finally
@@ -119,7 +119,7 @@ namespace ThreeBits.Data.User
                     UsuarioRES.ACTIVO = s.ACTIVO ?? false;
                     DatosUsuarioRES.Usuario = UsuarioRES;
                 }
-                if (DatosUsuarioRES.Usuario.IDUSUARIO == 0) throw new Exception('EL USUARIO NO SE A SIDO DADO DE ALTO O NO TIENE PERMISOS');
+                if (DatosUsuarioRES.Usuario.IDUSUARIO == 0) throw new Exception("EL USUARIO NO SE A SIDO DADO DE ALTO O NO TIENE PERMISOS");
 
                 var Domicilios = dboSecurity.sp_getDomicilios(DatosUsuarioRES.Usuario.IDUSUARIO);
                 foreach (var s in Domicilios)
@@ -130,13 +130,13 @@ namespace ThreeBits.Data.User
                     DomicilioRES.CALLE = s.CALLE;
                     DomicilioRES.NUMEXT = s.NUMEXT;
                     DomicilioRES.NUMINT = s.NUMINT;
-                    DomicilioRES.IDESTADO = string.IsNullOrEmpty(s.IDESTADO) ? '0' : s.IDESTADO;
+                    DomicilioRES.IDESTADO = string.IsNullOrEmpty(s.IDESTADO) ? "0" : s.IDESTADO;
                     //DomicilioRES.IDESTADO = (s.IDESTADO ?? 0).ToString();
                     DomicilioRES.ESTADO = s.ESTADO;
-                    DomicilioRES.IDMUNICIPIO = string.IsNullOrEmpty(s.IDMUN) ? '0' : s.IDMUN;
+                    DomicilioRES.IDMUNICIPIO = string.IsNullOrEmpty(s.IDMUN) ? "0" : s.IDMUN;
                     //DomicilioRES.IDMUNICIPIO = (s.IDMUN ?? 0).ToString();
                     DomicilioRES.MUNICIPIO = s.MUNICIPIO;
-                    DomicilioRES.IDCOLONIA = string.IsNullOrEmpty(s.IDCOLONIA) ? '0' : s.IDCOLONIA;
+                    DomicilioRES.IDCOLONIA = string.IsNullOrEmpty(s.IDCOLONIA) ? "0" : s.IDCOLONIA;
                     //DomicilioRES.IDCOLONIA = (s.IDCOLONIA ?? 0).ToString();
                     DomicilioRES.COLONIA = s.COLONIA;
                     DomicilioRES.CP = s.CP;
@@ -183,7 +183,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
             finally
@@ -214,7 +214,7 @@ namespace ThreeBits.Data.User
                     itemLector.NOMBRE = Lector.NOMBRE;
                     itemLector.FECHANACCONST = Lector.FECHANACCONST;
                     itemLector.USUARIO = Lector.USUARIO;
-                    itemLector.ACTIVO = bool.Parse(string.IsNullOrEmpty(Lector.ACTIVO.ToString()) ? 'false' : 'true');
+                    itemLector.ACTIVO = bool.Parse(string.IsNullOrEmpty(Lector.ACTIVO.ToString()) ? "false" : "true");
 
                     lstUsuarios.Add(itemLector);
                 }
@@ -223,7 +223,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
             finally
@@ -270,7 +270,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
             finally
@@ -296,7 +296,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -304,7 +304,7 @@ namespace ThreeBits.Data.User
         public bool updateUsuario(ReglasBE Reglas, UsuariosBE Usuario, List<DomicilioBE> Domicilios, List<ContactoBE> Contactos, List<RolesXUsuarioBE> RolesXUsuario, Int64 App)
         {
             
-            DbTransaction scopeGrl;
+           // DbTransaction scopeGrl;
             //dboSecurity.Connection.Open();
             //scopeGrl = dboSecurity.Connection.BeginTransaction();
             //dboSecurity.Transaction = scopeGrl;
@@ -369,7 +369,7 @@ namespace ThreeBits.Data.User
 
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
             finally
@@ -401,7 +401,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -430,7 +430,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -458,7 +458,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -481,7 +481,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -515,7 +515,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -538,7 +538,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -566,7 +566,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -606,23 +606,23 @@ namespace ThreeBits.Data.User
                 ////Obtenemos finalmente el catalogo
 
                 StringBuilder sComando = new StringBuilder(string.Empty);
-                sComando.Append('SELECT CONVERT(VARCHAR(250),');
-                sComando.Append(CatGrasl.IDTABLA); sComando.Append(') AS ID,');
-                sComando.Append('CONVERT(VARCHAR(250),');
-                sComando.Append(CatGrasl.DESCRIPCIONTABLA); sComando.Append(')');
-                sComando.Append(' AS DESCRIPCION');
-                sComando.Append(' FROM ');
+                sComando.Append("SELECT CONVERT(VARCHAR(250),");
+                sComando.Append(CatGrasl.IDTABLA); sComando.Append(") AS ID,");
+                sComando.Append("CONVERT(VARCHAR(250),");
+                sComando.Append(CatGrasl.DESCRIPCIONTABLA); sComando.Append(")");
+                sComando.Append(" AS DESCRIPCION");
+                sComando.Append(" FROM ");
                 sComando.Append(CatGrasl.NOMBRETABLA);
 
                 if (!string.IsNullOrEmpty(CatGrasl.IDFILTRO) && IdSubCatalogo != 0)
                 {
-                    sComando.Append(' WHERE ');
+                    sComando.Append(" WHERE ");
                     sComando.Append(CatGrasl.IDFILTRO);
-                    sComando.Append('='');
+                    sComando.Append("='");
                     sComando.Append(IdSubCatalogo);
-                    sComando.Append('' AND ACTIVO = 1 ');
+                    sComando.Append("' AND ACTIVO = 1 ");
                 }
-                else sComando.Append(' WHERE ACTIVO = 1 ');
+                else sComando.Append(" WHERE ACTIVO = 1 ");
 
                 var lnqConsulta = dboSecurity.Database.SqlQuery<CatalogosBE>(sComando.ToString());
                 List<CatalogosBE> ListCatalogo = new List<CatalogosBE>();
@@ -637,8 +637,8 @@ namespace ThreeBits.Data.User
                 lnqConsulta = null;
                 List<CatalogosBE> ListaGrlSort = ListaCatalogo.OrderBy(x => x.DESCRIPCION).ThenBy(x => x.DESCRIPCION).ToList();
                 CatalogosBE lista = new CatalogosBE();
-                lista.ID = '0';
-                lista.DESCRIPCION = '[SELECCIONE UNA OPCIÓN]';
+                lista.ID = "0";
+                lista.DESCRIPCION = "[SELECCIONE UNA OPCIÓN]";
                 ListaGrlSort.Insert(0, lista);
 
                 return ListaGrlSort;
@@ -647,7 +647,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }
@@ -666,7 +666,7 @@ namespace ThreeBits.Data.User
             {
                 StackTrace st = new StackTrace(true);
                 CommonDA ComunDA = new CommonDA();
-                ComunDA.insErrorDB('Error: ' + ex.Message + ' En El Metodo: ' + MethodBase.GetCurrentMethod().Name, st, '', App.ToString());
+                ComunDA.insErrorDB("Error: " + ex.Message + " En El Metodo: " + MethodBase.GetCurrentMethod().Name, st, "", App.ToString());
                 throw new Exception(ex.Message);
             }
         }

@@ -14,9 +14,9 @@
             toggleHasValueClass($(input));
         }
 
-        inputs.on('blur', onInputBlur);
+        inputs.on("blur", onInputBlur);
 
-        inputs.on('focus', onInputFocus)
+        inputs.on("focus", onInputFocus)
     }
 
     function onInputBlur(input)
@@ -47,30 +47,30 @@
 
     function addHasValueInputClass(el)
     {
-        el.addClass('md-has-value');
+        el.addClass("md-has-value");
     }
 
     function removeHasValueInputClass(el)
     {
-        el.removeClass('md-has-value');
+        el.removeClass("md-has-value");
     }
 
     function addFocusGroupClass(el)
     {
-        if ( !el.parent().hasClass('form-group') )
+        if ( !el.parent().hasClass("form-group") )
         {
             return;
         }
-        el.parent('.form-group').addClass('md-focus');
+        el.parent(".form-group").addClass("md-focus");
     }
 
     function removeFocusGroupClass(el)
     {
-        if ( !el.parent().hasClass('form-group') )
+        if ( !el.parent().hasClass("form-group") )
         {
             return;
         }
-        el.parent('.form-group').removeClass('md-focus');
+        el.parent(".form-group").removeClass("md-focus");
     }
 
 })(jQuery);

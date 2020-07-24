@@ -19,9 +19,6 @@ namespace ThreeBits.Security.Portal.Controllers
             HelperTools hHelp = new HelperTools();
             List<CatalogosBE> lstAplicaciones = new List<CatalogosBE>();
             lstAplicaciones = hHelp.SetDdlCatalogos("13");
-            //List<CatalogosBE> lstEdoCivil = new List<CatalogosBE>();
-            //lstEdoCivil = hHelp.SetDdlCatalogos("5");
-
             ViewBag.IdAplicacion = new SelectList(lstAplicaciones, "ID", "DESCRIPCION", "Selecciona una Aplicacion");
             return View();
         }
@@ -33,7 +30,6 @@ namespace ThreeBits.Security.Portal.Controllers
             lstRoles = hHelp.SetDdlCatalogos("14", IdAplicacion.ToString());
             return Json(lstRoles);
         }
-
 
         public ActionResult ConsultaMenu(string IdAplicacion, string IdRol)
         {
@@ -47,7 +43,6 @@ namespace ThreeBits.Security.Portal.Controllers
 
             return Json(oMenuLista);
         }
-
 
         public ActionResult MenuSubmenus(string IDMENU)
         {
@@ -72,7 +67,6 @@ namespace ThreeBits.Security.Portal.Controllers
 
             return PartialView("MenuView",oMenuLista);
         }
-
 
         [HttpPost]
         public ActionResult AddMenu(string IdRol,string IdApp, string Menu, string Img, string Obj,string Url, string Tool, string Orden)
@@ -149,7 +143,6 @@ namespace ThreeBits.Security.Portal.Controllers
             return View();
         }
 
-
         public ActionResult CreateMenu(string IdAplicacion, string IdRol)
         {
             ViewBag.IdAplicacion = IdAplicacion;
@@ -175,6 +168,18 @@ namespace ThreeBits.Security.Portal.Controllers
             return View(oMenu);
         }
 
+        public ActionResult DelMenu(string IdAplicacion, string IdRol, string IdMenu)
+        {
+            SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSecurity = new SECURITYWCF.SecutityDC();
+
+            resSecurity = security.getMenuxRol(long.Parse(IdRol), long.Parse(IdAplicacion), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            SECURITYWCF.PermisosXMenuBE oMenu = new SECURITYWCF.PermisosXMenuBE();
+
+            oMenu = resSecurity.PermisosXMenu.Where(x => x.IDPERMISOSMENU == long.Parse(IdMenu)).FirstOrDefault();
+            return View(oMenu);
+        }
+
         public ActionResult EditSubMenu(string IdAplicacion, string IdSubMenu, string IdMenu)
         {
             SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
@@ -185,6 +190,55 @@ namespace ThreeBits.Security.Portal.Controllers
             oSubMenu = resSecurity.PermisosXSubmenu.Where(x => x.IDPERMISOSXSUBMENU == long.Parse(IdSubMenu)).FirstOrDefault();
             return View(oSubMenu);
         }
+
+        public ActionResult DelSubMenu(string IdAplicacion, string IdSubMenu, string IdMenu)
+        {
+            SECURITYWCF.SecurityServiceClient security = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSecurity = new SECURITYWCF.SecutityDC();
+
+            resSecurity = security.getSubMenuXIdMenu(long.Parse(IdMenu), long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+            SECURITYWCF.PermisoXSubmenuBE oSubMenu = new SECURITYWCF.PermisoXSubmenuBE();
+            oSubMenu = resSecurity.PermisosXSubmenu.Where(x => x.IDPERMISOSXSUBMENU == long.Parse(IdSubMenu)).FirstOrDefault();
+            return View(oSubMenu);
+        }
+
+        [HttpPost]
+        public ActionResult DelSubMenu(SECURITYWCF.PermisoXSubmenuBE eSubMenu)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+
+            resSeguridad = seguridad.delSubMenu(eSubMenu.IDPERMISOSXSUBMENU, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se elimino el Sub Menu.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+
+            }
+
+
+
+
+
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
+        }
+
 
         [HttpPost]
         public ActionResult EditMenu(SECURITYWCF.PermisosXMenuBE eMenu)
@@ -205,6 +259,43 @@ namespace ThreeBits.Security.Portal.Controllers
                 success = true;
                 id = 1;
                 strMensaje.Append("Se agrego el Menu.");
+            }
+            else
+            {
+                success = false;
+                strMensaje.Append("Ups!, Algo salio mal.");
+                strMensaje.Append("<br/>");
+                strMensaje.Append("Error: ");
+                strMensaje.Append(resSeguridad.ResGral.ERRORMESSAGE);
+
+            }
+
+
+
+
+
+            return Json(new Response { IsSuccess = success, Message = strMensaje.ToString(), Id = id, RedirectTo = "Roles" }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult DelMenu(SECURITYWCF.PermisosXMenuBE eMenu)
+        {
+            USERSECURITYWCF.UsuariosBE itemSecurity = new USERSECURITYWCF.UsuariosBE();
+            itemSecurity = (USERSECURITYWCF.UsuariosBE)Session["USER_SESSION"];
+
+            StringBuilder strMensaje = new StringBuilder();
+            int id = 0;
+            bool success = false;
+            SECURITYWCF.SecurityServiceClient seguridad = new SECURITYWCF.SecurityServiceClient();
+            SECURITYWCF.SecutityDC resSeguridad = new SECURITYWCF.SecutityDC();
+
+            resSeguridad = seguridad.delMenu(eMenu.IDPERMISOSMENU, long.Parse(ResourceApp.IdApp), ResourceApp.Password);
+
+            if (resSeguridad.ResGral.FLAG)
+            {
+                success = true;
+                id = 1;
+                strMensaje.Append("Se elimino el Menu.");
             }
             else
             {

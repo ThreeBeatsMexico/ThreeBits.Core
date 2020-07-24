@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     var validAjax;
-    var formAjax = $('.formAjax');
-    $(".btnAjax").on('click', function (e) {
+    var formAjax = $(".formAjax");
+    $(".btnAjax").on("click", function (e) {
         e.preventDefault();
         // alert("ENTRA EN EL CLICK");
 
@@ -13,8 +13,8 @@
             //== Display error  
             invalidHandler: function (event, validAjax) {
                 PNotify.error({
-                    title: 'Oh No!',
-                    text: 'Los datos capturados no son correctos, por favor valida'
+                    title: "Oh No!",
+                    text: "Los datos capturados no son correctos, por favor valida"
                 });
             },
             //== Submit valid form
@@ -33,15 +33,15 @@
                         window.location.href = response.Message;
                     } else {
                         PNotify.success({
-                            title: 'Operacion completada!',
+                            title: "Operacion completada!",
                             text: response.Message,
-                            icon: 'fas fa-info-circle',
+                            icon: "fas fa-info-circle",
                             hide: false,
                             modules: {
                                 Confirm: {
                                     confirm: true,
                                     buttons: [{
-                                        text: 'Ok',
+                                        text: "Ok",
                                         primary: true,
                                         click: function (notice) {
                                             notice.close();
@@ -62,15 +62,15 @@
                 }
                 else {
                     PNotify.error({
-                        title: 'Error',
+                        title: "Error",
                         text: response.Message,
-                        icon: 'fas fa-info-circle',
+                        icon: "fas fa-info-circle",
                         hide: false,
                         modules: {
                             Confirm: {
                                 confirm: true,
                                 buttons: [{
-                                    text: 'Ok',
+                                    text: "Ok",
                                     primary: true,
                                     click: function (notice) {
                                         notice.close();
@@ -107,8 +107,8 @@
 
     //forms add
     var validAjaxAdd;
-    var formAjaxAdd = $('.formAjaxAdd');
-    $("button.btnAjaxAdd").on('click', function (e) {
+    var formAjaxAdd = $(".formAjaxAdd");
+    $("button.btnAjaxAdd").on("click", function (e) {
         e.preventDefault();
         validAjaxAdd = formAjaxAdd.validate({
             //== Validate only visible fields
@@ -140,7 +140,7 @@
                         "type": "success",
                         "confirmButtonClass": "btn btn-secondary m-btn m-btn--wide"
                     }).then(function () {
-                        $(".ocultarDespues").modal('hide');
+                        $(".ocultarDespues").modal("hide");
                         cargaTabla(strFiltro, strValOrder);
                         removeInfoForm(formAjaxAdd);
 
@@ -176,7 +176,7 @@
 
     function funProd(id, tipo, evt) {
         evt.preventDefault();
-        if (tipo == 'E') {
+        if (tipo == "E") {
             $.ajax({
                 type: "POST",
                 url: urlGeneral + "Productos/Eliminar",
@@ -190,7 +190,7 @@
                         "type": "success",
                         "confirmButtonClass": "btn btn-secondary m-btn m-btn--wide"
                     }).then(function () {
-                        $(".ocultarDespues").modal('hide');
+                        $(".ocultarDespues").modal("hide");
                         cargaTabla(strFiltro, strValOrder);
                         removeInfoForm(formAjaxAdd);
                     });
@@ -233,8 +233,8 @@
                         var strImgs = "";
                         for (var i = 0; i < arrayDeCadenas.length; i++) {
                             if (arrayDeCadenas[i]) {
-                                var funEli = 'eliminarImagen("' + arrayDeCadenas[i] + '", "divImagen' + i + '")';
-                                strImgs += "<div id='divImagen" + i + "'><img src='/Uploads/" + arrayDeCadenas[i] + "' /><br/><a class='c-btn c-btn--danger' href='#!' onclick='" + funEli + "'><i class='fa fa-trash-o u-mr-xsmall'></i></a></div>";
+                                var funEli = "eliminarImagen("" + arrayDeCadenas[i] + "", "divImagen" + i + "")";
+                                strImgs += "<div id="divImagen" + i + ""><img src="/Uploads/" + arrayDeCadenas[i] + "" /><br/><a class="c-btn c-btn--danger" href="#!" onclick="" + funEli + ""><i class="fa fa-trash-o u-mr-xsmall"></i></a></div>";
                             }
                         }
                         if (strImgs != "") {
@@ -273,7 +273,7 @@
         $("#" + divEliminar).remove();
     }
 
-    $('#modal8').on('hidden.bs.modal', function () {
+    $("#modal8").on("hidden.bs.modal", function () {
         $("input").val("");
         $("#anexosUpload").empty();
     });

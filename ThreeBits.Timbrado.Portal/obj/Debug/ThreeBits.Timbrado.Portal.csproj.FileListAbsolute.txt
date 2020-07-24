@@ -209,3 +209,7 @@ F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.T
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.csproj.CopyComplete
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.dll
 F:\PROYECTOS JULIO\2017\3BWebApi\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.pdb
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.csprojAssemblyReference.cache
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.Properties.ResourceApp.resources
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.csproj.GenerateResource.cache
+C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.Timbrado.Portal\obj\Debug\ThreeBits.Timbrado.Portal.csproj.CoreCompileInputs.cache

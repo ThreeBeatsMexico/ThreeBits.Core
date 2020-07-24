@@ -49,7 +49,7 @@
         var instance = instanceById(id);
 
         instance.el.css({
-            transform: ''
+            transform: ""
         });
 
 
@@ -64,9 +64,9 @@
 
         function resolve()
         {
-            instance.el.removeClass('fuse-bar-open');
-            instance.el.addClass('fuse-bar-closed');
-            dfd.resolve('closed');
+            instance.el.removeClass("fuse-bar-open");
+            instance.el.addClass("fuse-bar-closed");
+            dfd.resolve("closed");
         }
 
 
@@ -80,7 +80,7 @@
             });
         }
 
-        triggerEvent('fuse::barClosed', [id, instance]);
+        triggerEvent("fuse::barClosed", [id, instance]);
 
         return dfd.promise();
     }
@@ -95,15 +95,15 @@
             var instance = instanceById(id);
 
             instance.el.css({
-                transform: 'translate3D(0,0,0)'
+                transform: "translate3D(0,0,0)"
             });
 
-            instance.el.removeClass('fuse-bar-closed');
-            instance.el.addClass('fuse-bar-open');
+            instance.el.removeClass("fuse-bar-closed");
+            instance.el.addClass("fuse-bar-open");
 
             instance.opened = true;
 
-            backdropEl = $('<div class="fuse-bar-backdrop fuse-bar-backdrop-' + id.replace(' ', '-') + '"></div>');
+            backdropEl = $("<div class="fuse-bar-backdrop fuse-bar-backdrop-" + id.replace(" ", "-") + ""></div>");
 
             backdropEl.hide();
 
@@ -111,43 +111,43 @@
 
             backdropEl.fadeIn();
 
-            backdropEl.on('click', function (ev)
+            backdropEl.on("click", function (ev)
             {
                 ev.preventDefault();
                 ev.stopPropagation();
                 closeBar(id);
             });
 
-            triggerEvent('fuse::barOpened', [id, instance]);
+            triggerEvent("fuse::barOpened", [id, instance]);
         });
     }
 
     /**
      * Wait document ready to initialize
      */
-    $('document').ready(function ()
+    $("document").ready(function ()
     {
 
-        $('[data-fuse-bar]').each(function (ev)
+        $("[data-fuse-bar]").each(function (ev)
         {
             register($(this));
         });
 
-        $('[data-fuse-bar-toggle]').on('click', function (ev)
+        $("[data-fuse-bar-toggle]").on("click", function (ev)
         {
-            var id = $(this).data('fuse-bar-toggle');
+            var id = $(this).data("fuse-bar-toggle");
 
             toggleBar(id);
         });
 
-        $('[data-fuse-bar-close]').on('click', function (ev)
+        $("[data-fuse-bar-close]").on("click", function (ev)
         {
-            var id = $(this).data('fuse-bar-close');
+            var id = $(this).data("fuse-bar-close");
             closeBar(id);
         });
 
 
-        $(window).on('fuse::matchMediaChanged', watchMatchMediaChange);
+        $(window).on("fuse::matchMediaChanged", watchMatchMediaChange);
 
     });
 
@@ -156,10 +156,10 @@
      */
     function init(instance)
     {
-        instance.el.addClass('fuse-bar');
-        instance.el.addClass('position-' + instance.position);
+        instance.el.addClass("fuse-bar");
+        instance.el.addClass("position-" + instance.position);
         instance.isActive = true;
-        triggerEvent('fuse::barInit', [instance.id, instance]);
+        triggerEvent("fuse::barInit", [instance.id, instance]);
     }
 
     /**
@@ -167,10 +167,10 @@
      */
     function destroy(instance)
     {
-        instance.el.removeClass('fuse-bar');
-        instance.el.removeClass('position-' + instance.position);
+        instance.el.removeClass("fuse-bar");
+        instance.el.removeClass("position-" + instance.position);
         instance.isActive = false;
-        triggerEvent('fuse::barDestroy', [instance.id, instance]);
+        triggerEvent("fuse::barDestroy", [instance.id, instance]);
     }
 
     /**
@@ -178,9 +178,9 @@
      */
     function register(barEl)
     {
-        var id = barEl.data('fuse-bar');
-        var mediaStep = barEl.data('fuse-bar-media-step');
-        var position = barEl.data('fuse-bar-position');
+        var id = barEl.data("fuse-bar");
+        var mediaStep = barEl.data("fuse-bar-media-step");
+        var position = barEl.data("fuse-bar-position");
 
         fuseBar.instances[id] = {
             id       : id,
@@ -188,7 +188,7 @@
             mediaStep: mediaStep || false,
             opened   : false,
             isActive : false,
-            position : position || 'left'
+            position : position || "left"
         };
 
         instanceCheck(fuseBar.instances[id]);
@@ -231,7 +231,7 @@
         }
     }
 
-    $(window).on('resize', onResize);
+    $(window).on("resize", onResize);
 
     function onResize()
     {

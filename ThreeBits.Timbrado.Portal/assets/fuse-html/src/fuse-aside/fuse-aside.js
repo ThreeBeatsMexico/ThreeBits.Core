@@ -9,10 +9,10 @@
      */
     function expandAside()
     {
-        toggleBodyClass('', 'fuse-aside-expanded');
+        toggleBodyClass("", "fuse-aside-expanded");
         isAsideCollapsed = false;
 
-        triggerEvent('fuse::asideExpanded', []);
+        triggerEvent("fuse::asideExpanded", []);
     }
 
     /**
@@ -20,10 +20,10 @@
      */
     function collapseAside()
     {
-        toggleBodyClass('fuse-aside-expanded', '');
+        toggleBodyClass("fuse-aside-expanded", "");
         isAsideCollapsed = true;
 
-        triggerEvent('fuse::asideCollapsed', []);
+        triggerEvent("fuse::asideCollapsed", []);
     }
 
     /**
@@ -67,9 +67,9 @@
         }
         collapseAside();
         isAsideFolded = true;
-        toggleBodyClass('', 'fuse-aside-folded');
-        $('body').addClass('fuse-aside-folded');
-        triggerEvent('fuse::asideFolded', []);
+        toggleBodyClass("", "fuse-aside-folded");
+        $("body").addClass("fuse-aside-folded");
+        triggerEvent("fuse::asideFolded", []);
     }
 
     /**
@@ -84,16 +84,16 @@
 
         expandAside();
         isAsideFolded = false;
-        toggleBodyClass('fuse-aside-folded', '');
+        toggleBodyClass("fuse-aside-folded", "");
 
-        triggerEvent('fuse::asideUnfolded', []);
+        triggerEvent("fuse::asideUnfolded", []);
     }
 
     /**
      * Wait document ready to initialize
      */
-    $('document').ready(function () {
-        initialize($('#aside'));
+    $("document").ready(function () {
+        initialize($("#aside"));
     });
 
     /**
@@ -113,19 +113,19 @@
         window.fuseAside = fuseAside;
 
         // Toggle Fold Button click handler
-        $('[data-fuse-aside-toggle-fold]').on('click', function () {
+        $("[data-fuse-aside-toggle-fold]").on("click", function () {
             toggleFoldAside();
         });
 
         // Expand aside while Hovering the Aside
-        asideEl.on('mouseenter touchstart', function () {
+        asideEl.on("mouseenter touchstart", function () {
             if ( isAsideFolded && isAsideCollapsed )
             {
                 expandAside();
             }
         });
 
-        $(document).on('mousemove touchstart', function (e) {
+        $(document).on("mousemove touchstart", function (e) {
             if ( !asideEl.is(e.target) && asideEl.has(e.target).length === 0 )
             {
                 if ( isAsideFolded && !isAsideCollapsed )
@@ -141,22 +141,22 @@
      */
     function toggleBodyClass(removeClass, addClass)
     {
-        $('body').removeClass(removeClass).addClass(addClass);
+        $("body").removeClass(removeClass).addClass(addClass);
     }
 
     /**
      * Unfold the aside at the mobile media step
      */
-    $(window).on('fuse::matchMediaChanged', function (ev, currentStep, isOrBelow, isOrAbove) {
+    $(window).on("fuse::matchMediaChanged", function (ev, currentStep, isOrBelow, isOrAbove) {
 
         // One time before initialize check for fuse-aside-folded class
         if ( !window.fuseAside )
         {
-            if ( isOrBelow('md') )
+            if ( isOrBelow("md") )
             {
-                toggleBodyClass('fuse-aside-folded', '');
+                toggleBodyClass("fuse-aside-folded", "");
             }
-            else if ( $('body').hasClass('fuse-aside-folded') )
+            else if ( $("body").hasClass("fuse-aside-folded") )
             {
                 isAsideFolded = true;
                 isAsideCollapsed = true;
@@ -164,7 +164,7 @@
         }
 
         // Unfold if is or below md devices
-        if ( isOrBelow('md') )
+        if ( isOrBelow("md") )
         {
             unfoldAside();
         }

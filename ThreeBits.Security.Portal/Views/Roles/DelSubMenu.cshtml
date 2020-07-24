@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "DelSubMenu";
+    Layout = "~/Views/Shared/LayoutModales.cshtml";
+}
+@model ThreeBits.Security.Portal.SECURITYWCF.PermisoXSubmenuBE
+
+<form class="formAjax" method="post" action="~/Roles/DelSubMenu">
+
+    <input type="hidden" id="IDPERMISOSXSUBMENU" name="IDPERMISOSXSUBMENU" value="@Model.IDPERMISOSXSUBMENU" />
+    <input type="hidden" id="IDPERMISOSMENU" name="IDPERMISOSMENU" value="@Model.IDPERMISOSMENU" />
+
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <div class="form-group">
+                <input type="text" class="form-control md-has-value" readonly aria-describedby="NOMBRESUBMENU" id="NOMBRESUBMENU" name="NOMBRESUBMENU" value="@Model.NOMBRESUBMENU" placeholder="Menu" required />
+                <label>El siguiente submenu, sera eliminado</label>
+            </div>
+        </div>
+    </div>
+   <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary btnAjax">Eliminar</button>
+    </div>
+</form>
+

@@ -4,7 +4,7 @@
 ;(function ($, window, document, undefined)
 {
     // Create the defaults once
-    var pluginName = 'fuseRipple',
+    var pluginName = "fuseRipple",
         defaults = {
             duration  : 300,//ms
             fromCenter: false
@@ -19,15 +19,15 @@
             var parent = element.parentNode;
 
             // If input already have parent just pass through
-            if ( parent.tagName.toLowerCase() === 'span' && parent.classList.contains('fuse-ripple-ready') )
+            if ( parent.tagName.toLowerCase() === "span" && parent.classList.contains("fuse-ripple-ready") )
             {
                 return;
             }
 
             // Put element class and style to the specified parent
-            var wrapper = document.createElement('span');
-            wrapper.className = element.className + ' fuse-ripple-input-wrapper';
-            element.className = 'fuse-ripple-input';
+            var wrapper = document.createElement("span");
+            wrapper.className = element.className + " fuse-ripple-input-wrapper";
+            element.className = "fuse-ripple-input";
 
             // Put element as child
             parent.replaceChild(wrapper, element);
@@ -38,8 +38,8 @@
              var color = elementStyle.color;
              var backgroundColor = elementStyle.backgroundColor;
 
-             wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
-             element.setAttribute('style', 'background-color:rgba(0,0,0,0);');*/
+             wrapper.setAttribute("style", "color:" + color + ";background:" + backgroundColor);
+             element.setAttribute("style", "background-color:rgba(0,0,0,0);");*/
 
         },
 
@@ -50,13 +50,13 @@
             var parent = element.parentNode;
 
             // If input already have parent just pass through
-            if ( parent.tagName.toLowerCase() === 'span' && parent.classList.contains('fuse-ripple-ready') )
+            if ( parent.tagName.toLowerCase() === "span" && parent.classList.contains("fuse-ripple-ready") )
             {
                 return;
             }
 
             // Put element as child
-            var wrapper = document.createElement('span');
+            var wrapper = document.createElement("span");
             parent.replaceChild(wrapper, element);
             wrapper.appendChild(element);
 
@@ -89,18 +89,18 @@
 
             var tagName = self.element.tagName.toLowerCase();
 
-            if ( ['input', 'img'].indexOf(tagName) !== -1 )
+            if ( ["input", "img"].indexOf(tagName) !== -1 )
             {
                 TagWrapper[tagName](self.element);
                 el = self.element.parentElement;
             }
 
-            if ( !$(el).hasClass('fuse-ripple-ready') )
+            if ( !$(el).hasClass("fuse-ripple-ready") )
             {
-                $(el).addClass('fuse-ripple-ready');
+                $(el).addClass("fuse-ripple-ready");
             }
 
-            el.addEventListener('mousedown', triggerRippleEvent);
+            el.addEventListener("mousedown", triggerRippleEvent);
 
             function triggerRippleEvent(ev)
             {
@@ -115,15 +115,15 @@
             var el = $(element);
 
             // Remove the previous ripple before starting to a new one
-            var rippleExist = el.find('.fuse-ripple').length > 0;
+            var rippleExist = el.find(".fuse-ripple").length > 0;
 
             if ( rippleExist )
             {
-                el.find('.fuse-ripple').remove();
+                el.find(".fuse-ripple").remove();
             }
 
             // Create ripple
-            var ripple = $('<div class="fuse-ripple">');
+            var ripple = $("<div class="fuse-ripple">");
 
             // Get click coordinate and element width
             var pos = el.offset();
@@ -131,7 +131,7 @@
             var relativeX = 0;
 
             // Support for touch devices
-            if ( 'touches' in ev && ev.touches.length )
+            if ( "touches" in ev && ev.touches.length )
             {
                 relativeY = (ev.touches[0].pageY - pos.top);
                 relativeX = (ev.touches[0].pageX - pos.left);
@@ -152,36 +152,36 @@
             // Calculate ripple initial size
             var initialSize = (Math.max(elWidth, elHeight)) * 0.6;
 
-            var scale = 'scale(1)';
+            var scale = "scale(1)";
             var translateX = parseInt(relativeX - (initialSize / 2));
             var translateY = parseInt(relativeY - (initialSize / 2));
-            var translate = 'translate(' + translateX + 'px ,' + translateY + 'px)';
+            var translate = "translate(" + translateX + "px ," + translateY + "px)";
 
             if ( options.fromCenter )
             {
-                translate = 'translate(' + parseInt(elWidth * 0.2) + 'px ,' + parseInt(elHeight * 0.2) + 'px)';
+                translate = "translate(" + parseInt(elWidth * 0.2) + "px ," + parseInt(elHeight * 0.2) + "px)";
             }
 
-            var transform = scale + ' ' + translate;
+            var transform = scale + " " + translate;
             var scaleRatio = surfaceDiameter / initialSize;
-            var endScale = 'scale(' + scaleRatio + ')';
-            var endTranslate = 'translate(' + (elWidth - initialSize) * .5 / scaleRatio + 'px ,' + (elHeight - initialSize) * .5 / scaleRatio + 'px)';
-            var endTransform = endScale + ' ' + endTranslate;
-            var endTransition = 'opacity ' + options.duration + 'ms linear, transform  ' + options.duration + 'ms cubic-bezier(0.4, 0, 0.2, 1)';
+            var endScale = "scale(" + scaleRatio + ")";
+            var endTranslate = "translate(" + (elWidth - initialSize) * .5 / scaleRatio + "px ," + (elHeight - initialSize) * .5 / scaleRatio + "px)";
+            var endTransform = endScale + " " + endTranslate;
+            var endTransition = "opacity " + options.duration + "ms linear, transform  " + options.duration + "ms cubic-bezier(0.4, 0, 0.2, 1)";
 
             if ( options.fromCenter )
             {
             }
 
             var startStyle = {
-                width    : initialSize + 'px',
-                height   : initialSize + 'px',
+                width    : initialSize + "px",
+                height   : initialSize + "px",
                 transform: transform,
                 opacity  : 1
             };
 
             var endStyle = {
-                opacity   : '0',
+                opacity   : "0",
                 transform : endTransform,
                 transition: endTransition,
             };
@@ -208,9 +208,9 @@
     {
         return this.each(function ()
         {
-            if ( !$.data(this, 'plugin_' + pluginName) )
+            if ( !$.data(this, "plugin_" + pluginName) )
             {
-                $.data(this, 'plugin_' + pluginName,
+                $.data(this, "plugin_" + pluginName,
                     new Plugin(this, options));
             }
         });

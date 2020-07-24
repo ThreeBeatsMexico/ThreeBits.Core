@@ -1,41 +1,41 @@
 (function ()
 {
-    $('document').ready(function ()
+    $("document").ready(function ()
     {
         // Prevent default for empty links
-        $('[href="#"]').click(function (e)
+        $("[href="#"]").click(function (e)
         {
             e.preventDefault()
         });
 
         // Adding data-parent to togglable nav items
-        $('#sidenav [data-toggle]').each(function ()
+        $("#sidenav [data-toggle]").each(function ()
         {
-            $(this).attr('data-parent', '#' + $(this).parent().parent().attr('id'));
+            $(this).attr("data-parent", "#" + $(this).parent().parent().attr("id"));
         });
 
         /**
          * Trigger window resize to update nvd3 charts
          */
-        $('[data-toggle="tab"]').on('shown.bs.tab', function (e)
+        $("[data-toggle="tab"]").on("shown.bs.tab", function (e)
         {
-            window.dispatchEvent(new Event('resize'));
+            window.dispatchEvent(new Event("resize"));
         });
 
         /**
          * Enable tooltips everywhere
          */
-        $('[data-toggle="tooltip"]').tooltip();
+        $("[data-toggle="tooltip"]").tooltip();
 
         /**
          * Enable popovers everywhere
          */
-        $('[data-toggle="popover"]').popover();
+        $("[data-toggle="popover"]").popover();
 
         // Activate animated progress bar
-        $('.bd-toggle-animated-progress').on('click', function ()
+        $(".bd-toggle-animated-progress").on("click", function ()
         {
-            $(this).siblings('.progress').find('.progress-bar-striped').toggleClass('progress-bar-animated')
+            $(this).siblings(".progress").find(".progress-bar-striped").toggleClass("progress-bar-animated")
         });
 
         /**
@@ -45,24 +45,24 @@
 
         if ( !mobileDetect.mobile() )
         {
-            $('.custom-scrollbar').each(function ()
+            $(".custom-scrollbar").each(function ()
             {
                 new PerfectScrollbar(this);
             })
         }
         else
         {
-            $('body').addClass('is-mobile');
+            $("body").addClass("is-mobile");
         }
 
         /**
          * Fix code block indentations
          */
-        $('code').each(function ()
+        $("code").each(function ()
         {
-            var lines = $(this).html().split('\n');
+            var lines = $(this).html().split("\n");
 
-            if ( lines[0] === '' )
+            if ( lines[0] === "" )
             {
                 lines.shift()
             }
@@ -74,26 +74,26 @@
             {
                 lines = lines.map(function (line)
                 {
-                    return line.replace(indentation, '');
+                    return line.replace(indentation, "");
                 });
 
-                $(this).html(lines.join('\n').trim());
+                $(this).html(lines.join("\n").trim());
             }
         });
 
         /**
          * Flip source-preview cards
          */
-        $('.toggle-source-preview').on('click', function ()
+        $(".toggle-source-preview").on("click", function ()
         {
-            $(this).parents('.example').toggleClass('show-source');
+            $(this).parents(".example").toggleClass("show-source");
         });
     });
 
     /**
      * Data tables fix header resize
      */
-    $(window).on('resize', function ()
+    $(window).on("resize", function ()
     {
         $.fn.dataTable.tables({
             visible: true,
@@ -104,15 +104,15 @@
     /**
      *     PNotify default styling.
      */
-    PNotify.defaults.styling = 'material';
-    PNotify.defaults.icons = 'material';
+    PNotify.defaults.styling = "material";
+    PNotify.defaults.icons = "material";
 
     /**
      * Watching media step changes
      */
-    /*$(window).on('fuse::matchMediaChanged', function (ev, currentStep, isOrBelow, isOrAbove)
+    /*$(window).on("fuse::matchMediaChanged", function (ev, currentStep, isOrBelow, isOrAbove)
      {
-     console.info('match media changed');
+     console.info("match media changed");
      console.info(currentStep);
      });*/
 

@@ -115,7 +115,7 @@ $grid-breakpoints: (
     background: rgba(0, 0, 0, 0.54);
 }
 
-@each $breakpoint in 'sm', 'md', 'lg' {
+@each $breakpoint in "sm", "md", "lg" {
     @include media-breakpoint-down($breakpoint) {
         [data-fuse-bar-media-step="#{$breakpoint}"] {
             position: absolute!important;

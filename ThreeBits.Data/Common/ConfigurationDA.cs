@@ -21,8 +21,8 @@ namespace ThreeBits.Data.Common
             string sComando = string.Empty;
             StringBuilder sMensajeError = new StringBuilder();
             string sConexionString = conn;
-            //string sConexionString = @'Provider=SQLOLEDB;Server=DESKTOP-VC0BRD2\SQL2012;Database=Seguridad3Bits;UID=sa; Pwd=martinej';
-            //string sConexionString = @'Provider=SQLOLEDB;Server=JCMARTINEZ-PC\SQL2012;Database=seguridadlatinoqa;Uid=pvldev; Pwd=dominico';
+            //string sConexionString = @"Provider=SQLOLEDB;Server=DESKTOP-VC0BRD2\SQL2012;Database=Seguridad3Bits;UID=sa; Pwd=martinej";
+            //string sConexionString = @"Provider=SQLOLEDB;Server=JCMARTINEZ-PC\SQL2012;Database=seguridadlatinoqa;Uid=pvldev; Pwd=dominico";
             string sResultado = string.Empty;
 
             RespuestaComun.lstConfiguracion = new List<ConfiguracionBE>();
@@ -35,16 +35,16 @@ namespace ThreeBits.Data.Common
                 Conexion.Open();
                 Comando.Connection = Conexion;
 
-                sComando = 'spGetConfigApp';
+                sComando = "spGetConfigApp";
                 Comando.CommandText = sComando;
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.CommandTimeout = 0;
                 Comando.Parameters.Clear();
 
-                Comando.Parameters.Add(new OleDbParameter('IDCONFIGAPP', item.psIDCONFIGAPP)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("IDCONFIGAPP", item.psIDCONFIGAPP)).Direction = ParameterDirection.Input;
 
-                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append('[spGetConfigApp]');
-                RespuestaComun.itemError.psMensaje.Append('[spGetConfigApp]');
+                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append("[spGetConfigApp]");
+                RespuestaComun.itemError.psMensaje.Append("[spGetConfigApp]");
 
                 Lector = Comando.ExecuteReader();
 
@@ -54,10 +54,10 @@ namespace ThreeBits.Data.Common
                     {
                         ConfiguracionBE itemLector = new ConfiguracionBE();
 
-                        itemLector.psIDCONFIGAPP = Lector['IDCONFIGAPP'].ToString();
-                        itemLector.psDESCRIPCION = Lector['DESCRIPCION'].ToString();
-                        itemLector.psVALOR = Lector['VALOR'].ToString();
-                        itemLector.psACTIVO = Lector['ACTIVO'].ToString();
+                        itemLector.psIDCONFIGAPP = Lector["IDCONFIGAPP"].ToString();
+                        itemLector.psDESCRIPCION = Lector["DESCRIPCION"].ToString();
+                        itemLector.psVALOR = Lector["VALOR"].ToString();
+                        itemLector.psACTIVO = Lector["ACTIVO"].ToString();
 
 
                         RespuestaComun.lstConfiguracion.Add(itemLector);
@@ -69,9 +69,9 @@ namespace ThreeBits.Data.Common
             catch (Exception Ex)
             {
                 //Generar una deccion para crear Log de errores
-                RespuestaComun.itemError.psMensaje.Append('[');
+                RespuestaComun.itemError.psMensaje.Append("[");
                 RespuestaComun.itemError.psMensaje.Append(Ex.Message);
-                RespuestaComun.itemError.psMensaje.Append(']');
+                RespuestaComun.itemError.psMensaje.Append("]");
                 RespuestaComun.itemError.pbFlag = false;
             }
             finally
@@ -108,22 +108,22 @@ namespace ThreeBits.Data.Common
                 Comando.Connection = Conexion;
                 Comando.Transaction = Transaccion;
 
-                sComando = 'spAddConfigApp';
+                sComando = "spAddConfigApp";
                 Comando.CommandText = sComando;
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.CommandTimeout = 0;
                 Comando.Parameters.Clear();
 
-                Comando.Parameters.Add(new OleDbParameter('DESCRIPCION', item.psDESCRIPCION)).Direction = ParameterDirection.Input;
-                Comando.Parameters.Add(new OleDbParameter('VALOR', item.psVALOR)).Direction = ParameterDirection.Input;
-                Comando.Parameters.Add(new OleDbParameter('ACTIVO', item.psACTIVO)).Direction = ParameterDirection.Input;
-                Comando.Parameters.Add(new OleDbParameter('IDCONFIGAPPNEW', OleDbType.BigInt)).Direction = ParameterDirection.Output;
+                Comando.Parameters.Add(new OleDbParameter("DESCRIPCION", item.psDESCRIPCION)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("VALOR", item.psVALOR)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("ACTIVO", item.psACTIVO)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("IDCONFIGAPPNEW", OleDbType.BigInt)).Direction = ParameterDirection.Output;
 
-                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append('[spGetConfigApp]');
-                RespuestaComun.itemError.psMensaje.Append('[spAddConfigApp]');
+                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append("[spGetConfigApp]");
+                RespuestaComun.itemError.psMensaje.Append("[spAddConfigApp]");
 
                 Comando.ExecuteNonQuery();
-                RespuestaComun.psIDCONFIGAPP = Comando.Parameters['IDCONFIGAPPNEW'].Value.ToString();
+                RespuestaComun.psIDCONFIGAPP = Comando.Parameters["IDCONFIGAPPNEW"].Value.ToString();
 
                 Transaccion.Commit();
                 RespuestaComun.itemError.pbFlag = true;
@@ -131,9 +131,9 @@ namespace ThreeBits.Data.Common
             catch (Exception Ex)
             {
                 //Generar una deccion para crear Log de errores
-                RespuestaComun.itemError.psMensaje.Append('[');
+                RespuestaComun.itemError.psMensaje.Append("[");
                 RespuestaComun.itemError.psMensaje.Append(Ex.Message);
-                RespuestaComun.itemError.psMensaje.Append(']');
+                RespuestaComun.itemError.psMensaje.Append("]");
                 RespuestaComun.itemError.pbFlag = false;
             }
             finally
@@ -169,20 +169,20 @@ namespace ThreeBits.Data.Common
                 Comando.Connection = Conexion;
                 Comando.Transaction = Transaccion;
 
-                sComando = 'spSetConfigApp';
+                sComando = "spSetConfigApp";
                 Comando.CommandText = sComando;
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.CommandTimeout = 0;
                 Comando.Parameters.Clear();
 
-                Comando.Parameters.Add(new OleDbParameter('IDCONFIGAPP', item.psIDCONFIGAPP)).Direction = ParameterDirection.Input;
-                Comando.Parameters.Add(new OleDbParameter('DESCRIPCION', item.psDESCRIPCION)).Direction = ParameterDirection.Input;
-                Comando.Parameters.Add(new OleDbParameter('VALOR', item.psVALOR)).Direction = ParameterDirection.Input;
-                Comando.Parameters.Add(new OleDbParameter('ACTIVO', item.psACTIVO)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("IDCONFIGAPP", item.psIDCONFIGAPP)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("DESCRIPCION", item.psDESCRIPCION)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("VALOR", item.psVALOR)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("ACTIVO", item.psACTIVO)).Direction = ParameterDirection.Input;
 
 
-                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append('[spGetConfigApp]');
-                RespuestaComun.itemError.psMensaje.Append('[spSetConfigApp]');
+                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append("[spGetConfigApp]");
+                RespuestaComun.itemError.psMensaje.Append("[spSetConfigApp]");
 
                 Comando.ExecuteNonQuery();
 
@@ -193,9 +193,9 @@ namespace ThreeBits.Data.Common
             catch (Exception Ex)
             {
                 //Generar una deccion para crear Log de errores
-                RespuestaComun.itemError.psMensaje.Append('[');
+                RespuestaComun.itemError.psMensaje.Append("[");
                 RespuestaComun.itemError.psMensaje.Append(Ex.Message);
-                RespuestaComun.itemError.psMensaje.Append(']');
+                RespuestaComun.itemError.psMensaje.Append("]");
                 RespuestaComun.itemError.pbFlag = false;
             }
             finally

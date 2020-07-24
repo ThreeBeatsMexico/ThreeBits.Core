@@ -17,10 +17,10 @@ namespace ThreeBits.Data.Common
         /// <summary>
         /// Inserta en la base de datos un error a nivel base de datos
         /// </summary>
-        /// <param name='MessageErr'>Mensaje de error</param>
-        /// <param name='st'>El trace</param>
-        /// <param name='user'>Usuario en caso de haberlo</param>
-        /// <param name='sApp'>El ID de la aplicacion</param>
+        /// <param name="MessageErr">Mensaje de error</param>
+        /// <param name="st">El trace</param>
+        /// <param name="user">Usuario en caso de haberlo</param>
+        /// <param name="sApp">El ID de la aplicacion</param>
         public void insErrorDB(string MessageErr, StackTrace st, string user, string sApp)
         {
             try
@@ -66,8 +66,8 @@ namespace ThreeBits.Data.Common
         /// <summary>
         /// Ejecuta el sl_help de la tabla que se envia
         /// </summary>
-        /// <param name='sNombreTabla'> Nombre de la tabla a consultar</param>
-        /// <param name='sConexionString'> cadena de conexión que se obtiene de la clase ConfiguracionDA</param>
+        /// <param name="sNombreTabla"> Nombre de la tabla a consultar</param>
+        /// <param name="sConexionString"> cadena de conexión que se obtiene de la clase ConfiguracionDA</param>
         /// <returns>En lstCatalogos[].DESCRIPCION se regresa el nombre de las columnas de la tabla. En psIdentityTabla Se regresa el Identity de la tabla 
         ///</returns>
         public RespuestaComunBE GetDefinicionTabla(string sNombreTabla, string sConexionString)
@@ -90,17 +90,17 @@ namespace ThreeBits.Data.Common
                 Conexion.Open();
                 Comando.Connection = Conexion;
 
-                sComando = 'spGetDefinicionTabla';
+                sComando = "spGetDefinicionTabla";
                 Comando.CommandText = sComando;
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.CommandTimeout = 0;
                 Comando.Parameters.Clear();
 
-                Comando.Parameters.Add(new OleDbParameter('NombreTabla', sNombreTabla)).Direction = ParameterDirection.Input;
+                Comando.Parameters.Add(new OleDbParameter("NombreTabla", sNombreTabla)).Direction = ParameterDirection.Input;
 
 
-                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append('[spGetConfigApp]');
-                RespuestaComun.itemError.psMensaje.Append('[spGetDefinicionTabla]');
+                //[15102015][falta agregar la instruccion que obtiene el nombre del metodo]RespuestaComun.itemError.psMensaje.Append("[spGetConfigApp]");
+                RespuestaComun.itemError.psMensaje.Append("[spGetDefinicionTabla]");
 
                 Lector = Comando.ExecuteReader();
 
@@ -112,7 +112,7 @@ namespace ThreeBits.Data.Common
                     {
                         CatalogosBE itemLector = new CatalogosBE();
 
-                        itemLector.DESCRIPCION = Lector['Column_name'].ToString();
+                        itemLector.DESCRIPCION = Lector["Column_name"].ToString();
 
                         RespuestaComun.lstCatalogo.Add(itemLector);
                     }
@@ -121,8 +121,8 @@ namespace ThreeBits.Data.Common
                     while (Lector.Read())
                     {
                         //Se encuentra el nombre de la columna IDentity
-                        RespuestaComun.psIdentityTabla = Lector['Identity'].ToString();
-                        RespuestaComun.psDescripcionTabla = 'Descripcion';
+                        RespuestaComun.psIdentityTabla = Lector["Identity"].ToString();
+                        RespuestaComun.psDescripcionTabla = "Descripcion";
                     }
                 }
 
@@ -132,9 +132,9 @@ namespace ThreeBits.Data.Common
             catch (Exception Ex)
             {
                 //Generar una deccion para crear Log de errores
-                RespuestaComun.itemError.psMensaje.Append('[');
+                RespuestaComun.itemError.psMensaje.Append("[");
                 RespuestaComun.itemError.psMensaje.Append(Ex.Message);
-                RespuestaComun.itemError.psMensaje.Append(']');
+                RespuestaComun.itemError.psMensaje.Append("]");
                 RespuestaComun.itemError.pbFlag = false;
             }
             finally

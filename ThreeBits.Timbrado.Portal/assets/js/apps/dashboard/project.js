@@ -46,7 +46,7 @@
                 "label": "TASKS",
                 "count": 4,
                 "extra": {
-                    "label": "Yesterday's overdue",
+                    "label": "Yesterday"s overdue",
                     "count": 2
                 }
             },
@@ -636,7 +636,7 @@
                     }
                 },
                 "wont-fix"  : {
-                    "label": "WON'T FIX",
+                    "label": "WON"T FIX",
                     "count": {
                         "2W": 6,
                         "LW": 3,
@@ -645,7 +645,7 @@
                     "chart": {
                         "2W": [
                             {
-                                "key"   : "Won't Fix",
+                                "key"   : "Won"t Fix",
                                 "values": [
                                     {
                                         "x": 0,
@@ -680,7 +680,7 @@
                         ],
                         "LW": [
                             {
-                                "key"   : "Won't Fix",
+                                "key"   : "Won"t Fix",
                                 "values": [
                                     {
                                         "x": 0,
@@ -715,7 +715,7 @@
                         ],
                         "TW": [
                             {
-                                "key"   : "Won't Fix",
+                                "key"   : "Won"t Fix",
                                 "values": [
                                     {
                                         "x": 0,
@@ -760,7 +760,7 @@
                     "chart": {
                         "2W": [
                             {
-                                "key"   : "Won't Fix",
+                                "key"   : "Won"t Fix",
                                 "values": [
                                     {
                                         "x": 0,
@@ -795,7 +795,7 @@
                         ],
                         "LW": [
                             {
-                                "key"   : "Won't Fix",
+                                "key"   : "Won"t Fix",
                                 "values": [
                                     {
                                         "x": 0,
@@ -830,7 +830,7 @@
                         ],
                         "TW": [
                             {
-                                "key"   : "Won't Fix",
+                                "key"   : "Won"t Fix",
                                 "values": [
                                     {
                                         "x": 0,
@@ -1093,11 +1093,11 @@
                         "time" : "17:30 PM"
                     },
                     {
-                        "title": "Jane's Birthday Party",
+                        "title": "Jane"s Birthday Party",
                         "time" : "19:30 PM"
                     },
                     {
-                        "title": "Overseer's Retirement Party",
+                        "title": "Overseer"s Retirement Party",
                         "time" : "21:30 PM"
                     }
                 ],
@@ -1127,7 +1127,7 @@
                         "time" : "19:30 PM"
                     },
                     {
-                        "title": "CEO's Party",
+                        "title": "CEO"s Party",
                         "time" : "22:30 PM"
                     }
                 ]
@@ -1948,14 +1948,14 @@
     /**
      * Widget 5
      */
-    var widget5Option = 'TW';
+    var widget5Option = "TW";
     // Main Chart
     nv.addGraph(function ()
     {
         var chart = nv.models.multiBarChart()
             .options(
                 {
-                    color       : ['#03a9f4', '#b3e5fc'],
+                    color       : ["#03a9f4", "#b3e5fc"],
                     margin      : {
                         top   : 48,
                         right : 16,
@@ -1982,14 +1982,14 @@
                 }
             );
 
-        var chartd3 = d3.select('#widget5-main-chart svg')
+        var chartd3 = d3.select("#widget5-main-chart svg")
         var chartData;
 
         initChart();
 
         nv.utils.windowResize(chart.update);
 
-        $(window).bind('update:widget5', function ()
+        $(window).bind("update:widget5", function ()
         {
 
             initChart();
@@ -2005,14 +2005,14 @@
     });
 
     // Supporting Charts
-    $.each(['created', 'closed', 're-opened', 'wont-fix', 'needs-test', 'fixed'], function (index, id)
+    $.each(["created", "closed", "re-opened", "wont-fix", "needs-test", "fixed"], function (index, id)
     {
         nv.addGraph(function ()
         {
             var chart = nv.models.lineChart()
                 .options(
                     {
-                        color                  : ['#03A9F4'],
+                        color                  : ["#03A9F4"],
                         height                 : 50,
                         margin                 : {
                             top   : 8,
@@ -2021,7 +2021,7 @@
                             left  : 0
                         },
                         isArea                 : true,
-                        interpolate            : 'cardinal',
+                        interpolate            : "cardinal",
                         clipEdge               : true,
                         duration               : 500,
                         showXAxis              : false,
@@ -2040,18 +2040,18 @@
                     }
                 );
 
-            var chartd3 = d3.select('#widget5-' + id + '-chart svg');
+            var chartd3 = d3.select("#widget5-" + id + "-chart svg");
             var chartData;
 
             initChart();
 
             nv.utils.windowResize(chart.update);
 
-            $(window).bind('update:widget5', function ()
+            $(window).bind("update:widget5", function ()
             {
 
                 initChart();
-                $('#widget5-' + id + '-chart .count').text(data.widget5.supporting[id].count[widget5Option]);
+                $("#widget5-" + id + "-chart .count").text(data.widget5.supporting[id].count[widget5Option]);
             })
 
             function initChart()
@@ -2064,23 +2064,23 @@
         });
     });
 
-    $('.widget5-option-change-btn').on('click', function (ev)
+    $(".widget5-option-change-btn").on("click", function (ev)
     {
-        console.log($(ev.target).data('interval'));
-        widget5Option = $(ev.target).data('interval');
-        $(window).trigger('update:widget5');
+        console.log($(ev.target).data("interval"));
+        widget5Option = $(ev.target).data("interval");
+        $(window).trigger("update:widget5");
     });
 
     /**
      * Widget 6
      */
-    var widget6Option = 'TW';
+    var widget6Option = "TW";
     // Main Chart - Donut chart
     nv.addGraph(function ()
     {
         var chart = nv.models.pieChart()
             .options({
-                color       : ['#f44336', '#9c27b0', '#03a9f4', '#e91e63'],
+                color       : ["#f44336", "#9c27b0", "#03a9f4", "#e91e63"],
                 margin      : {
                     top   : 0,
                     right : 0,
@@ -2090,7 +2090,7 @@
                 donut       : true,
                 clipEdge    : true,
                 cornerRadius: 0,
-                labelType   : 'percent',
+                labelType   : "percent",
                 padAngle    : 0.02,
                 x           : function (d)
                 {
@@ -2102,19 +2102,19 @@
                 }
             });
 
-        var chartd3 = d3.select('#widget6-main-chart svg');
+        var chartd3 = d3.select("#widget6-main-chart svg");
         var chartData;
 
         initChart();
 
         nv.utils.windowResize(chart.update);
 
-        $(window).bind('update:widget6', function ()
+        $(window).bind("update:widget6", function ()
         {
 
             initChart();
-            $('#added-tasks .count').text(data.widget6.footerLeft.count[widget6Option]);
-            $('#completed-tasks .count').text(data.widget6.footerRight.count[widget6Option]);
+            $("#added-tasks .count").text(data.widget6.footerLeft.count[widget6Option]);
+            $("#completed-tasks .count").text(data.widget6.footerRight.count[widget6Option]);
         })
 
         function initChart()
@@ -2127,11 +2127,11 @@
     });
 
 
-    $('#widget6-option-select').on('change', function (ev)
+    $("#widget6-option-select").on("change", function (ev)
     {
         console.log($(ev.target).val());
         widget6Option = $(ev.target).val();
-        $(window).trigger('update:widget6');
+        $(window).trigger("update:widget6");
     });
 
 
@@ -2144,14 +2144,14 @@
     {
         var chart = nv.models.pieChart()
             .options({
-                color    : ['#f44336', '#9c27b0', '#03a9f4', '#e91e63', '#ffc107'],
+                color    : ["#f44336", "#9c27b0", "#03a9f4", "#e91e63", "#ffc107"],
                 margin   : {
                     top   : 0,
                     right : 0,
                     bottom: 0,
                     left  : 0
                 },
-                labelType: 'percent',
+                labelType: "percent",
                 x        : function (d)
                 {
                     return d.label;
@@ -2162,14 +2162,14 @@
                 }
             });
 
-        var chartd3 = d3.select('#widget8-main-chart svg');
+        var chartd3 = d3.select("#widget8-main-chart svg");
         var chartData;
 
         initChart();
 
         nv.utils.windowResize(chart.update);
 
-        $(window).bind('update:widget8', function ()
+        $(window).bind("update:widget8", function ()
         {
             initChart();
         })
@@ -2187,16 +2187,16 @@
     /**
      * Widget 9 Charts
      */
-    var widget9Option = 'TW';
+    var widget9Option = "TW";
 
-    $.each(['weeklySpent', 'totalSpent', 'remaining'], function (index, id)
+    $.each(["weeklySpent", "totalSpent", "remaining"], function (index, id)
     {
         nv.addGraph(function ()
         {
             var chart = nv.models.lineChart()
                 .options(
                     {
-                        color                  : ['#03A9F4'],
+                        color                  : ["#03A9F4"],
                         height                 : 50,
                         margin                 : {
                             top   : 8,
@@ -2205,7 +2205,7 @@
                             left  : 0
                         },
                         isArea                 : true,
-                        interpolate            : 'cardinal',
+                        interpolate            : "cardinal",
                         clipEdge               : true,
                         duration               : 500,
                         showXAxis              : false,
@@ -2224,17 +2224,17 @@
                     }
                 );
 
-            var chartd3 = d3.select('#widget9-' + id + ' svg');
+            var chartd3 = d3.select("#widget9-" + id + " svg");
             var chartData;
 
             initChart();
 
             nv.utils.windowResize(chart.update);
 
-            $(window).bind('update:widget9', function ()
+            $(window).bind("update:widget9", function ()
             {
                 initChart();
-                $('#widget9-' + id + ' .item-value').text(data.widget9[id].count[widget9Option]);
+                $("#widget9-" + id + " .item-value").text(data.widget9[id].count[widget9Option]);
             })
 
             function initChart()
@@ -2247,10 +2247,10 @@
         });
     });
 
-    $('#widget9-option-select').on('change', function (ev)
+    $("#widget9-option-select").on("change", function (ev)
     {
         console.log($(ev.target).val());
         widget9Option = $(ev.target).val();
-        $(window).trigger('update:widget9');
+        $(window).trigger("update:widget9");
     });
 })();

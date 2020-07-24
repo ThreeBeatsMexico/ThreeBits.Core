@@ -2,23 +2,23 @@
 {
     $(document).ready(function ()
     {
-        $('#e-commerce-orders-table').DataTable(
+        $("#e-commerce-orders-table").DataTable(
             {
-                dom       : 'rt<"dataTables_footer"ip>',
+                dom       : "rt<"dataTables_footer"ip>",
                 columnDefs: [
                     {
                         // Target the id column
                         targets: 0,
-                        width  : '72px'
+                        width  : "72px"
                     },
                     {
                         // Target the price column
                         targets: 3,
                         render : function (data, type)
                         {
-                            if ( type === 'display' )
+                            if ( type === "display" )
                             {
-                                return '<div class="layout-align-start-start layout-row">' + '<i class="s-4 icon-currency-usd text-muted"></i>' + '<span>' + data + '</span>' + '</div>';
+                                return "<div class="layout-align-start-start layout-row">" + "<i class="s-4 icon-currency-usd text-muted"></i>" + "<span>" + data + "</span>" + "</div>";
                             }
 
                             return data;
@@ -36,12 +36,12 @@
                 initComplete: function ()
                 {
                     var api = this.api(),
-                        searchBox = $('#orders-search-input');
+                        searchBox = $("#orders-search-input");
 
                     // Bind an external input as a table wide search box
                     if ( searchBox.length > 0 )
                     {
-                        searchBox.on('keyup', function (event)
+                        searchBox.on("keyup", function (event)
                         {
                             api.search(event.target.value).draw();
                         });
@@ -49,7 +49,7 @@
                 },
                 lengthMenu  : [10, 20, 30, 50, 100],
                 pageLength  : 10,
-                scrollY     : 'auto',
+                scrollY     : "auto",
                 scrollX     : false,
                 responsive  : true,
                 autoWidth   : false
