@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Seguridad3BitsModelStoreContainer" CdmEntityContainer="Seguridad3BitsEntities1">
+  <EntityContainerMapping StorageEntityContainer="Seguridad3BitsModelStoreContainer" CdmEntityContainer="Seguridad3BitsEntities">
     <EntitySetMapping Name="APLICACION">
       <EntityTypeMapping TypeName="Seguridad3BitsModel.APLICACION">
         <MappingFragment StoreEntitySet="APLICACION">
@@ -8,6 +8,9 @@
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
           <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
           <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+          <ScalarProperty Name="XAPPID" ColumnName="XAPPID" />
+          <ScalarProperty Name="JWTKEY" ColumnName="JWTKEY" />
+          <ScalarProperty Name="JWTEXPIRATIONTIME" ColumnName="JWTEXPIRATIONTIME" />
           <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -724,6 +727,19 @@
     <FunctionImportMapping FunctionImportName="spAddDomicilio" FunctionName="Seguridad3BitsModel.Store.spAddDomicilio" />
     <FunctionImportMapping FunctionImportName="spAddUsuario" FunctionName="Seguridad3BitsModel.Store.spAddUsuario" />
     <FunctionImportMapping FunctionImportName="spAddUsuarioXAplicacion" FunctionName="Seguridad3BitsModel.Store.spAddUsuarioXAplicacion" />
+    <FunctionImportMapping FunctionImportName="spGetAppInfo" FunctionName="Seguridad3BitsModel.Store.spGetAppInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetAppInfo_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+          <ScalarProperty Name="XAPPID" ColumnName="XAPPID" />
+          <ScalarProperty Name="JWTKEY" ColumnName="JWTKEY" />
+          <ScalarProperty Name="JWTEXPIRATIONTIME" ColumnName="JWTEXPIRATIONTIME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="spGetCatEspecifico" FunctionName="Seguridad3BitsModel.Store.spGetCatEspecifico" />
     <FunctionImportMapping FunctionImportName="spGetCatGenerales" FunctionName="Seguridad3BitsModel.Store.spGetCatGenerales">
       <ResultMapping>

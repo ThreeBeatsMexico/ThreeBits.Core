@@ -61,7 +61,7 @@ namespace ThreeBits.Security.Portal.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a 10014.
+        ///   Busca una cadena traducida similar a 1.
         /// </summary>
         internal static string IdApp {
             get {
@@ -70,7 +70,7 @@ namespace ThreeBits.Security.Portal.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a 8867D9A814621270A8D427.
+        ///   Busca una cadena traducida similar a 8426D7AD5F1C433DF38F7A9E2C.
         /// </summary>
         internal static string Password {
             get {

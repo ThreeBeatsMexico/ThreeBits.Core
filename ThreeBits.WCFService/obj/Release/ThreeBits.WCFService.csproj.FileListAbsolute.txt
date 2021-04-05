@@ -18,3 +18,24 @@ C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.csproj.CopyComplete
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.dll
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.WCFService.dll.config
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.WCFService.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.WCFService.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\EntityFramework.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Business.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Data.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\PVLSECVB.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Business.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Business.dll.config
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\EntityFramework.xml
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\EntityFramework.SqlServer.xml
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Data.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\bin\ThreeBits.Data.dll.config
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.csprojAssemblyReference.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.csproj.CopyComplete
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Release\ThreeBits.WCFService.pdb

@@ -111,7 +111,7 @@ namespace ThreeBits.Security.Portal.Controllers
             }
             return _return;
         }
-
+        
         public bool ValidaExpresion(string sTexto, string sPatron)
         {
             bool iRespuesta = false;

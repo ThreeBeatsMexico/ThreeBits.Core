@@ -15,10 +15,10 @@ namespace ThreeBits.Data.Models.Seguridad
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Seguridad3BitsEntities1 : DbContext
+    public partial class Seguridad3BitsEntities : DbContext
     {
-        public Seguridad3BitsEntities1()
-            : base("name=Seguridad3BitsEntities1")
+        public Seguridad3BitsEntities()
+            : base("name=Seguridad3BitsEntities")
         {
         }
     
@@ -1591,6 +1591,15 @@ namespace ThreeBits.Data.Models.Seguridad
                 new ObjectParameter("ACTIVO", typeof(bool));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spAddUsuarioXAplicacion", iDAPLICACIONParameter, iDUSUARIOParameter, aCTIVOParameter);
+        }
+    
+        public virtual ObjectResult<spGetAppInfo_Result> spGetAppInfo(string xAppId)
+        {
+            var xAppIdParameter = xAppId != null ?
+                new ObjectParameter("xAppId", xAppId) :
+                new ObjectParameter("xAppId", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetAppInfo_Result>("spGetAppInfo", xAppIdParameter);
         }
     
         public virtual int spGetCatEspecifico(Nullable<int> iDCATGENERALES, string nOMBRECATALOGO, string iDCATALOGO, string dESCRIPCION, string fILTRO, Nullable<bool> aCTIVO, string vALORFILTRO)

@@ -3,3 +3,9 @@ C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.csproj.CoreCompileInputs.cache
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.dll
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\bin\Release\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\bin\Release\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Entities\obj\Release\ThreeBits.Entities.csprojAssemblyReference.cache

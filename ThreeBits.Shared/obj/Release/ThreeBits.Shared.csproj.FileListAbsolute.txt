@@ -1,0 +1,9 @@
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Release\ThreeBits.Shared.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Release\ThreeBits.Shared.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Release\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Release\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Release\ThreeBits.Shared.csprojAssemblyReference.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Release\ThreeBits.Shared.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Release\ThreeBits.Shared.csproj.CopyComplete
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Release\ThreeBits.Shared.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Release\ThreeBits.Shared.pdb

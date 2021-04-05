@@ -1,0 +1,2515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IELibertadDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ALUMNOS">
+    <Key>
+      <PropertyRef Name="IDALUMNO" />
+    </Key>
+    <Property Name="IDALUMNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NUMEROMATRICULA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHAREGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="FECHAMATRICULA" Type="datetime" Nullable="false" />
+    <Property Name="APATERNO" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="AMATERNO" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="NOMBRES" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="FECHANACIMIENTO" Type="datetime" Nullable="false" />
+    <Property Name="SEXO" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="NACIONALIDAD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GRADO" Type="nvarchar" MaxLength="50" />
+    <Property Name="GRUPO" Type="nvarchar" MaxLength="50" />
+    <Property Name="NUMEROLISTA" Type="nvarchar" MaxLength="50" />
+    <Property Name="ESCUELAPROCEDENCIA" Type="nvarchar" MaxLength="250" />
+    <Property Name="HERMANOS" Type="int" />
+    <Property Name="GRADOHERMANOS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CALLE" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="NUMERO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COLONIA" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="DELEGACION" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ESTADO" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="CODIGOPOSTAL" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="TELEFONO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="CURP" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EDADANOS" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EDADMESES" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TUTOR" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="USUARIOALTA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="USUARIOMODIFICA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHAALTA" Type="datetime" Nullable="false" />
+    <Property Name="FECHAMODIFICA" Type="datetime" Nullable="false" />
+    <Property Name="FOTO" Type="nvarchar" MaxLength="150" />
+    <Property Name="NIVELACADEMICO" Type="nvarchar" MaxLength="50" />
+    <Property Name="ESTATUS" Type="nvarchar" MaxLength="50" />
+    <Property Name="SERVERPATH" Type="nvarchar" MaxLength="200" />
+    <Property Name="BECA" Type="int" />
+    <Property Name="IDCICLO" Type="int" />
+    <Property Name="FORMAPAGO" Type="int" />
+  </EntityType>
+  <EntityType Name="APLICACION">
+    <Key>
+      <PropertyRef Name="IDAPLICACION" />
+    </Key>
+    <Property Name="IDAPLICACION" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="80" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="80" />
+    <Property Name="URLINICIO" Type="varchar" MaxLength="200" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="AUDIT_CONTACTO">
+    <Key>
+      <PropertyRef Name="IDCONTACTOAUDIT" />
+    </Key>
+    <Property Name="IDCONTACTOAUDIT" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDOPERACIONAUDIT" Type="int" />
+    <Property Name="IDCONTACTO" Type="bigint" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="IDTIPOCONTACTO" Type="varchar" MaxLength="50" />
+    <Property Name="VALOR" Type="varchar" MaxLength="100" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="ACTIVOCONTACTO" Type="bit" />
+    <Property Name="IDUSERMODIFICA" Type="bigint" />
+    <Property Name="IDAPPMODIFICA" Type="bigint" />
+    <Property Name="FECHATRANSACCION" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="AUDIT_DOMICILIO">
+    <Key>
+      <PropertyRef Name="IDDOMICILIOAUDIT" />
+    </Key>
+    <Property Name="IDDOMICILIOAUDIT" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDOPERACIONAUDIT" Type="int" />
+    <Property Name="IDDOMICILIO" Type="bigint" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="CALLE" Type="varchar" MaxLength="100" />
+    <Property Name="NUMEXT" Type="varchar" MaxLength="20" />
+    <Property Name="NUMINT" Type="varchar" MaxLength="20" />
+    <Property Name="IDESTADO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+    <Property Name="IDMUN" Type="varchar" MaxLength="50" />
+    <Property Name="MUNICIPIO" Type="varchar" MaxLength="50" />
+    <Property Name="IDCOLONIA" Type="varchar" MaxLength="50" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="100" />
+    <Property Name="CP" Type="varchar" MaxLength="50" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="ACTIVODOM" Type="bit" />
+    <Property Name="IDUSERMODIFICA" Type="bigint" />
+    <Property Name="IDAPPMODIFICA" Type="bigint" />
+    <Property Name="FECHATRANSACCION" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="AUDIT_USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIOAUDIT" />
+    </Key>
+    <Property Name="IDUSUARIOAUDIT" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDOPERACIONAUDIT" Type="int" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="IDAPLICACION" Type="bigint" />
+    <Property Name="IDSEXO" Type="varchar" MaxLength="150" />
+    <Property Name="IDTIPOPERSONA" Type="varchar" MaxLength="150" />
+    <Property Name="IDESTADOCIVIL" Type="varchar" MaxLength="150" />
+    <Property Name="IDAREA" Type="varchar" MaxLength="100" />
+    <Property Name="IDTIPOUSUARIO" Type="varchar" MaxLength="100" />
+    <Property Name="IDUSUARIOAPP" Type="varchar" MaxLength="100" />
+    <Property Name="APATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="AMATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="FECHANACCONST" Type="datetime" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="500" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+    <Property Name="RUTAFOTOPERFIL" Type="varchar" MaxLength="150" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="ACTIVOUSR" Type="bit" />
+    <Property Name="IDUSERMODIFICA" Type="bigint" />
+    <Property Name="IDAPPMODIFICA" Type="bigint" />
+    <Property Name="FECHATRANSACCION" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_AREA">
+    <Key>
+      <PropertyRef Name="IDAREA" />
+    </Key>
+    <Property Name="IDAREA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_ESTACIONES">
+    <Key>
+      <PropertyRef Name="IDESTACION" />
+    </Key>
+    <Property Name="IDESTACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESRIPCION" Type="varchar" MaxLength="200" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_ESTADOCIVIL">
+    <Key>
+      <PropertyRef Name="IDESTADOCIVIL" />
+    </Key>
+    <Property Name="IDESTADOCIVIL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_GRALS">
+    <Key>
+      <PropertyRef Name="IDCATGRAL" />
+    </Key>
+    <Property Name="IDCATGRAL" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRETABLA" Type="varchar" MaxLength="50" />
+    <Property Name="IDTABLA" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPCIONTABLA" Type="varchar" MaxLength="50" />
+    <Property Name="IDFILTRO" Type="varchar" MaxLength="50" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_OPERACIONAUDIT">
+    <Key>
+      <PropertyRef Name="IDOPERACIONAUDIT" />
+    </Key>
+    <Property Name="IDOPERACIONAUDIT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_SEXO">
+    <Key>
+      <PropertyRef Name="IDSEXO" />
+    </Key>
+    <Property Name="IDSEXO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_TIPOCONTACTO">
+    <Key>
+      <PropertyRef Name="IDTIPOCONTACTO" />
+    </Key>
+    <Property Name="IDTIPOCONTACTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_TIPOPERSONA">
+    <Key>
+      <PropertyRef Name="IDTIPOPERSONA" />
+    </Key>
+    <Property Name="IDTIPOPERSONA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CAT_TIPOUSUARIO">
+    <Key>
+      <PropertyRef Name="IDTIPOUSUARIO" />
+    </Key>
+    <Property Name="IDTIPOUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CATEGORIA">
+    <Key>
+      <PropertyRef Name="CATEGORIAID" />
+    </Key>
+    <Property Name="CATEGORIAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="IMAGECAT" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATGENERALES">
+    <Key>
+      <PropertyRef Name="IDCATGENERALES" />
+    </Key>
+    <Property Name="IDCATGENERALES" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRECATALOGO" Type="nvarchar" MaxLength="100" />
+    <Property Name="IDCATALOGO" Type="nvarchar" MaxLength="100" />
+    <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="100" />
+    <Property Name="FILTRO" Type="nvarchar" MaxLength="100" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.CICLO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CICLO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRECICLO" Type="nvarchar" MaxLength="200" />
+    <Property Name="FECHAINICIO" Type="date" />
+    <Property Name="FECHAFIN" Type="date" />
+    <Property Name="MONTOINSCRIPCION" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="MONTOCOLEGIATURA" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="ESTATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RFCRECEP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NMBRECEP" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="CALLER" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="NROEXTR" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NROINTR" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLONIAR" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MUNICIPIOR" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LOCALIDADR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ESTADOR" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PAISRECEP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CPRECEP" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.Colonias' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Colonias">
+    <Key>
+      <PropertyRef Name="ClaveColonia" />
+      <PropertyRef Name="ClaveMunicipio" />
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreColonia" />
+      <PropertyRef Name="CodigoPostal" />
+      <PropertyRef Name="CodigoPostalAdministracion" />
+      <PropertyRef Name="ClaveTipoAsentamiento" />
+      <PropertyRef Name="TipoAsentamiento" />
+    </Key>
+    <Property Name="ClaveColonia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ClaveMunicipio" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClaveEntidad" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NombreColonia" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CodigoPostal" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CodigoPostalAdministracion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClaveTipoAsentamiento" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoAsentamiento" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ClaveCiudad" Type="varchar" MaxLength="250" />
+    <Property Name="NombreCiudad" Type="varchar" MaxLength="250" />
+    <Property Name="Zona" Type="varchar" MaxLength="250" />
+    <Property Name="Universe" Type="varchar" MaxLength="50" />
+    <Property Name="Oracle" Type="varchar" MaxLength="50" />
+    <Property Name="MunOracle" Type="varchar" MaxLength="50" />
+    <Property Name="MunUniverse" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.ColoniasIEL' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="ColoniasIEL">
+    <Key>
+      <PropertyRef Name="ClaveColonia" />
+      <PropertyRef Name="ClaveMunicipio" />
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreColonia" />
+      <PropertyRef Name="CodigoPostal" />
+      <PropertyRef Name="CodigoPostalAdministracion" />
+      <PropertyRef Name="ClaveTipoAsentamiento" />
+      <PropertyRef Name="TipoAsentamiento" />
+    </Key>
+    <Property Name="ClaveColonia" Type="bigint" Nullable="false" />
+    <Property Name="ClaveMunicipio" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClaveEntidad" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NombreColonia" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CodigoPostal" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CodigoPostalAdministracion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClaveTipoAsentamiento" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TipoAsentamiento" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ClaveCiudad" Type="varchar" MaxLength="250" />
+    <Property Name="NombreCiudad" Type="varchar" MaxLength="250" />
+    <Property Name="Zona" Type="varchar" MaxLength="250" />
+    <Property Name="Universe" Type="varchar" MaxLength="50" />
+    <Property Name="Oracle" Type="varchar" MaxLength="50" />
+    <Property Name="MunOracle" Type="varchar" MaxLength="50" />
+    <Property Name="MunUniverse" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMENTARIO">
+    <Key>
+      <PropertyRef Name="COMENTARIOID" />
+    </Key>
+    <Property Name="COMENTARIOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="POSTID" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" MaxLength="200" />
+    <Property Name="CONTENIDO" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONFIGAPP">
+    <Key>
+      <PropertyRef Name="IDCONFIGAPP" />
+    </Key>
+    <Property Name="IDCONFIGAPP" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="200" />
+    <Property Name="VALOR" Type="nvarchar" MaxLength="200" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CONTACTO">
+    <Key>
+      <PropertyRef Name="IDCONTACTO" />
+    </Key>
+    <Property Name="IDCONTACTO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="IDTIPOCONTACTO" Type="int" />
+    <Property Name="VALOR" Type="varchar" MaxLength="100" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="DOMICILIO">
+    <Key>
+      <PropertyRef Name="IDDOMICILIO" />
+    </Key>
+    <Property Name="IDDOMICILIO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="CALLE" Type="varchar" MaxLength="100" />
+    <Property Name="NUMEXT" Type="varchar" MaxLength="20" />
+    <Property Name="NUMINT" Type="varchar" MaxLength="20" />
+    <Property Name="IDESTADO" Type="nvarchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+    <Property Name="IDMUN" Type="nvarchar" MaxLength="50" />
+    <Property Name="MUNICIPIO" Type="varchar" MaxLength="50" />
+    <Property Name="IDCOLONIA" Type="nvarchar" MaxLength="50" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="100" />
+    <Property Name="CP" Type="varchar" MaxLength="50" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="EMPRESAS">
+    <Key>
+      <PropertyRef Name="ID_EMPRESA" />
+    </Key>
+    <Property Name="ID_EMPRESA" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="RFCEMISOR" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="NMBEMISOR" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="CALLEE" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="NROEXTE" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NROINTE" Type="nvarchar" MaxLength="10" />
+    <Property Name="COLONIAE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="MUNICIPIOE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LOCALIDADE" Type="nvarchar" MaxLength="30" />
+    <Property Name="ESTADOE" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="PAISEMISOR" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CPEMISOR" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="NMBREGIMEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTACIONESXAPP">
+    <Key>
+      <PropertyRef Name="IDESTACIONXAPP" />
+    </Key>
+    <Property Name="IDESTACIONXAPP" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDAPLICACION" Type="bigint" />
+    <Property Name="IDESTACION" Type="int" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.Estados' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreEstado" />
+    </Key>
+    <Property Name="ClaveEntidad" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NombreEstado" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Universe" Type="varchar" MaxLength="50" />
+    <Property Name="Oracle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.FORMATOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="FORMATOS">
+    <Key>
+      <PropertyRef Name="FORMATOID" />
+      <PropertyRef Name="NOMBRE" />
+      <PropertyRef Name="DESCRIPCION" />
+      <PropertyRef Name="FILERUT" />
+    </Key>
+    <Property Name="FORMATOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="FILERUT" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'IELibertadDB.dbo.GRADO' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="GRADO">
+          <Property Name="ID" Type="int" />
+          <Property Name="IDNIVEL" Type="int" />
+          <Property Name="IDGRADO" Type="nvarchar" MaxLength="50" />
+          <Property Name="DESCRIPCIONGRADO" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.GRUPO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="GRUPO">
+    <Key>
+      <PropertyRef Name="IDGRUPO" />
+    </Key>
+    <Property Name="IDGRUPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDNIVEL" Type="int" />
+    <Property Name="IDGRADO" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDCICLO" Type="int" />
+    <Property Name="NOMBREGRUPO" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.INFOALUMNOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="INFOALUMNOS">
+    <Key>
+      <PropertyRef Name="NUMEROMATRICULA" />
+    </Key>
+    <Property Name="NUMEROMATRICULA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBREPADRETUTOR" Type="nvarchar" MaxLength="150" />
+    <Property Name="OCUPACIONPADRE" Type="nvarchar" MaxLength="150" />
+    <Property Name="TELEFONOPADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEFONOTRABAJOPADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="CELULARPADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FECHANACIMIENTOPADRE" Type="datetime" />
+    <Property Name="SUELDOPADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NACIONALIDADPADRE" Type="nvarchar" MaxLength="150" />
+    <Property Name="NOMBREMADRETUTOR" Type="nvarchar" MaxLength="150" />
+    <Property Name="OCUPACIONMADRE" Type="nvarchar" MaxLength="150" />
+    <Property Name="TELEFONOMADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEFONOTRABAJOMADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="CELULARMADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FECHANACIMIENTOMADRE" Type="datetime" />
+    <Property Name="SUELDOMADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NACIONALIDADMADRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOMBREFAMVECINO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEFONOVECINO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEFONOTRABAJOVECINO" Type="nvarchar" MaxLength="50" />
+    <Property Name="CELULARVECINO" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDUCACIONFISICA" Type="int" />
+    <Property Name="MEDICAMENTO" Type="int" />
+    <Property Name="NOMBREMEDICAMENTO" Type="nvarchar" MaxLength="150" />
+    <Property Name="DOSISMEDICAMENTO" Type="nvarchar" MaxLength="150" />
+    <Property Name="ALIMENTOPROHIBIDO" Type="nvarchar" MaxLength="150" />
+    <Property Name="PESO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TALLA" Type="nvarchar" MaxLength="50" />
+    <Property Name="TIPOSANGRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENFERMEDADES" Type="int" />
+    <Property Name="NOMBREENFERMEDADES" Type="nvarchar" MaxLength="150" />
+    <Property Name="PROCEDIMIENTOCRISIS" Type="nvarchar" MaxLength="500" />
+    <Property Name="CERTIFICADO" Type="int" />
+    <Property Name="ENFERMEDADCERTIFICADO" Type="int" />
+    <Property Name="ALERGIA" Type="int" />
+    <Property Name="NOMBREALERGIA" Type="nvarchar" MaxLength="150" />
+    <Property Name="PROCEDIMINTOCRISISALERGIA" Type="nvarchar" MaxLength="500" />
+    <Property Name="NOMBREACCIDENTE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEFONOACCIDENTE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NOMBREHOSPITAL" Type="nvarchar" MaxLength="150" />
+    <Property Name="MEDICO" Type="int" />
+    <Property Name="NOMBREMEDICO" Type="nvarchar" MaxLength="250" />
+    <Property Name="TELEFONOMEDICO" Type="nvarchar" MaxLength="150" />
+    <Property Name="CEDULAMEDICO" Type="nvarchar" MaxLength="150" />
+    <Property Name="AUTORIZATRASLADO" Type="int" />
+    <Property Name="PROCEDIMIENTOACCIDENTE" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="LOGERROR">
+    <Key>
+      <PropertyRef Name="IDLOGERROR" />
+    </Key>
+    <Property Name="IDLOGERROR" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDAPLICACION" Type="bigint" />
+    <Property Name="VCHMENSAJE" Type="varchar" MaxLength="450" />
+    <Property Name="VCHHOSTNAME" Type="varchar" MaxLength="150" />
+    <Property Name="VCHIP" Type="varchar" MaxLength="40" />
+    <Property Name="VCHSTACKTRACE" Type="varchar" MaxLength="500" />
+    <Property Name="DTFECHAERROR" Type="datetime" />
+    <Property Name="VCHUSUARIO" Type="varchar" MaxLength="40" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.Municipios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Municipios">
+    <Key>
+      <PropertyRef Name="ClaveMunicipio" />
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreMunicipio" />
+    </Key>
+    <Property Name="ClaveMunicipio" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ClaveEntidad" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NombreMunicipio" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Universe" Type="varchar" MaxLength="50" />
+    <Property Name="Oracle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NUMERACION">
+    <Key>
+      <PropertyRef Name="ID_NUMERACION" />
+    </Key>
+    <Property Name="ID_NUMERACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_DOCTYPE" Type="int" Nullable="false" />
+    <Property Name="NMBSERIE" Type="varchar" MaxLength="10" />
+    <Property Name="NMBNUMBERFROM" Type="bigint" />
+    <Property Name="NMBCURRENTNUMBER" Type="bigint" />
+    <Property Name="NMBNUMBERTO" Type="bigint" Nullable="false" />
+    <Property Name="NMBAUTHNUMBER" Type="varchar" MaxLength="15" />
+    <Property Name="NMBAUTHDATE" Type="int" Nullable="false" />
+    <Property Name="NMBRFC" Type="varchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.NUMERACIONES' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="NUMERACIONES">
+    <Key>
+      <PropertyRef Name="CLAVE_PROCESO" />
+      <PropertyRef Name="TIPO_PROC" />
+      <PropertyRef Name="INICIAL" />
+      <PropertyRef Name="FINAL" />
+    </Key>
+    <Property Name="CLAVE_PROCESO" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TIPO_PROC" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="INICIAL" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FINAL" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ACTUAL" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FECHA_INICIO" Type="datetime" />
+    <Property Name="SERIE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.PAGOSALUMNO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="PAGOSALUMNO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDCICLO" Type="int" />
+    <Property Name="NUMEROMATRICULA" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDGRUPO" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDGRADO" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDALUMNO" Type="int" />
+    <Property Name="CONCEPTO" Type="nvarchar" MaxLength="500" />
+    <Property Name="MONTOTOTAL" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="MONTOACTUAL" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="IDESTATUS" Type="int" />
+    <Property Name="FECHAMOVIMIENTO" Type="datetime" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="USUARIOMODIFICA" Type="varchar" MaxLength="50" />
+    <Property Name="USUARIOALTA" Type="varchar" MaxLength="50" />
+    <Property Name="FECHAMODIFICA" Type="datetime" />
+    <Property Name="MEDIOPAGO" Type="int" />
+    <Property Name="REFERENCIA" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PERMISOSXELEMENTOSOBJETO">
+    <Key>
+      <PropertyRef Name="IDELEMENTOSXOBJ" />
+    </Key>
+    <Property Name="IDELEMENTOSXOBJ" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPERMISOSOBJ" Type="bigint" />
+    <Property Name="ELEMENTO" Type="varchar" MaxLength="200" />
+    <Property Name="TOOLTIP" Type="varchar" MaxLength="150" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="PERMISOSXMENU">
+    <Key>
+      <PropertyRef Name="IDPERMISOSMENU" />
+    </Key>
+    <Property Name="IDPERMISOSMENU" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDROL" Type="bigint" />
+    <Property Name="NOMBREMENU" Type="varchar" MaxLength="200" />
+    <Property Name="TIPOOBJETO" Type="varchar" MaxLength="200" />
+    <Property Name="URL" Type="varchar" MaxLength="250" />
+    <Property Name="IMAGEN" Type="varchar" MaxLength="250" />
+    <Property Name="ORDEN" Type="int" />
+    <Property Name="TOOLTIP" Type="varchar" MaxLength="150" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="PERMISOSXSUBMENU">
+    <Key>
+      <PropertyRef Name="IDPERMISOSXSUBMENU" />
+    </Key>
+    <Property Name="IDPERMISOSXSUBMENU" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPERMISOSMENU" Type="bigint" />
+    <Property Name="NOMBRESUBMENU" Type="varchar" MaxLength="200" />
+    <Property Name="TIPOOBJETO" Type="varchar" MaxLength="200" />
+    <Property Name="URL" Type="varchar" MaxLength="250" />
+    <Property Name="IMAGEN" Type="varchar" MaxLength="250" />
+    <Property Name="ORDEN" Type="int" />
+    <Property Name="TOOLTIP" Type="varchar" MaxLength="150" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="PERMISOXOBJETOS">
+    <Key>
+      <PropertyRef Name="IDPERMISOSOBJ" />
+    </Key>
+    <Property Name="IDPERMISOSOBJ" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDROL" Type="bigint" />
+    <Property Name="PAGINA" Type="varchar" MaxLength="500" />
+    <Property Name="NOMBREOBJETO" Type="varchar" MaxLength="200" />
+    <Property Name="TIPOOBJETO" Type="varchar" MaxLength="200" />
+    <Property Name="TOOLTIP" Type="varchar" MaxLength="150" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="POST">
+    <Key>
+      <PropertyRef Name="POSTID" />
+    </Key>
+    <Property Name="POSTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITULO" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="POSTEADOPOR" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="ntext" Nullable="false" />
+    <Property Name="CONTENIDO" Type="ntext" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="PUBLICADO" Type="bit" Nullable="false" />
+    <Property Name="COMENTARIOS" Type="int" Nullable="false" />
+    <Property Name="IMAGEN" Type="ntext" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.POSTCATEGORIA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="POSTCATEGORIA">
+    <Key>
+      <PropertyRef Name="POSTID" />
+      <PropertyRef Name="CATEGORIAID" />
+    </Key>
+    <Property Name="POSTID" Type="int" Nullable="false" />
+    <Property Name="CATEGORIAID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTOS">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PRODUCTO" Type="nvarchar" MaxLength="250" />
+    <Property Name="ID_UNIDAD_MEDIDA" Type="smallint" />
+    <Property Name="P_COMPRA" Type="float" />
+    <Property Name="P_VENTA" Type="float" />
+    <Property Name="EXISTENCIA" Type="float" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="IDROL" />
+    </Key>
+    <Property Name="IDROL" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDAPLICACION" Type="bigint" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="ROLESXUSUARIO">
+    <Key>
+      <PropertyRef Name="IDROLXUSUARIO" />
+    </Key>
+    <Property Name="IDROLXUSUARIO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDROL" Type="bigint" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="IDESTACIONXAPP" Type="bigint" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_CHATMESSAGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CHATID" Type="varchar" MaxLength="255" />
+    <Property Name="SENDERNAME" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="SENDERID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="RECIPIENTID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="RECIPIENTNAME" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="MESSAGEBODY" Type="varchar" MaxLength="5000" />
+    <Property Name="ISTYPING" Type="bit" Nullable="false" />
+    <Property Name="MESSAGETIME" Type="datetime" Nullable="false" />
+    <Property Name="ISREAD" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_USERSTATUS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="STATUS" Type="smallint" Nullable="false" />
+    <Property Name="THEME" Type="varchar" MaxLength="255" />
+    <Property Name="SOUND" Type="bit" />
+    <Property Name="AVATAR" Type="varchar" MaxLength="255" />
+    <Property Name="PROFILELINK" Type="varchar" MaxLength="255" />
+    <Property Name="LASTLOGIN" Type="datetime" />
+    <Property Name="LASTACTIVITY" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.TPOPROY' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TPOPROY">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TIPOPROY" />
+      <PropertyRef Name="DURACION" />
+      <PropertyRef Name="CATEGORIA" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPOPROY" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="DURACION" Type="int" Nullable="false" />
+    <Property Name="CATEGORIA" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.TRANSACCIONES' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TRANSACCIONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDALUMNO" Type="int" />
+    <Property Name="IDPAGO" Type="int" />
+    <Property Name="CONCEPTO" Type="nvarchar" MaxLength="500" />
+    <Property Name="MONTO" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="FECHATRANSACCION" Type="datetime" />
+    <Property Name="USUARIOTRANSACCION" Type="nvarchar" MaxLength="50" />
+    <Property Name="FORMAPAGO" Type="nvarchar" MaxLength="50" />
+    <Property Name="REFERENCIA" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UNIDAD_MEDIDA">
+    <Key>
+      <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+    </Key>
+    <Property Name="ID_UNIDAD_MEDIDA" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UNIDAD_MEDIDA" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_LOGIN" />
+    </Key>
+    <Property Name="USER_LOGIN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="USER_PASSWORD" Type="nvarchar" MaxLength="250" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="150" />
+    <Property Name="ACTIVO" Type="bit" Nullable="false" />
+    <Property Name="VENTAS" Type="bit" Nullable="false" />
+    <Property Name="REPORTES" Type="bit" Nullable="false" />
+    <Property Name="ADMINISTRAR" Type="bit" Nullable="false" />
+    <Property Name="FECHA_REGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="PRODUCTOS" Type="bit" Nullable="false" />
+    <Property Name="CLIENTES" Type="bit" Nullable="false" />
+    <Property Name="FACTURACION" Type="bit" Nullable="false" />
+    <Property Name="BLOG" Type="bit" Nullable="false" />
+    <Property Name="IMAGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PROY" Type="bit" Nullable="false" />
+    <Property Name="BIBLIO" Type="bit" Nullable="false" />
+    <Property Name="ALUMNOS" Type="bit" Nullable="false" />
+    <Property Name="PROFESORES" Type="bit" Nullable="false" />
+    <Property Name="COBRANZA" Type="bit" Nullable="false" />
+    <Property Name="AYUDA" Type="bit" Nullable="false" />
+    <Property Name="PAGO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDSEXO" Type="int" />
+    <Property Name="IDTIPOPERSONA" Type="int" />
+    <Property Name="IDESTADOCIVIL" Type="int" />
+    <Property Name="IDAREA" Type="int" />
+    <Property Name="IDTIPOUSUARIO" Type="int" />
+    <Property Name="IDUSUARIOAPP" Type="varchar" MaxLength="100" />
+    <Property Name="APATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="AMATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="FECHANACCONST" Type="datetime" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="500" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+    <Property Name="RUTAFOTOPERFIL" Type="varchar" MaxLength="150" />
+    <Property Name="FECHAALTA" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="USUARIOXAPLICACION">
+    <Key>
+      <PropertyRef Name="IDUSRSXAPP" />
+    </Key>
+    <Property Name="IDUSRSXAPP" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDAPLICACION" Type="bigint" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="bigint" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA_REGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="USER_LOGIN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCSERIE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCNUMBER" Type="bigint" Nullable="false" />
+    <Property Name="DOCDATE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TPODOC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RFCEMISOR" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="NMBEMISOR" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="RFCRECEP" Type="nvarchar" MaxLength="13" Nullable="false" />
+    <Property Name="NMBRECEP" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="MONEDA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SUBTOTAL" Type="float" Nullable="false" />
+    <Property Name="IVA" Type="float" Nullable="false" />
+    <Property Name="TOTAL" Type="float" Nullable="false" />
+    <Property Name="COMENTARIOS" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="VALORPALABRAS" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="METODO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CTAPAGO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LUGAREXP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TPOCAMBIO" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENTA_DETALLE">
+    <Key>
+      <PropertyRef Name="ID_VENTA_DETALLE" />
+    </Key>
+    <Property Name="ID_VENTA_DETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_VENTA" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+    <Property Name="P_VENTA" Type="float" Nullable="false" />
+    <Property Name="ADUANA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PEDIMENTO" Type="nvarchar" MaxLength="50" />
+    <Property Name="F_PEDIMENTO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PREDIAL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VENTA_DETALLE_TMP">
+    <Key>
+      <PropertyRef Name="ID_VENTA_DETALLE_TMP" />
+    </Key>
+    <Property Name="ID_VENTA_DETALLE_TMP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+    <Property Name="USER_LOGIN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_VENTA" Type="float" Nullable="false" />
+    <Property Name="ADUANA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PEDIMENTO" Type="nvarchar" MaxLength="50" />
+    <Property Name="F_PEDIMENTO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PREDIAL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WCFMETODOS">
+    <Key>
+      <PropertyRef Name="IDMETODOS" />
+    </Key>
+    <Property Name="IDMETODOS" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDAPLICACION" Type="bigint" />
+    <Property Name="IDSERVICIOS" Type="bigint" />
+    <Property Name="NOMBREMETODO" Type="varchar" MaxLength="100" />
+    <Property Name="RECURRENTE" Type="bit" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="WCFRECURRENCIA">
+    <Key>
+      <PropertyRef Name="IDRECURRENCIA" />
+    </Key>
+    <Property Name="IDRECURRENCIA" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDMETODOS" Type="bigint" />
+    <Property Name="FECHAACCESO" Type="datetime" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="WCFSERVICIOS">
+    <Key>
+      <PropertyRef Name="IDSERVICIOS" />
+    </Key>
+    <Property Name="IDSERVICIOS" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="80" />
+    <Property Name="ACTIVO" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'IELibertadDB.dbo.VWCATTABLASCATALOGOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VWCATTABLASCATALOGOS">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="IdTable" Type="bigint" />
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AUDITCONTACTO_REF_CATOPERAUDIT">
+    <End Role="CAT_OPERACIONAUDIT" Type="Self.CAT_OPERACIONAUDIT" Multiplicity="0..1" />
+    <End Role="AUDIT_CONTACTO" Type="Self.AUDIT_CONTACTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_OPERACIONAUDIT">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Principal>
+      <Dependent Role="AUDIT_CONTACTO">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AUDITDOM_REF_CATOPERAUDIT">
+    <End Role="CAT_OPERACIONAUDIT" Type="Self.CAT_OPERACIONAUDIT" Multiplicity="0..1" />
+    <End Role="AUDIT_DOMICILIO" Type="Self.AUDIT_DOMICILIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_OPERACIONAUDIT">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Principal>
+      <Dependent Role="AUDIT_DOMICILIO">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AUDITUSUARIOS_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="AUDIT_USUARIOS" Type="Self.AUDIT_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="AUDIT_USUARIOS">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AUDITUSUARIOS_REF_CATOPERAUDIT">
+    <End Role="CAT_OPERACIONAUDIT" Type="Self.CAT_OPERACIONAUDIT" Multiplicity="0..1" />
+    <End Role="AUDIT_USUARIOS" Type="Self.AUDIT_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_OPERACIONAUDIT">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Principal>
+      <Dependent Role="AUDIT_USUARIOS">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentario_Post">
+    <End Role="POST" Type="Self.POST" Multiplicity="1" />
+    <End Role="COMENTARIO" Type="Self.COMENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POST">
+        <PropertyRef Name="POSTID" />
+      </Principal>
+      <Dependent Role="COMENTARIO">
+        <PropertyRef Name="POSTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACTO_REF_CATTIPOCONTACTO">
+    <End Role="CAT_TIPOCONTACTO" Type="Self.CAT_TIPOCONTACTO" Multiplicity="0..1" />
+    <End Role="CONTACTO" Type="Self.CONTACTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_TIPOCONTACTO">
+        <PropertyRef Name="IDTIPOCONTACTO" />
+      </Principal>
+      <Dependent Role="CONTACTO">
+        <PropertyRef Name="IDTIPOCONTACTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACTO_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="CONTACTO" Type="Self.CONTACTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="CONTACTO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOMICILIO_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="DOMICILIO" Type="Self.DOMICILIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="DOMICILIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTACIONESXAPP_REF_CAT_ESTACIONES">
+    <End Role="CAT_ESTACIONES" Type="Self.CAT_ESTACIONES" Multiplicity="0..1" />
+    <End Role="ESTACIONESXAPP" Type="Self.ESTACIONESXAPP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_ESTACIONES">
+        <PropertyRef Name="IDESTACION" />
+      </Principal>
+      <Dependent Role="ESTACIONESXAPP">
+        <PropertyRef Name="IDESTACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTACIONXAPP_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="ESTACIONESXAPP" Type="Self.ESTACIONESXAPP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="ESTACIONESXAPP">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOGERROR_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="LOGERROR" Type="Self.LOGERROR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="LOGERROR">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU">
+    <End Role="PERMISOSXMENU" Type="Self.PERMISOSXMENU" Multiplicity="0..1" />
+    <End Role="PERMISOSXSUBMENU" Type="Self.PERMISOSXSUBMENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERMISOSXMENU">
+        <PropertyRef Name="IDPERMISOSMENU" />
+      </Principal>
+      <Dependent Role="PERMISOSXSUBMENU">
+        <PropertyRef Name="IDPERMISOSMENU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOSXMENU_REF_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="PERMISOSXMENU" Type="Self.PERMISOSXMENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="IDROL" />
+      </Principal>
+      <Dependent Role="PERMISOSXMENU">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS">
+    <End Role="PERMISOXOBJETOS" Type="Self.PERMISOXOBJETOS" Multiplicity="0..1" />
+    <End Role="PERMISOSXELEMENTOSOBJETO" Type="Self.PERMISOSXELEMENTOSOBJETO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERMISOXOBJETOS">
+        <PropertyRef Name="IDPERMISOSOBJ" />
+      </Principal>
+      <Dependent Role="PERMISOSXELEMENTOSOBJETO">
+        <PropertyRef Name="IDPERMISOSOBJ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOXOBJETO_REF_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="PERMISOXOBJETOS" Type="Self.PERMISOXOBJETOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="IDROL" />
+      </Principal>
+      <Dependent Role="PERMISOXOBJETOS">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostCategoria_Categoria">
+    <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="1" />
+    <End Role="POSTCATEGORIA" Type="Self.POSTCATEGORIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA">
+        <PropertyRef Name="CATEGORIAID" />
+      </Principal>
+      <Dependent Role="POSTCATEGORIA">
+        <PropertyRef Name="CATEGORIAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostCategoria_Post">
+    <End Role="POST" Type="Self.POST" Multiplicity="1" />
+    <End Role="POSTCATEGORIA" Type="Self.POSTCATEGORIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POST">
+        <PropertyRef Name="POSTID" />
+      </Principal>
+      <Dependent Role="POSTCATEGORIA">
+        <PropertyRef Name="POSTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_unidad_medida">
+    <End Role="UNIDAD_MEDIDA" Type="Self.UNIDAD_MEDIDA" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDAD_MEDIDA">
+        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLES_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="ROLES">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLESXPERFIL_REF_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="ROLESXUSUARIO" Type="Self.ROLESXUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="IDROL" />
+      </Principal>
+      <Dependent Role="ROLESXUSUARIO">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLESXUS_REF_ESTACIONESAPP">
+    <End Role="ESTACIONESXAPP" Type="Self.ESTACIONESXAPP" Multiplicity="0..1" />
+    <End Role="ROLESXUSUARIO" Type="Self.ROLESXUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTACIONESXAPP">
+        <PropertyRef Name="IDESTACIONXAPP" />
+      </Principal>
+      <Dependent Role="ROLESXUSUARIO">
+        <PropertyRef Name="IDESTACIONXAPP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLESXUSUARIO_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="ROLESXUSUARIO" Type="Self.ROLESXUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="ROLESXUSUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CAT_AREA">
+    <End Role="CAT_AREA" Type="Self.CAT_AREA" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_AREA">
+        <PropertyRef Name="IDAREA" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDAREA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATEDOCIVIL">
+    <End Role="CAT_ESTADOCIVIL" Type="Self.CAT_ESTADOCIVIL" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_ESTADOCIVIL">
+        <PropertyRef Name="IDESTADOCIVIL" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDESTADOCIVIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATSEXO">
+    <End Role="CAT_SEXO" Type="Self.CAT_SEXO" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_SEXO">
+        <PropertyRef Name="IDSEXO" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDSEXO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATTIPOPERSONA">
+    <End Role="CAT_TIPOPERSONA" Type="Self.CAT_TIPOPERSONA" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_TIPOPERSONA">
+        <PropertyRef Name="IDTIPOPERSONA" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDTIPOPERSONA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATTIPOUSUARIO">
+    <End Role="CAT_TIPOUSUARIO" Type="Self.CAT_TIPOUSUARIO" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_TIPOUSUARIO">
+        <PropertyRef Name="IDTIPOUSUARIO" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDTIPOUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOXAPP_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="1" />
+    <End Role="USUARIOXAPLICACION" Type="Self.USUARIOXAPLICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="USUARIOXAPLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOXAPP_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="USUARIOXAPLICACION" Type="Self.USUARIOXAPLICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="USUARIOXAPLICACION">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venta_detalle_productos">
+    <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
+    <End Role="VENTA_DETALLE" Type="Self.VENTA_DETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="VENTA_DETALLE">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venta_detalle_tmp_productos">
+    <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
+    <End Role="VENTA_DETALLE_TMP" Type="Self.VENTA_DETALLE_TMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="VENTA_DETALLE_TMP">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venta_detalle_venta">
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="1" />
+    <End Role="VENTA_DETALLE" Type="Self.VENTA_DETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTA">
+        <PropertyRef Name="ID_VENTA" />
+      </Principal>
+      <Dependent Role="VENTA_DETALLE">
+        <PropertyRef Name="ID_VENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WCFMETODOS_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="WCFMETODOS" Type="Self.WCFMETODOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="WCFMETODOS">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WCFMETODOS_REF_WCFSERVICIOS">
+    <End Role="WCFSERVICIOS" Type="Self.WCFSERVICIOS" Multiplicity="0..1" />
+    <End Role="WCFMETODOS" Type="Self.WCFMETODOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WCFSERVICIOS">
+        <PropertyRef Name="IDSERVICIOS" />
+      </Principal>
+      <Dependent Role="WCFMETODOS">
+        <PropertyRef Name="IDSERVICIOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WCFRECURRENCIA_REF_WCFMETODOS">
+    <End Role="WCFMETODOS" Type="Self.WCFMETODOS" Multiplicity="0..1" />
+    <End Role="WCFRECURRENCIA" Type="Self.WCFRECURRENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WCFMETODOS">
+        <PropertyRef Name="IDMETODOS" />
+      </Principal>
+      <Dependent Role="WCFRECURRENCIA">
+        <PropertyRef Name="IDMETODOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="PROC_ALUMNOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroMatricula" Type="nvarchar" Mode="In" />
+    <Parameter Name="APaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="AMaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombres" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="nvarchar" Mode="In" />
+    <Parameter Name="Sexo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nacionalidad" Type="nvarchar" Mode="In" />
+    <Parameter Name="Grado" Type="nvarchar" Mode="In" />
+    <Parameter Name="EscuelaProcedencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="Hermanos" Type="int" Mode="In" />
+    <Parameter Name="GradoHermanos" Type="nvarchar" Mode="In" />
+    <Parameter Name="Calle" Type="nvarchar" Mode="In" />
+    <Parameter Name="Numero" Type="nvarchar" Mode="In" />
+    <Parameter Name="Colonia" Type="nvarchar" Mode="In" />
+    <Parameter Name="Delegacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Estado" Type="nvarchar" Mode="In" />
+    <Parameter Name="CodigoPostal" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Curp" Type="nvarchar" Mode="In" />
+    <Parameter Name="EdadAnos" Type="nvarchar" Mode="In" />
+    <Parameter Name="EdadMeses" Type="nvarchar" Mode="In" />
+    <Parameter Name="Foto" Type="nvarchar" Mode="In" />
+    <Parameter Name="NivelAcademico" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombrePadreTutor" Type="nvarchar" Mode="In" />
+    <Parameter Name="OcupacionPadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoPadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoTrabajoPadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="CelularPadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimientoPadre" Type="varchar" Mode="In" />
+    <Parameter Name="SueldoPadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="NacionalidadPadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreMadreTutor" Type="nvarchar" Mode="In" />
+    <Parameter Name="OcupacionMadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoMadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoTrabajoMadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="CelularMadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimientoMadre" Type="varchar" Mode="In" />
+    <Parameter Name="SueldoMadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="NacionalidadMadre" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreFamVecino" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoVecino" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoTrabajoVecino" Type="nvarchar" Mode="In" />
+    <Parameter Name="CelularVecino" Type="nvarchar" Mode="In" />
+    <Parameter Name="EducacionFisica" Type="int" Mode="In" />
+    <Parameter Name="Medicamento" Type="int" Mode="In" />
+    <Parameter Name="NombreMedicamento" Type="nvarchar" Mode="In" />
+    <Parameter Name="DosisMedicamento" Type="nvarchar" Mode="In" />
+    <Parameter Name="Peso" Type="nvarchar" Mode="In" />
+    <Parameter Name="Talla" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoSangre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Enfermedades" Type="int" Mode="In" />
+    <Parameter Name="NombreEnfermedades" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProcedimientoCrisis" Type="nvarchar" Mode="In" />
+    <Parameter Name="Certificado" Type="int" Mode="In" />
+    <Parameter Name="EnfermedadCertificado" Type="int" Mode="In" />
+    <Parameter Name="Alergia" Type="int" Mode="In" />
+    <Parameter Name="NombreAlergia" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProcedimintoCrisisAlergia" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreAccidente" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoAccidente" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreHospital" Type="nvarchar" Mode="In" />
+    <Parameter Name="Medico" Type="int" Mode="In" />
+    <Parameter Name="NombreMedico" Type="nvarchar" Mode="In" />
+    <Parameter Name="TelefonoMedico" Type="nvarchar" Mode="In" />
+    <Parameter Name="CedulaMedico" Type="nvarchar" Mode="In" />
+    <Parameter Name="AutorizaTraslado" Type="int" Mode="In" />
+    <Parameter Name="ProcedimientoAccidente" Type="nvarchar" Mode="In" />
+    <Parameter Name="NombreUsuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="Tutor" Type="nvarchar" Mode="In" />
+    <Parameter Name="Estatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="ServerPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="Beca" Type="int" Mode="In" />
+    <Parameter Name="FormaPago" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PROC_ASIGNA_ALUMNO_GRUPO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDALUMNO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDGRUPO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCICLO" Type="nvarchar" Mode="In" />
+    <Parameter Name="USUARIO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_CATEGORIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRE" Type="nvarchar" Mode="In" />
+    <Parameter Name="IMAGECAT" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_CICLOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="NOMBRECICLO" Type="nvarchar" Mode="In" />
+    <Parameter Name="FECHAINICIAL" Type="nvarchar" Mode="In" />
+    <Parameter Name="FECHAFINAL" Type="nvarchar" Mode="In" />
+    <Parameter Name="MONTOINSCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="MONTOCOLEGIATURA" Type="nvarchar" Mode="In" />
+    <Parameter Name="ESTATUS" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PROC_CLIENTES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCLIENTE" Type="nvarchar" Mode="In" />
+    <Parameter Name="RFCRECEP" Type="nvarchar" Mode="In" />
+    <Parameter Name="NMBRECEP" Type="nvarchar" Mode="In" />
+    <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="EXT" Type="nvarchar" Mode="In" />
+    <Parameter Name="INT" Type="nvarchar" Mode="In" />
+    <Parameter Name="COL" Type="nvarchar" Mode="In" />
+    <Parameter Name="MUN" Type="nvarchar" Mode="In" />
+    <Parameter Name="LOC" Type="nvarchar" Mode="In" />
+    <Parameter Name="EDO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
+    <Parameter Name="CP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_EMPRESAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEMPRESA" Type="nvarchar" Mode="In" />
+    <Parameter Name="RFCEMISOR" Type="nvarchar" Mode="In" />
+    <Parameter Name="NMBEMISOR" Type="nvarchar" Mode="In" />
+    <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="EXT" Type="nvarchar" Mode="In" />
+    <Parameter Name="INT" Type="nvarchar" Mode="In" />
+    <Parameter Name="COL" Type="nvarchar" Mode="In" />
+    <Parameter Name="MUN" Type="nvarchar" Mode="In" />
+    <Parameter Name="LOC" Type="nvarchar" Mode="In" />
+    <Parameter Name="EDO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
+    <Parameter Name="CP" Type="nvarchar" Mode="In" />
+    <Parameter Name="REGIMEN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_FOLIOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DOC" Type="int" Mode="In" />
+    <Parameter Name="SERIE" Type="nvarchar" Mode="In" />
+    <Parameter Name="INI" Type="bigint" Mode="In" />
+    <Parameter Name="ACT" Type="bigint" Mode="In" />
+    <Parameter Name="FIN" Type="bigint" Mode="In" />
+    <Parameter Name="APROBACION" Type="varchar" Mode="In" />
+    <Parameter Name="ANO" Type="int" Mode="In" />
+    <Parameter Name="RFC" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_FORMATOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRE" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILERUT" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_GETFOLIOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CveProc" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="Serie" Type="varchar" Mode="In" />
+    <Parameter Name="Num_Folio" Type="numeric" Mode="InOut" />
+  </Function>
+  <Function Name="PROC_GRUPOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDNIVEL" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDGRADO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCICLO" Type="nvarchar" Mode="In" />
+    <Parameter Name="NOMBREGRUPO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_ALUMNOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Matricula" Type="varchar" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+    <Parameter Name="APaterno" Type="varchar" Mode="In" />
+    <Parameter Name="AMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="varchar" Mode="In" />
+    <Parameter Name="Estatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_ALUMNOS_GRUPO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDGRADO" Type="varchar" Mode="In" />
+    <Parameter Name="IDGRUPO" Type="varchar" Mode="In" />
+    <Parameter Name="IDCICLO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_ALUMNOS_GRUPO_ADD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDGRADO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_DETALLES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_VENTA" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_DEUDORES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PROC_LISTA_GRADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NIVEL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_PAGOS_ALUMNO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDALUMNO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_PAGOS_ALUMNO_MATRICULA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MATRICULA" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_PAGOS_TRANSACCIONES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPAGO" Type="varchar" Mode="In" />
+    <Parameter Name="IDALUMNO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_LISTA_TEMP_VENTAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_LOGIN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_OBTIENE_PAGO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPAGO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_PRODS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_PRODUCTO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PRODUCTO" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID_UNIDAD_MEDIDA" Type="smallint" Mode="In" />
+    <Parameter Name="COMPRA" Type="float" Mode="In" />
+    <Parameter Name="VENTA" Type="float" Mode="In" />
+    <Parameter Name="EXISTENCIA" Type="float" Mode="In" />
+  </Function>
+  <Function Name="PROC_REGISTRA_PAGO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPAGO" Type="varchar" Mode="In" />
+    <Parameter Name="IDALUMNO" Type="varchar" Mode="In" />
+    <Parameter Name="MONTO" Type="varchar" Mode="In" />
+    <Parameter Name="REFERENCIA" Type="varchar" Mode="In" />
+    <Parameter Name="MEDIOPAGO" Type="varchar" Mode="In" />
+    <Parameter Name="ESTATUS" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_RPT_ALUMNO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MATRICULA" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_RPT_CREDENCIAL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MATRICULA" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_RPT_PAGOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FECHA_INI" Type="varchar" Mode="In" />
+    <Parameter Name="FECHA_FIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_RPT_RECIBO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDALUMNO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_RPT_RECIBO_ALUMNO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDALUMNO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_RPT_VENTAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FECHA_INI" Type="datetime" Mode="In" />
+    <Parameter Name="FECHA_FIN" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="PROC_TEMP_VENTAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_LOGIN" Type="nvarchar" Mode="In" />
+    <Parameter Name="ID_PRODUCTO" Type="nvarchar" Mode="In" />
+    <Parameter Name="CANTIDAD" Type="float" Mode="In" />
+    <Parameter Name="ADUANA" Type="nvarchar" Mode="In" />
+    <Parameter Name="PEDIMENTO" Type="nvarchar" Mode="In" />
+    <Parameter Name="FECHAPEDIMENTO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PREDIAL" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_UM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UMEDIDA" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_USERS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_LOGIN" Type="nvarchar" Mode="In" />
+    <Parameter Name="USER_PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBRE" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="ADMINISTRACION" Type="bit" Mode="In" />
+    <Parameter Name="ALUMNOS" Type="bit" Mode="In" />
+    <Parameter Name="PROFESORES" Type="bit" Mode="In" />
+    <Parameter Name="COBRANZA" Type="bit" Mode="In" />
+    <Parameter Name="BLOG" Type="bit" Mode="In" />
+    <Parameter Name="AYUDA" Type="bit" Mode="In" />
+    <Parameter Name="IMAGEN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_USERS_PERMISOS_MOSTRAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_LOGIN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_VENTA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_LOGIN" Type="nvarchar" Mode="In" />
+    <Parameter Name="SERIE" Type="varchar" Mode="In" />
+    <Parameter Name="NUMERO" Type="bigint" Mode="In" />
+    <Parameter Name="DATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="TPODOC" Type="nvarchar" Mode="In" />
+    <Parameter Name="RFCE" Type="nvarchar" Mode="In" />
+    <Parameter Name="NMBE" Type="nvarchar" Mode="In" />
+    <Parameter Name="RFCR" Type="nvarchar" Mode="In" />
+    <Parameter Name="NMBR" Type="nvarchar" Mode="In" />
+    <Parameter Name="MONEDA" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUBTOTAL" Type="float" Mode="In" />
+    <Parameter Name="IVA" Type="float" Mode="In" />
+    <Parameter Name="TOTAL" Type="float" Mode="In" />
+    <Parameter Name="COMENT" Type="nvarchar" Mode="In" />
+    <Parameter Name="PALABRAS" Type="nvarchar" Mode="In" />
+    <Parameter Name="METODO" Type="nvarchar" Mode="In" />
+    <Parameter Name="CTAPAGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="LUGAREXP" Type="nvarchar" Mode="In" />
+    <Parameter Name="TPOCAMBIO" Type="float" Mode="In" />
+  </Function>
+  <Function Name="sp_actDeactUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIPOUSUARIOIN" Type="int" Mode="In" />
+    <Parameter Name="ACTDEACTIVATE" Type="bit" Mode="In" />
+    <Parameter Name="USUARIOIN" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_addUsuarioXAplicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSRSXAPP" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_AuditContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDOPERACIONAUDIT" Type="int" Mode="In" />
+    <Parameter Name="IDCONTACTO" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDTIPOCONTACTO" Type="varchar" Mode="In" />
+    <Parameter Name="VALOR" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_AuditDomicilio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDOPERACIONAUDIT" Type="int" Mode="In" />
+    <Parameter Name="IDDOMICILIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="CALLE" Type="varchar" Mode="In" />
+    <Parameter Name="NUMEXT" Type="varchar" Mode="In" />
+    <Parameter Name="NUMINT" Type="varchar" Mode="In" />
+    <Parameter Name="IDESTADO" Type="varchar" Mode="In" />
+    <Parameter Name="ESTADO" Type="varchar" Mode="In" />
+    <Parameter Name="IDMUN" Type="varchar" Mode="In" />
+    <Parameter Name="MUNICIPIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDCOLONIA" Type="varchar" Mode="In" />
+    <Parameter Name="COLONIA" Type="varchar" Mode="In" />
+    <Parameter Name="CP" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_AuditUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDOPERACIONAUDIT" Type="int" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDSEXO" Type="varchar" Mode="In" />
+    <Parameter Name="IDTIPOPERSONA" Type="varchar" Mode="In" />
+    <Parameter Name="IDESTADOCIVIL" Type="varchar" Mode="In" />
+    <Parameter Name="AREA" Type="varchar" Mode="In" />
+    <Parameter Name="TIPOUSUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDUSUARIOAPP" Type="varchar" Mode="In" />
+    <Parameter Name="APATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="AMATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="FECHANACCONST" Type="datetime" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="RUTAFOTOPERFIL" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_checkMenuxAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MENU" Type="varchar" Mode="In" />
+    <Parameter Name="IDROL" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_checkMetodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="METODO" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDSERVICIOS" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_checkRolxApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ROL" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_checkServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SERVICIO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_checkSubMenuxAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SUBMENU" Type="varchar" Mode="In" />
+    <Parameter Name="IDPERMISOSMENU" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_checkUsrXApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIPOBUSQUEDA" Type="int" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_checkXApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="APLICACION" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_delMenusXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdMenu" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_delSubMenusXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSubMenu" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getAplicaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="varchar" Mode="In" />
+    <Parameter Name="TXTBUSQUEDA" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getAppsXUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIPOBUSQUEDA" Type="int" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getContactos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getDomicilios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getElementsObjectsXIdObj" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDELEMENTOSXOBJ" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getEstacionesXApps" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getMenusXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdApp" Type="bigint" Mode="In" />
+    <Parameter Name="IdRol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getMenusXAppRolAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdApp" Type="bigint" Mode="In" />
+    <Parameter Name="IdRol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getMetodoXApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdApp" Type="bigint" Mode="In" />
+    <Parameter Name="SERVICENAME" Type="varchar" Mode="In" />
+    <Parameter Name="METHODNAME" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getObjetosXAppRolPage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdApp" Type="bigint" Mode="In" />
+    <Parameter Name="IdRol" Type="bigint" Mode="In" />
+    <Parameter Name="Pagina" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getPermisoXApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdApp" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getRolesXApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getRolesXUserApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIPOBUSQUEDA" Type="int" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getSubMenusXIdMenu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPERMISOSMENU" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getSubMenusXIdMenuAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPERMISOSMENU" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIPOBUSQUEDA" Type="int" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insAplicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DESCRIPCION" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_insContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDTIPOCONTACTO" Type="int" Mode="In" />
+    <Parameter Name="VALOR" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insDomicilio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="CALLE" Type="varchar" Mode="In" />
+    <Parameter Name="NUMEXT" Type="varchar" Mode="In" />
+    <Parameter Name="NUMINT" Type="varchar" Mode="In" />
+    <Parameter Name="IDESTADO" Type="int" Mode="In" />
+    <Parameter Name="ESTADO" Type="varchar" Mode="In" />
+    <Parameter Name="IDMUN" Type="int" Mode="In" />
+    <Parameter Name="MUNICIPIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDCOLONIA" Type="int" Mode="In" />
+    <Parameter Name="COLONIA" Type="varchar" Mode="In" />
+    <Parameter Name="CP" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insLogError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdApp" Type="bigint" Mode="In" />
+    <Parameter Name="MENSAJE" Type="varchar" Mode="In" />
+    <Parameter Name="HOSTNAME" Type="varchar" Mode="In" />
+    <Parameter Name="IP" Type="varchar" Mode="In" />
+    <Parameter Name="STACKTRACE" Type="varchar" Mode="In" />
+    <Parameter Name="DTFECHAERROR" Type="datetime" Mode="In" />
+    <Parameter Name="VCHUSUARIO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insMenuXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDROL" Type="bigint" Mode="In" />
+    <Parameter Name="NOMBREMENU" Type="varchar" Mode="In" />
+    <Parameter Name="IMAGEN" Type="varchar" Mode="In" />
+    <Parameter Name="TIPOOBJETO" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="TOOLTIP" Type="varchar" Mode="In" />
+    <Parameter Name="ORDEN" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insMetodosxApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMETODOS" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDSERVICIOS" Type="bigint" Mode="In" />
+    <Parameter Name="NOMBREMETODO" Type="varchar" Mode="In" />
+    <Parameter Name="RECURRENTE" Type="bit" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_insPermisosxElementoObjeto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPERMISOSOBJ" Type="bigint" Mode="In" />
+    <Parameter Name="ELEMENTO" Type="varchar" Mode="In" />
+    <Parameter Name="TOOLTIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insPermisosxObjeto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDROL" Type="bigint" Mode="In" />
+    <Parameter Name="PAGINA" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBREOBJETO" Type="varchar" Mode="In" />
+    <Parameter Name="TIPOOBJETO" Type="varchar" Mode="In" />
+    <Parameter Name="TOOLTIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insRolesXUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDROL" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDESTACIONXAPP" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insRolXApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ROL" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insRolXUserApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDROL" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDESTACIONXAPP" Type="bigint" Mode="In" />
+    <Parameter Name="IDROLXUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_insServicioWCF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DESCRIPCION" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insSubMenuXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPERMISOSMENU" Type="bigint" Mode="In" />
+    <Parameter Name="NOMBRESUBMENU" Type="varchar" Mode="In" />
+    <Parameter Name="IMAGEN" Type="varchar" Mode="In" />
+    <Parameter Name="TIPOOBJETO" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="TOOLTIP" Type="varchar" Mode="In" />
+    <Parameter Name="ORDEN" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_insUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDSEXO" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOPERSONA" Type="int" Mode="In" />
+    <Parameter Name="IDESTADOCIVIL" Type="int" Mode="In" />
+    <Parameter Name="IDAREA" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOUSUARIO" Type="int" Mode="In" />
+    <Parameter Name="IDUSUARIOAPP" Type="varchar" Mode="In" />
+    <Parameter Name="APATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="AMATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="FECHANACCONST" Type="datetime" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="RUTAFOTOPERFIL" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_updAplicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_updContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDCONTACTO" Type="bigint" Mode="In" />
+    <Parameter Name="IDTIPOCONTACTO" Type="int" Mode="In" />
+    <Parameter Name="VALOR" Type="varchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_updDomicilio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDDOMICILIO" Type="bigint" Mode="In" />
+    <Parameter Name="CALLE" Type="varchar" Mode="In" />
+    <Parameter Name="NUMEXT" Type="varchar" Mode="In" />
+    <Parameter Name="NUMINT" Type="varchar" Mode="In" />
+    <Parameter Name="IDESTADO" Type="int" Mode="In" />
+    <Parameter Name="ESTADO" Type="varchar" Mode="In" />
+    <Parameter Name="IDMUN" Type="int" Mode="In" />
+    <Parameter Name="MUNICIPIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDCOLONIA" Type="int" Mode="In" />
+    <Parameter Name="COLONIA" Type="varchar" Mode="In" />
+    <Parameter Name="CP" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_updMenuXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPERMISOSMENU" Type="bigint" Mode="In" />
+    <Parameter Name="NOMBREMENU" Type="varchar" Mode="In" />
+    <Parameter Name="IMAGEN" Type="varchar" Mode="In" />
+    <Parameter Name="TIPOOBJETO" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="TOOLTIP" Type="varchar" Mode="In" />
+    <Parameter Name="ORDEN" Type="bigint" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_updRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDROLXUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDROL" Type="bigint" Mode="In" />
+    <Parameter Name="IDESTACIONXAPP" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_updSubMenuXAppRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDPERMISOSMENU" Type="bigint" Mode="In" />
+    <Parameter Name="IDPERMISOSSUBMENU" Type="bigint" Mode="In" />
+    <Parameter Name="NOMBRESUBMENU" Type="varchar" Mode="In" />
+    <Parameter Name="IMAGEN" Type="varchar" Mode="In" />
+    <Parameter Name="TIPOOBJETO" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="TOOLTIP" Type="varchar" Mode="In" />
+    <Parameter Name="ORDEN" Type="bigint" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_updUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDSEXO" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOPERSONA" Type="int" Mode="In" />
+    <Parameter Name="IDESTADOCIVIL" Type="int" Mode="In" />
+    <Parameter Name="IDAREA" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOUSUARIO" Type="int" Mode="In" />
+    <Parameter Name="IDUSUARIOAPP" Type="varchar" Mode="In" />
+    <Parameter Name="APATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="AMATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="FECHANACCONST" Type="datetime" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="RUTAFOTOPERFIL" Type="varchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spAddCatEspecifico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRECATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="VALORDESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="RESPUESTA" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spAddCatGenerales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRECATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILTRO" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDCATGENERALESNEW" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spAddConfigApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="VALOR" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDCONFIGAPPNEW" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spAddContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDTIPOCONTACTO" Type="int" Mode="In" />
+    <Parameter Name="VALOR" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spAddDomicilio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="CALLE" Type="varchar" Mode="In" />
+    <Parameter Name="NUMEXT" Type="varchar" Mode="In" />
+    <Parameter Name="NUMINT" Type="varchar" Mode="In" />
+    <Parameter Name="IDESTADO" Type="int" Mode="In" />
+    <Parameter Name="ESTADO" Type="varchar" Mode="In" />
+    <Parameter Name="IDMUN" Type="int" Mode="In" />
+    <Parameter Name="MUNICIPIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDCOLONIA" Type="int" Mode="In" />
+    <Parameter Name="COLONIA" Type="varchar" Mode="In" />
+    <Parameter Name="CP" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spAddUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDSEXO" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOPERSONA" Type="int" Mode="In" />
+    <Parameter Name="IDESTADOCIVIL" Type="int" Mode="In" />
+    <Parameter Name="IDAREA" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOUSUARIO" Type="int" Mode="In" />
+    <Parameter Name="IDUSUARIOAPP" Type="varchar" Mode="In" />
+    <Parameter Name="APATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="AMATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="FECHANACCONST" Type="datetime" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="RUTAFOTOPERFIL" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAALTA" Type="datetime" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spAddUsuarioXAplicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGetCatEspecifico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCATGENERALES" Type="int" Mode="In" />
+    <Parameter Name="NOMBRECATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILTRO" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="VALORFILTRO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spGetCatGenerales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCATGENERALES" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetConfigApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCONFIGAPP" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetContactos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spGetDefinicionTabla" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreTabla" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spGetDomicilios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spGetRolesVSUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spGetSysTablaCatalogo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spGetUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spGetUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAplicacion" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="AMaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="APaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="Usuario" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRolesVSUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spSetCatEspecifico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRECATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCIONVALOR" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCAT" Type="int" Mode="In" />
+    <Parameter Name="ACTIVO" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSetCatGenerales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCATGENERALES" Type="int" Mode="In" />
+    <Parameter Name="NOMBRECATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDCATALOGO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILTRO" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spSetConfigApp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCONFIGAPP" Type="int" Mode="In" />
+    <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+    <Parameter Name="VALOR" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spSetContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDCONTACTO" Type="bigint" Mode="In" />
+    <Parameter Name="IDTIPOCONTACTO" Type="int" Mode="In" />
+    <Parameter Name="VALOR" Type="varchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spSetDomicilio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDDOMICILIO" Type="bigint" Mode="In" />
+    <Parameter Name="CALLE" Type="varchar" Mode="In" />
+    <Parameter Name="NUMEXT" Type="varchar" Mode="In" />
+    <Parameter Name="NUMINT" Type="varchar" Mode="In" />
+    <Parameter Name="IDESTADO" Type="int" Mode="In" />
+    <Parameter Name="ESTADO" Type="varchar" Mode="In" />
+    <Parameter Name="IDMUN" Type="int" Mode="In" />
+    <Parameter Name="MUNICIPIO" Type="varchar" Mode="In" />
+    <Parameter Name="IDCOLONIA" Type="int" Mode="In" />
+    <Parameter Name="COLONIA" Type="varchar" Mode="In" />
+    <Parameter Name="CP" Type="varchar" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spSetUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDSEXO" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOPERSONA" Type="int" Mode="In" />
+    <Parameter Name="IDESTADOCIVIL" Type="int" Mode="In" />
+    <Parameter Name="IDAREA" Type="int" Mode="In" />
+    <Parameter Name="IDTIPOUSUARIO" Type="int" Mode="In" />
+    <Parameter Name="IDUSUARIOAPP" Type="varchar" Mode="In" />
+    <Parameter Name="APATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="AMATERNO" Type="varchar" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="FECHANACCONST" Type="datetime" Mode="In" />
+    <Parameter Name="USUARIO" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="RUTAFOTOPERFIL" Type="varchar" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+    <Parameter Name="IDUSERMODIFICA" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPPMODIFICA" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spSetUsuarioXAplicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSRSXAPP" Type="bigint" Mode="In" />
+    <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
+    <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
+    <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <EntityContainer Name="IELibertadDBModelStoreContainer">
+    <EntitySet Name="ALUMNOS" EntityType="Self.ALUMNOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="APLICACION" EntityType="Self.APLICACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUDIT_CONTACTO" EntityType="Self.AUDIT_CONTACTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUDIT_DOMICILIO" EntityType="Self.AUDIT_DOMICILIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AUDIT_USUARIOS" EntityType="Self.AUDIT_USUARIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_AREA" EntityType="Self.CAT_AREA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_ESTACIONES" EntityType="Self.CAT_ESTACIONES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_ESTADOCIVIL" EntityType="Self.CAT_ESTADOCIVIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_GRALS" EntityType="Self.CAT_GRALS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_OPERACIONAUDIT" EntityType="Self.CAT_OPERACIONAUDIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_SEXO" EntityType="Self.CAT_SEXO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_TIPOCONTACTO" EntityType="Self.CAT_TIPOCONTACTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_TIPOPERSONA" EntityType="Self.CAT_TIPOPERSONA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAT_TIPOUSUARIO" EntityType="Self.CAT_TIPOUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATGENERALES" EntityType="Self.CATGENERALES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMENTARIO" EntityType="Self.COMENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONFIGAPP" EntityType="Self.CONFIGAPP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTACTO" EntityType="Self.CONTACTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOMICILIO" EntityType="Self.DOMICILIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPRESAS" EntityType="Self.EMPRESAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTACIONESXAPP" EntityType="Self.ESTACIONESXAPP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOGERROR" EntityType="Self.LOGERROR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NUMERACION" EntityType="Self.NUMERACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISOSXELEMENTOSOBJETO" EntityType="Self.PERMISOSXELEMENTOSOBJETO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISOSXMENU" EntityType="Self.PERMISOSXMENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISOSXSUBMENU" EntityType="Self.PERMISOSXSUBMENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISOXOBJETOS" EntityType="Self.PERMISOXOBJETOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POST" EntityType="Self.POST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLESXUSUARIO" EntityType="Self.ROLESXUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CHATMESSAGES" EntityType="Self.TBL_CHATMESSAGES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USERSTATUS" EntityType="Self.TBL_USERSTATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UNIDAD_MEDIDA" EntityType="Self.UNIDAD_MEDIDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOXAPLICACION" EntityType="Self.USUARIOXAPLICACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTA_DETALLE" EntityType="Self.VENTA_DETALLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTA_DETALLE_TMP" EntityType="Self.VENTA_DETALLE_TMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WCFMETODOS" EntityType="Self.WCFMETODOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WCFRECURRENCIA" EntityType="Self.WCFRECURRENCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WCFSERVICIOS" EntityType="Self.WCFSERVICIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CICLO" EntityType="Self.CICLO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CICLO].[ID] AS [ID], 
+    [CICLO].[NOMBRECICLO] AS [NOMBRECICLO], 
+    [CICLO].[FECHAINICIO] AS [FECHAINICIO], 
+    [CICLO].[FECHAFIN] AS [FECHAFIN], 
+    [CICLO].[MONTOINSCRIPCION] AS [MONTOINSCRIPCION], 
+    [CICLO].[MONTOCOLEGIATURA] AS [MONTOCOLEGIATURA], 
+    [CICLO].[ESTATUS] AS [ESTATUS]
+    FROM [dbo].[CICLO] AS [CICLO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Colonias" EntityType="Self.Colonias" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Colonias].[ClaveColonia] AS [ClaveColonia], 
+    [Colonias].[ClaveMunicipio] AS [ClaveMunicipio], 
+    [Colonias].[ClaveEntidad] AS [ClaveEntidad], 
+    [Colonias].[NombreColonia] AS [NombreColonia], 
+    [Colonias].[CodigoPostal] AS [CodigoPostal], 
+    [Colonias].[CodigoPostalAdministracion] AS [CodigoPostalAdministracion], 
+    [Colonias].[ClaveTipoAsentamiento] AS [ClaveTipoAsentamiento], 
+    [Colonias].[TipoAsentamiento] AS [TipoAsentamiento], 
+    [Colonias].[ClaveCiudad] AS [ClaveCiudad], 
+    [Colonias].[NombreCiudad] AS [NombreCiudad], 
+    [Colonias].[Zona] AS [Zona], 
+    [Colonias].[Universe] AS [Universe], 
+    [Colonias].[Oracle] AS [Oracle], 
+    [Colonias].[MunOracle] AS [MunOracle], 
+    [Colonias].[MunUniverse] AS [MunUniverse]
+    FROM [dbo].[Colonias] AS [Colonias]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ColoniasIEL" EntityType="Self.ColoniasIEL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ColoniasIEL].[ClaveColonia] AS [ClaveColonia], 
+    [ColoniasIEL].[ClaveMunicipio] AS [ClaveMunicipio], 
+    [ColoniasIEL].[ClaveEntidad] AS [ClaveEntidad], 
+    [ColoniasIEL].[NombreColonia] AS [NombreColonia], 
+    [ColoniasIEL].[CodigoPostal] AS [CodigoPostal], 
+    [ColoniasIEL].[CodigoPostalAdministracion] AS [CodigoPostalAdministracion], 
+    [ColoniasIEL].[ClaveTipoAsentamiento] AS [ClaveTipoAsentamiento], 
+    [ColoniasIEL].[TipoAsentamiento] AS [TipoAsentamiento], 
+    [ColoniasIEL].[ClaveCiudad] AS [ClaveCiudad], 
+    [ColoniasIEL].[NombreCiudad] AS [NombreCiudad], 
+    [ColoniasIEL].[Zona] AS [Zona], 
+    [ColoniasIEL].[Universe] AS [Universe], 
+    [ColoniasIEL].[Oracle] AS [Oracle], 
+    [ColoniasIEL].[MunOracle] AS [MunOracle], 
+    [ColoniasIEL].[MunUniverse] AS [MunUniverse]
+    FROM [dbo].[ColoniasIEL] AS [ColoniasIEL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Estados" EntityType="Self.Estados" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Estados].[ClaveEntidad] AS [ClaveEntidad], 
+    [Estados].[NombreEstado] AS [NombreEstado], 
+    [Estados].[Universe] AS [Universe], 
+    [Estados].[Oracle] AS [Oracle]
+    FROM [dbo].[Estados] AS [Estados]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FORMATOS" EntityType="Self.FORMATOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FORMATOS].[FORMATOID] AS [FORMATOID], 
+    [FORMATOS].[NOMBRE] AS [NOMBRE], 
+    [FORMATOS].[DESCRIPCION] AS [DESCRIPCION], 
+    [FORMATOS].[FILERUT] AS [FILERUT]
+    FROM [dbo].[FORMATOS] AS [FORMATOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GRUPO" EntityType="Self.GRUPO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GRUPO].[IDGRUPO] AS [IDGRUPO], 
+    [GRUPO].[IDNIVEL] AS [IDNIVEL], 
+    [GRUPO].[IDGRADO] AS [IDGRADO], 
+    [GRUPO].[IDCICLO] AS [IDCICLO], 
+    [GRUPO].[NOMBREGRUPO] AS [NOMBREGRUPO]
+    FROM [dbo].[GRUPO] AS [GRUPO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="INFOALUMNOS" EntityType="Self.INFOALUMNOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [INFOALUMNOS].[NUMEROMATRICULA] AS [NUMEROMATRICULA], 
+    [INFOALUMNOS].[NOMBREPADRETUTOR] AS [NOMBREPADRETUTOR], 
+    [INFOALUMNOS].[OCUPACIONPADRE] AS [OCUPACIONPADRE], 
+    [INFOALUMNOS].[TELEFONOPADRE] AS [TELEFONOPADRE], 
+    [INFOALUMNOS].[TELEFONOTRABAJOPADRE] AS [TELEFONOTRABAJOPADRE], 
+    [INFOALUMNOS].[CELULARPADRE] AS [CELULARPADRE], 
+    [INFOALUMNOS].[FECHANACIMIENTOPADRE] AS [FECHANACIMIENTOPADRE], 
+    [INFOALUMNOS].[SUELDOPADRE] AS [SUELDOPADRE], 
+    [INFOALUMNOS].[NACIONALIDADPADRE] AS [NACIONALIDADPADRE], 
+    [INFOALUMNOS].[NOMBREMADRETUTOR] AS [NOMBREMADRETUTOR], 
+    [INFOALUMNOS].[OCUPACIONMADRE] AS [OCUPACIONMADRE], 
+    [INFOALUMNOS].[TELEFONOMADRE] AS [TELEFONOMADRE], 
+    [INFOALUMNOS].[TELEFONOTRABAJOMADRE] AS [TELEFONOTRABAJOMADRE], 
+    [INFOALUMNOS].[CELULARMADRE] AS [CELULARMADRE], 
+    [INFOALUMNOS].[FECHANACIMIENTOMADRE] AS [FECHANACIMIENTOMADRE], 
+    [INFOALUMNOS].[SUELDOMADRE] AS [SUELDOMADRE], 
+    [INFOALUMNOS].[NACIONALIDADMADRE] AS [NACIONALIDADMADRE], 
+    [INFOALUMNOS].[NOMBREFAMVECINO] AS [NOMBREFAMVECINO], 
+    [INFOALUMNOS].[TELEFONOVECINO] AS [TELEFONOVECINO], 
+    [INFOALUMNOS].[TELEFONOTRABAJOVECINO] AS [TELEFONOTRABAJOVECINO], 
+    [INFOALUMNOS].[CELULARVECINO] AS [CELULARVECINO], 
+    [INFOALUMNOS].[EDUCACIONFISICA] AS [EDUCACIONFISICA], 
+    [INFOALUMNOS].[MEDICAMENTO] AS [MEDICAMENTO], 
+    [INFOALUMNOS].[NOMBREMEDICAMENTO] AS [NOMBREMEDICAMENTO], 
+    [INFOALUMNOS].[DOSISMEDICAMENTO] AS [DOSISMEDICAMENTO], 
+    [INFOALUMNOS].[ALIMENTOPROHIBIDO] AS [ALIMENTOPROHIBIDO], 
+    [INFOALUMNOS].[PESO] AS [PESO], 
+    [INFOALUMNOS].[TALLA] AS [TALLA], 
+    [INFOALUMNOS].[TIPOSANGRE] AS [TIPOSANGRE], 
+    [INFOALUMNOS].[ENFERMEDADES] AS [ENFERMEDADES], 
+    [INFOALUMNOS].[NOMBREENFERMEDADES] AS [NOMBREENFERMEDADES], 
+    [INFOALUMNOS].[PROCEDIMIENTOCRISIS] AS [PROCEDIMIENTOCRISIS], 
+    [INFOALUMNOS].[CERTIFICADO] AS [CERTIFICADO], 
+    [INFOALUMNOS].[ENFERMEDADCERTIFICADO] AS [ENFERMEDADCERTIFICADO], 
+    [INFOALUMNOS].[ALERGIA] AS [ALERGIA], 
+    [INFOALUMNOS].[NOMBREALERGIA] AS [NOMBREALERGIA], 
+    [INFOALUMNOS].[PROCEDIMINTOCRISISALERGIA] AS [PROCEDIMINTOCRISISALERGIA], 
+    [INFOALUMNOS].[NOMBREACCIDENTE] AS [NOMBREACCIDENTE], 
+    [INFOALUMNOS].[TELEFONOACCIDENTE] AS [TELEFONOACCIDENTE], 
+    [INFOALUMNOS].[NOMBREHOSPITAL] AS [NOMBREHOSPITAL], 
+    [INFOALUMNOS].[MEDICO] AS [MEDICO], 
+    [INFOALUMNOS].[NOMBREMEDICO] AS [NOMBREMEDICO], 
+    [INFOALUMNOS].[TELEFONOMEDICO] AS [TELEFONOMEDICO], 
+    [INFOALUMNOS].[CEDULAMEDICO] AS [CEDULAMEDICO], 
+    [INFOALUMNOS].[AUTORIZATRASLADO] AS [AUTORIZATRASLADO], 
+    [INFOALUMNOS].[PROCEDIMIENTOACCIDENTE] AS [PROCEDIMIENTOACCIDENTE]
+    FROM [dbo].[INFOALUMNOS] AS [INFOALUMNOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Municipios" EntityType="Self.Municipios" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Municipios].[ClaveMunicipio] AS [ClaveMunicipio], 
+    [Municipios].[ClaveEntidad] AS [ClaveEntidad], 
+    [Municipios].[NombreMunicipio] AS [NombreMunicipio], 
+    [Municipios].[Universe] AS [Universe], 
+    [Municipios].[Oracle] AS [Oracle]
+    FROM [dbo].[Municipios] AS [Municipios]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NUMERACIONES" EntityType="Self.NUMERACIONES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NUMERACIONES].[CLAVE_PROCESO] AS [CLAVE_PROCESO], 
+    [NUMERACIONES].[TIPO_PROC] AS [TIPO_PROC], 
+    [NUMERACIONES].[INICIAL] AS [INICIAL], 
+    [NUMERACIONES].[FINAL] AS [FINAL], 
+    [NUMERACIONES].[ACTUAL] AS [ACTUAL], 
+    [NUMERACIONES].[FECHA_INICIO] AS [FECHA_INICIO], 
+    [NUMERACIONES].[SERIE] AS [SERIE]
+    FROM [dbo].[NUMERACIONES] AS [NUMERACIONES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PAGOSALUMNO" EntityType="Self.PAGOSALUMNO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PAGOSALUMNO].[ID] AS [ID], 
+    [PAGOSALUMNO].[IDCICLO] AS [IDCICLO], 
+    [PAGOSALUMNO].[NUMEROMATRICULA] AS [NUMEROMATRICULA], 
+    [PAGOSALUMNO].[IDGRUPO] AS [IDGRUPO], 
+    [PAGOSALUMNO].[IDGRADO] AS [IDGRADO], 
+    [PAGOSALUMNO].[IDALUMNO] AS [IDALUMNO], 
+    [PAGOSALUMNO].[CONCEPTO] AS [CONCEPTO], 
+    [PAGOSALUMNO].[MONTOTOTAL] AS [MONTOTOTAL], 
+    [PAGOSALUMNO].[MONTOACTUAL] AS [MONTOACTUAL], 
+    [PAGOSALUMNO].[IDESTATUS] AS [IDESTATUS], 
+    [PAGOSALUMNO].[FECHAMOVIMIENTO] AS [FECHAMOVIMIENTO], 
+    [PAGOSALUMNO].[FECHAALTA] AS [FECHAALTA], 
+    [PAGOSALUMNO].[USUARIOMODIFICA] AS [USUARIOMODIFICA], 
+    [PAGOSALUMNO].[USUARIOALTA] AS [USUARIOALTA], 
+    [PAGOSALUMNO].[FECHAMODIFICA] AS [FECHAMODIFICA], 
+    [PAGOSALUMNO].[MEDIOPAGO] AS [MEDIOPAGO], 
+    [PAGOSALUMNO].[REFERENCIA] AS [REFERENCIA]
+    FROM [dbo].[PAGOSALUMNO] AS [PAGOSALUMNO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="POSTCATEGORIA" EntityType="Self.POSTCATEGORIA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [POSTCATEGORIA].[POSTID] AS [POSTID], 
+    [POSTCATEGORIA].[CATEGORIAID] AS [CATEGORIAID]
+    FROM [dbo].[POSTCATEGORIA] AS [POSTCATEGORIA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TPOPROY" EntityType="Self.TPOPROY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TPOPROY].[ID] AS [ID], 
+    [TPOPROY].[TIPOPROY] AS [TIPOPROY], 
+    [TPOPROY].[DURACION] AS [DURACION], 
+    [TPOPROY].[CATEGORIA] AS [CATEGORIA]
+    FROM [dbo].[TPOPROY] AS [TPOPROY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TRANSACCIONES" EntityType="Self.TRANSACCIONES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TRANSACCIONES].[ID] AS [ID], 
+    [TRANSACCIONES].[IDALUMNO] AS [IDALUMNO], 
+    [TRANSACCIONES].[IDPAGO] AS [IDPAGO], 
+    [TRANSACCIONES].[CONCEPTO] AS [CONCEPTO], 
+    [TRANSACCIONES].[MONTO] AS [MONTO], 
+    [TRANSACCIONES].[FECHATRANSACCION] AS [FECHATRANSACCION], 
+    [TRANSACCIONES].[USUARIOTRANSACCION] AS [USUARIOTRANSACCION], 
+    [TRANSACCIONES].[FORMAPAGO] AS [FORMAPAGO], 
+    [TRANSACCIONES].[REFERENCIA] AS [REFERENCIA]
+    FROM [dbo].[TRANSACCIONES] AS [TRANSACCIONES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VWCATTABLASCATALOGOS" EntityType="Self.VWCATTABLASCATALOGOS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VWCATTABLASCATALOGOS].[IdTable] AS [IdTable], 
+    [VWCATTABLASCATALOGOS].[name] AS [name]
+    FROM [dbo].[VWCATTABLASCATALOGOS] AS [VWCATTABLASCATALOGOS]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AUDITCONTACTO_REF_CATOPERAUDIT" Association="Self.FK_AUDITCONTACTO_REF_CATOPERAUDIT">
+      <End Role="CAT_OPERACIONAUDIT" EntitySet="CAT_OPERACIONAUDIT" />
+      <End Role="AUDIT_CONTACTO" EntitySet="AUDIT_CONTACTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AUDITDOM_REF_CATOPERAUDIT" Association="Self.FK_AUDITDOM_REF_CATOPERAUDIT">
+      <End Role="CAT_OPERACIONAUDIT" EntitySet="CAT_OPERACIONAUDIT" />
+      <End Role="AUDIT_DOMICILIO" EntitySet="AUDIT_DOMICILIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AUDITUSUARIOS_REF_APLICACION" Association="Self.FK_AUDITUSUARIOS_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="AUDIT_USUARIOS" EntitySet="AUDIT_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AUDITUSUARIOS_REF_CATOPERAUDIT" Association="Self.FK_AUDITUSUARIOS_REF_CATOPERAUDIT">
+      <End Role="CAT_OPERACIONAUDIT" EntitySet="CAT_OPERACIONAUDIT" />
+      <End Role="AUDIT_USUARIOS" EntitySet="AUDIT_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentario_Post" Association="Self.FK_Comentario_Post">
+      <End Role="POST" EntitySet="POST" />
+      <End Role="COMENTARIO" EntitySet="COMENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACTO_REF_CATTIPOCONTACTO" Association="Self.FK_CONTACTO_REF_CATTIPOCONTACTO">
+      <End Role="CAT_TIPOCONTACTO" EntitySet="CAT_TIPOCONTACTO" />
+      <End Role="CONTACTO" EntitySet="CONTACTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACTO_REF_USUARIOS" Association="Self.FK_CONTACTO_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="CONTACTO" EntitySet="CONTACTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOMICILIO_REF_USUARIOS" Association="Self.FK_DOMICILIO_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="DOMICILIO" EntitySet="DOMICILIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTACIONESXAPP_REF_CAT_ESTACIONES" Association="Self.FK_ESTACIONESXAPP_REF_CAT_ESTACIONES">
+      <End Role="CAT_ESTACIONES" EntitySet="CAT_ESTACIONES" />
+      <End Role="ESTACIONESXAPP" EntitySet="ESTACIONESXAPP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTACIONXAPP_REF_APLICACION" Association="Self.FK_ESTACIONXAPP_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="ESTACIONESXAPP" EntitySet="ESTACIONESXAPP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOGERROR_REF_APLICACION" Association="Self.FK_LOGERROR_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="LOGERROR" EntitySet="LOGERROR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU" Association="Self.FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU">
+      <End Role="PERMISOSXMENU" EntitySet="PERMISOSXMENU" />
+      <End Role="PERMISOSXSUBMENU" EntitySet="PERMISOSXSUBMENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOSXMENU_REF_ROLES" Association="Self.FK_PERMISOSXMENU_REF_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="PERMISOSXMENU" EntitySet="PERMISOSXMENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS" Association="Self.FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS">
+      <End Role="PERMISOXOBJETOS" EntitySet="PERMISOXOBJETOS" />
+      <End Role="PERMISOSXELEMENTOSOBJETO" EntitySet="PERMISOSXELEMENTOSOBJETO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOXOBJETO_REF_ROLES" Association="Self.FK_PERMISOXOBJETO_REF_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="PERMISOXOBJETOS" EntitySet="PERMISOXOBJETOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostCategoria_Categoria" Association="Self.FK_PostCategoria_Categoria">
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+      <End Role="POSTCATEGORIA" EntitySet="POSTCATEGORIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostCategoria_Post" Association="Self.FK_PostCategoria_Post">
+      <End Role="POST" EntitySet="POST" />
+      <End Role="POSTCATEGORIA" EntitySet="POSTCATEGORIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_unidad_medida" Association="Self.FK_productos_unidad_medida">
+      <End Role="UNIDAD_MEDIDA" EntitySet="UNIDAD_MEDIDA" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLES_REF_APLICACION" Association="Self.FK_ROLES_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="ROLES" EntitySet="ROLES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLESXPERFIL_REF_ROLES" Association="Self.FK_ROLESXPERFIL_REF_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="ROLESXUSUARIO" EntitySet="ROLESXUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLESXUS_REF_ESTACIONESAPP" Association="Self.FK_ROLESXUS_REF_ESTACIONESAPP">
+      <End Role="ESTACIONESXAPP" EntitySet="ESTACIONESXAPP" />
+      <End Role="ROLESXUSUARIO" EntitySet="ROLESXUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLESXUSUARIO_REF_USUARIOS" Association="Self.FK_ROLESXUSUARIO_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="ROLESXUSUARIO" EntitySet="ROLESXUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CAT_AREA" Association="Self.FK_USUARIOS_REF_CAT_AREA">
+      <End Role="CAT_AREA" EntitySet="CAT_AREA" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATEDOCIVIL" Association="Self.FK_USUARIOS_REF_CATEDOCIVIL">
+      <End Role="CAT_ESTADOCIVIL" EntitySet="CAT_ESTADOCIVIL" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATSEXO" Association="Self.FK_USUARIOS_REF_CATSEXO">
+      <End Role="CAT_SEXO" EntitySet="CAT_SEXO" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATTIPOPERSONA" Association="Self.FK_USUARIOS_REF_CATTIPOPERSONA">
+      <End Role="CAT_TIPOPERSONA" EntitySet="CAT_TIPOPERSONA" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATTIPOUSUARIO" Association="Self.FK_USUARIOS_REF_CATTIPOUSUARIO">
+      <End Role="CAT_TIPOUSUARIO" EntitySet="CAT_TIPOUSUARIO" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOXAPP_REF_APLICACION" Association="Self.FK_USUARIOXAPP_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="USUARIOXAPLICACION" EntitySet="USUARIOXAPLICACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOXAPP_REF_USUARIOS" Association="Self.FK_USUARIOXAPP_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="USUARIOXAPLICACION" EntitySet="USUARIOXAPLICACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venta_detalle_productos" Association="Self.FK_venta_detalle_productos">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="VENTA_DETALLE" EntitySet="VENTA_DETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venta_detalle_tmp_productos" Association="Self.FK_venta_detalle_tmp_productos">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="VENTA_DETALLE_TMP" EntitySet="VENTA_DETALLE_TMP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venta_detalle_venta" Association="Self.FK_venta_detalle_venta">
+      <End Role="VENTA" EntitySet="VENTA" />
+      <End Role="VENTA_DETALLE" EntitySet="VENTA_DETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WCFMETODOS_REF_APLICACION" Association="Self.FK_WCFMETODOS_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="WCFMETODOS" EntitySet="WCFMETODOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WCFMETODOS_REF_WCFSERVICIOS" Association="Self.FK_WCFMETODOS_REF_WCFSERVICIOS">
+      <End Role="WCFSERVICIOS" EntitySet="WCFSERVICIOS" />
+      <End Role="WCFMETODOS" EntitySet="WCFMETODOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WCFRECURRENCIA_REF_WCFMETODOS" Association="Self.FK_WCFRECURRENCIA_REF_WCFMETODOS">
+      <End Role="WCFMETODOS" EntitySet="WCFMETODOS" />
+      <End Role="WCFRECURRENCIA" EntitySet="WCFRECURRENCIA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

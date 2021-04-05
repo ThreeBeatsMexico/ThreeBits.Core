@@ -1,0 +1,9 @@
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Debug\ThreeBits.Shared.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Debug\ThreeBits.Shared.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Debug\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\bin\Debug\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Debug\ThreeBits.Shared.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Debug\ThreeBits.Shared.csproj.CopyComplete
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Debug\ThreeBits.Shared.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Debug\ThreeBits.Shared.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Shared\obj\Debug\ThreeBits.Shared.csprojAssemblyReference.cache

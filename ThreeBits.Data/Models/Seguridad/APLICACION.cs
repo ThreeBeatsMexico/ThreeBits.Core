@@ -29,6 +29,9 @@ namespace ThreeBits.Data.Models.Seguridad
         public string DESCRIPCION { get; set; }
         public string PASSWORD { get; set; }
         public string URLINICIO { get; set; }
+        public string XAPPID { get; set; }
+        public string JWTKEY { get; set; }
+        public Nullable<int> JWTEXPIRATIONTIME { get; set; }
         public Nullable<bool> ACTIVO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

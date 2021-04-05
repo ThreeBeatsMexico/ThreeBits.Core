@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ThreeBits.Entities.Security
 {
-    [DataContract]
+    
     public class EncryptionBE
     {
         private string sVALORIN;
-        [DataMember]
+       
         public string VALORIN
         {
             get { return sVALORIN; }
@@ -19,11 +19,27 @@ namespace ThreeBits.Entities.Security
         }
 
         private string sVALOROUT;
-        [DataMember]
+       
         public string VALOROUT
         {
             get { return sVALOROUT; }
             set { sVALOROUT = value; }
+        }
+
+        private int iTIPO;
+       
+        public int TIPO
+        {
+            get { return iTIPO; }
+            set { iTIPO = value; }
+        }
+
+        private string sLLAVE;
+       
+        public string LLAVE
+        {
+            get { return sLLAVE; }
+            set { sLLAVE = value; }
         }
     }
 }

@@ -4,12 +4,12 @@
 
             foreach (ThreeBits.Security.Portal.SECURITYWCF.PermisosXMenuBE item in ViewBag.oListaMenu)
             {
-            <li class="nav-item" role="tab" id="heading-@item.NOMBREMENU">
+            <li class="nav-item" role="tab" title="@item.TOOLTIP"  id="heading-@item.NOMBREMENU">
                 <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-@item.NOMBREMENU" href="@item.URL" aria-expanded="false" aria-controls="collapse-@item.NOMBREMENU" >
                     <i class="icon s-4 @item.IMAGEN"></i>
                     <span>@item.NOMBREMENU</span>
                 </a>
-                <ul name="menu" id="collapse-@item.NOMBREMENU" class='collapse' role="tabpanel" aria-labelledby="heading-@item.NOMBREMENU" data-children=".nav-item">
+                <ul name="menu" title="@item.TOOLTIP" id="collapse-@item.NOMBREMENU" class='collapse' role="tabpanel" aria-labelledby="heading-@item.NOMBREMENU" data-children=".nav-item">
 
                     @{
                         ((ThreeBits.Security.Portal.Controllers.AccountController)this.ViewContext.Controller).get_sumbenu(Convert.ToInt32(item.IDPERMISOSMENU.ToString()));
@@ -17,7 +17,7 @@
 
                     @foreach (ThreeBits.Security.Portal.SECURITYWCF.PermisoXSubmenuBE iSubmenu in Session["SubMenu"] as List<ThreeBits.Security.Portal.SECURITYWCF.PermisoXSubmenuBE>)
                     {
-                        <li class="nav-item">
+                        <li class="nav-item" title="@iSubmenu.TOOLTIP">
                             <a class="nav-link ripple fuse-ripple-ready" href="~/@iSubmenu.URL" data-url="user-interface-page-layouts-blank.html">
                                 <i class="icon s-3 @iSubmenu.IMAGEN"></i>
                                 <span>@iSubmenu.NOMBRESUBMENU</span>

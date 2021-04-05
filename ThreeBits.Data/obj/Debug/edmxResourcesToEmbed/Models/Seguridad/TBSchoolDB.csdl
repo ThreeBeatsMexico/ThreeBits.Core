@@ -1,0 +1,2930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IELibertadDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ALUMNOS">
+    <Key>
+      <PropertyRef Name="IDALUMNO" />
+    </Key>
+    <Property Name="IDALUMNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NUMEROMATRICULA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FECHAREGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FECHAMATRICULA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="APATERNO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AMATERNO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NOMBRES" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FECHANACIMIENTO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SEXO" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NACIONALIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GRADO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GRUPO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NUMEROLISTA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ESCUELAPROCEDENCIA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="HERMANOS" Type="Int32" />
+    <Property Name="GRADOHERMANOS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CALLE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NUMERO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COLONIA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DELEGACION" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CODIGOPOSTAL" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CURP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EDADANOS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EDADMESES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TUTOR" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USUARIOALTA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USUARIOMODIFICA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FECHAMODIFICA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FOTO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIVELACADEMICO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SERVERPATH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BECA" Type="Int32" />
+    <Property Name="IDCICLO" Type="Int32" />
+    <Property Name="FORMAPAGO" Type="Int32" />
+  </EntityType>
+  <EntityType Name="APLICACION">
+    <Key>
+      <PropertyRef Name="IDAPLICACION" />
+    </Key>
+    <Property Name="IDAPLICACION" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="URLINICIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="AUDIT_USUARIOS" Relationship="Self.FK_AUDITUSUARIOS_REF_APLICACION" FromRole="APLICACION" ToRole="AUDIT_USUARIOS" />
+    <NavigationProperty Name="ESTACIONESXAPP" Relationship="Self.FK_ESTACIONXAPP_REF_APLICACION" FromRole="APLICACION" ToRole="ESTACIONESXAPP" />
+    <NavigationProperty Name="LOGERROR" Relationship="Self.FK_LOGERROR_REF_APLICACION" FromRole="APLICACION" ToRole="LOGERROR" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_ROLES_REF_APLICACION" FromRole="APLICACION" ToRole="ROLES" />
+    <NavigationProperty Name="USUARIOXAPLICACION" Relationship="Self.FK_USUARIOXAPP_REF_APLICACION" FromRole="APLICACION" ToRole="USUARIOXAPLICACION" />
+    <NavigationProperty Name="WCFMETODOS" Relationship="Self.FK_WCFMETODOS_REF_APLICACION" FromRole="APLICACION" ToRole="WCFMETODOS" />
+  </EntityType>
+  <EntityType Name="AUDIT_CONTACTO">
+    <Key>
+      <PropertyRef Name="IDCONTACTOAUDIT" />
+    </Key>
+    <Property Name="IDCONTACTOAUDIT" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDOPERACIONAUDIT" Type="Int32" />
+    <Property Name="IDCONTACTO" Type="Int64" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="IDTIPOCONTACTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VALOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVOCONTACTO" Type="Boolean" />
+    <Property Name="IDUSERMODIFICA" Type="Int64" />
+    <Property Name="IDAPPMODIFICA" Type="Int64" />
+    <Property Name="FECHATRANSACCION" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="CAT_OPERACIONAUDIT" Relationship="Self.FK_AUDITCONTACTO_REF_CATOPERAUDIT" FromRole="AUDIT_CONTACTO" ToRole="CAT_OPERACIONAUDIT" />
+  </EntityType>
+  <EntityType Name="AUDIT_DOMICILIO">
+    <Key>
+      <PropertyRef Name="IDDOMICILIOAUDIT" />
+    </Key>
+    <Property Name="IDDOMICILIOAUDIT" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDOPERACIONAUDIT" Type="Int32" />
+    <Property Name="IDDOMICILIO" Type="Int64" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="CALLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NUMEXT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NUMINT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IDESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDMUN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MUNICIPIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDCOLONIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COLONIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVODOM" Type="Boolean" />
+    <Property Name="IDUSERMODIFICA" Type="Int64" />
+    <Property Name="IDAPPMODIFICA" Type="Int64" />
+    <Property Name="FECHATRANSACCION" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="CAT_OPERACIONAUDIT" Relationship="Self.FK_AUDITDOM_REF_CATOPERAUDIT" FromRole="AUDIT_DOMICILIO" ToRole="CAT_OPERACIONAUDIT" />
+  </EntityType>
+  <EntityType Name="AUDIT_USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIOAUDIT" />
+    </Key>
+    <Property Name="IDUSUARIOAUDIT" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDOPERACIONAUDIT" Type="Int32" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="IDAPLICACION" Type="Int64" />
+    <Property Name="IDSEXO" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IDTIPOPERSONA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IDESTADOCIVIL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IDAREA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDTIPOUSUARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDUSUARIOAPP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="APATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AMATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FECHANACCONST" Type="DateTime" Precision="3" />
+    <Property Name="USUARIO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RUTAFOTOPERFIL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVOUSR" Type="Boolean" />
+    <Property Name="IDUSERMODIFICA" Type="Int64" />
+    <Property Name="IDAPPMODIFICA" Type="Int64" />
+    <Property Name="FECHATRANSACCION" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="APLICACION" Relationship="Self.FK_AUDITUSUARIOS_REF_APLICACION" FromRole="AUDIT_USUARIOS" ToRole="APLICACION" />
+    <NavigationProperty Name="CAT_OPERACIONAUDIT" Relationship="Self.FK_AUDITUSUARIOS_REF_CATOPERAUDIT" FromRole="AUDIT_USUARIOS" ToRole="CAT_OPERACIONAUDIT" />
+  </EntityType>
+  <EntityType Name="CAT_AREA">
+    <Key>
+      <PropertyRef Name="IDAREA" />
+    </Key>
+    <Property Name="IDAREA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOS_REF_CAT_AREA" FromRole="CAT_AREA" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="CAT_ESTACIONES">
+    <Key>
+      <PropertyRef Name="IDESTACION" />
+    </Key>
+    <Property Name="IDESTACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="ESTACIONESXAPP" Relationship="Self.FK_ESTACIONESXAPP_REF_CAT_ESTACIONES" FromRole="CAT_ESTACIONES" ToRole="ESTACIONESXAPP" />
+  </EntityType>
+  <EntityType Name="CAT_ESTADOCIVIL">
+    <Key>
+      <PropertyRef Name="IDESTADOCIVIL" />
+    </Key>
+    <Property Name="IDESTADOCIVIL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOS_REF_CATEDOCIVIL" FromRole="CAT_ESTADOCIVIL" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="CAT_GRALS">
+    <Key>
+      <PropertyRef Name="IDCATGRAL" />
+    </Key>
+    <Property Name="IDCATGRAL" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRETABLA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDTABLA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCIONTABLA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDFILTRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CAT_OPERACIONAUDIT">
+    <Key>
+      <PropertyRef Name="IDOPERACIONAUDIT" />
+    </Key>
+    <Property Name="IDOPERACIONAUDIT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="AUDIT_CONTACTO" Relationship="Self.FK_AUDITCONTACTO_REF_CATOPERAUDIT" FromRole="CAT_OPERACIONAUDIT" ToRole="AUDIT_CONTACTO" />
+    <NavigationProperty Name="AUDIT_DOMICILIO" Relationship="Self.FK_AUDITDOM_REF_CATOPERAUDIT" FromRole="CAT_OPERACIONAUDIT" ToRole="AUDIT_DOMICILIO" />
+    <NavigationProperty Name="AUDIT_USUARIOS" Relationship="Self.FK_AUDITUSUARIOS_REF_CATOPERAUDIT" FromRole="CAT_OPERACIONAUDIT" ToRole="AUDIT_USUARIOS" />
+  </EntityType>
+  <EntityType Name="CAT_SEXO">
+    <Key>
+      <PropertyRef Name="IDSEXO" />
+    </Key>
+    <Property Name="IDSEXO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOS_REF_CATSEXO" FromRole="CAT_SEXO" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="CAT_TIPOCONTACTO">
+    <Key>
+      <PropertyRef Name="IDTIPOCONTACTO" />
+    </Key>
+    <Property Name="IDTIPOCONTACTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="CONTACTO" Relationship="Self.FK_CONTACTO_REF_CATTIPOCONTACTO" FromRole="CAT_TIPOCONTACTO" ToRole="CONTACTO" />
+  </EntityType>
+  <EntityType Name="CAT_TIPOPERSONA">
+    <Key>
+      <PropertyRef Name="IDTIPOPERSONA" />
+    </Key>
+    <Property Name="IDTIPOPERSONA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOS_REF_CATTIPOPERSONA" FromRole="CAT_TIPOPERSONA" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="CAT_TIPOUSUARIO">
+    <Key>
+      <PropertyRef Name="IDTIPOUSUARIO" />
+    </Key>
+    <Property Name="IDTIPOUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOS_REF_CATTIPOUSUARIO" FromRole="CAT_TIPOUSUARIO" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="CATEGORIA">
+    <Key>
+      <PropertyRef Name="CATEGORIAID" />
+    </Key>
+    <Property Name="CATEGORIAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IMAGECAT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="POST" Relationship="Self.POSTCATEGORIA" FromRole="CATEGORIA" ToRole="POST" />
+  </EntityType>
+  <EntityType Name="CATGENERALES">
+    <Key>
+      <PropertyRef Name="IDCATGENERALES" />
+    </Key>
+    <Property Name="IDCATGENERALES" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRECATALOGO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IDCATALOGO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FILTRO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVO" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RFCRECEP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NMBRECEP" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CALLER" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NROEXTR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NROINTR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COLONIAR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MUNICIPIOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LOCALIDADR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ESTADOR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PAISRECEP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CPRECEP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMENTARIO">
+    <Key>
+      <PropertyRef Name="COMENTARIOID" />
+    </Key>
+    <Property Name="COMENTARIOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="POSTID" Type="Int32" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="POST" Relationship="Self.FK_Comentario_Post" FromRole="COMENTARIO" ToRole="POST" />
+  </EntityType>
+  <EntityType Name="CONFIGAPP">
+    <Key>
+      <PropertyRef Name="IDCONFIGAPP" />
+    </Key>
+    <Property Name="IDCONFIGAPP" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="VALOR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVO" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CONTACTO">
+    <Key>
+      <PropertyRef Name="IDCONTACTO" />
+    </Key>
+    <Property Name="IDCONTACTO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="IDTIPOCONTACTO" Type="Int32" />
+    <Property Name="VALOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="CAT_TIPOCONTACTO" Relationship="Self.FK_CONTACTO_REF_CATTIPOCONTACTO" FromRole="CONTACTO" ToRole="CAT_TIPOCONTACTO" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_CONTACTO_REF_USUARIOS" FromRole="CONTACTO" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="DOMICILIO">
+    <Key>
+      <PropertyRef Name="IDDOMICILIO" />
+    </Key>
+    <Property Name="IDDOMICILIO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="CALLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NUMEXT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NUMINT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IDESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDMUN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MUNICIPIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDCOLONIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COLONIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_DOMICILIO_REF_USUARIOS" FromRole="DOMICILIO" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="EMPRESAS">
+    <Key>
+      <PropertyRef Name="ID_EMPRESA" />
+    </Key>
+    <Property Name="ID_EMPRESA" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RFCEMISOR" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NMBEMISOR" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CALLEE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NROEXTE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NROINTE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="COLONIAE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MUNICIPIOE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LOCALIDADE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ESTADOE" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PAISEMISOR" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CPEMISOR" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NMBREGIMEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTACIONESXAPP">
+    <Key>
+      <PropertyRef Name="IDESTACIONXAPP" />
+    </Key>
+    <Property Name="IDESTACIONXAPP" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDAPLICACION" Type="Int64" />
+    <Property Name="IDESTACION" Type="Int32" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="APLICACION" Relationship="Self.FK_ESTACIONXAPP_REF_APLICACION" FromRole="ESTACIONESXAPP" ToRole="APLICACION" />
+    <NavigationProperty Name="CAT_ESTACIONES" Relationship="Self.FK_ESTACIONESXAPP_REF_CAT_ESTACIONES" FromRole="ESTACIONESXAPP" ToRole="CAT_ESTACIONES" />
+    <NavigationProperty Name="ROLESXUSUARIO" Relationship="Self.FK_ROLESXUS_REF_ESTACIONESAPP" FromRole="ESTACIONESXAPP" ToRole="ROLESXUSUARIO" />
+  </EntityType>
+  <EntityType Name="LOGERROR">
+    <Key>
+      <PropertyRef Name="IDLOGERROR" />
+    </Key>
+    <Property Name="IDLOGERROR" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDAPLICACION" Type="Int64" />
+    <Property Name="VCHMENSAJE" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="VCHHOSTNAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="VCHIP" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="VCHSTACKTRACE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DTFECHAERROR" Type="DateTime" Precision="3" />
+    <Property Name="VCHUSUARIO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="APLICACION" Relationship="Self.FK_LOGERROR_REF_APLICACION" FromRole="LOGERROR" ToRole="APLICACION" />
+  </EntityType>
+  <EntityType Name="NUMERACION">
+    <Key>
+      <PropertyRef Name="ID_NUMERACION" />
+    </Key>
+    <Property Name="ID_NUMERACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_DOCTYPE" Type="Int32" Nullable="false" />
+    <Property Name="NMBSERIE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NMBNUMBERFROM" Type="Int64" />
+    <Property Name="NMBCURRENTNUMBER" Type="Int64" />
+    <Property Name="NMBNUMBERTO" Type="Int64" Nullable="false" />
+    <Property Name="NMBAUTHNUMBER" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NMBAUTHDATE" Type="Int32" Nullable="false" />
+    <Property Name="NMBRFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERMISOSXELEMENTOSOBJETO">
+    <Key>
+      <PropertyRef Name="IDELEMENTOSXOBJ" />
+    </Key>
+    <Property Name="IDELEMENTOSXOBJ" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPERMISOSOBJ" Type="Int64" />
+    <Property Name="ELEMENTO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TOOLTIP" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="PERMISOXOBJETOS" Relationship="Self.FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS" FromRole="PERMISOSXELEMENTOSOBJETO" ToRole="PERMISOXOBJETOS" />
+  </EntityType>
+  <EntityType Name="PERMISOSXMENU">
+    <Key>
+      <PropertyRef Name="IDPERMISOSMENU" />
+    </Key>
+    <Property Name="IDPERMISOSMENU" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDROL" Type="Int64" />
+    <Property Name="NOMBREMENU" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TIPOOBJETO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGEN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ORDEN" Type="Int32" />
+    <Property Name="TOOLTIP" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="PERMISOSXSUBMENU" Relationship="Self.FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU" FromRole="PERMISOSXMENU" ToRole="PERMISOSXSUBMENU" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_PERMISOSXMENU_REF_ROLES" FromRole="PERMISOSXMENU" ToRole="ROLES" />
+  </EntityType>
+  <EntityType Name="PERMISOSXSUBMENU">
+    <Key>
+      <PropertyRef Name="IDPERMISOSXSUBMENU" />
+    </Key>
+    <Property Name="IDPERMISOSXSUBMENU" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPERMISOSMENU" Type="Int64" />
+    <Property Name="NOMBRESUBMENU" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TIPOOBJETO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGEN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ORDEN" Type="Int32" />
+    <Property Name="TOOLTIP" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="PERMISOSXMENU" Relationship="Self.FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU" FromRole="PERMISOSXSUBMENU" ToRole="PERMISOSXMENU" />
+  </EntityType>
+  <EntityType Name="PERMISOXOBJETOS">
+    <Key>
+      <PropertyRef Name="IDPERMISOSOBJ" />
+    </Key>
+    <Property Name="IDPERMISOSOBJ" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDROL" Type="Int64" />
+    <Property Name="PAGINA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBREOBJETO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TIPOOBJETO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TOOLTIP" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="PERMISOSXELEMENTOSOBJETO" Relationship="Self.FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS" FromRole="PERMISOXOBJETOS" ToRole="PERMISOSXELEMENTOSOBJETO" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_PERMISOXOBJETO_REF_ROLES" FromRole="PERMISOXOBJETOS" ToRole="ROLES" />
+  </EntityType>
+  <EntityType Name="POST">
+    <Key>
+      <PropertyRef Name="POSTID" />
+    </Key>
+    <Property Name="POSTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TITULO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="POSTEADOPOR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PUBLICADO" Type="Boolean" Nullable="false" />
+    <Property Name="COMENTARIOS" Type="Int32" Nullable="false" />
+    <Property Name="IMAGEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="COMENTARIO" Relationship="Self.FK_Comentario_Post" FromRole="POST" ToRole="COMENTARIO" />
+    <NavigationProperty Name="CATEGORIA" Relationship="Self.POSTCATEGORIA" FromRole="POST" ToRole="CATEGORIA" />
+  </EntityType>
+  <EntityType Name="PRODUCTOS">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRODUCTO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID_UNIDAD_MEDIDA" Type="Int16" />
+    <Property Name="P_COMPRA" Type="Double" />
+    <Property Name="P_VENTA" Type="Double" />
+    <Property Name="EXISTENCIA" Type="Double" />
+    <NavigationProperty Name="UNIDAD_MEDIDA" Relationship="Self.FK_productos_unidad_medida" FromRole="PRODUCTOS" ToRole="UNIDAD_MEDIDA" />
+    <NavigationProperty Name="VENTA_DETALLE" Relationship="Self.FK_venta_detalle_productos" FromRole="PRODUCTOS" ToRole="VENTA_DETALLE" />
+    <NavigationProperty Name="VENTA_DETALLE_TMP" Relationship="Self.FK_venta_detalle_tmp_productos" FromRole="PRODUCTOS" ToRole="VENTA_DETALLE_TMP" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="IDROL" />
+    </Key>
+    <Property Name="IDROL" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDAPLICACION" Type="Int64" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="APLICACION" Relationship="Self.FK_ROLES_REF_APLICACION" FromRole="ROLES" ToRole="APLICACION" />
+    <NavigationProperty Name="PERMISOSXMENU" Relationship="Self.FK_PERMISOSXMENU_REF_ROLES" FromRole="ROLES" ToRole="PERMISOSXMENU" />
+    <NavigationProperty Name="PERMISOXOBJETOS" Relationship="Self.FK_PERMISOXOBJETO_REF_ROLES" FromRole="ROLES" ToRole="PERMISOXOBJETOS" />
+    <NavigationProperty Name="ROLESXUSUARIO" Relationship="Self.FK_ROLESXPERFIL_REF_ROLES" FromRole="ROLES" ToRole="ROLESXUSUARIO" />
+  </EntityType>
+  <EntityType Name="ROLESXUSUARIO">
+    <Key>
+      <PropertyRef Name="IDROLXUSUARIO" />
+    </Key>
+    <Property Name="IDROLXUSUARIO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDROL" Type="Int64" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="IDESTACIONXAPP" Type="Int64" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="ESTACIONESXAPP" Relationship="Self.FK_ROLESXUS_REF_ESTACIONESAPP" FromRole="ROLESXUSUARIO" ToRole="ESTACIONESXAPP" />
+    <NavigationProperty Name="ROLES" Relationship="Self.FK_ROLESXPERFIL_REF_ROLES" FromRole="ROLESXUSUARIO" ToRole="ROLES" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_ROLESXUSUARIO_REF_USUARIOS" FromRole="ROLESXUSUARIO" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="TBL_CHATMESSAGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CHATID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SENDERNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SENDERID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RECIPIENTID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RECIPIENTNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MESSAGEBODY" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="ISTYPING" Type="Boolean" Nullable="false" />
+    <Property Name="MESSAGETIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ISREAD" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_USERSTATUS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="Int16" Nullable="false" />
+    <Property Name="THEME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SOUND" Type="Boolean" />
+    <Property Name="AVATAR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PROFILELINK" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LASTLOGIN" Type="DateTime" Precision="3" />
+    <Property Name="LASTACTIVITY" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UNIDAD_MEDIDA">
+    <Key>
+      <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+    </Key>
+    <Property Name="ID_UNIDAD_MEDIDA" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UNIDAD_MEDIDA1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="Self.FK_productos_unidad_medida" FromRole="UNIDAD_MEDIDA" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_LOGIN" />
+    </Key>
+    <Property Name="USER_LOGIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USER_PASSWORD" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBRE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVO" Type="Boolean" Nullable="false" />
+    <Property Name="VENTAS" Type="Boolean" Nullable="false" />
+    <Property Name="REPORTES" Type="Boolean" Nullable="false" />
+    <Property Name="ADMINISTRAR" Type="Boolean" Nullable="false" />
+    <Property Name="FECHA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PRODUCTOS" Type="Boolean" Nullable="false" />
+    <Property Name="CLIENTES" Type="Boolean" Nullable="false" />
+    <Property Name="FACTURACION" Type="Boolean" Nullable="false" />
+    <Property Name="BLOG" Type="Boolean" Nullable="false" />
+    <Property Name="IMAGEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PROY" Type="Boolean" Nullable="false" />
+    <Property Name="BIBLIO" Type="Boolean" Nullable="false" />
+    <Property Name="ALUMNOS" Type="Boolean" Nullable="false" />
+    <Property Name="PROFESORES" Type="Boolean" Nullable="false" />
+    <Property Name="COBRANZA" Type="Boolean" Nullable="false" />
+    <Property Name="AYUDA" Type="Boolean" Nullable="false" />
+    <Property Name="PAGO" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDSEXO" Type="Int32" />
+    <Property Name="IDTIPOPERSONA" Type="Int32" />
+    <Property Name="IDESTADOCIVIL" Type="Int32" />
+    <Property Name="IDAREA" Type="Int32" />
+    <Property Name="IDTIPOUSUARIO" Type="Int32" />
+    <Property Name="IDUSUARIOAPP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="APATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AMATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FECHANACCONST" Type="DateTime" Precision="3" />
+    <Property Name="USUARIO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RUTAFOTOPERFIL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="CAT_AREA" Relationship="Self.FK_USUARIOS_REF_CAT_AREA" FromRole="USUARIOS" ToRole="CAT_AREA" />
+    <NavigationProperty Name="CAT_ESTADOCIVIL" Relationship="Self.FK_USUARIOS_REF_CATEDOCIVIL" FromRole="USUARIOS" ToRole="CAT_ESTADOCIVIL" />
+    <NavigationProperty Name="CAT_SEXO" Relationship="Self.FK_USUARIOS_REF_CATSEXO" FromRole="USUARIOS" ToRole="CAT_SEXO" />
+    <NavigationProperty Name="CAT_TIPOPERSONA" Relationship="Self.FK_USUARIOS_REF_CATTIPOPERSONA" FromRole="USUARIOS" ToRole="CAT_TIPOPERSONA" />
+    <NavigationProperty Name="CAT_TIPOUSUARIO" Relationship="Self.FK_USUARIOS_REF_CATTIPOUSUARIO" FromRole="USUARIOS" ToRole="CAT_TIPOUSUARIO" />
+    <NavigationProperty Name="CONTACTO" Relationship="Self.FK_CONTACTO_REF_USUARIOS" FromRole="USUARIOS" ToRole="CONTACTO" />
+    <NavigationProperty Name="DOMICILIO" Relationship="Self.FK_DOMICILIO_REF_USUARIOS" FromRole="USUARIOS" ToRole="DOMICILIO" />
+    <NavigationProperty Name="ROLESXUSUARIO" Relationship="Self.FK_ROLESXUSUARIO_REF_USUARIOS" FromRole="USUARIOS" ToRole="ROLESXUSUARIO" />
+    <NavigationProperty Name="USUARIOXAPLICACION" Relationship="Self.FK_USUARIOXAPP_REF_USUARIOS" FromRole="USUARIOS" ToRole="USUARIOXAPLICACION" />
+  </EntityType>
+  <EntityType Name="USUARIOXAPLICACION">
+    <Key>
+      <PropertyRef Name="IDUSRSXAPP" />
+    </Key>
+    <Property Name="IDUSRSXAPP" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDAPLICACION" Type="Int64" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="Int64" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="APLICACION" Relationship="Self.FK_USUARIOXAPP_REF_APLICACION" FromRole="USUARIOXAPLICACION" ToRole="APLICACION" />
+    <NavigationProperty Name="USUARIOS" Relationship="Self.FK_USUARIOXAPP_REF_USUARIOS" FromRole="USUARIOXAPLICACION" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FECHA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USER_LOGIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOCSERIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOCNUMBER" Type="Int64" Nullable="false" />
+    <Property Name="DOCDATE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TPODOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RFCEMISOR" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NMBEMISOR" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RFCRECEP" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NMBRECEP" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MONEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SUBTOTAL" Type="Double" Nullable="false" />
+    <Property Name="IVA" Type="Double" Nullable="false" />
+    <Property Name="TOTAL" Type="Double" Nullable="false" />
+    <Property Name="COMENTARIOS" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VALORPALABRAS" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="METODO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CTAPAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LUGAREXP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TPOCAMBIO" Type="Double" Nullable="false" />
+    <NavigationProperty Name="VENTA_DETALLE" Relationship="Self.FK_venta_detalle_venta" FromRole="VENTA" ToRole="VENTA_DETALLE" />
+  </EntityType>
+  <EntityType Name="VENTA_DETALLE">
+    <Key>
+      <PropertyRef Name="ID_VENTA_DETALLE" />
+    </Key>
+    <Property Name="ID_VENTA_DETALLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_VENTA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Double" Nullable="false" />
+    <Property Name="P_VENTA" Type="Double" Nullable="false" />
+    <Property Name="ADUANA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PEDIMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="F_PEDIMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PREDIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="Self.FK_venta_detalle_productos" FromRole="VENTA_DETALLE" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_venta_detalle_venta" FromRole="VENTA_DETALLE" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="VENTA_DETALLE_TMP">
+    <Key>
+      <PropertyRef Name="ID_VENTA_DETALLE_TMP" />
+    </Key>
+    <Property Name="ID_VENTA_DETALLE_TMP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PRODUCTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Double" Nullable="false" />
+    <Property Name="USER_LOGIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="P_VENTA" Type="Double" Nullable="false" />
+    <Property Name="ADUANA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PEDIMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="F_PEDIMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PREDIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="Self.FK_venta_detalle_tmp_productos" FromRole="VENTA_DETALLE_TMP" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="WCFMETODOS">
+    <Key>
+      <PropertyRef Name="IDMETODOS" />
+    </Key>
+    <Property Name="IDMETODOS" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDAPLICACION" Type="Int64" />
+    <Property Name="IDSERVICIOS" Type="Int64" />
+    <Property Name="NOMBREMETODO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RECURRENTE" Type="Boolean" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="APLICACION" Relationship="Self.FK_WCFMETODOS_REF_APLICACION" FromRole="WCFMETODOS" ToRole="APLICACION" />
+    <NavigationProperty Name="WCFSERVICIOS" Relationship="Self.FK_WCFMETODOS_REF_WCFSERVICIOS" FromRole="WCFMETODOS" ToRole="WCFSERVICIOS" />
+    <NavigationProperty Name="WCFRECURRENCIA" Relationship="Self.FK_WCFRECURRENCIA_REF_WCFMETODOS" FromRole="WCFMETODOS" ToRole="WCFRECURRENCIA" />
+  </EntityType>
+  <EntityType Name="WCFRECURRENCIA">
+    <Key>
+      <PropertyRef Name="IDRECURRENCIA" />
+    </Key>
+    <Property Name="IDRECURRENCIA" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDMETODOS" Type="Int64" />
+    <Property Name="FECHAACCESO" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="WCFMETODOS" Relationship="Self.FK_WCFRECURRENCIA_REF_WCFMETODOS" FromRole="WCFRECURRENCIA" ToRole="WCFMETODOS" />
+  </EntityType>
+  <EntityType Name="WCFSERVICIOS">
+    <Key>
+      <PropertyRef Name="IDSERVICIOS" />
+    </Key>
+    <Property Name="IDSERVICIOS" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" />
+    <NavigationProperty Name="WCFMETODOS" Relationship="Self.FK_WCFMETODOS_REF_WCFSERVICIOS" FromRole="WCFSERVICIOS" ToRole="WCFMETODOS" />
+  </EntityType>
+  <EntityType Name="CICLO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRECICLO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FECHAINICIO" Type="DateTime" Precision="0" />
+    <Property Name="FECHAFIN" Type="DateTime" Precision="0" />
+    <Property Name="MONTOINSCRIPCION" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="MONTOCOLEGIATURA" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="ESTATUS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Colonias">
+    <Key>
+      <PropertyRef Name="ClaveColonia" />
+      <PropertyRef Name="ClaveMunicipio" />
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreColonia" />
+      <PropertyRef Name="CodigoPostal" />
+      <PropertyRef Name="CodigoPostalAdministracion" />
+      <PropertyRef Name="ClaveTipoAsentamiento" />
+      <PropertyRef Name="TipoAsentamiento" />
+    </Key>
+    <Property Name="ClaveColonia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveMunicipio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveEntidad" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NombreColonia" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoPostal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoPostalAdministracion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveTipoAsentamiento" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoAsentamiento" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveCiudad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCiudad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Zona" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Universe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Oracle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MunOracle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MunUniverse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ColoniasIEL">
+    <Key>
+      <PropertyRef Name="ClaveColonia" />
+      <PropertyRef Name="ClaveMunicipio" />
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreColonia" />
+      <PropertyRef Name="CodigoPostal" />
+      <PropertyRef Name="CodigoPostalAdministracion" />
+      <PropertyRef Name="ClaveTipoAsentamiento" />
+      <PropertyRef Name="TipoAsentamiento" />
+    </Key>
+    <Property Name="ClaveColonia" Type="Int64" Nullable="false" />
+    <Property Name="ClaveMunicipio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveEntidad" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NombreColonia" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoPostal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodigoPostalAdministracion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveTipoAsentamiento" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoAsentamiento" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveCiudad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCiudad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Zona" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Universe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Oracle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MunOracle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MunUniverse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreEstado" />
+    </Key>
+    <Property Name="ClaveEntidad" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NombreEstado" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Universe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Oracle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FORMATOS">
+    <Key>
+      <PropertyRef Name="FORMATOID" />
+      <PropertyRef Name="NOMBRE" />
+      <PropertyRef Name="DESCRIPCION" />
+      <PropertyRef Name="FILERUT" />
+    </Key>
+    <Property Name="FORMATOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FILERUT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GRUPO">
+    <Key>
+      <PropertyRef Name="IDGRUPO" />
+    </Key>
+    <Property Name="IDGRUPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDNIVEL" Type="Int32" />
+    <Property Name="IDGRADO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDCICLO" Type="Int32" />
+    <Property Name="NOMBREGRUPO" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="INFOALUMNOS">
+    <Key>
+      <PropertyRef Name="NUMEROMATRICULA" />
+    </Key>
+    <Property Name="NUMEROMATRICULA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NOMBREPADRETUTOR" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OCUPACIONPADRE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOPADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOTRABAJOPADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CELULARPADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FECHANACIMIENTOPADRE" Type="DateTime" Precision="3" />
+    <Property Name="SUELDOPADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NACIONALIDADPADRE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBREMADRETUTOR" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OCUPACIONMADRE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOMADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOTRABAJOMADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CELULARMADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FECHANACIMIENTOMADRE" Type="DateTime" Precision="3" />
+    <Property Name="SUELDOMADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NACIONALIDADMADRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBREFAMVECINO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOVECINO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOTRABAJOVECINO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CELULARVECINO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDUCACIONFISICA" Type="Int32" />
+    <Property Name="MEDICAMENTO" Type="Int32" />
+    <Property Name="NOMBREMEDICAMENTO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DOSISMEDICAMENTO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ALIMENTOPROHIBIDO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PESO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TALLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TIPOSANGRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ENFERMEDADES" Type="Int32" />
+    <Property Name="NOMBREENFERMEDADES" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PROCEDIMIENTOCRISIS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CERTIFICADO" Type="Int32" />
+    <Property Name="ENFERMEDADCERTIFICADO" Type="Int32" />
+    <Property Name="ALERGIA" Type="Int32" />
+    <Property Name="NOMBREALERGIA" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PROCEDIMINTOCRISISALERGIA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBREACCIDENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOACCIDENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBREHOSPITAL" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="MEDICO" Type="Int32" />
+    <Property Name="NOMBREMEDICO" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONOMEDICO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CEDULAMEDICO" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AUTORIZATRASLADO" Type="Int32" />
+    <Property Name="PROCEDIMIENTOACCIDENTE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Municipios">
+    <Key>
+      <PropertyRef Name="ClaveMunicipio" />
+      <PropertyRef Name="ClaveEntidad" />
+      <PropertyRef Name="NombreMunicipio" />
+    </Key>
+    <Property Name="ClaveMunicipio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaveEntidad" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NombreMunicipio" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Universe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Oracle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NUMERACIONES">
+    <Key>
+      <PropertyRef Name="CLAVE_PROCESO" />
+      <PropertyRef Name="TIPO_PROC" />
+      <PropertyRef Name="INICIAL" />
+      <PropertyRef Name="FINAL" />
+    </Key>
+    <Property Name="CLAVE_PROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TIPO_PROC" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="INICIAL" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FINAL" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ACTUAL" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FECHA_INICIO" Type="DateTime" Precision="3" />
+    <Property Name="SERIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PAGOSALUMNO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCICLO" Type="Int32" />
+    <Property Name="NUMEROMATRICULA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDGRUPO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDGRADO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDALUMNO" Type="Int32" />
+    <Property Name="CONCEPTO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MONTOTOTAL" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="MONTOACTUAL" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="IDESTATUS" Type="Int32" />
+    <Property Name="FECHAMOVIMIENTO" Type="DateTime" Precision="3" />
+    <Property Name="FECHAALTA" Type="DateTime" Precision="3" />
+    <Property Name="USUARIOMODIFICA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USUARIOALTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAMODIFICA" Type="DateTime" Precision="3" />
+    <Property Name="MEDIOPAGO" Type="Int32" />
+    <Property Name="REFERENCIA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TPOPROY">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TIPOPROY" />
+      <PropertyRef Name="DURACION" />
+      <PropertyRef Name="CATEGORIA" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TIPOPROY" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DURACION" Type="Int32" Nullable="false" />
+    <Property Name="CATEGORIA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRANSACCIONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDALUMNO" Type="Int32" />
+    <Property Name="IDPAGO" Type="Int32" />
+    <Property Name="CONCEPTO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MONTO" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="FECHATRANSACCION" Type="DateTime" Precision="3" />
+    <Property Name="USUARIOTRANSACCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FORMAPAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="REFERENCIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VWCATTABLASCATALOGOS">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="IdTable" Type="Int64" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AUDITUSUARIOS_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="AUDIT_USUARIOS" Type="Self.AUDIT_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="AUDIT_USUARIOS">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTACIONXAPP_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="ESTACIONESXAPP" Type="Self.ESTACIONESXAPP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="ESTACIONESXAPP">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOGERROR_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="LOGERROR" Type="Self.LOGERROR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="LOGERROR">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLES_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="ROLES">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOXAPP_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="1" />
+    <End Role="USUARIOXAPLICACION" Type="Self.USUARIOXAPLICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="USUARIOXAPLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WCFMETODOS_REF_APLICACION">
+    <End Role="APLICACION" Type="Self.APLICACION" Multiplicity="0..1" />
+    <End Role="WCFMETODOS" Type="Self.WCFMETODOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APLICACION">
+        <PropertyRef Name="IDAPLICACION" />
+      </Principal>
+      <Dependent Role="WCFMETODOS">
+        <PropertyRef Name="IDAPLICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AUDITCONTACTO_REF_CATOPERAUDIT">
+    <End Role="CAT_OPERACIONAUDIT" Type="Self.CAT_OPERACIONAUDIT" Multiplicity="0..1" />
+    <End Role="AUDIT_CONTACTO" Type="Self.AUDIT_CONTACTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_OPERACIONAUDIT">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Principal>
+      <Dependent Role="AUDIT_CONTACTO">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AUDITDOM_REF_CATOPERAUDIT">
+    <End Role="CAT_OPERACIONAUDIT" Type="Self.CAT_OPERACIONAUDIT" Multiplicity="0..1" />
+    <End Role="AUDIT_DOMICILIO" Type="Self.AUDIT_DOMICILIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_OPERACIONAUDIT">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Principal>
+      <Dependent Role="AUDIT_DOMICILIO">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AUDITUSUARIOS_REF_CATOPERAUDIT">
+    <End Role="CAT_OPERACIONAUDIT" Type="Self.CAT_OPERACIONAUDIT" Multiplicity="0..1" />
+    <End Role="AUDIT_USUARIOS" Type="Self.AUDIT_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_OPERACIONAUDIT">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Principal>
+      <Dependent Role="AUDIT_USUARIOS">
+        <PropertyRef Name="IDOPERACIONAUDIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CAT_AREA">
+    <End Role="CAT_AREA" Type="Self.CAT_AREA" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_AREA">
+        <PropertyRef Name="IDAREA" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDAREA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTACIONESXAPP_REF_CAT_ESTACIONES">
+    <End Role="CAT_ESTACIONES" Type="Self.CAT_ESTACIONES" Multiplicity="0..1" />
+    <End Role="ESTACIONESXAPP" Type="Self.ESTACIONESXAPP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_ESTACIONES">
+        <PropertyRef Name="IDESTACION" />
+      </Principal>
+      <Dependent Role="ESTACIONESXAPP">
+        <PropertyRef Name="IDESTACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATEDOCIVIL">
+    <End Role="CAT_ESTADOCIVIL" Type="Self.CAT_ESTADOCIVIL" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_ESTADOCIVIL">
+        <PropertyRef Name="IDESTADOCIVIL" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDESTADOCIVIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATSEXO">
+    <End Role="CAT_SEXO" Type="Self.CAT_SEXO" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_SEXO">
+        <PropertyRef Name="IDSEXO" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDSEXO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACTO_REF_CATTIPOCONTACTO">
+    <End Role="CAT_TIPOCONTACTO" Type="Self.CAT_TIPOCONTACTO" Multiplicity="0..1" />
+    <End Role="CONTACTO" Type="Self.CONTACTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_TIPOCONTACTO">
+        <PropertyRef Name="IDTIPOCONTACTO" />
+      </Principal>
+      <Dependent Role="CONTACTO">
+        <PropertyRef Name="IDTIPOCONTACTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATTIPOPERSONA">
+    <End Role="CAT_TIPOPERSONA" Type="Self.CAT_TIPOPERSONA" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_TIPOPERSONA">
+        <PropertyRef Name="IDTIPOPERSONA" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDTIPOPERSONA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_REF_CATTIPOUSUARIO">
+    <End Role="CAT_TIPOUSUARIO" Type="Self.CAT_TIPOUSUARIO" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAT_TIPOUSUARIO">
+        <PropertyRef Name="IDTIPOUSUARIO" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="IDTIPOUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentario_Post">
+    <End Role="POST" Type="Self.POST" Multiplicity="1" />
+    <End Role="COMENTARIO" Type="Self.COMENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POST">
+        <PropertyRef Name="POSTID" />
+      </Principal>
+      <Dependent Role="COMENTARIO">
+        <PropertyRef Name="POSTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACTO_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="CONTACTO" Type="Self.CONTACTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="CONTACTO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOMICILIO_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="DOMICILIO" Type="Self.DOMICILIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="DOMICILIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLESXUS_REF_ESTACIONESAPP">
+    <End Role="ESTACIONESXAPP" Type="Self.ESTACIONESXAPP" Multiplicity="0..1" />
+    <End Role="ROLESXUSUARIO" Type="Self.ROLESXUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTACIONESXAPP">
+        <PropertyRef Name="IDESTACIONXAPP" />
+      </Principal>
+      <Dependent Role="ROLESXUSUARIO">
+        <PropertyRef Name="IDESTACIONXAPP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS">
+    <End Role="PERMISOXOBJETOS" Type="Self.PERMISOXOBJETOS" Multiplicity="0..1" />
+    <End Role="PERMISOSXELEMENTOSOBJETO" Type="Self.PERMISOSXELEMENTOSOBJETO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERMISOXOBJETOS">
+        <PropertyRef Name="IDPERMISOSOBJ" />
+      </Principal>
+      <Dependent Role="PERMISOSXELEMENTOSOBJETO">
+        <PropertyRef Name="IDPERMISOSOBJ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU">
+    <End Role="PERMISOSXMENU" Type="Self.PERMISOSXMENU" Multiplicity="0..1" />
+    <End Role="PERMISOSXSUBMENU" Type="Self.PERMISOSXSUBMENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERMISOSXMENU">
+        <PropertyRef Name="IDPERMISOSMENU" />
+      </Principal>
+      <Dependent Role="PERMISOSXSUBMENU">
+        <PropertyRef Name="IDPERMISOSMENU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOSXMENU_REF_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="PERMISOSXMENU" Type="Self.PERMISOSXMENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="IDROL" />
+      </Principal>
+      <Dependent Role="PERMISOSXMENU">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERMISOXOBJETO_REF_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="PERMISOXOBJETOS" Type="Self.PERMISOXOBJETOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="IDROL" />
+      </Principal>
+      <Dependent Role="PERMISOXOBJETOS">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productos_unidad_medida">
+    <End Role="UNIDAD_MEDIDA" Type="Self.UNIDAD_MEDIDA" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDAD_MEDIDA">
+        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="ID_UNIDAD_MEDIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venta_detalle_productos">
+    <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
+    <End Role="VENTA_DETALLE" Type="Self.VENTA_DETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="VENTA_DETALLE">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venta_detalle_tmp_productos">
+    <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
+    <End Role="VENTA_DETALLE_TMP" Type="Self.VENTA_DETALLE_TMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Principal>
+      <Dependent Role="VENTA_DETALLE_TMP">
+        <PropertyRef Name="ID_PRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLESXPERFIL_REF_ROLES">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="ROLESXUSUARIO" Type="Self.ROLESXUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="IDROL" />
+      </Principal>
+      <Dependent Role="ROLESXUSUARIO">
+        <PropertyRef Name="IDROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ROLESXUSUARIO_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="ROLESXUSUARIO" Type="Self.ROLESXUSUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="ROLESXUSUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOXAPP_REF_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
+    <End Role="USUARIOXAPLICACION" Type="Self.USUARIOXAPLICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="USUARIOXAPLICACION">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_venta_detalle_venta">
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="1" />
+    <End Role="VENTA_DETALLE" Type="Self.VENTA_DETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTA">
+        <PropertyRef Name="ID_VENTA" />
+      </Principal>
+      <Dependent Role="VENTA_DETALLE">
+        <PropertyRef Name="ID_VENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WCFMETODOS_REF_WCFSERVICIOS">
+    <End Role="WCFSERVICIOS" Type="Self.WCFSERVICIOS" Multiplicity="0..1" />
+    <End Role="WCFMETODOS" Type="Self.WCFMETODOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WCFSERVICIOS">
+        <PropertyRef Name="IDSERVICIOS" />
+      </Principal>
+      <Dependent Role="WCFMETODOS">
+        <PropertyRef Name="IDSERVICIOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WCFRECURRENCIA_REF_WCFMETODOS">
+    <End Role="WCFMETODOS" Type="Self.WCFMETODOS" Multiplicity="0..1" />
+    <End Role="WCFRECURRENCIA" Type="Self.WCFRECURRENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WCFMETODOS">
+        <PropertyRef Name="IDMETODOS" />
+      </Principal>
+      <Dependent Role="WCFRECURRENCIA">
+        <PropertyRef Name="IDMETODOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="POSTCATEGORIA">
+    <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="*" />
+    <End Role="POST" Type="Self.POST" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="IELibertadDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ALUMNOS" EntityType="Self.ALUMNOS" />
+    <EntitySet Name="APLICACION" EntityType="Self.APLICACION" />
+    <EntitySet Name="AUDIT_CONTACTO" EntityType="Self.AUDIT_CONTACTO" />
+    <EntitySet Name="AUDIT_DOMICILIO" EntityType="Self.AUDIT_DOMICILIO" />
+    <EntitySet Name="AUDIT_USUARIOS" EntityType="Self.AUDIT_USUARIOS" />
+    <EntitySet Name="CAT_AREA" EntityType="Self.CAT_AREA" />
+    <EntitySet Name="CAT_ESTACIONES" EntityType="Self.CAT_ESTACIONES" />
+    <EntitySet Name="CAT_ESTADOCIVIL" EntityType="Self.CAT_ESTADOCIVIL" />
+    <EntitySet Name="CAT_GRALS" EntityType="Self.CAT_GRALS" />
+    <EntitySet Name="CAT_OPERACIONAUDIT" EntityType="Self.CAT_OPERACIONAUDIT" />
+    <EntitySet Name="CAT_SEXO" EntityType="Self.CAT_SEXO" />
+    <EntitySet Name="CAT_TIPOCONTACTO" EntityType="Self.CAT_TIPOCONTACTO" />
+    <EntitySet Name="CAT_TIPOPERSONA" EntityType="Self.CAT_TIPOPERSONA" />
+    <EntitySet Name="CAT_TIPOUSUARIO" EntityType="Self.CAT_TIPOUSUARIO" />
+    <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" />
+    <EntitySet Name="CATGENERALES" EntityType="Self.CATGENERALES" />
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" />
+    <EntitySet Name="COMENTARIO" EntityType="Self.COMENTARIO" />
+    <EntitySet Name="CONFIGAPP" EntityType="Self.CONFIGAPP" />
+    <EntitySet Name="CONTACTO" EntityType="Self.CONTACTO" />
+    <EntitySet Name="DOMICILIO" EntityType="Self.DOMICILIO" />
+    <EntitySet Name="EMPRESAS" EntityType="Self.EMPRESAS" />
+    <EntitySet Name="ESTACIONESXAPP" EntityType="Self.ESTACIONESXAPP" />
+    <EntitySet Name="LOGERROR" EntityType="Self.LOGERROR" />
+    <EntitySet Name="NUMERACION" EntityType="Self.NUMERACION" />
+    <EntitySet Name="PERMISOSXELEMENTOSOBJETO" EntityType="Self.PERMISOSXELEMENTOSOBJETO" />
+    <EntitySet Name="PERMISOSXMENU" EntityType="Self.PERMISOSXMENU" />
+    <EntitySet Name="PERMISOSXSUBMENU" EntityType="Self.PERMISOSXSUBMENU" />
+    <EntitySet Name="PERMISOXOBJETOS" EntityType="Self.PERMISOXOBJETOS" />
+    <EntitySet Name="POST" EntityType="Self.POST" />
+    <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" />
+    <EntitySet Name="ROLESXUSUARIO" EntityType="Self.ROLESXUSUARIO" />
+    <EntitySet Name="TBL_CHATMESSAGES" EntityType="Self.TBL_CHATMESSAGES" />
+    <EntitySet Name="TBL_USERSTATUS" EntityType="Self.TBL_USERSTATUS" />
+    <EntitySet Name="UNIDAD_MEDIDA" EntityType="Self.UNIDAD_MEDIDA" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
+    <EntitySet Name="USUARIOXAPLICACION" EntityType="Self.USUARIOXAPLICACION" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" />
+    <EntitySet Name="VENTA_DETALLE" EntityType="Self.VENTA_DETALLE" />
+    <EntitySet Name="VENTA_DETALLE_TMP" EntityType="Self.VENTA_DETALLE_TMP" />
+    <EntitySet Name="WCFMETODOS" EntityType="Self.WCFMETODOS" />
+    <EntitySet Name="WCFRECURRENCIA" EntityType="Self.WCFRECURRENCIA" />
+    <EntitySet Name="WCFSERVICIOS" EntityType="Self.WCFSERVICIOS" />
+    <EntitySet Name="CICLO" EntityType="Self.CICLO" />
+    <EntitySet Name="Colonias" EntityType="Self.Colonias" />
+    <EntitySet Name="ColoniasIEL" EntityType="Self.ColoniasIEL" />
+    <EntitySet Name="Estados" EntityType="Self.Estados" />
+    <EntitySet Name="FORMATOS" EntityType="Self.FORMATOS" />
+    <EntitySet Name="GRUPO" EntityType="Self.GRUPO" />
+    <EntitySet Name="INFOALUMNOS" EntityType="Self.INFOALUMNOS" />
+    <EntitySet Name="Municipios" EntityType="Self.Municipios" />
+    <EntitySet Name="NUMERACIONES" EntityType="Self.NUMERACIONES" />
+    <EntitySet Name="PAGOSALUMNO" EntityType="Self.PAGOSALUMNO" />
+    <EntitySet Name="TPOPROY" EntityType="Self.TPOPROY" />
+    <EntitySet Name="TRANSACCIONES" EntityType="Self.TRANSACCIONES" />
+    <EntitySet Name="VWCATTABLASCATALOGOS" EntityType="Self.VWCATTABLASCATALOGOS" />
+    <AssociationSet Name="FK_AUDITUSUARIOS_REF_APLICACION" Association="Self.FK_AUDITUSUARIOS_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="AUDIT_USUARIOS" EntitySet="AUDIT_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTACIONXAPP_REF_APLICACION" Association="Self.FK_ESTACIONXAPP_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="ESTACIONESXAPP" EntitySet="ESTACIONESXAPP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOGERROR_REF_APLICACION" Association="Self.FK_LOGERROR_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="LOGERROR" EntitySet="LOGERROR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLES_REF_APLICACION" Association="Self.FK_ROLES_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="ROLES" EntitySet="ROLES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOXAPP_REF_APLICACION" Association="Self.FK_USUARIOXAPP_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="USUARIOXAPLICACION" EntitySet="USUARIOXAPLICACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WCFMETODOS_REF_APLICACION" Association="Self.FK_WCFMETODOS_REF_APLICACION">
+      <End Role="APLICACION" EntitySet="APLICACION" />
+      <End Role="WCFMETODOS" EntitySet="WCFMETODOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AUDITCONTACTO_REF_CATOPERAUDIT" Association="Self.FK_AUDITCONTACTO_REF_CATOPERAUDIT">
+      <End Role="CAT_OPERACIONAUDIT" EntitySet="CAT_OPERACIONAUDIT" />
+      <End Role="AUDIT_CONTACTO" EntitySet="AUDIT_CONTACTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AUDITDOM_REF_CATOPERAUDIT" Association="Self.FK_AUDITDOM_REF_CATOPERAUDIT">
+      <End Role="CAT_OPERACIONAUDIT" EntitySet="CAT_OPERACIONAUDIT" />
+      <End Role="AUDIT_DOMICILIO" EntitySet="AUDIT_DOMICILIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AUDITUSUARIOS_REF_CATOPERAUDIT" Association="Self.FK_AUDITUSUARIOS_REF_CATOPERAUDIT">
+      <End Role="CAT_OPERACIONAUDIT" EntitySet="CAT_OPERACIONAUDIT" />
+      <End Role="AUDIT_USUARIOS" EntitySet="AUDIT_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CAT_AREA" Association="Self.FK_USUARIOS_REF_CAT_AREA">
+      <End Role="CAT_AREA" EntitySet="CAT_AREA" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTACIONESXAPP_REF_CAT_ESTACIONES" Association="Self.FK_ESTACIONESXAPP_REF_CAT_ESTACIONES">
+      <End Role="CAT_ESTACIONES" EntitySet="CAT_ESTACIONES" />
+      <End Role="ESTACIONESXAPP" EntitySet="ESTACIONESXAPP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATEDOCIVIL" Association="Self.FK_USUARIOS_REF_CATEDOCIVIL">
+      <End Role="CAT_ESTADOCIVIL" EntitySet="CAT_ESTADOCIVIL" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATSEXO" Association="Self.FK_USUARIOS_REF_CATSEXO">
+      <End Role="CAT_SEXO" EntitySet="CAT_SEXO" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACTO_REF_CATTIPOCONTACTO" Association="Self.FK_CONTACTO_REF_CATTIPOCONTACTO">
+      <End Role="CAT_TIPOCONTACTO" EntitySet="CAT_TIPOCONTACTO" />
+      <End Role="CONTACTO" EntitySet="CONTACTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATTIPOPERSONA" Association="Self.FK_USUARIOS_REF_CATTIPOPERSONA">
+      <End Role="CAT_TIPOPERSONA" EntitySet="CAT_TIPOPERSONA" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_REF_CATTIPOUSUARIO" Association="Self.FK_USUARIOS_REF_CATTIPOUSUARIO">
+      <End Role="CAT_TIPOUSUARIO" EntitySet="CAT_TIPOUSUARIO" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentario_Post" Association="Self.FK_Comentario_Post">
+      <End Role="POST" EntitySet="POST" />
+      <End Role="COMENTARIO" EntitySet="COMENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACTO_REF_USUARIOS" Association="Self.FK_CONTACTO_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="CONTACTO" EntitySet="CONTACTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOMICILIO_REF_USUARIOS" Association="Self.FK_DOMICILIO_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="DOMICILIO" EntitySet="DOMICILIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLESXUS_REF_ESTACIONESAPP" Association="Self.FK_ROLESXUS_REF_ESTACIONESAPP">
+      <End Role="ESTACIONESXAPP" EntitySet="ESTACIONESXAPP" />
+      <End Role="ROLESXUSUARIO" EntitySet="ROLESXUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS" Association="Self.FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS">
+      <End Role="PERMISOXOBJETOS" EntitySet="PERMISOXOBJETOS" />
+      <End Role="PERMISOSXELEMENTOSOBJETO" EntitySet="PERMISOSXELEMENTOSOBJETO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU" Association="Self.FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU">
+      <End Role="PERMISOSXMENU" EntitySet="PERMISOSXMENU" />
+      <End Role="PERMISOSXSUBMENU" EntitySet="PERMISOSXSUBMENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOSXMENU_REF_ROLES" Association="Self.FK_PERMISOSXMENU_REF_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="PERMISOSXMENU" EntitySet="PERMISOSXMENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERMISOXOBJETO_REF_ROLES" Association="Self.FK_PERMISOXOBJETO_REF_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="PERMISOXOBJETOS" EntitySet="PERMISOXOBJETOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productos_unidad_medida" Association="Self.FK_productos_unidad_medida">
+      <End Role="UNIDAD_MEDIDA" EntitySet="UNIDAD_MEDIDA" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venta_detalle_productos" Association="Self.FK_venta_detalle_productos">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="VENTA_DETALLE" EntitySet="VENTA_DETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venta_detalle_tmp_productos" Association="Self.FK_venta_detalle_tmp_productos">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="VENTA_DETALLE_TMP" EntitySet="VENTA_DETALLE_TMP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLESXPERFIL_REF_ROLES" Association="Self.FK_ROLESXPERFIL_REF_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="ROLESXUSUARIO" EntitySet="ROLESXUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ROLESXUSUARIO_REF_USUARIOS" Association="Self.FK_ROLESXUSUARIO_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="ROLESXUSUARIO" EntitySet="ROLESXUSUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOXAPP_REF_USUARIOS" Association="Self.FK_USUARIOXAPP_REF_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="USUARIOXAPLICACION" EntitySet="USUARIOXAPLICACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_venta_detalle_venta" Association="Self.FK_venta_detalle_venta">
+      <End Role="VENTA" EntitySet="VENTA" />
+      <End Role="VENTA_DETALLE" EntitySet="VENTA_DETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WCFMETODOS_REF_WCFSERVICIOS" Association="Self.FK_WCFMETODOS_REF_WCFSERVICIOS">
+      <End Role="WCFSERVICIOS" EntitySet="WCFSERVICIOS" />
+      <End Role="WCFMETODOS" EntitySet="WCFMETODOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WCFRECURRENCIA_REF_WCFMETODOS" Association="Self.FK_WCFRECURRENCIA_REF_WCFMETODOS">
+      <End Role="WCFMETODOS" EntitySet="WCFMETODOS" />
+      <End Role="WCFRECURRENCIA" EntitySet="WCFRECURRENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="POSTCATEGORIA" Association="Self.POSTCATEGORIA">
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+      <End Role="POST" EntitySet="POST" />
+    </AssociationSet>
+    <FunctionImport Name="PROC_ALUMNOS" ReturnType="Collection(String)">
+      <Parameter Name="NumeroMatricula" Mode="In" Type="String" />
+      <Parameter Name="APaterno" Mode="In" Type="String" />
+      <Parameter Name="AMaterno" Mode="In" Type="String" />
+      <Parameter Name="Nombres" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="String" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Nacionalidad" Mode="In" Type="String" />
+      <Parameter Name="Grado" Mode="In" Type="String" />
+      <Parameter Name="EscuelaProcedencia" Mode="In" Type="String" />
+      <Parameter Name="Hermanos" Mode="In" Type="Int32" />
+      <Parameter Name="GradoHermanos" Mode="In" Type="String" />
+      <Parameter Name="Calle" Mode="In" Type="String" />
+      <Parameter Name="Numero" Mode="In" Type="String" />
+      <Parameter Name="Colonia" Mode="In" Type="String" />
+      <Parameter Name="Delegacion" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="CodigoPostal" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Curp" Mode="In" Type="String" />
+      <Parameter Name="EdadAnos" Mode="In" Type="String" />
+      <Parameter Name="EdadMeses" Mode="In" Type="String" />
+      <Parameter Name="Foto" Mode="In" Type="String" />
+      <Parameter Name="NivelAcademico" Mode="In" Type="String" />
+      <Parameter Name="NombrePadreTutor" Mode="In" Type="String" />
+      <Parameter Name="OcupacionPadre" Mode="In" Type="String" />
+      <Parameter Name="TelefonoPadre" Mode="In" Type="String" />
+      <Parameter Name="TelefonoTrabajoPadre" Mode="In" Type="String" />
+      <Parameter Name="CelularPadre" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimientoPadre" Mode="In" Type="String" />
+      <Parameter Name="SueldoPadre" Mode="In" Type="String" />
+      <Parameter Name="NacionalidadPadre" Mode="In" Type="String" />
+      <Parameter Name="NombreMadreTutor" Mode="In" Type="String" />
+      <Parameter Name="OcupacionMadre" Mode="In" Type="String" />
+      <Parameter Name="TelefonoMadre" Mode="In" Type="String" />
+      <Parameter Name="TelefonoTrabajoMadre" Mode="In" Type="String" />
+      <Parameter Name="CelularMadre" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimientoMadre" Mode="In" Type="String" />
+      <Parameter Name="SueldoMadre" Mode="In" Type="String" />
+      <Parameter Name="NacionalidadMadre" Mode="In" Type="String" />
+      <Parameter Name="NombreFamVecino" Mode="In" Type="String" />
+      <Parameter Name="TelefonoVecino" Mode="In" Type="String" />
+      <Parameter Name="TelefonoTrabajoVecino" Mode="In" Type="String" />
+      <Parameter Name="CelularVecino" Mode="In" Type="String" />
+      <Parameter Name="EducacionFisica" Mode="In" Type="Int32" />
+      <Parameter Name="Medicamento" Mode="In" Type="Int32" />
+      <Parameter Name="NombreMedicamento" Mode="In" Type="String" />
+      <Parameter Name="DosisMedicamento" Mode="In" Type="String" />
+      <Parameter Name="Peso" Mode="In" Type="String" />
+      <Parameter Name="Talla" Mode="In" Type="String" />
+      <Parameter Name="TipoSangre" Mode="In" Type="String" />
+      <Parameter Name="Enfermedades" Mode="In" Type="Int32" />
+      <Parameter Name="NombreEnfermedades" Mode="In" Type="String" />
+      <Parameter Name="ProcedimientoCrisis" Mode="In" Type="String" />
+      <Parameter Name="Certificado" Mode="In" Type="Int32" />
+      <Parameter Name="EnfermedadCertificado" Mode="In" Type="Int32" />
+      <Parameter Name="Alergia" Mode="In" Type="Int32" />
+      <Parameter Name="NombreAlergia" Mode="In" Type="String" />
+      <Parameter Name="ProcedimintoCrisisAlergia" Mode="In" Type="String" />
+      <Parameter Name="NombreAccidente" Mode="In" Type="String" />
+      <Parameter Name="TelefonoAccidente" Mode="In" Type="String" />
+      <Parameter Name="NombreHospital" Mode="In" Type="String" />
+      <Parameter Name="Medico" Mode="In" Type="Int32" />
+      <Parameter Name="NombreMedico" Mode="In" Type="String" />
+      <Parameter Name="TelefonoMedico" Mode="In" Type="String" />
+      <Parameter Name="CedulaMedico" Mode="In" Type="String" />
+      <Parameter Name="AutorizaTraslado" Mode="In" Type="Int32" />
+      <Parameter Name="ProcedimientoAccidente" Mode="In" Type="String" />
+      <Parameter Name="NombreUsuario" Mode="In" Type="String" />
+      <Parameter Name="Tutor" Mode="In" Type="String" />
+      <Parameter Name="Estatus" Mode="In" Type="String" />
+      <Parameter Name="ServerPath" Mode="In" Type="String" />
+      <Parameter Name="Beca" Mode="In" Type="Int32" />
+      <Parameter Name="FormaPago" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_ASIGNA_ALUMNO_GRUPO">
+      <Parameter Name="IDALUMNO" Mode="In" Type="String" />
+      <Parameter Name="IDGRUPO" Mode="In" Type="String" />
+      <Parameter Name="IDCICLO" Mode="In" Type="String" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_CATEGORIA">
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="IMAGECAT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_CICLOS">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="NOMBRECICLO" Mode="In" Type="String" />
+      <Parameter Name="FECHAINICIAL" Mode="In" Type="String" />
+      <Parameter Name="FECHAFINAL" Mode="In" Type="String" />
+      <Parameter Name="MONTOINSCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="MONTOCOLEGIATURA" Mode="In" Type="String" />
+      <Parameter Name="ESTATUS" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_CLIENTES">
+      <Parameter Name="IDCLIENTE" Mode="In" Type="String" />
+      <Parameter Name="RFCRECEP" Mode="In" Type="String" />
+      <Parameter Name="NMBRECEP" Mode="In" Type="String" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="EXT" Mode="In" Type="String" />
+      <Parameter Name="INT" Mode="In" Type="String" />
+      <Parameter Name="COL" Mode="In" Type="String" />
+      <Parameter Name="MUN" Mode="In" Type="String" />
+      <Parameter Name="LOC" Mode="In" Type="String" />
+      <Parameter Name="EDO" Mode="In" Type="String" />
+      <Parameter Name="PAIS" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_EMPRESAS">
+      <Parameter Name="IDEMPRESA" Mode="In" Type="String" />
+      <Parameter Name="RFCEMISOR" Mode="In" Type="String" />
+      <Parameter Name="NMBEMISOR" Mode="In" Type="String" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="EXT" Mode="In" Type="String" />
+      <Parameter Name="INT" Mode="In" Type="String" />
+      <Parameter Name="COL" Mode="In" Type="String" />
+      <Parameter Name="MUN" Mode="In" Type="String" />
+      <Parameter Name="LOC" Mode="In" Type="String" />
+      <Parameter Name="EDO" Mode="In" Type="String" />
+      <Parameter Name="PAIS" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+      <Parameter Name="REGIMEN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FOLIOS">
+      <Parameter Name="DOC" Mode="In" Type="Int32" />
+      <Parameter Name="SERIE" Mode="In" Type="String" />
+      <Parameter Name="INI" Mode="In" Type="Int64" />
+      <Parameter Name="ACT" Mode="In" Type="Int64" />
+      <Parameter Name="FIN" Mode="In" Type="Int64" />
+      <Parameter Name="APROBACION" Mode="In" Type="String" />
+      <Parameter Name="ANO" Mode="In" Type="Int32" />
+      <Parameter Name="RFC" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FORMATOS">
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="FILERUT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_GETFOLIOS">
+      <Parameter Name="CveProc" Mode="In" Type="String" />
+      <Parameter Name="Tipo" Mode="In" Type="String" />
+      <Parameter Name="Serie" Mode="In" Type="String" />
+      <Parameter Name="Num_Folio" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_GRUPOS">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="IDNIVEL" Mode="In" Type="String" />
+      <Parameter Name="IDGRADO" Mode="In" Type="String" />
+      <Parameter Name="IDCICLO" Mode="In" Type="String" />
+      <Parameter Name="NOMBREGRUPO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_ALUMNOS">
+      <Parameter Name="Matricula" Mode="In" Type="String" />
+      <Parameter Name="Nombres" Mode="In" Type="String" />
+      <Parameter Name="APaterno" Mode="In" Type="String" />
+      <Parameter Name="AMaterno" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="String" />
+      <Parameter Name="Estatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_ALUMNOS_GRUPO" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_ALUMNOS_GRUPO_Result)">
+      <Parameter Name="IDGRADO" Mode="In" Type="String" />
+      <Parameter Name="IDGRUPO" Mode="In" Type="String" />
+      <Parameter Name="IDCICLO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_ALUMNOS_GRUPO_ADD" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_ALUMNOS_GRUPO_ADD_Result)">
+      <Parameter Name="IDGRADO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_DETALLES" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_DETALLES_Result)">
+      <Parameter Name="ID_VENTA" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_DEUDORES" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_DEUDORES_Result)" />
+    <FunctionImport Name="PROC_LISTA_GRADO" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_GRADO_Result)">
+      <Parameter Name="NIVEL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_PAGOS_ALUMNO" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_PAGOS_ALUMNO_Result)">
+      <Parameter Name="IDALUMNO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_PAGOS_ALUMNO_MATRICULA" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_PAGOS_ALUMNO_MATRICULA_Result)">
+      <Parameter Name="MATRICULA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_PAGOS_TRANSACCIONES" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_PAGOS_TRANSACCIONES_Result)">
+      <Parameter Name="IDPAGO" Mode="In" Type="String" />
+      <Parameter Name="IDALUMNO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_LISTA_TEMP_VENTAS" ReturnType="Collection(IELibertadDBModel.PROC_LISTA_TEMP_VENTAS_Result)">
+      <Parameter Name="USER_LOGIN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_OBTIENE_PAGO" ReturnType="Collection(IELibertadDBModel.PROC_OBTIENE_PAGO_Result)">
+      <Parameter Name="IDPAGO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_PRODS">
+      <Parameter Name="ID_PRODUCTO" Mode="In" Type="String" />
+      <Parameter Name="PRODUCTO" Mode="In" Type="String" />
+      <Parameter Name="ID_UNIDAD_MEDIDA" Mode="In" Type="Int16" />
+      <Parameter Name="COMPRA" Mode="In" Type="Double" />
+      <Parameter Name="VENTA" Mode="In" Type="Double" />
+      <Parameter Name="EXISTENCIA" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_REGISTRA_PAGO">
+      <Parameter Name="IDPAGO" Mode="In" Type="String" />
+      <Parameter Name="IDALUMNO" Mode="In" Type="String" />
+      <Parameter Name="MONTO" Mode="In" Type="String" />
+      <Parameter Name="REFERENCIA" Mode="In" Type="String" />
+      <Parameter Name="MEDIOPAGO" Mode="In" Type="String" />
+      <Parameter Name="ESTATUS" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_RPT_ALUMNO" ReturnType="Collection(IELibertadDBModel.PROC_RPT_ALUMNO_Result)">
+      <Parameter Name="MATRICULA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_RPT_CREDENCIAL">
+      <Parameter Name="MATRICULA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_RPT_PAGOS" ReturnType="Collection(IELibertadDBModel.PROC_RPT_PAGOS_Result)">
+      <Parameter Name="FECHA_INI" Mode="In" Type="String" />
+      <Parameter Name="FECHA_FIN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_RPT_RECIBO" ReturnType="Collection(IELibertadDBModel.PROC_RPT_RECIBO_Result)">
+      <Parameter Name="IDALUMNO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_RPT_RECIBO_ALUMNO" ReturnType="Collection(IELibertadDBModel.PROC_RPT_RECIBO_ALUMNO_Result)">
+      <Parameter Name="IDALUMNO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_RPT_VENTAS" ReturnType="Collection(IELibertadDBModel.PROC_RPT_VENTAS_Result)">
+      <Parameter Name="FECHA_INI" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_TEMP_VENTAS">
+      <Parameter Name="USER_LOGIN" Mode="In" Type="String" />
+      <Parameter Name="ID_PRODUCTO" Mode="In" Type="String" />
+      <Parameter Name="CANTIDAD" Mode="In" Type="Double" />
+      <Parameter Name="ADUANA" Mode="In" Type="String" />
+      <Parameter Name="PEDIMENTO" Mode="In" Type="String" />
+      <Parameter Name="FECHAPEDIMENTO" Mode="In" Type="String" />
+      <Parameter Name="PREDIAL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_UM">
+      <Parameter Name="UMEDIDA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_USERS">
+      <Parameter Name="USER_LOGIN" Mode="In" Type="String" />
+      <Parameter Name="USER_PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="ADMINISTRACION" Mode="In" Type="Boolean" />
+      <Parameter Name="ALUMNOS" Mode="In" Type="Boolean" />
+      <Parameter Name="PROFESORES" Mode="In" Type="Boolean" />
+      <Parameter Name="COBRANZA" Mode="In" Type="Boolean" />
+      <Parameter Name="BLOG" Mode="In" Type="Boolean" />
+      <Parameter Name="AYUDA" Mode="In" Type="Boolean" />
+      <Parameter Name="IMAGEN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_USERS_PERMISOS_MOSTRAR" ReturnType="Collection(IELibertadDBModel.PROC_USERS_PERMISOS_MOSTRAR_Result)">
+      <Parameter Name="USER_LOGIN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_VENTA" ReturnType="Collection(Int32)">
+      <Parameter Name="USER_LOGIN" Mode="In" Type="String" />
+      <Parameter Name="SERIE" Mode="In" Type="String" />
+      <Parameter Name="NUMERO" Mode="In" Type="Int64" />
+      <Parameter Name="DATE" Mode="In" Type="String" />
+      <Parameter Name="TPODOC" Mode="In" Type="String" />
+      <Parameter Name="RFCE" Mode="In" Type="String" />
+      <Parameter Name="NMBE" Mode="In" Type="String" />
+      <Parameter Name="RFCR" Mode="In" Type="String" />
+      <Parameter Name="NMBR" Mode="In" Type="String" />
+      <Parameter Name="MONEDA" Mode="In" Type="String" />
+      <Parameter Name="SUBTOTAL" Mode="In" Type="Double" />
+      <Parameter Name="IVA" Mode="In" Type="Double" />
+      <Parameter Name="TOTAL" Mode="In" Type="Double" />
+      <Parameter Name="COMENT" Mode="In" Type="String" />
+      <Parameter Name="PALABRAS" Mode="In" Type="String" />
+      <Parameter Name="METODO" Mode="In" Type="String" />
+      <Parameter Name="CTAPAGO" Mode="In" Type="String" />
+      <Parameter Name="LUGAREXP" Mode="In" Type="String" />
+      <Parameter Name="TPOCAMBIO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_actDeactUsuario">
+      <Parameter Name="TIPOUSUARIOIN" Mode="In" Type="Int32" />
+      <Parameter Name="ACTDEACTIVATE" Mode="In" Type="Boolean" />
+      <Parameter Name="USUARIOIN" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_addUsuarioXAplicacion">
+      <Parameter Name="IDUSRSXAPP" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="String" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AuditContacto">
+      <Parameter Name="IDOPERACIONAUDIT" Mode="In" Type="Int32" />
+      <Parameter Name="IDCONTACTO" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDTIPOCONTACTO" Mode="In" Type="String" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AuditDomicilio">
+      <Parameter Name="IDOPERACIONAUDIT" Mode="In" Type="Int32" />
+      <Parameter Name="IDDOMICILIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="NUMEXT" Mode="In" Type="String" />
+      <Parameter Name="NUMINT" Mode="In" Type="String" />
+      <Parameter Name="IDESTADO" Mode="In" Type="String" />
+      <Parameter Name="ESTADO" Mode="In" Type="String" />
+      <Parameter Name="IDMUN" Mode="In" Type="String" />
+      <Parameter Name="MUNICIPIO" Mode="In" Type="String" />
+      <Parameter Name="IDCOLONIA" Mode="In" Type="String" />
+      <Parameter Name="COLONIA" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AuditUser">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDOPERACIONAUDIT" Mode="In" Type="Int32" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDSEXO" Mode="In" Type="String" />
+      <Parameter Name="IDTIPOPERSONA" Mode="In" Type="String" />
+      <Parameter Name="IDESTADOCIVIL" Mode="In" Type="String" />
+      <Parameter Name="AREA" Mode="In" Type="String" />
+      <Parameter Name="TIPOUSUARIO" Mode="In" Type="String" />
+      <Parameter Name="IDUSUARIOAPP" Mode="In" Type="String" />
+      <Parameter Name="APATERNO" Mode="In" Type="String" />
+      <Parameter Name="AMATERNO" Mode="In" Type="String" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="FECHANACCONST" Mode="In" Type="DateTime" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="RUTAFOTOPERFIL" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkMenuxAppRol" ReturnType="Collection(IELibertadDBModel.sp_checkMenuxAppRol_Result)">
+      <Parameter Name="MENU" Mode="In" Type="String" />
+      <Parameter Name="IDROL" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkMetodo" ReturnType="Collection(IELibertadDBModel.sp_checkMetodo_Result)">
+      <Parameter Name="METODO" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDSERVICIOS" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkRolxApp" ReturnType="Collection(IELibertadDBModel.sp_checkRolxApp_Result)">
+      <Parameter Name="ROL" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkServicio" ReturnType="Collection(IELibertadDBModel.sp_checkServicio_Result)">
+      <Parameter Name="SERVICIO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkSubMenuxAppRol" ReturnType="Collection(IELibertadDBModel.sp_checkSubMenuxAppRol_Result)">
+      <Parameter Name="SUBMENU" Mode="In" Type="String" />
+      <Parameter Name="IDPERMISOSMENU" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkUsrXApp" ReturnType="Collection(IELibertadDBModel.sp_checkUsrXApp_Result)">
+      <Parameter Name="TIPOBUSQUEDA" Mode="In" Type="Int32" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkXApp" ReturnType="Collection(IELibertadDBModel.sp_checkXApp_Result)">
+      <Parameter Name="APLICACION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delMenusXAppRol">
+      <Parameter Name="IdMenu" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_delSubMenusXAppRol">
+      <Parameter Name="IdSubMenu" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getAplicaciones" ReturnType="Collection(IELibertadDBModel.sp_getAplicaciones_Result)">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="String" />
+      <Parameter Name="TXTBUSQUEDA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getAppsXUsuario" ReturnType="Collection(IELibertadDBModel.sp_getAppsXUsuario_Result)">
+      <Parameter Name="TIPOBUSQUEDA" Mode="In" Type="Int32" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getContactos" ReturnType="Collection(IELibertadDBModel.sp_getContactos_Result)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getDomicilios" ReturnType="Collection(IELibertadDBModel.sp_getDomicilios_Result)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getElementsObjectsXIdObj" ReturnType="Collection(IELibertadDBModel.sp_getElementsObjectsXIdObj_Result)">
+      <Parameter Name="IDELEMENTOSXOBJ" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEstacionesXApps" ReturnType="Collection(IELibertadDBModel.sp_getEstacionesXApps_Result)">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getMenusXAppRol" ReturnType="Collection(IELibertadDBModel.sp_getMenusXAppRol_Result)">
+      <Parameter Name="IdApp" Mode="In" Type="Int64" />
+      <Parameter Name="IdRol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getMenusXAppRolAdmin" ReturnType="Collection(IELibertadDBModel.sp_getMenusXAppRolAdmin_Result)">
+      <Parameter Name="IdApp" Mode="In" Type="Int64" />
+      <Parameter Name="IdRol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getMetodoXApp" ReturnType="Collection(IELibertadDBModel.sp_getMetodoXApp_Result)">
+      <Parameter Name="IdApp" Mode="In" Type="Int64" />
+      <Parameter Name="SERVICENAME" Mode="In" Type="String" />
+      <Parameter Name="METHODNAME" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getObjetosXAppRolPage" ReturnType="Collection(IELibertadDBModel.sp_getObjetosXAppRolPage_Result)">
+      <Parameter Name="IdApp" Mode="In" Type="Int64" />
+      <Parameter Name="IdRol" Mode="In" Type="Int64" />
+      <Parameter Name="Pagina" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getPermisoXApp" ReturnType="Collection(IELibertadDBModel.sp_getPermisoXApp_Result)">
+      <Parameter Name="IdApp" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getRolesXApp" ReturnType="Collection(IELibertadDBModel.sp_getRolesXApp_Result)">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getRolesXUserApp" ReturnType="Collection(IELibertadDBModel.sp_getRolesXUserApp_Result)">
+      <Parameter Name="TIPOBUSQUEDA" Mode="In" Type="Int32" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getSubMenusXIdMenu" ReturnType="Collection(IELibertadDBModel.sp_getSubMenusXIdMenu_Result)">
+      <Parameter Name="IDPERMISOSMENU" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getSubMenusXIdMenuAdmin" ReturnType="Collection(IELibertadDBModel.sp_getSubMenusXIdMenuAdmin_Result)">
+      <Parameter Name="IDPERMISOSMENU" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getUsuario" ReturnType="Collection(IELibertadDBModel.sp_getUsuario_Result)">
+      <Parameter Name="TIPOBUSQUEDA" Mode="In" Type="Int32" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insAplicacion">
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insContacto">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDTIPOCONTACTO" Mode="In" Type="Int32" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insDomicilio" ReturnType="Collection(Decimal)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="NUMEXT" Mode="In" Type="String" />
+      <Parameter Name="NUMINT" Mode="In" Type="String" />
+      <Parameter Name="IDESTADO" Mode="In" Type="Int32" />
+      <Parameter Name="ESTADO" Mode="In" Type="String" />
+      <Parameter Name="IDMUN" Mode="In" Type="Int32" />
+      <Parameter Name="MUNICIPIO" Mode="In" Type="String" />
+      <Parameter Name="IDCOLONIA" Mode="In" Type="Int32" />
+      <Parameter Name="COLONIA" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insLogError">
+      <Parameter Name="IdApp" Mode="In" Type="Int64" />
+      <Parameter Name="MENSAJE" Mode="In" Type="String" />
+      <Parameter Name="HOSTNAME" Mode="In" Type="String" />
+      <Parameter Name="IP" Mode="In" Type="String" />
+      <Parameter Name="STACKTRACE" Mode="In" Type="String" />
+      <Parameter Name="DTFECHAERROR" Mode="In" Type="DateTime" />
+      <Parameter Name="VCHUSUARIO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insMenuXAppRol">
+      <Parameter Name="IDROL" Mode="In" Type="Int64" />
+      <Parameter Name="NOMBREMENU" Mode="In" Type="String" />
+      <Parameter Name="IMAGEN" Mode="In" Type="String" />
+      <Parameter Name="TIPOOBJETO" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="TOOLTIP" Mode="In" Type="String" />
+      <Parameter Name="ORDEN" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insMetodosxApp">
+      <Parameter Name="IDMETODOS" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDSERVICIOS" Mode="In" Type="Int64" />
+      <Parameter Name="NOMBREMETODO" Mode="In" Type="String" />
+      <Parameter Name="RECURRENTE" Mode="In" Type="Boolean" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insPermisosxElementoObjeto">
+      <Parameter Name="IDPERMISOSOBJ" Mode="In" Type="Int64" />
+      <Parameter Name="ELEMENTO" Mode="In" Type="String" />
+      <Parameter Name="TOOLTIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insPermisosxObjeto">
+      <Parameter Name="IDROL" Mode="In" Type="Int64" />
+      <Parameter Name="PAGINA" Mode="In" Type="String" />
+      <Parameter Name="NOMBREOBJETO" Mode="In" Type="String" />
+      <Parameter Name="TIPOOBJETO" Mode="In" Type="String" />
+      <Parameter Name="TOOLTIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insRolesXUsuario">
+      <Parameter Name="IDROL" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDESTACIONXAPP" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insRolXApp">
+      <Parameter Name="ROL" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insRolXUserApp">
+      <Parameter Name="IDROL" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDESTACIONXAPP" Mode="In" Type="Int64" />
+      <Parameter Name="IDROLXUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insServicioWCF">
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insSubMenuXAppRol">
+      <Parameter Name="IDPERMISOSMENU" Mode="In" Type="Int64" />
+      <Parameter Name="NOMBRESUBMENU" Mode="In" Type="String" />
+      <Parameter Name="IMAGEN" Mode="In" Type="String" />
+      <Parameter Name="TIPOOBJETO" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="TOOLTIP" Mode="In" Type="String" />
+      <Parameter Name="ORDEN" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insUser" ReturnType="Collection(Decimal)">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDSEXO" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOPERSONA" Mode="In" Type="Int32" />
+      <Parameter Name="IDESTADOCIVIL" Mode="In" Type="Int32" />
+      <Parameter Name="IDAREA" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOUSUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="IDUSUARIOAPP" Mode="In" Type="String" />
+      <Parameter Name="APATERNO" Mode="In" Type="String" />
+      <Parameter Name="AMATERNO" Mode="In" Type="String" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="FECHANACCONST" Mode="In" Type="DateTime" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="RUTAFOTOPERFIL" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updAplicacion">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updContacto">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDCONTACTO" Mode="In" Type="Int64" />
+      <Parameter Name="IDTIPOCONTACTO" Mode="In" Type="Int32" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updDomicilio">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDDOMICILIO" Mode="In" Type="Int64" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="NUMEXT" Mode="In" Type="String" />
+      <Parameter Name="NUMINT" Mode="In" Type="String" />
+      <Parameter Name="IDESTADO" Mode="In" Type="Int32" />
+      <Parameter Name="ESTADO" Mode="In" Type="String" />
+      <Parameter Name="IDMUN" Mode="In" Type="Int32" />
+      <Parameter Name="MUNICIPIO" Mode="In" Type="String" />
+      <Parameter Name="IDCOLONIA" Mode="In" Type="Int32" />
+      <Parameter Name="COLONIA" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updMenuXAppRol">
+      <Parameter Name="IDPERMISOSMENU" Mode="In" Type="Int64" />
+      <Parameter Name="NOMBREMENU" Mode="In" Type="String" />
+      <Parameter Name="IMAGEN" Mode="In" Type="String" />
+      <Parameter Name="TIPOOBJETO" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="TOOLTIP" Mode="In" Type="String" />
+      <Parameter Name="ORDEN" Mode="In" Type="Int64" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updRol">
+      <Parameter Name="IDROLXUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDROL" Mode="In" Type="Int64" />
+      <Parameter Name="IDESTACIONXAPP" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updSubMenuXAppRol">
+      <Parameter Name="IDPERMISOSMENU" Mode="In" Type="Int64" />
+      <Parameter Name="IDPERMISOSSUBMENU" Mode="In" Type="Int64" />
+      <Parameter Name="NOMBRESUBMENU" Mode="In" Type="String" />
+      <Parameter Name="IMAGEN" Mode="In" Type="String" />
+      <Parameter Name="TIPOOBJETO" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="TOOLTIP" Mode="In" Type="String" />
+      <Parameter Name="ORDEN" Mode="In" Type="Int64" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updUsuario">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDSEXO" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOPERSONA" Mode="In" Type="Int32" />
+      <Parameter Name="IDESTADOCIVIL" Mode="In" Type="Int32" />
+      <Parameter Name="IDAREA" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOUSUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="IDUSUARIOAPP" Mode="In" Type="String" />
+      <Parameter Name="APATERNO" Mode="In" Type="String" />
+      <Parameter Name="AMATERNO" Mode="In" Type="String" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="FECHANACCONST" Mode="In" Type="DateTime" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="RUTAFOTOPERFIL" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spAddCatEspecifico">
+      <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
+      <Parameter Name="IDCATALOGO" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="VALORDESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="RESPUESTA" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAddCatGenerales">
+      <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
+      <Parameter Name="IDCATALOGO" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="FILTRO" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDCATGENERALESNEW" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAddConfigApp">
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDCONFIGAPPNEW" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAddContacto" ReturnType="Collection(Decimal)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDTIPOCONTACTO" Mode="In" Type="Int32" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spAddDomicilio" ReturnType="Collection(Decimal)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="NUMEXT" Mode="In" Type="String" />
+      <Parameter Name="NUMINT" Mode="In" Type="String" />
+      <Parameter Name="IDESTADO" Mode="In" Type="Int32" />
+      <Parameter Name="ESTADO" Mode="In" Type="String" />
+      <Parameter Name="IDMUN" Mode="In" Type="Int32" />
+      <Parameter Name="MUNICIPIO" Mode="In" Type="String" />
+      <Parameter Name="IDCOLONIA" Mode="In" Type="Int32" />
+      <Parameter Name="COLONIA" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spAddUsuario" ReturnType="Collection(Decimal)">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDSEXO" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOPERSONA" Mode="In" Type="Int32" />
+      <Parameter Name="IDESTADOCIVIL" Mode="In" Type="Int32" />
+      <Parameter Name="IDAREA" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOUSUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="IDUSUARIOAPP" Mode="In" Type="String" />
+      <Parameter Name="APATERNO" Mode="In" Type="String" />
+      <Parameter Name="AMATERNO" Mode="In" Type="String" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="FECHANACCONST" Mode="In" Type="DateTime" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="RUTAFOTOPERFIL" Mode="In" Type="String" />
+      <Parameter Name="FECHAALTA" Mode="In" Type="DateTime" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spAddUsuarioXAplicacion">
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spGetCatEspecifico">
+      <Parameter Name="IDCATGENERALES" Mode="In" Type="Int32" />
+      <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
+      <Parameter Name="IDCATALOGO" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="FILTRO" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="VALORFILTRO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetCatGenerales" ReturnType="Collection(IELibertadDBModel.spGetCatGenerales_Result)">
+      <Parameter Name="IDCATGENERALES" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetConfigApp" ReturnType="Collection(IELibertadDBModel.spGetConfigApp_Result)">
+      <Parameter Name="IDCONFIGAPP" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetContactos" ReturnType="Collection(IELibertadDBModel.spGetContactos_Result)">
+      <Parameter Name="IdUsuario" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDefinicionTabla">
+      <Parameter Name="NombreTabla" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetDomicilios" ReturnType="Collection(IELibertadDBModel.spGetDomicilios_Result)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spGetRolesVSUsuario" ReturnType="Collection(IELibertadDBModel.spGetRolesVSUsuario_Result)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetSysTablaCatalogo" ReturnType="Collection(IELibertadDBModel.spGetSysTablaCatalogo_Result)" />
+    <FunctionImport Name="spGetUsuario" ReturnType="Collection(IELibertadDBModel.spGetUsuario_Result)">
+      <Parameter Name="IdUsuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetUsuarios" ReturnType="Collection(IELibertadDBModel.spGetUsuarios_Result)">
+      <Parameter Name="IdAplicacion" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="AMaterno" Mode="In" Type="String" />
+      <Parameter Name="APaterno" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRolesVSUsuario" ReturnType="Collection(IELibertadDBModel.spRolesVSUsuario_Result)">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSetCatEspecifico">
+      <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
+      <Parameter Name="IDCATALOGO" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCIONVALOR" Mode="In" Type="String" />
+      <Parameter Name="IDCAT" Mode="In" Type="Int32" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSetCatGenerales">
+      <Parameter Name="IDCATGENERALES" Mode="In" Type="Int32" />
+      <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
+      <Parameter Name="IDCATALOGO" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="FILTRO" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spSetConfigApp">
+      <Parameter Name="IDCONFIGAPP" Mode="In" Type="Int32" />
+      <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spSetContacto">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDCONTACTO" Mode="In" Type="Int64" />
+      <Parameter Name="IDTIPOCONTACTO" Mode="In" Type="Int32" />
+      <Parameter Name="VALOR" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spSetDomicilio">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDDOMICILIO" Mode="In" Type="Int64" />
+      <Parameter Name="CALLE" Mode="In" Type="String" />
+      <Parameter Name="NUMEXT" Mode="In" Type="String" />
+      <Parameter Name="NUMINT" Mode="In" Type="String" />
+      <Parameter Name="IDESTADO" Mode="In" Type="Int32" />
+      <Parameter Name="ESTADO" Mode="In" Type="String" />
+      <Parameter Name="IDMUN" Mode="In" Type="Int32" />
+      <Parameter Name="MUNICIPIO" Mode="In" Type="String" />
+      <Parameter Name="IDCOLONIA" Mode="In" Type="Int32" />
+      <Parameter Name="COLONIA" Mode="In" Type="String" />
+      <Parameter Name="CP" Mode="In" Type="String" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spSetUsuario">
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDSEXO" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOPERSONA" Mode="In" Type="Int32" />
+      <Parameter Name="IDESTADOCIVIL" Mode="In" Type="Int32" />
+      <Parameter Name="IDAREA" Mode="In" Type="Int32" />
+      <Parameter Name="IDTIPOUSUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="IDUSUARIOAPP" Mode="In" Type="String" />
+      <Parameter Name="APATERNO" Mode="In" Type="String" />
+      <Parameter Name="AMATERNO" Mode="In" Type="String" />
+      <Parameter Name="NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="FECHANACCONST" Mode="In" Type="DateTime" />
+      <Parameter Name="USUARIO" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="RUTAFOTOPERFIL" Mode="In" Type="String" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+      <Parameter Name="IDUSERMODIFICA" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPPMODIFICA" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spSetUsuarioXAplicacion">
+      <Parameter Name="IDUSRSXAPP" Mode="In" Type="Int64" />
+      <Parameter Name="IDAPLICACION" Mode="In" Type="Int64" />
+      <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
+      <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="PROC_LISTA_ALUMNOS_GRUPO_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="String" Name="NUMEROMATRICULA" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAREGISTRO" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FECHAMATRICULA" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APATERNO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="AMATERNO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NOMBRES" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHANACIMIENTO" Nullable="false" Precision="23" />
+    <Property Type="String" Name="SEXO" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="NACIONALIDAD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GRADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GRUPO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NUMEROLISTA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESCUELAPROCEDENCIA" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="HERMANOS" Nullable="true" />
+    <Property Type="String" Name="GRADOHERMANOS" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CALLE" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NUMERO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COLONIA" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="DELEGACION" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="CODIGOPOSTAL" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="TELEFONO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="CURP" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EDADANOS" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EDADMESES" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TUTOR" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="USUARIOALTA" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="USUARIOMODIFICA" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FECHAMODIFICA" Nullable="false" Precision="23" />
+    <Property Type="String" Name="FOTO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NIVELACADEMICO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESTATUS" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SERVERPATH" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="BECA" Nullable="true" />
+    <Property Type="Int32" Name="IDCICLO" Nullable="true" />
+    <Property Type="Int32" Name="FORMAPAGO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_ALUMNOS_GRUPO_ADD_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="String" Name="NUMEROMATRICULA" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAREGISTRO" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FECHAMATRICULA" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APATERNO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="AMATERNO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NOMBRES" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHANACIMIENTO" Nullable="false" Precision="23" />
+    <Property Type="String" Name="SEXO" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="NACIONALIDAD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GRADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GRUPO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NUMEROLISTA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESCUELAPROCEDENCIA" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="HERMANOS" Nullable="true" />
+    <Property Type="String" Name="GRADOHERMANOS" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CALLE" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NUMERO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COLONIA" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="DELEGACION" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="CODIGOPOSTAL" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="TELEFONO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="CURP" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EDADANOS" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EDADMESES" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TUTOR" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="USUARIOALTA" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="USUARIOMODIFICA" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FECHAMODIFICA" Nullable="false" Precision="23" />
+    <Property Type="String" Name="FOTO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NIVELACADEMICO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESTATUS" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SERVERPATH" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="BECA" Nullable="true" />
+    <Property Type="Int32" Name="IDCICLO" Nullable="true" />
+    <Property Type="Int32" Name="FORMAPAGO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_DETALLES_Result">
+    <Property Type="Int32" Name="id_venta_detalle" Nullable="false" />
+    <Property Type="String" Name="id_producto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="producto" Nullable="true" MaxLength="250" />
+    <Property Type="Double" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="p_venta" Nullable="false" />
+    <Property Type="Double" Name="TOTAL" Nullable="false" />
+    <Property Type="String" Name="aduana" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pedimento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="f_pedimento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="predial" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UM" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_DEUDORES_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="String" Name="APaterno" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="AMaterno" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Nombres" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreGrupo" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="DescripcionGrado" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CONCEPTO" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="MontoActual" Nullable="true" Precision="16" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_GRADO_Result">
+    <Property Type="String" Name="IDGRADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DESCRIPCIONGRADO" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_PAGOS_ALUMNO_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CONCEPTO" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="MontoActual" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="ESTATUS" Nullable="true" MaxLength="9" />
+    <Property Type="DateTime" Name="FechaMovimiento" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_PAGOS_ALUMNO_MATRICULA_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CONCEPTO" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="MontoActual" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="ESTATUS" Nullable="true" MaxLength="9" />
+    <Property Type="DateTime" Name="FechaMovimiento" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_PAGOS_TRANSACCIONES_Result">
+    <Property Type="String" Name="DESCFORMAPAGO" Nullable="true" MaxLength="13" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IDALUMNO" Nullable="true" />
+    <Property Type="Int32" Name="IDPAGO" Nullable="true" />
+    <Property Type="String" Name="CONCEPTO" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="MONTO" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="DateTime" Name="FECHATRANSACCION" Nullable="true" Precision="23" />
+    <Property Type="String" Name="USUARIOTRANSACCION" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FORMAPAGO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="REFERENCIA" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PROC_LISTA_TEMP_VENTAS_Result">
+    <Property Type="Int32" Name="id_venta_detalle_tmp" Nullable="false" />
+    <Property Type="String" Name="id_producto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="producto" Nullable="true" MaxLength="250" />
+    <Property Type="Double" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="p_venta" Nullable="false" />
+    <Property Type="Double" Name="TOTAL" Nullable="false" />
+    <Property Type="String" Name="aduana" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pedimento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="f_pedimento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="predial" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UM" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="PROC_OBTIENE_PAGO_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CONCEPTO" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="MontoActual" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="String" Name="ESTATUS" Nullable="true" MaxLength="9" />
+    <Property Type="DateTime" Name="FechaMovimiento" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="PROC_RPT_ALUMNO_Result">
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <Property Type="String" Name="NUMEROMATRICULA" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAREGISTRO" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FECHAMATRICULA" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APATERNO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="AMATERNO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NOMBRES" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHANACIMIENTO" Nullable="false" Precision="23" />
+    <Property Type="String" Name="SEXO" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="NACIONALIDAD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GRADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GRUPO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NUMEROLISTA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESCUELAPROCEDENCIA" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="HERMANOS" Nullable="true" />
+    <Property Type="String" Name="GRADOHERMANOS" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CALLE" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NUMERO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="COLONIA" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="DELEGACION" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="CODIGOPOSTAL" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="TELEFONO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="CURP" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="EDADANOS" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EDADMESES" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TUTOR" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="USUARIOALTA" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="USUARIOMODIFICA" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FECHAMODIFICA" Nullable="false" Precision="23" />
+    <Property Type="String" Name="FOTO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NIVELACADEMICO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESTATUS" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SERVERPATH" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="BECA" Nullable="true" />
+    <Property Type="Int32" Name="IDCICLO" Nullable="true" />
+    <Property Type="Int32" Name="FORMAPAGO" Nullable="true" />
+    <Property Type="String" Name="NUMEROMATRICULA1" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NOMBREPADRETUTOR" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="OCUPACIONPADRE" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="TELEFONOPADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TELEFONOTRABAJOPADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CELULARPADRE" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHANACIMIENTOPADRE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SUELDOPADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NACIONALIDADPADRE" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NOMBREMADRETUTOR" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="OCUPACIONMADRE" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="TELEFONOMADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TELEFONOTRABAJOMADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CELULARMADRE" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHANACIMIENTOMADRE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SUELDOMADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NACIONALIDADMADRE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NOMBREFAMVECINO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TELEFONOVECINO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TELEFONOTRABAJOVECINO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CELULARVECINO" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="EDUCACIONFISICA" Nullable="true" />
+    <Property Type="Int32" Name="MEDICAMENTO" Nullable="true" />
+    <Property Type="String" Name="NOMBREMEDICAMENTO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="DOSISMEDICAMENTO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ALIMENTOPROHIBIDO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PESO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TALLA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TIPOSANGRE" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ENFERMEDADES" Nullable="true" />
+    <Property Type="String" Name="NOMBREENFERMEDADES" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PROCEDIMIENTOCRISIS" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="CERTIFICADO" Nullable="true" />
+    <Property Type="Int32" Name="ENFERMEDADCERTIFICADO" Nullable="true" />
+    <Property Type="Int32" Name="ALERGIA" Nullable="true" />
+    <Property Type="String" Name="NOMBREALERGIA" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PROCEDIMINTOCRISISALERGIA" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NOMBREACCIDENTE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TELEFONOACCIDENTE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NOMBREHOSPITAL" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="MEDICO" Nullable="true" />
+    <Property Type="String" Name="NOMBREMEDICO" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TELEFONOMEDICO" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CEDULAMEDICO" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="AUTORIZATRASLADO" Nullable="true" />
+    <Property Type="String" Name="PROCEDIMIENTOACCIDENTE" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NombreGrupo" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="DescripcionGrado" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NombreCiclo" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="PROC_RPT_PAGOS_Result">
+    <Property Type="Int32" Name="IdAlumno" Nullable="false" />
+    <Property Type="String" Name="NumeroMatricula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Apaterno" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="AMaterno" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Nombres" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreGrupo" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="DescripcionGrado" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Concepto" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Monto" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="DateTime" Name="FechaTransaccion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="FINI" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="FFIN" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="FPAGO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="REFERENCIA" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PROC_RPT_RECIBO_Result">
+    <Property Type="String" Name="Concepto" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Monto" Nullable="true" Precision="16" Scale="2" />
+    <Property Type="DateTime" Name="FechaTransaccion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="FPAGO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="REFERENCIA" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PROC_RPT_RECIBO_ALUMNO_Result">
+    <Property Type="Int32" Name="IdAlumno" Nullable="false" />
+    <Property Type="String" Name="APaterno" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="AMaterno" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Nombres" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreGrupo" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="DescripcionGrado" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NombreCiclo" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="PROC_RPT_VENTAS_Result">
+    <Property Type="Int32" Name="id_venta" Nullable="false" />
+    <Property Type="DateTime" Name="fecha_registro" Nullable="false" Precision="23" />
+    <Property Type="String" Name="id_producto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="producto" Nullable="true" MaxLength="250" />
+    <Property Type="Double" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="p_venta" Nullable="false" />
+    <Property Type="Double" Name="TOTAL" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="PROC_USERS_PERMISOS_MOSTRAR_Result">
+    <Property Type="String" Name="USER_LOGIN" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="USER_PASSWORD" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="false" />
+    <Property Type="Boolean" Name="VENTAS" Nullable="false" />
+    <Property Type="Boolean" Name="REPORTES" Nullable="false" />
+    <Property Type="Boolean" Name="ADMINISTRAR" Nullable="false" />
+    <Property Type="DateTime" Name="FECHA_REGISTRO" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="PRODUCTOS" Nullable="false" />
+    <Property Type="Boolean" Name="CLIENTES" Nullable="false" />
+    <Property Type="Boolean" Name="FACTURACION" Nullable="false" />
+    <Property Type="Boolean" Name="BLOG" Nullable="false" />
+    <Property Type="String" Name="IMAGEN" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="PROY" Nullable="false" />
+    <Property Type="Boolean" Name="BIBLIO" Nullable="false" />
+    <Property Type="Boolean" Name="ALUMNOS" Nullable="false" />
+    <Property Type="Boolean" Name="PROFESORES" Nullable="false" />
+    <Property Type="Boolean" Name="COBRANZA" Nullable="false" />
+    <Property Type="Boolean" Name="AYUDA" Nullable="false" />
+    <Property Type="Boolean" Name="PAGO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_checkMenuxAppRol_Result">
+    <Property Type="Int64" Name="IDROL" Nullable="true" />
+    <Property Type="String" Name="NOMBREMENU" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_checkMetodo_Result">
+    <Property Type="Int64" Name="IDMETODOS" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="Int64" Name="IDSERVICIOS" Nullable="true" />
+    <Property Type="String" Name="NOMBREMETODO" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="RECURRENTE" Nullable="true" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_checkRolxApp_Result">
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="Int64" Name="IDROL" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_checkServicio_Result">
+    <Property Type="Int64" Name="IDSERVICIOS" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_checkSubMenuxAppRol_Result">
+    <Property Type="Int64" Name="IDPERMISOSXSUBMENU" Nullable="false" />
+    <Property Type="Int64" Name="IDPERMISOSMENU" Nullable="true" />
+    <Property Type="String" Name="NOMBRESUBMENU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TIPOOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="IMAGEN" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="ORDEN" Nullable="true" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_checkUsrXApp_Result">
+    <Property Type="Int64" Name="IDUSRSXAPP" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="true" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_checkXApp_Result">
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getAplicaciones_Result">
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getAppsXUsuario_Result">
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="URLINICIO" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int64" Name="IDUSRSXAPP" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_getContactos_Result">
+    <Property Type="Int64" Name="IDCONTACTO" Nullable="false" />
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="true" />
+    <Property Type="Int32" Name="IDTIPOCONTACTO" Nullable="true" />
+    <Property Type="String" Name="TIPOCONTACTO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VALOR" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getDomicilios_Result">
+    <Property Type="Int64" Name="IDDOMICILIO" Nullable="false" />
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="true" />
+    <Property Type="String" Name="CALLE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NUMEXT" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="NUMINT" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="IDESTADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESTADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IDMUN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MUNICIPIO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IDCOLONIA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COLONIA" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CP" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getElementsObjectsXIdObj_Result">
+    <Property Type="Int64" Name="IDELEMENTOSXOBJ" Nullable="false" />
+    <Property Type="Int64" Name="IDPERMISOSOBJ" Nullable="true" />
+    <Property Type="String" Name="ELEMENTO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEstacionesXApps_Result">
+    <Property Type="Int64" Name="IDESTACIONXAPP" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="Int32" Name="IDESTACION" Nullable="true" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getMenusXAppRol_Result">
+    <Property Type="Int64" Name="IDPERMISOSMENU" Nullable="false" />
+    <Property Type="Int64" Name="IDROL" Nullable="true" />
+    <Property Type="String" Name="NOMBREMENU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IMAGEN" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TIPOOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int32" Name="ORDEN" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getMenusXAppRolAdmin_Result">
+    <Property Type="Int64" Name="IDPERMISOSMENU" Nullable="false" />
+    <Property Type="Int64" Name="IDROL" Nullable="true" />
+    <Property Type="String" Name="NOMBREMENU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IMAGEN" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TIPOOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int32" Name="ORDEN" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getMetodoXApp_Result">
+    <Property Type="Int64" Name="IDMETODOS" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="Int64" Name="IDSERVICIOS" Nullable="true" />
+    <Property Type="String" Name="NOMBREMETODO" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="RECURRENTE" Nullable="true" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getObjetosXAppRolPage_Result">
+    <Property Type="Int64" Name="IDPERMISOSOBJ" Nullable="false" />
+    <Property Type="Int64" Name="IDROL" Nullable="true" />
+    <Property Type="String" Name="PAGINA" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NOMBREOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TIPOOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getPermisoXApp_Result">
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="80" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getRolesXApp_Result">
+    <Property Type="Int64" Name="IDROL" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getRolesXUserApp_Result">
+    <Property Type="Int64" Name="IDROLXUSUARIO" Nullable="false" />
+    <Property Type="Int64" Name="IDROL" Nullable="true" />
+    <Property Type="String" Name="DESCROL" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="true" />
+    <Property Type="Int64" Name="IDESTACIONXAPP" Nullable="true" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="String" Name="DescripcionAplicacion" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="sp_getSubMenusXIdMenu_Result">
+    <Property Type="Int64" Name="IDPERMISOSXSUBMENU" Nullable="false" />
+    <Property Type="Int64" Name="IDPERMISOSMENU" Nullable="true" />
+    <Property Type="String" Name="NOMBRESUBMENU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IMAGEN" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TIPOOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int32" Name="ORDEN" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getSubMenusXIdMenuAdmin_Result">
+    <Property Type="Int64" Name="IDPERMISOSXSUBMENU" Nullable="false" />
+    <Property Type="Int64" Name="IDPERMISOSMENU" Nullable="true" />
+    <Property Type="String" Name="NOMBRESUBMENU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IMAGEN" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TIPOOBJETO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TOOLTIP" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int32" Name="ORDEN" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getUsuario_Result">
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="false" />
+    <Property Type="Int32" Name="IDSEXO" Nullable="true" />
+    <Property Type="Int32" Name="IDTIPOPERSONA" Nullable="true" />
+    <Property Type="Int32" Name="IDESTADOCIVIL" Nullable="true" />
+    <Property Type="Int32" Name="IDAREA" Nullable="true" />
+    <Property Type="String" Name="DESCAREA" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="IDTIPOUSUARIO" Nullable="true" />
+    <Property Type="String" Name="DESCIDTIPOUSUARIO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IDUSUARIOAPP" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="APATERNO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AMATERNO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHANACCONST" Nullable="true" Precision="23" />
+    <Property Type="String" Name="USUARIO" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RUTAFOTOPERFIL" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetCatGenerales_Result">
+    <Property Type="Int32" Name="IDCATGENERALES" Nullable="false" />
+    <Property Type="String" Name="NOMBRECATALOGO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IDCATALOGO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="FILTRO" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetConfigApp_Result">
+    <Property Type="Int32" Name="IDCONFIGAPP" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="VALOR" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetContactos_Result">
+    <Property Type="Int64" Name="IDCONTACTO" Nullable="false" />
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="true" />
+    <Property Type="Int32" Name="IDTIPOCONTACTO" Nullable="true" />
+    <Property Type="String" Name="TIPOCONTACTO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="VALOR" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spGetDomicilios_Result">
+    <Property Type="Int64" Name="IDDOMICILIO" Nullable="false" />
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="true" />
+    <Property Type="String" Name="CALLE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NUMEXT" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="NUMINT" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="IDESTADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ESTADO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IDMUN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MUNICIPIO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IDCOLONIA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="COLONIA" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CP" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetRolesVSUsuario_Result">
+    <Property Type="Int64" Name="IDROL" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="String" Name="APLICACION" Nullable="true" MaxLength="80" />
+    <Property Type="Int64" Name="IDROLXUSUARIO" Nullable="true" />
+    <Property Type="Int32" Name="ROLASIGNADO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetSysTablaCatalogo_Result">
+    <Property Type="Int64" Name="IdTable" Nullable="true" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" />
+  </ComplexType>
+  <ComplexType Name="spGetUsuario_Result">
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="false" />
+    <Property Type="Int32" Name="IDSEXO" Nullable="true" />
+    <Property Type="Int32" Name="IDTIPOPERSONA" Nullable="true" />
+    <Property Type="Int32" Name="IDESTADOCIVIL" Nullable="true" />
+    <Property Type="Int32" Name="IDAREA" Nullable="true" />
+    <Property Type="Int32" Name="IDTIPOUSUARIO" Nullable="true" />
+    <Property Type="String" Name="IDUSUARIOAPP" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="APATERNO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AMATERNO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHANACCONST" Nullable="true" Precision="23" />
+    <Property Type="String" Name="USUARIO" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RUTAFOTOPERFIL" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetUsuarios_Result">
+    <Property Type="Int64" Name="IDUSUARIO" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="String" Name="AREA" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="APATERNO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AMATERNO" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="FECHANACCONST" Nullable="true" Precision="23" />
+    <Property Type="String" Name="USUARIO" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spRolesVSUsuario_Result">
+    <Property Type="Int64" Name="IDROL" Nullable="false" />
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="true" />
+    <Property Type="String" Name="APLICACION" Nullable="true" MaxLength="80" />
+    <Property Type="Int64" Name="IDROLXUSUARIO" Nullable="true" />
+  </ComplexType>
+</Schema>

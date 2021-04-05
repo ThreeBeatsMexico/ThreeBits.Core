@@ -48,7 +48,8 @@
             <div class="form-group">
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="checkbox" checked="@Model.ACTIVO" name="ACTIVO" id="ACTIVO" class="form-check-input">
+                        @Html.CheckBoxFor(model => model.ACTIVO, new { @class = "form-check-input" })
+                       
                         <span class="checkbox-icon fuse-ripple-ready"></span>
                         <span>ACTIVO</span>
                     </label>

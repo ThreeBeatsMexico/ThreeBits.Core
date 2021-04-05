@@ -64,6 +64,29 @@ namespace ThreeBits.Entities.Security
             get { return bACTIVO; }
             set { bACTIVO = value; }
         }
+        private String sJWTKEY;
+
+        public String jwtKey
+        {
+            get { return sJWTKEY; }
+            set { sJWTKEY = value; }
+        }
+
+        private string sXAPPID;
+
+        public string xAppId
+        {
+            get { return sXAPPID; }
+            set { sXAPPID = value; }
+        }
+
+        private int iJWTEXPIRATION;
+
+        public int jwtExpirationTime
+        {
+            get { return iJWTEXPIRATION; }
+            set { iJWTEXPIRATION = value; }
+        }
 
     }
 }

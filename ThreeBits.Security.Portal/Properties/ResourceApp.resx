@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="IdApp" xml:space="preserve">
-    <value>10014</value>
+    <value>1</value>
     <comment>Id de la Aplicacion</comment>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>8867D9A814621270A8D427</value>
+    <value>8426D7AD5F1C433DF38F7A9E2C</value>
     <comment>Password de la Aplicacion</comment>
   </data>
 </root>

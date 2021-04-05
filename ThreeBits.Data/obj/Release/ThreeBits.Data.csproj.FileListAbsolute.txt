@@ -12,3 +12,17 @@ C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.csproj.CopyComplete
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.dll
 C:\Users\Julio Cesar Martinez\Documents\GitHub\3BWebApi\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\ThreeBits.Data.dll.config
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\ThreeBits.Data.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\ThreeBits.Data.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\EntityFramework.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\ThreeBits.Entities.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\ThreeBits.Entities.pdb
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\EntityFramework.xml
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.csprojAssemblyReference.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.csproj.CopyComplete
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.dll
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Release\ThreeBits.Data.pdb

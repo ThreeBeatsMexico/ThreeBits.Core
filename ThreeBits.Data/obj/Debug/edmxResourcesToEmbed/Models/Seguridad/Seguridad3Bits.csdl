@@ -8,6 +8,9 @@
     <Property Name="DESCRIPCION" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="PASSWORD" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="URLINICIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="XAPPID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="JWTKEY" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="JWTEXPIRATIONTIME" Type="Int32" />
     <Property Name="ACTIVO" Type="Boolean" />
     <NavigationProperty Name="AUDIT_USUARIOS" Relationship="Self.FK_AUDITUSUARIOS_REF_APLICACION" FromRole="APLICACION" ToRole="AUDIT_USUARIOS" />
     <NavigationProperty Name="ESTACIONESXAPP" Relationship="Self.FK_ESTACIONXAPP_REF_APLICACION" FromRole="APLICACION" ToRole="ESTACIONESXAPP" />
@@ -754,7 +757,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Seguridad3BitsEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Seguridad3BitsEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="APLICACION" EntityType="Self.APLICACION" />
     <EntitySet Name="AUDIT_CONTACTO" EntityType="Self.AUDIT_CONTACTO" />
     <EntitySet Name="AUDIT_DOMICILIO" EntityType="Self.AUDIT_DOMICILIO" />
@@ -1328,6 +1331,9 @@
       <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
       <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
     </FunctionImport>
+    <FunctionImport Name="spGetAppInfo" ReturnType="Collection(Seguridad3BitsModel.spGetAppInfo_Result)">
+      <Parameter Name="xAppId" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="spGetCatEspecifico">
       <Parameter Name="IDCATGENERALES" Mode="In" Type="Int32" />
       <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
@@ -1649,6 +1655,15 @@
     <Property Type="DateTime" Name="FECHAALTA" Nullable="true" Precision="23" />
     <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
     <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetAppInfo_Result">
+    <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+    <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="URLINICIO" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="XAPPID" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="JWTKEY" Nullable="true" MaxLength="80" />
+    <Property Type="Int32" Name="JWTEXPIRATIONTIME" Nullable="true" />
   </ComplexType>
   <ComplexType Name="spGetCatGenerales_Result">
     <Property Type="Int32" Name="IDCATGENERALES" Nullable="false" />

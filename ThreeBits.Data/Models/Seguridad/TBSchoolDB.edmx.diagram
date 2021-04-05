@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ee9755b6cb64462cb6f0f275ee8cbc51" Name="Diagram1">
+        <EntityTypeShape EntityType="IELibertadDBModel.ALUMNOS" Width="1.5" PointX="13.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.APLICACION" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.AUDIT_CONTACTO" Width="1.5" PointX="11.25" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.AUDIT_DOMICILIO" Width="1.5" PointX="11.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.AUDIT_USUARIOS" Width="1.5" PointX="11.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_AREA" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_ESTACIONES" Width="1.5" PointX="3.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_ESTADOCIVIL" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_GRALS" Width="1.5" PointX="13.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_OPERACIONAUDIT" Width="1.5" PointX="9" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_SEXO" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_TIPOCONTACTO" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_TIPOPERSONA" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CAT_TIPOUSUARIO" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CATEGORIA" Width="1.5" PointX="17.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CATGENERALES" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CLIENTES" Width="1.5" PointX="2.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.COMENTARIO" Width="1.5" PointX="22.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CONFIGAPP" Width="1.5" PointX="17.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CONTACTO" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.DOMICILIO" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.EMPRESAS" Width="1.5" PointX="15.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.ESTACIONESXAPP" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.LOGERROR" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.NUMERACION" Width="1.5" PointX="17.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.PERMISOSXELEMENTOSOBJETO" Width="1.5" PointX="10.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.PERMISOSXMENU" Width="1.5" PointX="8.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.PERMISOSXSUBMENU" Width="1.5" PointX="10.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.PERMISOXOBJETOS" Width="1.5" PointX="8.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.POST" Width="1.5" PointX="20" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.PRODUCTOS" Width="1.5" PointX="15" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.ROLES" Width="1.5" PointX="6" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.ROLESXUSUARIO" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.TBL_CHATMESSAGES" Width="1.5" PointX="19.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.TBL_USERSTATUS" Width="1.5" PointX="19.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.UNIDAD_MEDIDA" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.USERS" Width="1.5" PointX="19.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.USUARIOS" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.USUARIOXAPLICACION" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.VENTA" Width="1.5" PointX="15" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.VENTA_DETALLE" Width="1.5" PointX="17.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.VENTA_DETALLE_TMP" Width="1.5" PointX="17.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.WCFMETODOS" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.WCFRECURRENCIA" Width="1.5" PointX="10.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.WCFSERVICIOS" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.CICLO" Width="1.5" PointX="19.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.Colonias" Width="1.5" PointX="21.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.ColoniasIEL" Width="1.5" PointX="21.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.Estados" Width="1.5" PointX="21.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.FORMATOS" Width="1.5" PointX="21.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.GRUPO" Width="1.5" PointX="21.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.INFOALUMNOS" Width="1.5" PointX="0.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.Municipios" Width="1.5" PointX="2.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.NUMERACIONES" Width="1.5" PointX="15.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.PAGOSALUMNO" Width="1.5" PointX="23.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.TPOPROY" Width="1.5" PointX="23.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.TRANSACCIONES" Width="1.5" PointX="23.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IELibertadDBModel.VWCATTABLASCATALOGOS" Width="1.5" PointX="23.75" PointY="19.625" IsExpanded="true" />
+        <AssociationConnector Association="IELibertadDBModel.FK_AUDITUSUARIOS_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_ESTACIONXAPP_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_LOGERROR_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_ROLES_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOXAPP_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_WCFMETODOS_REF_APLICACION" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_AUDITCONTACTO_REF_CATOPERAUDIT" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_AUDITDOM_REF_CATOPERAUDIT" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_AUDITUSUARIOS_REF_CATOPERAUDIT" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOS_REF_CAT_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_ESTACIONESXAPP_REF_CAT_ESTACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOS_REF_CATEDOCIVIL" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOS_REF_CATSEXO" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_CONTACTO_REF_CATTIPOCONTACTO" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOS_REF_CATTIPOPERSONA" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOS_REF_CATTIPOUSUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_Comentario_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_CONTACTO_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_DOMICILIO_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_ROLESXUS_REF_ESTACIONESAPP" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_PERMISOSXOBJ_REF_PERMISOELEMXOBJS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_PERMISOSXMENU_REF_PERMISOSXSUBMENU" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_PERMISOSXMENU_REF_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_PERMISOXOBJETO_REF_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_productos_unidad_medida" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_venta_detalle_productos" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_venta_detalle_tmp_productos" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_ROLESXPERFIL_REF_ROLES" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_ROLESXUSUARIO_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_USUARIOXAPP_REF_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_venta_detalle_venta" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_WCFMETODOS_REF_WCFSERVICIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.FK_WCFRECURRENCIA_REF_WCFMETODOS" ManuallyRouted="false" />
+        <AssociationConnector Association="IELibertadDBModel.POSTCATEGORIA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

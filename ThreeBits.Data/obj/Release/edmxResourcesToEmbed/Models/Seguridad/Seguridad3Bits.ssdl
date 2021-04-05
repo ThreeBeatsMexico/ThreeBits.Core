@@ -8,6 +8,9 @@
     <Property Name="DESCRIPCION" Type="varchar" MaxLength="80" />
     <Property Name="PASSWORD" Type="varchar" MaxLength="80" />
     <Property Name="URLINICIO" Type="varchar" MaxLength="200" />
+    <Property Name="XAPPID" Type="nvarchar" MaxLength="80" />
+    <Property Name="JWTKEY" Type="nvarchar" MaxLength="80" />
+    <Property Name="JWTEXPIRATIONTIME" Type="int" />
     <Property Name="ACTIVO" Type="bit" />
   </EntityType>
   <EntityType Name="AUDIT_CONTACTO">
@@ -1129,6 +1132,9 @@ advertencia 6002: La tabla o vista 'Seguridad3Bits.dbo.VWCATTABLASCATALOGOS' no 
     <Parameter Name="IDAPLICACION" Type="bigint" Mode="In" />
     <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
     <Parameter Name="ACTIVO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGetAppInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="xAppId" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="spGetCatEspecifico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IDCATGENERALES" Type="int" Mode="In" />

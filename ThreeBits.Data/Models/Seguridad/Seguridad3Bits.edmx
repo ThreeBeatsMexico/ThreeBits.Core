@@ -13,6 +13,9 @@
           <Property Name="DESCRIPCION" Type="varchar" MaxLength="80" />
           <Property Name="PASSWORD" Type="varchar" MaxLength="80" />
           <Property Name="URLINICIO" Type="varchar" MaxLength="200" />
+          <Property Name="XAPPID" Type="nvarchar" MaxLength="80" />
+          <Property Name="JWTKEY" Type="nvarchar" MaxLength="80" />
+          <Property Name="JWTEXPIRATIONTIME" Type="int" />
           <Property Name="ACTIVO" Type="bit" />
         </EntityType>
         <EntityType Name="AUDIT_CONTACTO">
@@ -361,7 +364,7 @@
           <Property Name="ACTIVO" Type="bit" />
         </EntityType>
         <!--Errores durante la generación:
-advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+advertencia 6002: La tabla o vista 'Seguridad3Bits.dbo.VWCATTABLASCATALOGOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="VWCATTABLASCATALOGOS">
           <Key>
             <PropertyRef Name="name" />
@@ -1135,6 +1138,9 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
           <Parameter Name="IDUSUARIO" Type="bigint" Mode="In" />
           <Parameter Name="ACTIVO" Type="bit" Mode="In" />
         </Function>
+        <Function Name="spGetAppInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="xAppId" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="spGetCatEspecifico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDCATGENERALES" Type="int" Mode="In" />
           <Parameter Name="NOMBRECATALOGO" Type="nvarchar" Mode="In" />
@@ -1416,6 +1422,9 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
           <Property Name="DESCRIPCION" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="PASSWORD" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="URLINICIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="XAPPID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="JWTKEY" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="JWTEXPIRATIONTIME" Type="Int32" />
           <Property Name="ACTIVO" Type="Boolean" />
           <NavigationProperty Name="AUDIT_USUARIOS" Relationship="Self.FK_AUDITUSUARIOS_REF_APLICACION" FromRole="APLICACION" ToRole="AUDIT_USUARIOS" />
           <NavigationProperty Name="ESTACIONESXAPP" Relationship="Self.FK_ESTACIONXAPP_REF_APLICACION" FromRole="APLICACION" ToRole="ESTACIONESXAPP" />
@@ -2162,7 +2171,7 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Seguridad3BitsEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Seguridad3BitsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="APLICACION" EntityType="Self.APLICACION" />
           <EntitySet Name="AUDIT_CONTACTO" EntityType="Self.AUDIT_CONTACTO" />
           <EntitySet Name="AUDIT_DOMICILIO" EntityType="Self.AUDIT_DOMICILIO" />
@@ -2736,6 +2745,9 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
             <Parameter Name="IDUSUARIO" Mode="In" Type="Int64" />
             <Parameter Name="ACTIVO" Mode="In" Type="Boolean" />
           </FunctionImport>
+          <FunctionImport Name="spGetAppInfo" ReturnType="Collection(Seguridad3BitsModel.spGetAppInfo_Result)">
+            <Parameter Name="xAppId" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="spGetCatEspecifico">
             <Parameter Name="IDCATGENERALES" Mode="In" Type="Int32" />
             <Parameter Name="NOMBRECATALOGO" Mode="In" Type="String" />
@@ -3058,6 +3070,15 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
           <Property Type="Boolean" Name="ACTIVO" Nullable="true" />
           <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
         </ComplexType>
+        <ComplexType Name="spGetAppInfo_Result">
+          <Property Type="Int64" Name="IDAPLICACION" Nullable="false" />
+          <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="URLINICIO" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="XAPPID" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="JWTKEY" Nullable="true" MaxLength="80" />
+          <Property Type="Int32" Name="JWTEXPIRATIONTIME" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="spGetCatGenerales_Result">
           <Property Type="Int32" Name="IDCATGENERALES" Nullable="false" />
           <Property Type="String" Name="NOMBRECATALOGO" Nullable="true" MaxLength="100" />
@@ -3148,7 +3169,7 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Seguridad3BitsModelStoreContainer" CdmEntityContainer="Seguridad3BitsEntities1">
+        <EntityContainerMapping StorageEntityContainer="Seguridad3BitsModelStoreContainer" CdmEntityContainer="Seguridad3BitsEntities">
           <EntitySetMapping Name="APLICACION">
             <EntityTypeMapping TypeName="Seguridad3BitsModel.APLICACION">
               <MappingFragment StoreEntitySet="APLICACION">
@@ -3156,6 +3177,9 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
                 <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
                 <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
                 <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+                <ScalarProperty Name="XAPPID" ColumnName="XAPPID" />
+                <ScalarProperty Name="JWTKEY" ColumnName="JWTKEY" />
+                <ScalarProperty Name="JWTEXPIRATIONTIME" ColumnName="JWTEXPIRATIONTIME" />
                 <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -3872,6 +3896,19 @@ advertencia 6002: La tabla o vista "Seguridad3Bits.dbo.VWCATTABLASCATALOGOS" no 
           <FunctionImportMapping FunctionImportName="spAddDomicilio" FunctionName="Seguridad3BitsModel.Store.spAddDomicilio" />
           <FunctionImportMapping FunctionImportName="spAddUsuario" FunctionName="Seguridad3BitsModel.Store.spAddUsuario" />
           <FunctionImportMapping FunctionImportName="spAddUsuarioXAplicacion" FunctionName="Seguridad3BitsModel.Store.spAddUsuarioXAplicacion" />
+          <FunctionImportMapping FunctionImportName="spGetAppInfo" FunctionName="Seguridad3BitsModel.Store.spGetAppInfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Seguridad3BitsModel.spGetAppInfo_Result">
+                <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+                <ScalarProperty Name="XAPPID" ColumnName="XAPPID" />
+                <ScalarProperty Name="JWTKEY" ColumnName="JWTKEY" />
+                <ScalarProperty Name="JWTEXPIRATIONTIME" ColumnName="JWTEXPIRATIONTIME" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="spGetCatEspecifico" FunctionName="Seguridad3BitsModel.Store.spGetCatEspecifico" />
           <FunctionImportMapping FunctionImportName="spGetCatGenerales" FunctionName="Seguridad3BitsModel.Store.spGetCatGenerales">
             <ResultMapping>

@@ -110,11 +110,7 @@ namespace ThreeBits.Security.Portal.Helpers
             lstDdl.Add(item);
             lstDdl.AddRange(Respuesta.lstCatalogo);
             return lstDdl;
-            //ddl.DataSource = lstDdl;
-            //ddl.DataValueField = "ID";
-            //ddl.DataTextField = "DESCRIPCION";
-
-            //ddl.DataBind();
+           
         }
         public byte[] UrltoByte(string fileName)
         {

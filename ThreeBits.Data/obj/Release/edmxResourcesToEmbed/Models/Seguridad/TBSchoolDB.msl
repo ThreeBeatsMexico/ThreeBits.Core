@@ -1,0 +1,1738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IELibertadDBModelStoreContainer" CdmEntityContainer="IELibertadDBEntities">
+    <EntitySetMapping Name="ALUMNOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.ALUMNOS">
+        <MappingFragment StoreEntitySet="ALUMNOS">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="NUMEROMATRICULA" ColumnName="NUMEROMATRICULA" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="FECHAMATRICULA" ColumnName="FECHAMATRICULA" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="NUMEROLISTA" ColumnName="NUMEROLISTA" />
+          <ScalarProperty Name="ESCUELAPROCEDENCIA" ColumnName="ESCUELAPROCEDENCIA" />
+          <ScalarProperty Name="HERMANOS" ColumnName="HERMANOS" />
+          <ScalarProperty Name="GRADOHERMANOS" ColumnName="GRADOHERMANOS" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOPOSTAL" ColumnName="CODIGOPOSTAL" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="EDADANOS" ColumnName="EDADANOS" />
+          <ScalarProperty Name="EDADMESES" ColumnName="EDADMESES" />
+          <ScalarProperty Name="TUTOR" ColumnName="TUTOR" />
+          <ScalarProperty Name="USUARIOALTA" ColumnName="USUARIOALTA" />
+          <ScalarProperty Name="USUARIOMODIFICA" ColumnName="USUARIOMODIFICA" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="FECHAMODIFICA" ColumnName="FECHAMODIFICA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="NIVELACADEMICO" ColumnName="NIVELACADEMICO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="SERVERPATH" ColumnName="SERVERPATH" />
+          <ScalarProperty Name="BECA" ColumnName="BECA" />
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="FORMAPAGO" ColumnName="FORMAPAGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APLICACION">
+      <EntityTypeMapping TypeName="IELibertadDBModel.APLICACION">
+        <MappingFragment StoreEntitySet="APLICACION">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDIT_CONTACTO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.AUDIT_CONTACTO">
+        <MappingFragment StoreEntitySet="AUDIT_CONTACTO">
+          <ScalarProperty Name="IDCONTACTOAUDIT" ColumnName="IDCONTACTOAUDIT" />
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVOCONTACTO" ColumnName="ACTIVOCONTACTO" />
+          <ScalarProperty Name="IDUSERMODIFICA" ColumnName="IDUSERMODIFICA" />
+          <ScalarProperty Name="IDAPPMODIFICA" ColumnName="IDAPPMODIFICA" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDIT_DOMICILIO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.AUDIT_DOMICILIO">
+        <MappingFragment StoreEntitySet="AUDIT_DOMICILIO">
+          <ScalarProperty Name="IDDOMICILIOAUDIT" ColumnName="IDDOMICILIOAUDIT" />
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVODOM" ColumnName="ACTIVODOM" />
+          <ScalarProperty Name="IDUSERMODIFICA" ColumnName="IDUSERMODIFICA" />
+          <ScalarProperty Name="IDAPPMODIFICA" ColumnName="IDAPPMODIFICA" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUDIT_USUARIOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.AUDIT_USUARIOS">
+        <MappingFragment StoreEntitySet="AUDIT_USUARIOS">
+          <ScalarProperty Name="IDUSUARIOAUDIT" ColumnName="IDUSUARIOAUDIT" />
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVOUSR" ColumnName="ACTIVOUSR" />
+          <ScalarProperty Name="IDUSERMODIFICA" ColumnName="IDUSERMODIFICA" />
+          <ScalarProperty Name="IDAPPMODIFICA" ColumnName="IDAPPMODIFICA" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_AREA">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_AREA">
+        <MappingFragment StoreEntitySet="CAT_AREA">
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_ESTACIONES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_ESTACIONES">
+        <MappingFragment StoreEntitySet="CAT_ESTACIONES">
+          <ScalarProperty Name="IDESTACION" ColumnName="IDESTACION" />
+          <ScalarProperty Name="DESRIPCION" ColumnName="DESRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_ESTADOCIVIL">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_ESTADOCIVIL">
+        <MappingFragment StoreEntitySet="CAT_ESTADOCIVIL">
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_GRALS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_GRALS">
+        <MappingFragment StoreEntitySet="CAT_GRALS">
+          <ScalarProperty Name="IDCATGRAL" ColumnName="IDCATGRAL" />
+          <ScalarProperty Name="NOMBRETABLA" ColumnName="NOMBRETABLA" />
+          <ScalarProperty Name="IDTABLA" ColumnName="IDTABLA" />
+          <ScalarProperty Name="DESCRIPCIONTABLA" ColumnName="DESCRIPCIONTABLA" />
+          <ScalarProperty Name="IDFILTRO" ColumnName="IDFILTRO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_OPERACIONAUDIT">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_OPERACIONAUDIT">
+        <MappingFragment StoreEntitySet="CAT_OPERACIONAUDIT">
+          <ScalarProperty Name="IDOPERACIONAUDIT" ColumnName="IDOPERACIONAUDIT" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_SEXO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_SEXO">
+        <MappingFragment StoreEntitySet="CAT_SEXO">
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_TIPOCONTACTO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_TIPOCONTACTO">
+        <MappingFragment StoreEntitySet="CAT_TIPOCONTACTO">
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_TIPOPERSONA">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_TIPOPERSONA">
+        <MappingFragment StoreEntitySet="CAT_TIPOPERSONA">
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAT_TIPOUSUARIO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CAT_TIPOUSUARIO">
+        <MappingFragment StoreEntitySet="CAT_TIPOUSUARIO">
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIA">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CATEGORIA">
+        <MappingFragment StoreEntitySet="CATEGORIA">
+          <ScalarProperty Name="CATEGORIAID" ColumnName="CATEGORIAID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="IMAGECAT" ColumnName="IMAGECAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATGENERALES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CATGENERALES">
+        <MappingFragment StoreEntitySet="CATGENERALES">
+          <ScalarProperty Name="IDCATGENERALES" ColumnName="IDCATGENERALES" />
+          <ScalarProperty Name="NOMBRECATALOGO" ColumnName="NOMBRECATALOGO" />
+          <ScalarProperty Name="IDCATALOGO" ColumnName="IDCATALOGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="FILTRO" ColumnName="FILTRO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CLIENTES">
+        <MappingFragment StoreEntitySet="CLIENTES">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="RFCRECEP" ColumnName="RFCRECEP" />
+          <ScalarProperty Name="NMBRECEP" ColumnName="NMBRECEP" />
+          <ScalarProperty Name="CALLER" ColumnName="CALLER" />
+          <ScalarProperty Name="NROEXTR" ColumnName="NROEXTR" />
+          <ScalarProperty Name="NROINTR" ColumnName="NROINTR" />
+          <ScalarProperty Name="COLONIAR" ColumnName="COLONIAR" />
+          <ScalarProperty Name="MUNICIPIOR" ColumnName="MUNICIPIOR" />
+          <ScalarProperty Name="LOCALIDADR" ColumnName="LOCALIDADR" />
+          <ScalarProperty Name="ESTADOR" ColumnName="ESTADOR" />
+          <ScalarProperty Name="PAISRECEP" ColumnName="PAISRECEP" />
+          <ScalarProperty Name="CPRECEP" ColumnName="CPRECEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMENTARIO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.COMENTARIO">
+        <MappingFragment StoreEntitySet="COMENTARIO">
+          <ScalarProperty Name="COMENTARIOID" ColumnName="COMENTARIOID" />
+          <ScalarProperty Name="POSTID" ColumnName="POSTID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFIGAPP">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CONFIGAPP">
+        <MappingFragment StoreEntitySet="CONFIGAPP">
+          <ScalarProperty Name="IDCONFIGAPP" ColumnName="IDCONFIGAPP" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CONTACTO">
+        <MappingFragment StoreEntitySet="CONTACTO">
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOMICILIO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.DOMICILIO">
+        <MappingFragment StoreEntitySet="DOMICILIO">
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESAS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.EMPRESAS">
+        <MappingFragment StoreEntitySet="EMPRESAS">
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="RFCEMISOR" ColumnName="RFCEMISOR" />
+          <ScalarProperty Name="NMBEMISOR" ColumnName="NMBEMISOR" />
+          <ScalarProperty Name="CALLEE" ColumnName="CALLEE" />
+          <ScalarProperty Name="NROEXTE" ColumnName="NROEXTE" />
+          <ScalarProperty Name="NROINTE" ColumnName="NROINTE" />
+          <ScalarProperty Name="COLONIAE" ColumnName="COLONIAE" />
+          <ScalarProperty Name="MUNICIPIOE" ColumnName="MUNICIPIOE" />
+          <ScalarProperty Name="LOCALIDADE" ColumnName="LOCALIDADE" />
+          <ScalarProperty Name="ESTADOE" ColumnName="ESTADOE" />
+          <ScalarProperty Name="PAISEMISOR" ColumnName="PAISEMISOR" />
+          <ScalarProperty Name="CPEMISOR" ColumnName="CPEMISOR" />
+          <ScalarProperty Name="NMBREGIMEN" ColumnName="NMBREGIMEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTACIONESXAPP">
+      <EntityTypeMapping TypeName="IELibertadDBModel.ESTACIONESXAPP">
+        <MappingFragment StoreEntitySet="ESTACIONESXAPP">
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDESTACION" ColumnName="IDESTACION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGERROR">
+      <EntityTypeMapping TypeName="IELibertadDBModel.LOGERROR">
+        <MappingFragment StoreEntitySet="LOGERROR">
+          <ScalarProperty Name="IDLOGERROR" ColumnName="IDLOGERROR" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="VCHMENSAJE" ColumnName="VCHMENSAJE" />
+          <ScalarProperty Name="VCHHOSTNAME" ColumnName="VCHHOSTNAME" />
+          <ScalarProperty Name="VCHIP" ColumnName="VCHIP" />
+          <ScalarProperty Name="VCHSTACKTRACE" ColumnName="VCHSTACKTRACE" />
+          <ScalarProperty Name="DTFECHAERROR" ColumnName="DTFECHAERROR" />
+          <ScalarProperty Name="VCHUSUARIO" ColumnName="VCHUSUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NUMERACION">
+      <EntityTypeMapping TypeName="IELibertadDBModel.NUMERACION">
+        <MappingFragment StoreEntitySet="NUMERACION">
+          <ScalarProperty Name="ID_NUMERACION" ColumnName="ID_NUMERACION" />
+          <ScalarProperty Name="ID_DOCTYPE" ColumnName="ID_DOCTYPE" />
+          <ScalarProperty Name="NMBSERIE" ColumnName="NMBSERIE" />
+          <ScalarProperty Name="NMBNUMBERFROM" ColumnName="NMBNUMBERFROM" />
+          <ScalarProperty Name="NMBCURRENTNUMBER" ColumnName="NMBCURRENTNUMBER" />
+          <ScalarProperty Name="NMBNUMBERTO" ColumnName="NMBNUMBERTO" />
+          <ScalarProperty Name="NMBAUTHNUMBER" ColumnName="NMBAUTHNUMBER" />
+          <ScalarProperty Name="NMBAUTHDATE" ColumnName="NMBAUTHDATE" />
+          <ScalarProperty Name="NMBRFC" ColumnName="NMBRFC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOSXELEMENTOSOBJETO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.PERMISOSXELEMENTOSOBJETO">
+        <MappingFragment StoreEntitySet="PERMISOSXELEMENTOSOBJETO">
+          <ScalarProperty Name="IDELEMENTOSXOBJ" ColumnName="IDELEMENTOSXOBJ" />
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="ELEMENTO" ColumnName="ELEMENTO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOSXMENU">
+      <EntityTypeMapping TypeName="IELibertadDBModel.PERMISOSXMENU">
+        <MappingFragment StoreEntitySet="PERMISOSXMENU">
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOSXSUBMENU">
+      <EntityTypeMapping TypeName="IELibertadDBModel.PERMISOSXSUBMENU">
+        <MappingFragment StoreEntitySet="PERMISOSXSUBMENU">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISOXOBJETOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.PERMISOXOBJETOS">
+        <MappingFragment StoreEntitySet="PERMISOXOBJETOS">
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="PAGINA" ColumnName="PAGINA" />
+          <ScalarProperty Name="NOMBREOBJETO" ColumnName="NOMBREOBJETO" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POST">
+      <EntityTypeMapping TypeName="IELibertadDBModel.POST">
+        <MappingFragment StoreEntitySet="POST">
+          <ScalarProperty Name="POSTID" ColumnName="POSTID" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="POSTEADOPOR" ColumnName="POSTEADOPOR" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PUBLICADO" ColumnName="PUBLICADO" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.PRODUCTOS">
+        <MappingFragment StoreEntitySet="PRODUCTOS">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+          <ScalarProperty Name="ID_UNIDAD_MEDIDA" ColumnName="ID_UNIDAD_MEDIDA" />
+          <ScalarProperty Name="P_COMPRA" ColumnName="P_COMPRA" />
+          <ScalarProperty Name="P_VENTA" ColumnName="P_VENTA" />
+          <ScalarProperty Name="EXISTENCIA" ColumnName="EXISTENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLESXUSUARIO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.ROLESXUSUARIO">
+        <MappingFragment StoreEntitySet="ROLESXUSUARIO">
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_CHATMESSAGES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.TBL_CHATMESSAGES">
+        <MappingFragment StoreEntitySet="TBL_CHATMESSAGES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CHATID" ColumnName="CHATID" />
+          <ScalarProperty Name="SENDERNAME" ColumnName="SENDERNAME" />
+          <ScalarProperty Name="SENDERID" ColumnName="SENDERID" />
+          <ScalarProperty Name="RECIPIENTID" ColumnName="RECIPIENTID" />
+          <ScalarProperty Name="RECIPIENTNAME" ColumnName="RECIPIENTNAME" />
+          <ScalarProperty Name="MESSAGEBODY" ColumnName="MESSAGEBODY" />
+          <ScalarProperty Name="ISTYPING" ColumnName="ISTYPING" />
+          <ScalarProperty Name="MESSAGETIME" ColumnName="MESSAGETIME" />
+          <ScalarProperty Name="ISREAD" ColumnName="ISREAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USERSTATUS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.TBL_USERSTATUS">
+        <MappingFragment StoreEntitySet="TBL_USERSTATUS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="THEME" ColumnName="THEME" />
+          <ScalarProperty Name="SOUND" ColumnName="SOUND" />
+          <ScalarProperty Name="AVATAR" ColumnName="AVATAR" />
+          <ScalarProperty Name="PROFILELINK" ColumnName="PROFILELINK" />
+          <ScalarProperty Name="LASTLOGIN" ColumnName="LASTLOGIN" />
+          <ScalarProperty Name="LASTACTIVITY" ColumnName="LASTACTIVITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIDAD_MEDIDA">
+      <EntityTypeMapping TypeName="IELibertadDBModel.UNIDAD_MEDIDA">
+        <MappingFragment StoreEntitySet="UNIDAD_MEDIDA">
+          <ScalarProperty Name="ID_UNIDAD_MEDIDA" ColumnName="ID_UNIDAD_MEDIDA" />
+          <ScalarProperty Name="UNIDAD_MEDIDA1" ColumnName="UNIDAD_MEDIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.USERS">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="VENTAS" ColumnName="VENTAS" />
+          <ScalarProperty Name="REPORTES" ColumnName="REPORTES" />
+          <ScalarProperty Name="ADMINISTRAR" ColumnName="ADMINISTRAR" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="PRODUCTOS" ColumnName="PRODUCTOS" />
+          <ScalarProperty Name="CLIENTES" ColumnName="CLIENTES" />
+          <ScalarProperty Name="FACTURACION" ColumnName="FACTURACION" />
+          <ScalarProperty Name="BLOG" ColumnName="BLOG" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="PROY" ColumnName="PROY" />
+          <ScalarProperty Name="BIBLIO" ColumnName="BIBLIO" />
+          <ScalarProperty Name="ALUMNOS" ColumnName="ALUMNOS" />
+          <ScalarProperty Name="PROFESORES" ColumnName="PROFESORES" />
+          <ScalarProperty Name="COBRANZA" ColumnName="COBRANZA" />
+          <ScalarProperty Name="AYUDA" ColumnName="AYUDA" />
+          <ScalarProperty Name="PAGO" ColumnName="PAGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOXAPLICACION">
+      <EntityTypeMapping TypeName="IELibertadDBModel.USUARIOXAPLICACION">
+        <MappingFragment StoreEntitySet="USUARIOXAPLICACION">
+          <ScalarProperty Name="IDUSRSXAPP" ColumnName="IDUSRSXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTA">
+      <EntityTypeMapping TypeName="IELibertadDBModel.VENTA">
+        <MappingFragment StoreEntitySet="VENTA">
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
+          <ScalarProperty Name="DOCSERIE" ColumnName="DOCSERIE" />
+          <ScalarProperty Name="DOCNUMBER" ColumnName="DOCNUMBER" />
+          <ScalarProperty Name="DOCDATE" ColumnName="DOCDATE" />
+          <ScalarProperty Name="TPODOC" ColumnName="TPODOC" />
+          <ScalarProperty Name="RFCEMISOR" ColumnName="RFCEMISOR" />
+          <ScalarProperty Name="NMBEMISOR" ColumnName="NMBEMISOR" />
+          <ScalarProperty Name="RFCRECEP" ColumnName="RFCRECEP" />
+          <ScalarProperty Name="NMBRECEP" ColumnName="NMBRECEP" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+          <ScalarProperty Name="VALORPALABRAS" ColumnName="VALORPALABRAS" />
+          <ScalarProperty Name="METODO" ColumnName="METODO" />
+          <ScalarProperty Name="CTAPAGO" ColumnName="CTAPAGO" />
+          <ScalarProperty Name="LUGAREXP" ColumnName="LUGAREXP" />
+          <ScalarProperty Name="TPOCAMBIO" ColumnName="TPOCAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTA_DETALLE">
+      <EntityTypeMapping TypeName="IELibertadDBModel.VENTA_DETALLE">
+        <MappingFragment StoreEntitySet="VENTA_DETALLE">
+          <ScalarProperty Name="ID_VENTA_DETALLE" ColumnName="ID_VENTA_DETALLE" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="P_VENTA" ColumnName="P_VENTA" />
+          <ScalarProperty Name="ADUANA" ColumnName="ADUANA" />
+          <ScalarProperty Name="PEDIMENTO" ColumnName="PEDIMENTO" />
+          <ScalarProperty Name="F_PEDIMENTO" ColumnName="F_PEDIMENTO" />
+          <ScalarProperty Name="PREDIAL" ColumnName="PREDIAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTA_DETALLE_TMP">
+      <EntityTypeMapping TypeName="IELibertadDBModel.VENTA_DETALLE_TMP">
+        <MappingFragment StoreEntitySet="VENTA_DETALLE_TMP">
+          <ScalarProperty Name="ID_VENTA_DETALLE_TMP" ColumnName="ID_VENTA_DETALLE_TMP" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
+          <ScalarProperty Name="P_VENTA" ColumnName="P_VENTA" />
+          <ScalarProperty Name="ADUANA" ColumnName="ADUANA" />
+          <ScalarProperty Name="PEDIMENTO" ColumnName="PEDIMENTO" />
+          <ScalarProperty Name="F_PEDIMENTO" ColumnName="F_PEDIMENTO" />
+          <ScalarProperty Name="PREDIAL" ColumnName="PREDIAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WCFMETODOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.WCFMETODOS">
+        <MappingFragment StoreEntitySet="WCFMETODOS">
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="NOMBREMETODO" ColumnName="NOMBREMETODO" />
+          <ScalarProperty Name="RECURRENTE" ColumnName="RECURRENTE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WCFRECURRENCIA">
+      <EntityTypeMapping TypeName="IELibertadDBModel.WCFRECURRENCIA">
+        <MappingFragment StoreEntitySet="WCFRECURRENCIA">
+          <ScalarProperty Name="IDRECURRENCIA" ColumnName="IDRECURRENCIA" />
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="FECHAACCESO" ColumnName="FECHAACCESO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WCFSERVICIOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.WCFSERVICIOS">
+        <MappingFragment StoreEntitySet="WCFSERVICIOS">
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CICLO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.CICLO">
+        <MappingFragment StoreEntitySet="CICLO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRECICLO" ColumnName="NOMBRECICLO" />
+          <ScalarProperty Name="FECHAINICIO" ColumnName="FECHAINICIO" />
+          <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+          <ScalarProperty Name="MONTOINSCRIPCION" ColumnName="MONTOINSCRIPCION" />
+          <ScalarProperty Name="MONTOCOLEGIATURA" ColumnName="MONTOCOLEGIATURA" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colonias">
+      <EntityTypeMapping TypeName="IELibertadDBModel.Colonias">
+        <MappingFragment StoreEntitySet="Colonias">
+          <ScalarProperty Name="ClaveColonia" ColumnName="ClaveColonia" />
+          <ScalarProperty Name="ClaveMunicipio" ColumnName="ClaveMunicipio" />
+          <ScalarProperty Name="ClaveEntidad" ColumnName="ClaveEntidad" />
+          <ScalarProperty Name="NombreColonia" ColumnName="NombreColonia" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="CodigoPostalAdministracion" ColumnName="CodigoPostalAdministracion" />
+          <ScalarProperty Name="ClaveTipoAsentamiento" ColumnName="ClaveTipoAsentamiento" />
+          <ScalarProperty Name="TipoAsentamiento" ColumnName="TipoAsentamiento" />
+          <ScalarProperty Name="ClaveCiudad" ColumnName="ClaveCiudad" />
+          <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+          <ScalarProperty Name="Universe" ColumnName="Universe" />
+          <ScalarProperty Name="Oracle" ColumnName="Oracle" />
+          <ScalarProperty Name="MunOracle" ColumnName="MunOracle" />
+          <ScalarProperty Name="MunUniverse" ColumnName="MunUniverse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColoniasIEL">
+      <EntityTypeMapping TypeName="IELibertadDBModel.ColoniasIEL">
+        <MappingFragment StoreEntitySet="ColoniasIEL">
+          <ScalarProperty Name="ClaveColonia" ColumnName="ClaveColonia" />
+          <ScalarProperty Name="ClaveMunicipio" ColumnName="ClaveMunicipio" />
+          <ScalarProperty Name="ClaveEntidad" ColumnName="ClaveEntidad" />
+          <ScalarProperty Name="NombreColonia" ColumnName="NombreColonia" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="CodigoPostalAdministracion" ColumnName="CodigoPostalAdministracion" />
+          <ScalarProperty Name="ClaveTipoAsentamiento" ColumnName="ClaveTipoAsentamiento" />
+          <ScalarProperty Name="TipoAsentamiento" ColumnName="TipoAsentamiento" />
+          <ScalarProperty Name="ClaveCiudad" ColumnName="ClaveCiudad" />
+          <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+          <ScalarProperty Name="Universe" ColumnName="Universe" />
+          <ScalarProperty Name="Oracle" ColumnName="Oracle" />
+          <ScalarProperty Name="MunOracle" ColumnName="MunOracle" />
+          <ScalarProperty Name="MunUniverse" ColumnName="MunUniverse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="IELibertadDBModel.Estados">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="ClaveEntidad" ColumnName="ClaveEntidad" />
+          <ScalarProperty Name="NombreEstado" ColumnName="NombreEstado" />
+          <ScalarProperty Name="Universe" ColumnName="Universe" />
+          <ScalarProperty Name="Oracle" ColumnName="Oracle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMATOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.FORMATOS">
+        <MappingFragment StoreEntitySet="FORMATOS">
+          <ScalarProperty Name="FORMATOID" ColumnName="FORMATOID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="FILERUT" ColumnName="FILERUT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRUPO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.GRUPO">
+        <MappingFragment StoreEntitySet="GRUPO">
+          <ScalarProperty Name="IDGRUPO" ColumnName="IDGRUPO" />
+          <ScalarProperty Name="IDNIVEL" ColumnName="IDNIVEL" />
+          <ScalarProperty Name="IDGRADO" ColumnName="IDGRADO" />
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="NOMBREGRUPO" ColumnName="NOMBREGRUPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INFOALUMNOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.INFOALUMNOS">
+        <MappingFragment StoreEntitySet="INFOALUMNOS">
+          <ScalarProperty Name="NUMEROMATRICULA" ColumnName="NUMEROMATRICULA" />
+          <ScalarProperty Name="NOMBREPADRETUTOR" ColumnName="NOMBREPADRETUTOR" />
+          <ScalarProperty Name="OCUPACIONPADRE" ColumnName="OCUPACIONPADRE" />
+          <ScalarProperty Name="TELEFONOPADRE" ColumnName="TELEFONOPADRE" />
+          <ScalarProperty Name="TELEFONOTRABAJOPADRE" ColumnName="TELEFONOTRABAJOPADRE" />
+          <ScalarProperty Name="CELULARPADRE" ColumnName="CELULARPADRE" />
+          <ScalarProperty Name="FECHANACIMIENTOPADRE" ColumnName="FECHANACIMIENTOPADRE" />
+          <ScalarProperty Name="SUELDOPADRE" ColumnName="SUELDOPADRE" />
+          <ScalarProperty Name="NACIONALIDADPADRE" ColumnName="NACIONALIDADPADRE" />
+          <ScalarProperty Name="NOMBREMADRETUTOR" ColumnName="NOMBREMADRETUTOR" />
+          <ScalarProperty Name="OCUPACIONMADRE" ColumnName="OCUPACIONMADRE" />
+          <ScalarProperty Name="TELEFONOMADRE" ColumnName="TELEFONOMADRE" />
+          <ScalarProperty Name="TELEFONOTRABAJOMADRE" ColumnName="TELEFONOTRABAJOMADRE" />
+          <ScalarProperty Name="CELULARMADRE" ColumnName="CELULARMADRE" />
+          <ScalarProperty Name="FECHANACIMIENTOMADRE" ColumnName="FECHANACIMIENTOMADRE" />
+          <ScalarProperty Name="SUELDOMADRE" ColumnName="SUELDOMADRE" />
+          <ScalarProperty Name="NACIONALIDADMADRE" ColumnName="NACIONALIDADMADRE" />
+          <ScalarProperty Name="NOMBREFAMVECINO" ColumnName="NOMBREFAMVECINO" />
+          <ScalarProperty Name="TELEFONOVECINO" ColumnName="TELEFONOVECINO" />
+          <ScalarProperty Name="TELEFONOTRABAJOVECINO" ColumnName="TELEFONOTRABAJOVECINO" />
+          <ScalarProperty Name="CELULARVECINO" ColumnName="CELULARVECINO" />
+          <ScalarProperty Name="EDUCACIONFISICA" ColumnName="EDUCACIONFISICA" />
+          <ScalarProperty Name="MEDICAMENTO" ColumnName="MEDICAMENTO" />
+          <ScalarProperty Name="NOMBREMEDICAMENTO" ColumnName="NOMBREMEDICAMENTO" />
+          <ScalarProperty Name="DOSISMEDICAMENTO" ColumnName="DOSISMEDICAMENTO" />
+          <ScalarProperty Name="ALIMENTOPROHIBIDO" ColumnName="ALIMENTOPROHIBIDO" />
+          <ScalarProperty Name="PESO" ColumnName="PESO" />
+          <ScalarProperty Name="TALLA" ColumnName="TALLA" />
+          <ScalarProperty Name="TIPOSANGRE" ColumnName="TIPOSANGRE" />
+          <ScalarProperty Name="ENFERMEDADES" ColumnName="ENFERMEDADES" />
+          <ScalarProperty Name="NOMBREENFERMEDADES" ColumnName="NOMBREENFERMEDADES" />
+          <ScalarProperty Name="PROCEDIMIENTOCRISIS" ColumnName="PROCEDIMIENTOCRISIS" />
+          <ScalarProperty Name="CERTIFICADO" ColumnName="CERTIFICADO" />
+          <ScalarProperty Name="ENFERMEDADCERTIFICADO" ColumnName="ENFERMEDADCERTIFICADO" />
+          <ScalarProperty Name="ALERGIA" ColumnName="ALERGIA" />
+          <ScalarProperty Name="NOMBREALERGIA" ColumnName="NOMBREALERGIA" />
+          <ScalarProperty Name="PROCEDIMINTOCRISISALERGIA" ColumnName="PROCEDIMINTOCRISISALERGIA" />
+          <ScalarProperty Name="NOMBREACCIDENTE" ColumnName="NOMBREACCIDENTE" />
+          <ScalarProperty Name="TELEFONOACCIDENTE" ColumnName="TELEFONOACCIDENTE" />
+          <ScalarProperty Name="NOMBREHOSPITAL" ColumnName="NOMBREHOSPITAL" />
+          <ScalarProperty Name="MEDICO" ColumnName="MEDICO" />
+          <ScalarProperty Name="NOMBREMEDICO" ColumnName="NOMBREMEDICO" />
+          <ScalarProperty Name="TELEFONOMEDICO" ColumnName="TELEFONOMEDICO" />
+          <ScalarProperty Name="CEDULAMEDICO" ColumnName="CEDULAMEDICO" />
+          <ScalarProperty Name="AUTORIZATRASLADO" ColumnName="AUTORIZATRASLADO" />
+          <ScalarProperty Name="PROCEDIMIENTOACCIDENTE" ColumnName="PROCEDIMIENTOACCIDENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Municipios">
+      <EntityTypeMapping TypeName="IELibertadDBModel.Municipios">
+        <MappingFragment StoreEntitySet="Municipios">
+          <ScalarProperty Name="ClaveMunicipio" ColumnName="ClaveMunicipio" />
+          <ScalarProperty Name="ClaveEntidad" ColumnName="ClaveEntidad" />
+          <ScalarProperty Name="NombreMunicipio" ColumnName="NombreMunicipio" />
+          <ScalarProperty Name="Universe" ColumnName="Universe" />
+          <ScalarProperty Name="Oracle" ColumnName="Oracle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NUMERACIONES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.NUMERACIONES">
+        <MappingFragment StoreEntitySet="NUMERACIONES">
+          <ScalarProperty Name="CLAVE_PROCESO" ColumnName="CLAVE_PROCESO" />
+          <ScalarProperty Name="TIPO_PROC" ColumnName="TIPO_PROC" />
+          <ScalarProperty Name="INICIAL" ColumnName="INICIAL" />
+          <ScalarProperty Name="FINAL" ColumnName="FINAL" />
+          <ScalarProperty Name="ACTUAL" ColumnName="ACTUAL" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGOSALUMNO">
+      <EntityTypeMapping TypeName="IELibertadDBModel.PAGOSALUMNO">
+        <MappingFragment StoreEntitySet="PAGOSALUMNO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="NUMEROMATRICULA" ColumnName="NUMEROMATRICULA" />
+          <ScalarProperty Name="IDGRUPO" ColumnName="IDGRUPO" />
+          <ScalarProperty Name="IDGRADO" ColumnName="IDGRADO" />
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MONTOTOTAL" ColumnName="MONTOTOTAL" />
+          <ScalarProperty Name="MONTOACTUAL" ColumnName="MONTOACTUAL" />
+          <ScalarProperty Name="IDESTATUS" ColumnName="IDESTATUS" />
+          <ScalarProperty Name="FECHAMOVIMIENTO" ColumnName="FECHAMOVIMIENTO" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="USUARIOMODIFICA" ColumnName="USUARIOMODIFICA" />
+          <ScalarProperty Name="USUARIOALTA" ColumnName="USUARIOALTA" />
+          <ScalarProperty Name="FECHAMODIFICA" ColumnName="FECHAMODIFICA" />
+          <ScalarProperty Name="MEDIOPAGO" ColumnName="MEDIOPAGO" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TPOPROY">
+      <EntityTypeMapping TypeName="IELibertadDBModel.TPOPROY">
+        <MappingFragment StoreEntitySet="TPOPROY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TIPOPROY" ColumnName="TIPOPROY" />
+          <ScalarProperty Name="DURACION" ColumnName="DURACION" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSACCIONES">
+      <EntityTypeMapping TypeName="IELibertadDBModel.TRANSACCIONES">
+        <MappingFragment StoreEntitySet="TRANSACCIONES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="IDPAGO" ColumnName="IDPAGO" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="USUARIOTRANSACCION" ColumnName="USUARIOTRANSACCION" />
+          <ScalarProperty Name="FORMAPAGO" ColumnName="FORMAPAGO" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VWCATTABLASCATALOGOS">
+      <EntityTypeMapping TypeName="IELibertadDBModel.VWCATTABLASCATALOGOS">
+        <MappingFragment StoreEntitySet="VWCATTABLASCATALOGOS">
+          <ScalarProperty Name="IdTable" ColumnName="IdTable" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="POSTCATEGORIA" TypeName="IELibertadDBModel.POSTCATEGORIA" StoreEntitySet="POSTCATEGORIA">
+      <EndProperty Name="CATEGORIA">
+        <ScalarProperty Name="CATEGORIAID" ColumnName="CATEGORIAID" />
+      </EndProperty>
+      <EndProperty Name="POST">
+        <ScalarProperty Name="POSTID" ColumnName="POSTID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="PROC_ALUMNOS" FunctionName="IELibertadDBModel.Store.PROC_ALUMNOS" />
+    <FunctionImportMapping FunctionImportName="PROC_ASIGNA_ALUMNO_GRUPO" FunctionName="IELibertadDBModel.Store.PROC_ASIGNA_ALUMNO_GRUPO" />
+    <FunctionImportMapping FunctionImportName="PROC_CATEGORIA" FunctionName="IELibertadDBModel.Store.PROC_CATEGORIA" />
+    <FunctionImportMapping FunctionImportName="PROC_CICLOS" FunctionName="IELibertadDBModel.Store.PROC_CICLOS" />
+    <FunctionImportMapping FunctionImportName="PROC_CLIENTES" FunctionName="IELibertadDBModel.Store.PROC_CLIENTES" />
+    <FunctionImportMapping FunctionImportName="PROC_EMPRESAS" FunctionName="IELibertadDBModel.Store.PROC_EMPRESAS" />
+    <FunctionImportMapping FunctionImportName="PROC_FOLIOS" FunctionName="IELibertadDBModel.Store.PROC_FOLIOS" />
+    <FunctionImportMapping FunctionImportName="PROC_FORMATOS" FunctionName="IELibertadDBModel.Store.PROC_FORMATOS" />
+    <FunctionImportMapping FunctionImportName="PROC_GETFOLIOS" FunctionName="IELibertadDBModel.Store.PROC_GETFOLIOS" />
+    <FunctionImportMapping FunctionImportName="PROC_GRUPOS" FunctionName="IELibertadDBModel.Store.PROC_GRUPOS" />
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_ALUMNOS" FunctionName="IELibertadDBModel.Store.PROC_LISTA_ALUMNOS" />
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_ALUMNOS_GRUPO" FunctionName="IELibertadDBModel.Store.PROC_LISTA_ALUMNOS_GRUPO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_ALUMNOS_GRUPO_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="NUMEROMATRICULA" ColumnName="NUMEROMATRICULA" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="FECHAMATRICULA" ColumnName="FECHAMATRICULA" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="NUMEROLISTA" ColumnName="NUMEROLISTA" />
+          <ScalarProperty Name="ESCUELAPROCEDENCIA" ColumnName="ESCUELAPROCEDENCIA" />
+          <ScalarProperty Name="HERMANOS" ColumnName="HERMANOS" />
+          <ScalarProperty Name="GRADOHERMANOS" ColumnName="GRADOHERMANOS" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOPOSTAL" ColumnName="CODIGOPOSTAL" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="EDADANOS" ColumnName="EDADANOS" />
+          <ScalarProperty Name="EDADMESES" ColumnName="EDADMESES" />
+          <ScalarProperty Name="TUTOR" ColumnName="TUTOR" />
+          <ScalarProperty Name="USUARIOALTA" ColumnName="USUARIOALTA" />
+          <ScalarProperty Name="USUARIOMODIFICA" ColumnName="USUARIOMODIFICA" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="FECHAMODIFICA" ColumnName="FECHAMODIFICA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="NIVELACADEMICO" ColumnName="NIVELACADEMICO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="SERVERPATH" ColumnName="SERVERPATH" />
+          <ScalarProperty Name="BECA" ColumnName="BECA" />
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="FORMAPAGO" ColumnName="FORMAPAGO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_ALUMNOS_GRUPO_ADD" FunctionName="IELibertadDBModel.Store.PROC_LISTA_ALUMNOS_GRUPO_ADD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_ALUMNOS_GRUPO_ADD_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="NUMEROMATRICULA" ColumnName="NUMEROMATRICULA" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="FECHAMATRICULA" ColumnName="FECHAMATRICULA" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="NUMEROLISTA" ColumnName="NUMEROLISTA" />
+          <ScalarProperty Name="ESCUELAPROCEDENCIA" ColumnName="ESCUELAPROCEDENCIA" />
+          <ScalarProperty Name="HERMANOS" ColumnName="HERMANOS" />
+          <ScalarProperty Name="GRADOHERMANOS" ColumnName="GRADOHERMANOS" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOPOSTAL" ColumnName="CODIGOPOSTAL" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="EDADANOS" ColumnName="EDADANOS" />
+          <ScalarProperty Name="EDADMESES" ColumnName="EDADMESES" />
+          <ScalarProperty Name="TUTOR" ColumnName="TUTOR" />
+          <ScalarProperty Name="USUARIOALTA" ColumnName="USUARIOALTA" />
+          <ScalarProperty Name="USUARIOMODIFICA" ColumnName="USUARIOMODIFICA" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="FECHAMODIFICA" ColumnName="FECHAMODIFICA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="NIVELACADEMICO" ColumnName="NIVELACADEMICO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="SERVERPATH" ColumnName="SERVERPATH" />
+          <ScalarProperty Name="BECA" ColumnName="BECA" />
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="FORMAPAGO" ColumnName="FORMAPAGO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_DETALLES" FunctionName="IELibertadDBModel.Store.PROC_LISTA_DETALLES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_DETALLES_Result">
+          <ScalarProperty Name="id_venta_detalle" ColumnName="id_venta_detalle" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="producto" ColumnName="producto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="p_venta" ColumnName="p_venta" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="aduana" ColumnName="aduana" />
+          <ScalarProperty Name="pedimento" ColumnName="pedimento" />
+          <ScalarProperty Name="f_pedimento" ColumnName="f_pedimento" />
+          <ScalarProperty Name="predial" ColumnName="predial" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_DEUDORES" FunctionName="IELibertadDBModel.Store.PROC_LISTA_DEUDORES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_DEUDORES_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="APaterno" ColumnName="APaterno" />
+          <ScalarProperty Name="AMaterno" ColumnName="AMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="NombreGrupo" ColumnName="NombreGrupo" />
+          <ScalarProperty Name="DescripcionGrado" ColumnName="DescripcionGrado" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MontoActual" ColumnName="MontoActual" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_GRADO" FunctionName="IELibertadDBModel.Store.PROC_LISTA_GRADO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_GRADO_Result">
+          <ScalarProperty Name="IDGRADO" ColumnName="IDGRADO" />
+          <ScalarProperty Name="DESCRIPCIONGRADO" ColumnName="DESCRIPCIONGRADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_PAGOS_ALUMNO" FunctionName="IELibertadDBModel.Store.PROC_LISTA_PAGOS_ALUMNO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_PAGOS_ALUMNO_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MontoActual" ColumnName="MontoActual" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_PAGOS_ALUMNO_MATRICULA" FunctionName="IELibertadDBModel.Store.PROC_LISTA_PAGOS_ALUMNO_MATRICULA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_PAGOS_ALUMNO_MATRICULA_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MontoActual" ColumnName="MontoActual" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_PAGOS_TRANSACCIONES" FunctionName="IELibertadDBModel.Store.PROC_LISTA_PAGOS_TRANSACCIONES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_PAGOS_TRANSACCIONES_Result">
+          <ScalarProperty Name="DESCFORMAPAGO" ColumnName="DESCFORMAPAGO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="IDPAGO" ColumnName="IDPAGO" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="FECHATRANSACCION" ColumnName="FECHATRANSACCION" />
+          <ScalarProperty Name="USUARIOTRANSACCION" ColumnName="USUARIOTRANSACCION" />
+          <ScalarProperty Name="FORMAPAGO" ColumnName="FORMAPAGO" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_LISTA_TEMP_VENTAS" FunctionName="IELibertadDBModel.Store.PROC_LISTA_TEMP_VENTAS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_LISTA_TEMP_VENTAS_Result">
+          <ScalarProperty Name="id_venta_detalle_tmp" ColumnName="id_venta_detalle_tmp" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="producto" ColumnName="producto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="p_venta" ColumnName="p_venta" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="aduana" ColumnName="aduana" />
+          <ScalarProperty Name="pedimento" ColumnName="pedimento" />
+          <ScalarProperty Name="f_pedimento" ColumnName="f_pedimento" />
+          <ScalarProperty Name="predial" ColumnName="predial" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_OBTIENE_PAGO" FunctionName="IELibertadDBModel.Store.PROC_OBTIENE_PAGO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_OBTIENE_PAGO_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="MontoActual" ColumnName="MontoActual" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_PRODS" FunctionName="IELibertadDBModel.Store.PROC_PRODS" />
+    <FunctionImportMapping FunctionImportName="PROC_REGISTRA_PAGO" FunctionName="IELibertadDBModel.Store.PROC_REGISTRA_PAGO" />
+    <FunctionImportMapping FunctionImportName="PROC_RPT_ALUMNO" FunctionName="IELibertadDBModel.Store.PROC_RPT_ALUMNO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_RPT_ALUMNO_Result">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="NUMEROMATRICULA" ColumnName="NUMEROMATRICULA" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="FECHAMATRICULA" ColumnName="FECHAMATRICULA" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="NUMEROLISTA" ColumnName="NUMEROLISTA" />
+          <ScalarProperty Name="ESCUELAPROCEDENCIA" ColumnName="ESCUELAPROCEDENCIA" />
+          <ScalarProperty Name="HERMANOS" ColumnName="HERMANOS" />
+          <ScalarProperty Name="GRADOHERMANOS" ColumnName="GRADOHERMANOS" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOPOSTAL" ColumnName="CODIGOPOSTAL" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="EDADANOS" ColumnName="EDADANOS" />
+          <ScalarProperty Name="EDADMESES" ColumnName="EDADMESES" />
+          <ScalarProperty Name="TUTOR" ColumnName="TUTOR" />
+          <ScalarProperty Name="USUARIOALTA" ColumnName="USUARIOALTA" />
+          <ScalarProperty Name="USUARIOMODIFICA" ColumnName="USUARIOMODIFICA" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="FECHAMODIFICA" ColumnName="FECHAMODIFICA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="NIVELACADEMICO" ColumnName="NIVELACADEMICO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="SERVERPATH" ColumnName="SERVERPATH" />
+          <ScalarProperty Name="BECA" ColumnName="BECA" />
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="FORMAPAGO" ColumnName="FORMAPAGO" />
+          <ScalarProperty Name="NUMEROMATRICULA1" ColumnName="NUMEROMATRICULA1" />
+          <ScalarProperty Name="NOMBREPADRETUTOR" ColumnName="NOMBREPADRETUTOR" />
+          <ScalarProperty Name="OCUPACIONPADRE" ColumnName="OCUPACIONPADRE" />
+          <ScalarProperty Name="TELEFONOPADRE" ColumnName="TELEFONOPADRE" />
+          <ScalarProperty Name="TELEFONOTRABAJOPADRE" ColumnName="TELEFONOTRABAJOPADRE" />
+          <ScalarProperty Name="CELULARPADRE" ColumnName="CELULARPADRE" />
+          <ScalarProperty Name="FECHANACIMIENTOPADRE" ColumnName="FECHANACIMIENTOPADRE" />
+          <ScalarProperty Name="SUELDOPADRE" ColumnName="SUELDOPADRE" />
+          <ScalarProperty Name="NACIONALIDADPADRE" ColumnName="NACIONALIDADPADRE" />
+          <ScalarProperty Name="NOMBREMADRETUTOR" ColumnName="NOMBREMADRETUTOR" />
+          <ScalarProperty Name="OCUPACIONMADRE" ColumnName="OCUPACIONMADRE" />
+          <ScalarProperty Name="TELEFONOMADRE" ColumnName="TELEFONOMADRE" />
+          <ScalarProperty Name="TELEFONOTRABAJOMADRE" ColumnName="TELEFONOTRABAJOMADRE" />
+          <ScalarProperty Name="CELULARMADRE" ColumnName="CELULARMADRE" />
+          <ScalarProperty Name="FECHANACIMIENTOMADRE" ColumnName="FECHANACIMIENTOMADRE" />
+          <ScalarProperty Name="SUELDOMADRE" ColumnName="SUELDOMADRE" />
+          <ScalarProperty Name="NACIONALIDADMADRE" ColumnName="NACIONALIDADMADRE" />
+          <ScalarProperty Name="NOMBREFAMVECINO" ColumnName="NOMBREFAMVECINO" />
+          <ScalarProperty Name="TELEFONOVECINO" ColumnName="TELEFONOVECINO" />
+          <ScalarProperty Name="TELEFONOTRABAJOVECINO" ColumnName="TELEFONOTRABAJOVECINO" />
+          <ScalarProperty Name="CELULARVECINO" ColumnName="CELULARVECINO" />
+          <ScalarProperty Name="EDUCACIONFISICA" ColumnName="EDUCACIONFISICA" />
+          <ScalarProperty Name="MEDICAMENTO" ColumnName="MEDICAMENTO" />
+          <ScalarProperty Name="NOMBREMEDICAMENTO" ColumnName="NOMBREMEDICAMENTO" />
+          <ScalarProperty Name="DOSISMEDICAMENTO" ColumnName="DOSISMEDICAMENTO" />
+          <ScalarProperty Name="ALIMENTOPROHIBIDO" ColumnName="ALIMENTOPROHIBIDO" />
+          <ScalarProperty Name="PESO" ColumnName="PESO" />
+          <ScalarProperty Name="TALLA" ColumnName="TALLA" />
+          <ScalarProperty Name="TIPOSANGRE" ColumnName="TIPOSANGRE" />
+          <ScalarProperty Name="ENFERMEDADES" ColumnName="ENFERMEDADES" />
+          <ScalarProperty Name="NOMBREENFERMEDADES" ColumnName="NOMBREENFERMEDADES" />
+          <ScalarProperty Name="PROCEDIMIENTOCRISIS" ColumnName="PROCEDIMIENTOCRISIS" />
+          <ScalarProperty Name="CERTIFICADO" ColumnName="CERTIFICADO" />
+          <ScalarProperty Name="ENFERMEDADCERTIFICADO" ColumnName="ENFERMEDADCERTIFICADO" />
+          <ScalarProperty Name="ALERGIA" ColumnName="ALERGIA" />
+          <ScalarProperty Name="NOMBREALERGIA" ColumnName="NOMBREALERGIA" />
+          <ScalarProperty Name="PROCEDIMINTOCRISISALERGIA" ColumnName="PROCEDIMINTOCRISISALERGIA" />
+          <ScalarProperty Name="NOMBREACCIDENTE" ColumnName="NOMBREACCIDENTE" />
+          <ScalarProperty Name="TELEFONOACCIDENTE" ColumnName="TELEFONOACCIDENTE" />
+          <ScalarProperty Name="NOMBREHOSPITAL" ColumnName="NOMBREHOSPITAL" />
+          <ScalarProperty Name="MEDICO" ColumnName="MEDICO" />
+          <ScalarProperty Name="NOMBREMEDICO" ColumnName="NOMBREMEDICO" />
+          <ScalarProperty Name="TELEFONOMEDICO" ColumnName="TELEFONOMEDICO" />
+          <ScalarProperty Name="CEDULAMEDICO" ColumnName="CEDULAMEDICO" />
+          <ScalarProperty Name="AUTORIZATRASLADO" ColumnName="AUTORIZATRASLADO" />
+          <ScalarProperty Name="PROCEDIMIENTOACCIDENTE" ColumnName="PROCEDIMIENTOACCIDENTE" />
+          <ScalarProperty Name="NombreGrupo" ColumnName="NombreGrupo" />
+          <ScalarProperty Name="DescripcionGrado" ColumnName="DescripcionGrado" />
+          <ScalarProperty Name="NombreCiclo" ColumnName="NombreCiclo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_RPT_CREDENCIAL" FunctionName="IELibertadDBModel.Store.PROC_RPT_CREDENCIAL" />
+    <FunctionImportMapping FunctionImportName="PROC_RPT_PAGOS" FunctionName="IELibertadDBModel.Store.PROC_RPT_PAGOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_RPT_PAGOS_Result">
+          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
+          <ScalarProperty Name="NumeroMatricula" ColumnName="NumeroMatricula" />
+          <ScalarProperty Name="Apaterno" ColumnName="Apaterno" />
+          <ScalarProperty Name="AMaterno" ColumnName="AMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="NombreGrupo" ColumnName="NombreGrupo" />
+          <ScalarProperty Name="DescripcionGrado" ColumnName="DescripcionGrado" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="FechaTransaccion" ColumnName="FechaTransaccion" />
+          <ScalarProperty Name="FINI" ColumnName="FINI" />
+          <ScalarProperty Name="FFIN" ColumnName="FFIN" />
+          <ScalarProperty Name="FPAGO" ColumnName="FPAGO" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_RPT_RECIBO" FunctionName="IELibertadDBModel.Store.PROC_RPT_RECIBO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_RPT_RECIBO_Result">
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="FechaTransaccion" ColumnName="FechaTransaccion" />
+          <ScalarProperty Name="FPAGO" ColumnName="FPAGO" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_RPT_RECIBO_ALUMNO" FunctionName="IELibertadDBModel.Store.PROC_RPT_RECIBO_ALUMNO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_RPT_RECIBO_ALUMNO_Result">
+          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
+          <ScalarProperty Name="APaterno" ColumnName="APaterno" />
+          <ScalarProperty Name="AMaterno" ColumnName="AMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="NombreGrupo" ColumnName="NombreGrupo" />
+          <ScalarProperty Name="DescripcionGrado" ColumnName="DescripcionGrado" />
+          <ScalarProperty Name="NombreCiclo" ColumnName="NombreCiclo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_RPT_VENTAS" FunctionName="IELibertadDBModel.Store.PROC_RPT_VENTAS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_RPT_VENTAS_Result">
+          <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="producto" ColumnName="producto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="p_venta" ColumnName="p_venta" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_TEMP_VENTAS" FunctionName="IELibertadDBModel.Store.PROC_TEMP_VENTAS" />
+    <FunctionImportMapping FunctionImportName="PROC_UM" FunctionName="IELibertadDBModel.Store.PROC_UM" />
+    <FunctionImportMapping FunctionImportName="PROC_USERS" FunctionName="IELibertadDBModel.Store.PROC_USERS" />
+    <FunctionImportMapping FunctionImportName="PROC_USERS_PERMISOS_MOSTRAR" FunctionName="IELibertadDBModel.Store.PROC_USERS_PERMISOS_MOSTRAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.PROC_USERS_PERMISOS_MOSTRAR_Result">
+          <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="VENTAS" ColumnName="VENTAS" />
+          <ScalarProperty Name="REPORTES" ColumnName="REPORTES" />
+          <ScalarProperty Name="ADMINISTRAR" ColumnName="ADMINISTRAR" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="PRODUCTOS" ColumnName="PRODUCTOS" />
+          <ScalarProperty Name="CLIENTES" ColumnName="CLIENTES" />
+          <ScalarProperty Name="FACTURACION" ColumnName="FACTURACION" />
+          <ScalarProperty Name="BLOG" ColumnName="BLOG" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="PROY" ColumnName="PROY" />
+          <ScalarProperty Name="BIBLIO" ColumnName="BIBLIO" />
+          <ScalarProperty Name="ALUMNOS" ColumnName="ALUMNOS" />
+          <ScalarProperty Name="PROFESORES" ColumnName="PROFESORES" />
+          <ScalarProperty Name="COBRANZA" ColumnName="COBRANZA" />
+          <ScalarProperty Name="AYUDA" ColumnName="AYUDA" />
+          <ScalarProperty Name="PAGO" ColumnName="PAGO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_VENTA" FunctionName="IELibertadDBModel.Store.PROC_VENTA" />
+    <FunctionImportMapping FunctionImportName="sp_actDeactUsuario" FunctionName="IELibertadDBModel.Store.sp_actDeactUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_addUsuarioXAplicacion" FunctionName="IELibertadDBModel.Store.sp_addUsuarioXAplicacion" />
+    <FunctionImportMapping FunctionImportName="sp_AuditContacto" FunctionName="IELibertadDBModel.Store.sp_AuditContacto" />
+    <FunctionImportMapping FunctionImportName="sp_AuditDomicilio" FunctionName="IELibertadDBModel.Store.sp_AuditDomicilio" />
+    <FunctionImportMapping FunctionImportName="sp_AuditUser" FunctionName="IELibertadDBModel.Store.sp_AuditUser" />
+    <FunctionImportMapping FunctionImportName="sp_checkMenuxAppRol" FunctionName="IELibertadDBModel.Store.sp_checkMenuxAppRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkMenuxAppRol_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkMetodo" FunctionName="IELibertadDBModel.Store.sp_checkMetodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkMetodo_Result">
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="NOMBREMETODO" ColumnName="NOMBREMETODO" />
+          <ScalarProperty Name="RECURRENTE" ColumnName="RECURRENTE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkRolxApp" FunctionName="IELibertadDBModel.Store.sp_checkRolxApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkRolxApp_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkServicio" FunctionName="IELibertadDBModel.Store.sp_checkServicio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkServicio_Result">
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkSubMenuxAppRol" FunctionName="IELibertadDBModel.Store.sp_checkSubMenuxAppRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkSubMenuxAppRol_Result">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkUsrXApp" FunctionName="IELibertadDBModel.Store.sp_checkUsrXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkUsrXApp_Result">
+          <ScalarProperty Name="IDUSRSXAPP" ColumnName="IDUSRSXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_checkXApp" FunctionName="IELibertadDBModel.Store.sp_checkXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_checkXApp_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_delMenusXAppRol" FunctionName="IELibertadDBModel.Store.sp_delMenusXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_delSubMenusXAppRol" FunctionName="IELibertadDBModel.Store.sp_delSubMenusXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_getAplicaciones" FunctionName="IELibertadDBModel.Store.sp_getAplicaciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getAplicaciones_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getAppsXUsuario" FunctionName="IELibertadDBModel.Store.sp_getAppsXUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getAppsXUsuario_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="URLINICIO" ColumnName="URLINICIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="IDUSRSXAPP" ColumnName="IDUSRSXAPP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getContactos" FunctionName="IELibertadDBModel.Store.sp_getContactos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getContactos_Result">
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="TIPOCONTACTO" ColumnName="TIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getDomicilios" FunctionName="IELibertadDBModel.Store.sp_getDomicilios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getDomicilios_Result">
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getElementsObjectsXIdObj" FunctionName="IELibertadDBModel.Store.sp_getElementsObjectsXIdObj">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getElementsObjectsXIdObj_Result">
+          <ScalarProperty Name="IDELEMENTOSXOBJ" ColumnName="IDELEMENTOSXOBJ" />
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="ELEMENTO" ColumnName="ELEMENTO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEstacionesXApps" FunctionName="IELibertadDBModel.Store.sp_getEstacionesXApps">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getEstacionesXApps_Result">
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDESTACION" ColumnName="IDESTACION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMenusXAppRol" FunctionName="IELibertadDBModel.Store.sp_getMenusXAppRol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getMenusXAppRol_Result">
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMenusXAppRolAdmin" FunctionName="IELibertadDBModel.Store.sp_getMenusXAppRolAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getMenusXAppRolAdmin_Result">
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="NOMBREMENU" ColumnName="NOMBREMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMetodoXApp" FunctionName="IELibertadDBModel.Store.sp_getMetodoXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getMetodoXApp_Result">
+          <ScalarProperty Name="IDMETODOS" ColumnName="IDMETODOS" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="IDSERVICIOS" ColumnName="IDSERVICIOS" />
+          <ScalarProperty Name="NOMBREMETODO" ColumnName="NOMBREMETODO" />
+          <ScalarProperty Name="RECURRENTE" ColumnName="RECURRENTE" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getObjetosXAppRolPage" FunctionName="IELibertadDBModel.Store.sp_getObjetosXAppRolPage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getObjetosXAppRolPage_Result">
+          <ScalarProperty Name="IDPERMISOSOBJ" ColumnName="IDPERMISOSOBJ" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="PAGINA" ColumnName="PAGINA" />
+          <ScalarProperty Name="NOMBREOBJETO" ColumnName="NOMBREOBJETO" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getPermisoXApp" FunctionName="IELibertadDBModel.Store.sp_getPermisoXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getPermisoXApp_Result">
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getRolesXApp" FunctionName="IELibertadDBModel.Store.sp_getRolesXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getRolesXApp_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getRolesXUserApp" FunctionName="IELibertadDBModel.Store.sp_getRolesXUserApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getRolesXUserApp_Result">
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="DESCROL" ColumnName="DESCROL" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDESTACIONXAPP" ColumnName="IDESTACIONXAPP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="DescripcionAplicacion" ColumnName="DescripcionAplicacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getSubMenusXIdMenu" FunctionName="IELibertadDBModel.Store.sp_getSubMenusXIdMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getSubMenusXIdMenu_Result">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getSubMenusXIdMenuAdmin" FunctionName="IELibertadDBModel.Store.sp_getSubMenusXIdMenuAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getSubMenusXIdMenuAdmin_Result">
+          <ScalarProperty Name="IDPERMISOSXSUBMENU" ColumnName="IDPERMISOSXSUBMENU" />
+          <ScalarProperty Name="IDPERMISOSMENU" ColumnName="IDPERMISOSMENU" />
+          <ScalarProperty Name="NOMBRESUBMENU" ColumnName="NOMBRESUBMENU" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="TIPOOBJETO" ColumnName="TIPOOBJETO" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getUsuario" FunctionName="IELibertadDBModel.Store.sp_getUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.sp_getUsuario_Result">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="DESCAREA" ColumnName="DESCAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="DESCIDTIPOUSUARIO" ColumnName="DESCIDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_insAplicacion" FunctionName="IELibertadDBModel.Store.sp_insAplicacion" />
+    <FunctionImportMapping FunctionImportName="sp_insContacto" FunctionName="IELibertadDBModel.Store.sp_insContacto" />
+    <FunctionImportMapping FunctionImportName="sp_insDomicilio" FunctionName="IELibertadDBModel.Store.sp_insDomicilio" />
+    <FunctionImportMapping FunctionImportName="sp_insLogError" FunctionName="IELibertadDBModel.Store.sp_insLogError" />
+    <FunctionImportMapping FunctionImportName="sp_insMenuXAppRol" FunctionName="IELibertadDBModel.Store.sp_insMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_insMetodosxApp" FunctionName="IELibertadDBModel.Store.sp_insMetodosxApp" />
+    <FunctionImportMapping FunctionImportName="sp_insPermisosxElementoObjeto" FunctionName="IELibertadDBModel.Store.sp_insPermisosxElementoObjeto" />
+    <FunctionImportMapping FunctionImportName="sp_insPermisosxObjeto" FunctionName="IELibertadDBModel.Store.sp_insPermisosxObjeto" />
+    <FunctionImportMapping FunctionImportName="sp_insRolesXUsuario" FunctionName="IELibertadDBModel.Store.sp_insRolesXUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_insRolXApp" FunctionName="IELibertadDBModel.Store.sp_insRolXApp" />
+    <FunctionImportMapping FunctionImportName="sp_insRolXUserApp" FunctionName="IELibertadDBModel.Store.sp_insRolXUserApp" />
+    <FunctionImportMapping FunctionImportName="sp_insServicioWCF" FunctionName="IELibertadDBModel.Store.sp_insServicioWCF" />
+    <FunctionImportMapping FunctionImportName="sp_insSubMenuXAppRol" FunctionName="IELibertadDBModel.Store.sp_insSubMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_insUser" FunctionName="IELibertadDBModel.Store.sp_insUser" />
+    <FunctionImportMapping FunctionImportName="sp_updAplicacion" FunctionName="IELibertadDBModel.Store.sp_updAplicacion" />
+    <FunctionImportMapping FunctionImportName="sp_updContacto" FunctionName="IELibertadDBModel.Store.sp_updContacto" />
+    <FunctionImportMapping FunctionImportName="sp_updDomicilio" FunctionName="IELibertadDBModel.Store.sp_updDomicilio" />
+    <FunctionImportMapping FunctionImportName="sp_updMenuXAppRol" FunctionName="IELibertadDBModel.Store.sp_updMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_updRol" FunctionName="IELibertadDBModel.Store.sp_updRol" />
+    <FunctionImportMapping FunctionImportName="sp_updSubMenuXAppRol" FunctionName="IELibertadDBModel.Store.sp_updSubMenuXAppRol" />
+    <FunctionImportMapping FunctionImportName="sp_updUsuario" FunctionName="IELibertadDBModel.Store.sp_updUsuario" />
+    <FunctionImportMapping FunctionImportName="spAddCatEspecifico" FunctionName="IELibertadDBModel.Store.spAddCatEspecifico" />
+    <FunctionImportMapping FunctionImportName="spAddCatGenerales" FunctionName="IELibertadDBModel.Store.spAddCatGenerales" />
+    <FunctionImportMapping FunctionImportName="spAddConfigApp" FunctionName="IELibertadDBModel.Store.spAddConfigApp" />
+    <FunctionImportMapping FunctionImportName="spAddContacto" FunctionName="IELibertadDBModel.Store.spAddContacto" />
+    <FunctionImportMapping FunctionImportName="spAddDomicilio" FunctionName="IELibertadDBModel.Store.spAddDomicilio" />
+    <FunctionImportMapping FunctionImportName="spAddUsuario" FunctionName="IELibertadDBModel.Store.spAddUsuario" />
+    <FunctionImportMapping FunctionImportName="spAddUsuarioXAplicacion" FunctionName="IELibertadDBModel.Store.spAddUsuarioXAplicacion" />
+    <FunctionImportMapping FunctionImportName="spGetCatEspecifico" FunctionName="IELibertadDBModel.Store.spGetCatEspecifico" />
+    <FunctionImportMapping FunctionImportName="spGetCatGenerales" FunctionName="IELibertadDBModel.Store.spGetCatGenerales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetCatGenerales_Result">
+          <ScalarProperty Name="IDCATGENERALES" ColumnName="IDCATGENERALES" />
+          <ScalarProperty Name="NOMBRECATALOGO" ColumnName="NOMBRECATALOGO" />
+          <ScalarProperty Name="IDCATALOGO" ColumnName="IDCATALOGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="FILTRO" ColumnName="FILTRO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetConfigApp" FunctionName="IELibertadDBModel.Store.spGetConfigApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetConfigApp_Result">
+          <ScalarProperty Name="IDCONFIGAPP" ColumnName="IDCONFIGAPP" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetContactos" FunctionName="IELibertadDBModel.Store.spGetContactos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetContactos_Result">
+          <ScalarProperty Name="IDCONTACTO" ColumnName="IDCONTACTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPOCONTACTO" ColumnName="IDTIPOCONTACTO" />
+          <ScalarProperty Name="TIPOCONTACTO" ColumnName="TIPOCONTACTO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetDefinicionTabla" FunctionName="IELibertadDBModel.Store.spGetDefinicionTabla" />
+    <FunctionImportMapping FunctionImportName="spGetDomicilios" FunctionName="IELibertadDBModel.Store.spGetDomicilios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetDomicilios_Result">
+          <ScalarProperty Name="IDDOMICILIO" ColumnName="IDDOMICILIO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMEXT" ColumnName="NUMEXT" />
+          <ScalarProperty Name="NUMINT" ColumnName="NUMINT" />
+          <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDMUN" ColumnName="IDMUN" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="IDCOLONIA" ColumnName="IDCOLONIA" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetRolesVSUsuario" FunctionName="IELibertadDBModel.Store.spGetRolesVSUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetRolesVSUsuario_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="APLICACION" ColumnName="APLICACION" />
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+          <ScalarProperty Name="ROLASIGNADO" ColumnName="ROLASIGNADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSysTablaCatalogo" FunctionName="IELibertadDBModel.Store.spGetSysTablaCatalogo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetSysTablaCatalogo_Result">
+          <ScalarProperty Name="IdTable" ColumnName="IdTable" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUsuario" FunctionName="IELibertadDBModel.Store.spGetUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetUsuario_Result">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDSEXO" ColumnName="IDSEXO" />
+          <ScalarProperty Name="IDTIPOPERSONA" ColumnName="IDTIPOPERSONA" />
+          <ScalarProperty Name="IDESTADOCIVIL" ColumnName="IDESTADOCIVIL" />
+          <ScalarProperty Name="IDAREA" ColumnName="IDAREA" />
+          <ScalarProperty Name="IDTIPOUSUARIO" ColumnName="IDTIPOUSUARIO" />
+          <ScalarProperty Name="IDUSUARIOAPP" ColumnName="IDUSUARIOAPP" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="RUTAFOTOPERFIL" ColumnName="RUTAFOTOPERFIL" />
+          <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetUsuarios" FunctionName="IELibertadDBModel.Store.spGetUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spGetUsuarios_Result">
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="APATERNO" ColumnName="APATERNO" />
+          <ScalarProperty Name="AMATERNO" ColumnName="AMATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHANACCONST" ColumnName="FECHANACCONST" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRolesVSUsuario" FunctionName="IELibertadDBModel.Store.spRolesVSUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IELibertadDBModel.spRolesVSUsuario_Result">
+          <ScalarProperty Name="IDROL" ColumnName="IDROL" />
+          <ScalarProperty Name="IDAPLICACION" ColumnName="IDAPLICACION" />
+          <ScalarProperty Name="APLICACION" ColumnName="APLICACION" />
+          <ScalarProperty Name="IDROLXUSUARIO" ColumnName="IDROLXUSUARIO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSetCatEspecifico" FunctionName="IELibertadDBModel.Store.spSetCatEspecifico" />
+    <FunctionImportMapping FunctionImportName="spSetCatGenerales" FunctionName="IELibertadDBModel.Store.spSetCatGenerales" />
+    <FunctionImportMapping FunctionImportName="spSetConfigApp" FunctionName="IELibertadDBModel.Store.spSetConfigApp" />
+    <FunctionImportMapping FunctionImportName="spSetContacto" FunctionName="IELibertadDBModel.Store.spSetContacto" />
+    <FunctionImportMapping FunctionImportName="spSetDomicilio" FunctionName="IELibertadDBModel.Store.spSetDomicilio" />
+    <FunctionImportMapping FunctionImportName="spSetUsuario" FunctionName="IELibertadDBModel.Store.spSetUsuario" />
+    <FunctionImportMapping FunctionImportName="spSetUsuarioXAplicacion" FunctionName="IELibertadDBModel.Store.spSetUsuarioXAplicacion" />
+  </EntityContainerMapping>
+</Mapping>
