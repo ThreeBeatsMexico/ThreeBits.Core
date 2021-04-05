@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeBits.Api.Services", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeBits.Api.Invoice", "ThreeBits.Api.Invoice\ThreeBits.Api.Invoice.csproj", "{E295D9B8-C9FA-432B-8C4C-7AF5EE176832}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeBits.Api.School", "ThreeBits.Api.School\ThreeBits.Api.School.csproj", "{F473680D-CDC7-48FA-AD7C-E4C772575580}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{E295D9B8-C9FA-432B-8C4C-7AF5EE176832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E295D9B8-C9FA-432B-8C4C-7AF5EE176832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E295D9B8-C9FA-432B-8C4C-7AF5EE176832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F473680D-CDC7-48FA-AD7C-E4C772575580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F473680D-CDC7-48FA-AD7C-E4C772575580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F473680D-CDC7-48FA-AD7C-E4C772575580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F473680D-CDC7-48FA-AD7C-E4C772575580}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{821294E1-9800-4EDC-A01D-3931162F99CC} = {70AA5960-B754-46D3-B839-0595EC8D5105}
 		{CC9F221B-8F90-4D0F-9258-9C447002FF4C} = {891B70DA-AB9C-4A77-BE5D-C8E3084CEFBA}
 		{E295D9B8-C9FA-432B-8C4C-7AF5EE176832} = {891B70DA-AB9C-4A77-BE5D-C8E3084CEFBA}
+		{F473680D-CDC7-48FA-AD7C-E4C772575580} = {891B70DA-AB9C-4A77-BE5D-C8E3084CEFBA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD21E6AB-B1D1-455B-BCA5-8E67947271E0}
