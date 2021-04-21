@@ -54,3 +54,17 @@ C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\En
 C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.CopyComplete
 C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.dll
 C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.pdb
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Data.dll.config
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Data.dll
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Data.pdb
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Entities.dll
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\ThreeBits.Entities.pdb
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csprojAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.csproj.CopyComplete
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.dll
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Data\obj\Debug\ThreeBits.Data.pdb

@@ -1,0 +1,2 @@
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Api.School\obj\Debug\ThreeBits.Api.School.csprojAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.Api.School\obj\Debug\ThreeBits.Api.School.csproj.CoreCompileInputs.cache
