@@ -156,6 +156,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SchoolController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -198,7 +199,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -216,6 +219,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Alumno\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -245,6 +249,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThreeBits.Business\ThreeBits.Business.csproj">
+      <Project>{73C2B071-FB81-4899-8078-D0EEB14357FD}</Project>
+      <Name>ThreeBits.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThreeBits.Entities\ThreeBits.Entities.csproj">
+      <Project>{FE9C5E26-2E16-4A8A-B146-17BAE06AD908}</Project>
+      <Name>ThreeBits.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThreeBits.Security.Portal\ThreeBits.Security.Portal.csproj">
+      <Project>{A10FC15F-E073-4234-9023-C33979C7FF2C}</Project>
+      <Name>ThreeBits.Security.Portal</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

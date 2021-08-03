@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ThreeBits.Business</RootNamespace>
     <AssemblyName>ThreeBits.Business</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,6 +78,7 @@
     <Compile Include="Filters\HttpAuthenticationChallengeContextExtensions.cs" />
     <Compile Include="Filters\JwtAuthenticationAttribute.cs" />
     <Compile Include="Login\Login.cs" />
+    <Compile Include="School\AlumnosBR.cs" />
     <Compile Include="Security\Common\CatalogosBR.cs" />
     <Compile Include="Security\Common\CommonBR.cs" />
     <Compile Include="Security\Common\ConfiguracionBR.cs" />
@@ -103,8 +105,6 @@
       <Name>ThreeBits.Shared</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="School\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
