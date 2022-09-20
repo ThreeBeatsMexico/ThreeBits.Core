@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f473680d-cdc7-48fa-ad7c-e4c772575580": {
+      "ProjectGuid": "f473680d-cdc7-48fa-ad7c-e4c772575580",
+      "DisplayName": "ThreeBits.Api.School",
+      "ColorIndex": 0
+    },
+    "fe9c5e26-2e16-4a8a-b146-17bae06ad908": {
+      "ProjectGuid": "fe9c5e26-2e16-4a8a-b146-17bae06ad908",
+      "DisplayName": "ThreeBits.Entities",
+      "ColorIndex": 1
+    },
+    "cc9f221b-8f90-4d0f-9258-9c447002ff4c": {
+      "ProjectGuid": "cc9f221b-8f90-4d0f-9258-9c447002ff4c",
+      "DisplayName": "ThreeBits.Api.Services",
+      "ColorIndex": 2
+    },
+    "f5113302-9bb2-4bb9-82ed-3ee5215a94b5": {
+      "ProjectGuid": "f5113302-9bb2-4bb9-82ed-3ee5215a94b5",
+      "DisplayName": "ThreeBits.WCFService",
+      "ColorIndex": 3
+    },
+    "821294e1-9800-4edc-a01d-3931162f99cc": {
+      "ProjectGuid": "821294e1-9800-4edc-a01d-3931162f99cc",
+      "DisplayName": "ThreeBits.Shared",
+      "ColorIndex": 4
+    },
+    "73c2b071-fb81-4899-8078-d0eeb14357fd": {
+      "ProjectGuid": "73c2b071-fb81-4899-8078-d0eeb14357fd",
+      "DisplayName": "ThreeBits.Business",
+      "ColorIndex": 5
+    },
+    "f052d0fe-de53-4f2d-a11f-ff011cb2916b": {
+      "ProjectGuid": "f052d0fe-de53-4f2d-a11f-ff011cb2916b",
+      "DisplayName": "ThreeBits.Data",
+      "ColorIndex": 6
+    },
+    "70aa5960-b754-46d3-b839-0595ec8d5105": {
+      "ProjectGuid": "70aa5960-b754-46d3-b839-0595ec8d5105",
+      "DisplayName": "BUSINESS",
+      "ColorIndex": 7
+    }
+  },
+  "NextColorIndex": 8
+}

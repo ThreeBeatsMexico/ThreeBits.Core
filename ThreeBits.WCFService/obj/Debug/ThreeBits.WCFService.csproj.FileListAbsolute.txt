@@ -60,3 +60,5 @@ C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj
 C:\Users\Julio Martinez\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.pdb
 C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csprojAssemblyReference.cache
 C:\Users\LENOVO\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.CoreCompileInputs.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.AssemblyReference.cache
+C:\Users\JULIO CESAR\Documents\GitHub\ThreeBits.Core\ThreeBits.WCFService\obj\Debug\ThreeBits.WCFService.csproj.CoreCompileInputs.cache

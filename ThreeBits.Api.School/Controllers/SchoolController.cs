@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ThreeBits.Business.School;
 using ThreeBits.Business.Security;
 using ThreeBits.Entities.Common;
 using ThreeBits.Entities.Security;
@@ -21,6 +22,7 @@ namespace ThreeBits.Api.School.Controllers
         {
             ProcessResult Respuesta = new ProcessResult();
             SecurityBR oSecBr = new SecurityBR();
+            AlumnosBR oAlumnos = new AlumnosBR();
             AplicacionBE oApp = new AplicacionBE();
             Respuesta.flag = true;
             try
@@ -37,7 +39,7 @@ namespace ThreeBits.Api.School.Controllers
                 }
                 else
                 {
-                    //Respuesta.data = ThreeBits.Business.;
+                    Respuesta.data = oAlumnos.getAlumnosBr();
                 }
             }
             catch (Exception ex)
